@@ -1,0 +1,27 @@
+{
+  "repository": "AnelPasic/optimalisering.oslo.noV3.3",
+  "commit": "9719e4c439ef22b52ac74d868fa5d72b88a5d622",
+  "files": {
+    "src/pages/design-system.astro": "a947698ce1d6223a04e546c0ccb78927f8fee2fc24360bbffb45a5712f7a11dd",
+    "src/pages/design-system/global-elements.astro": "012fd674d3cfc6e071a22198c30e11e50939e0200d841c32cff6e24471cabedb",
+    "src/pages/design-system/proof-list.astro": "1aabe694891024a6f313b8761d68dcf9072555cb5c8e07fcb7563c4b10949df9",
+    "src/components/PageList.astro": "8151f470cca291a6d386a4a41bcfadb480085adf1af8ca4bff13b1363cae3c82",
+    "src/components/HomeAssessment.astro": "c3758c750f527a5b1b60975f3a50d84616ec83e73e98ba444922af673b689b3e",
+    "src/components/PackageSection.astro": "3b51862c0adb83b5601b215ad8e1dbd78490ccdec28ad722fa7e08151a1076e1",
+    "src/components/HomeLeverage.astro": "6898659d670d9f7becf852fd23eb1a0b0c60b7e52cb31215070aaf5188bdd538",
+    "src/components/HomeProof.astro": "0208fabf3ee2e7d2309c460c8aa5c918677f7ec4de482e718835f8f589a7c710",
+    "src/components/CommercialHero.astro": "37e900c473e51b67b26d3c09b8aaf7f857b934fe22cb1c446c85d355adba0538",
+    "src/components/HomeSection.astro": "5d4b31fc5d9d7d68454de5c2e83b533f3855cc14ca9a66ce80fc9eeb7c1b839f",
+    "src/components/ContentCard.astro": "a4ce5bd43b766520288caf5f26d846d07db1093109f4e98d14b75a44b6b6907c",
+    "src/components/Faq.astro": "8748620508b01f3dbed2e45f909de27047257feca7dfc1bd58380c063665de3a",
+    "src/components/HomeHeader.astro": "1822fbbeec402ba0d1f3d91e885879ee7ed3d026e33c24a40e6ddc7757d0549a",
+    "src/components/HeaderNavigation.astro": "969ed26a73c502a1983f959135f6e29956b804d8d2efdc88d32c11fc7c10a9eb",
+    "src/components/HomeFooter.astro": "f46df71eafe2fa090ef45d482db28e64d728b8e4c1f6bf7179b4baeac3fc1dc2",
+    "src/components/PackageOrder.astro": "212a4a28a829a181a761144c4f77f0204cf73b40bf22f34eda14eb28790ee78f",
+    "src/components/PackageVisual.astro": "1b474a6b9a56dd774e386a23143a5864445de95b24284e3ad409a0b1d2210522",
+    "src/components/PackageMotif.astro": "18984afbd3f6dd4509d7b96411f9b259c0208033092785db3b4b40b186347461",
+    "src/lib/leverage.ts": "59db1f302cf8c46ae255b01b57ca88d482a7e4ca6298838548928182f9e907f0",
+    "src/lib/scenario-ratio.ts": "64a84d6e941609f7a5444a3481b32b73c0ad4f448f1425e5bd00d7fcd3918ec7",
+    "src/lib/scenario-chart.ts": "987810a737f1e0aa09d9940e3bfc9b1b20f885222d0201fc1ac768a6c5bfc345"
+  }
+}

@@ -1,0 +1,33 @@
+---
+interface Props { kind: 'controlled' | 'accelerating' | 'tracks'; id: string; }
+const { kind, id } = Astro.props;
+const paths = {
+  controlled: ['M14 128 C112 122 206 106 294 56'],
+  accelerating: ['M92 128 C178 128 240 104 292 20'],
+  tracks: ['M14 128 C128 125 230 92 292 20', 'M14 131 C134 130 230 108 292 45', 'M14 134 C140 134 238 122 292 70'],
+};
+const colors = kind === 'accelerating' ? ['#086aff'] : kind === 'tracks' ? ['#008a70', '#087b87', '#075b91'] : ['#008a70'];
+const heads = { controlled: ['M283 52 302 48 294 67Z'], accelerating: ['M283 17 301 9 296 30Z'], tracks: ['M283 17 301 9 296 30Z', 'M282 42 301 34 295 55Z', 'M282 67 301 59 295 80Z'] };
+---
+<svg class={`package-visual package-visual-${kind}`} viewBox="0 0 320 144" fill="none" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id={`${id}-wash`} x1="0" y1="24" x2="0" y2="140" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a3f1de" stop-opacity=".45" /><stop offset="1" stop-color="#edfff9" stop-opacity="0" />
+    </linearGradient>
+    {colors.map((color,index) => <linearGradient id={`${id}-track-${index}`} x1="14" y1="128" x2="292" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color={kind === 'controlled' ? '#d2f4ed' : '#d9ecff'} /><stop offset=".45" stop-color={color} stop-opacity=".65" /><stop offset="1" stop-color={color} />
+    </linearGradient>)}
+    {kind === 'accelerating' && <linearGradient id={`${id}-input`} x1="14" y1="132" x2="98" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c7f3e9" /><stop offset="1" stop-color="#008a70" />
+    </linearGradient>}
+  </defs>
+  <path d={`${paths[kind][0]} L294 142H14Z`} fill={`url(#${id}-wash)`} />
+  {kind === 'accelerating' && <>
+    <path class="package-input" d="M14 119 C45 119 62 128 92 128" stroke={`url(#${id}-track-0)`} stroke-width="3" stroke-linecap="round" />
+    <path class="package-input" d="M14 137 C45 137 62 128 92 128" stroke={`url(#${id}-input)`} stroke-width="3" stroke-linecap="round" />
+  </>}
+  {paths[kind].map((path,index) => <g class:list={{ 'package-input': kind !== 'accelerating' }}>
+    <path class="package-curve" d={path} stroke={`url(#${id}-track-${index})`} stroke-width={kind === 'accelerating' ? 4.5 : 3.5} stroke-linecap="round" />
+    <path d={heads[kind][index]} fill={colors[index]} />
+  </g>)}
+</svg>

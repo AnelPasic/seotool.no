@@ -1,0 +1,31 @@
+{
+  "slug": "priser",
+  "kind": "utility",
+  "seo": {
+    "title": "Tilbud | SeoTool",
+    "description": "Eksempel på CMS-redigerbar tilbudsside."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "title": "Tilbud og priser",
+    "support": "Prisene er ikke definert i denne demonstrasjonen.",
+    "visual": {
+      "kind": "none"
+    },
+    "family": "pricing"
+  },
+  "listing": {
+    "title": "Tilbud",
+    "visible": false
+  },
+  "faq": [],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "tilbud",
+      "heading": "Ingen kundepakker er aktivert",
+      "body": "Kundepriser og pakker krever eksplisitt godkjenning. Dette er kun eksempelinnhold.",
+      "visibility": "visible"
+    }
+  ]
+}

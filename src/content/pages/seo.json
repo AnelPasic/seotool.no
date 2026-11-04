@@ -1,0 +1,92 @@
+{
+  "slug": "seo",
+  "kind": "service",
+  "seo": {
+    "title": "SEO og organisk søk – SeoTool",
+    "description": "Få full oversikt over tekniske feil, søkeord, rangeringer og konkurrenter med SeoTool."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Kjernesøk og analyse",
+    "title": "Teknisk innsikt og søkemuligheter uten gjetting.",
+    "support": "SeoTool overvåker nettsidens helse, Search Console-ytelse og faktiske rangeringer for å avdekke hvilke optimaliseringer som gir størst effekt.",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Be om analyse",
+      "href": "/gratis-analyse/"
+    }
+  },
+  "listing": {
+    "title": "SEO og organisk søk",
+    "summary": "Teknisk gjennomsøking, Search Console-integrasjon, søkeord og konkurrentovervåking.",
+    "order": 1,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Hvor ofte gjennomsøker SeoTool nettstedet?",
+      "answer": "SeoTool utfører regelmessige tekniske gjennomganger for å identifisere brutte lenker, indekseringsfeil og manglende metadata."
+    },
+    {
+      "question": "Hvilke data hentes fra Search Console?",
+      "answer": "SeoTool kobler seg til Google Search Console for å analysere faktiske visninger, klikk, gjennomsnittlige posisjoner og søkeintensjon."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "funksjoner",
+      "heading": "Hva SeoTool overvåker",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "SEO handler om konkrete forbedringer på sider som faktisk kan rangere. SeoTool samler målinger fra flere kilder i én prioritert oversikt.",
+        "I stedet for lange feillister uten sammenheng, grupperes funnene etter forventet effekt på organisk trafikk."
+      ],
+      "items": [
+        {
+          "title": "Teknisk gjennomsøking",
+          "text": "Identifiserer indekseringshindre, brutte lenker, kanoniske avvik og ytelsesflaskehalser.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Search Console & Søkeord",
+          "text": "Avdekker faktiske søkespørsmål, klikkdata og posisjonsendringer direkte fra Google.",
+          "surface": "base-200"
+        },
+        {
+          "title": "SERP & Konkurrentanalyse",
+          "text": "Følger utviklingen i søkeresultatene mot reelle konkurrenter og analyserer søkeintensjon.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Historiske observasjoner",
+          "text": "Dokumenterer endringer over tid slik at du ser effekten av utførte tiltak.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Klar for å kartlegge nettstedet?",
+      "visibility": "visible",
+      "body": [
+        "Få en innledende gjennomgang av nettstedets tekniske tilstand og søkepotensial.",
+        "Har du allerede en aktiv SeoTool-konto, kan du logge inn direkte i applikasjonen."
+      ],
+      "links": [
+        {
+          "label": "Gå til gratis analyse",
+          "href": "/gratis-analyse/"
+        },
+        {
+          "label": "Ta kontakt for rådgivning",
+          "href": "/kontakt/"
+        }
+      ]
+    }
+  ]
+}

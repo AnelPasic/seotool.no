@@ -1,0 +1,296 @@
+@layer project {
+ .site-header .header-nav-item { position: relative; padding: 0; }
+ .site-header .header-nav-parent { display: flex; align-items: center; padding: 0; gap: 0; border-radius: 0; background: transparent; }
+ .site-header .header-nav-parent > a { display: flex; align-items: center; min-height: 44px; padding: 10px 12px; text-decoration: none; }
+ .site-header .header-nav-parent > a[aria-current="page"], .site-header .header-submenu a[aria-current="page"] .header-submenu-label { text-decoration: underline; text-underline-offset: 6px; font-weight: var(--weight-label); }
+ .site-header .header-submenu a[aria-current="page"] { text-decoration: none; }
+ .site-header [data-active-parent] > .header-nav-parent > a { color: var(--green); }
+ .site-header .nav-disclosure { display: inline-flex; flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; padding: 12px; border: 0; }
+ .nav-disclosure .arrow-icon { width: 18px; height: 18px; transform: rotate(90deg); }
+ .nav-disclosure[aria-expanded="true"] .arrow-icon { transform: rotate(-90deg); }
+ /* Storebrand-style understated pill: current daisyUI base-300, no layout shift. */
+ @media (min-width: 901px) {
+  /* Match the Storebrand navigation rhythm using Oslo's existing Figtree font. */
+  .site-shell .site-header .desktop-nav > ul.menu {
+   gap: 6px;
+  }
+  .site-shell .site-header .desktop-nav .header-nav-parent > a {
+   font-family: var(--body);
+   font-size: 1rem;
+   font-weight: 600;
+  }
+  .site-shell .site-header .desktop-nav .header-nav-parent {
+   border-radius: 999px;
+   transition: background-color 150ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+   .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:hover {
+    background: color-mix(in srgb, var(--color-base-300) 70%, var(--color-base-200));
+   }
+  }
+  .site-shell .site-header .desktop-nav .header-nav-item > .header-nav-parent:is(:focus-within, :has(> a[aria-current="page"])),
+  .site-shell .site-header .desktop-nav .header-nav-item[data-active-parent] > .header-nav-parent,
+  .site-shell .site-header .desktop-nav .header-nav-item[data-nav-open] > .header-nav-parent {
+   background: var(--color-base-300);
+  }
+  .site-shell .site-header .desktop-nav .header-nav-parent > a:is(:hover, [aria-current="page"]) {
+   text-decoration: none;
+  }
+ }
+ @media (prefers-reduced-motion: reduce) {
+  .site-shell .site-header .desktop-nav .header-nav-parent { transition: none; }
+ }
+ .site-header .header-submenu { position: absolute; z-index: 30; top: calc(100% + 4px); left: 0; width: 350px; max-width: calc(100vw - 40px); padding: 8px; border: var(--border-subtle); border-radius: var(--radius-sm); box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 10%, transparent); }
+ .site-header .header-submenu li > a { display: flex; flex-direction: column; align-items: start; gap: 4px; min-height: 44px; padding: 12px; white-space: normal; border: 0; font-size: var(--type-label); line-height: var(--leading-small); }
+ .header-submenu-label { font-weight: var(--weight-label); }
+ .header-submenu-description { color: var(--muted); font-size: var(--type-meta); line-height: var(--leading-body); }
+ .header-submenu a:is(:focus, :active) .header-submenu-description { color: inherit; }
+ @media (max-width: 900px) {
+  .site-header .menu-toggle { flex: 0 0 44px; width: 44px; min-width: 44px; min-height: 44px; height: 44px; }
+  .site-header .header-actions { flex-shrink: 0; }
+  .site-header .mobile-menu .header-nav-parent > a { flex: 1; justify-content: space-between; min-width: 44px; }
+  .site-header .mobile-menu .header-nav-parent { border-top: var(--border-subtle); }
+  .site-header .mobile-menu .header-nav-parent > a { border: 0; }
+  .site-header .mobile-menu .header-submenu { position: static; width: 100%; max-width: none; margin: 0 0 12px; box-shadow: none; }
+  .site-header .mobile-menu .header-submenu::before { display: none; }
+ }
+ @media (max-width: 359px) {
+  .site-header .header-inner { gap: 6px; }
+  .site-header .header-actions { gap: 6px; }
+  .site-header .header-actions > a { padding-inline: 10px; }
+  .site-header .header-actions > a .arrow-icon { display: none; }
+  .site-header .wordmark { flex-shrink: 0; }
+ }
+}
+
+
+
+/* MWS-038 preview adapter: use the current Optimalisering Oslo theme and fonts. */
+@layer project {
+ .site-shell .site-header { position: relative; z-index: 55; }
+ .site-shell .site-header.site-header--sticky { position: sticky; top: 0; }
+ .site-shell .site-header .header-nav-item--mega { position: static; }
+ .site-shell .site-header .desktop-nav > ul.menu { position: static; }
+ .site-shell .site-header .header-mega-menu[hidden] { display: none !important; }
+ .site-shell .site-header .header-mega-menu {
+  position: absolute; top: 100%; left: 0; right: 0; z-index: 60;
+  padding: 34px 0 44px; background: var(--color-base-100);
+  border-bottom: var(--border-subtle);
+  box-shadow: 0 25px 40px color-mix(in srgb, var(--ink) 12%, transparent);
+  color: var(--ink);
+ }
+ .site-shell .site-header .header-mega-inner.shell {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
+  align-items: stretch; gap: clamp(24px, 3vw, 64px);
+  width: min(1440px, calc(100% - 80px));
+ }
+ .site-shell .site-header .header-mega-inner:not(:has(.header-mega-promo)) {
+  grid-template-columns: minmax(0, 1fr);
+ }
+ .site-shell .site-header .header-mega-columns {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(20px, 2.4vw, 52px); align-items: start;
+ }
+ .site-shell .site-header .header-mega-heading {
+  margin: 0 0 14px; color: var(--muted);
+  font-size: var(--type-label); font-weight: var(--weight-label);
+  letter-spacing: var(--tracking-eyebrow); text-transform: uppercase;
+ }
+ .site-shell .site-header .header-mega-links.menu { width: 100%; padding: 0; gap: 6px; }
+ .site-shell .site-header .header-mega-links.menu > li > a {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 4px; white-space: normal; text-decoration: none;
+  padding: 12px 9px; min-height: 44px; border-radius: var(--radius-field);
+  border: 0; font-size: var(--type-label); line-height: var(--leading-small);
+ }
+ .site-shell .site-header .header-mega-links.menu a:is(:hover,:focus-visible) {
+  background: var(--color-base-200); color: var(--ink);
+ }
+ .site-shell .site-header .header-mega-links .header-submenu-description {
+  color: var(--muted); font-size: var(--type-label); line-height: var(--leading-small);
+ }
+ .site-shell .site-header .header-mega-promo {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: clamp(24px, 2.6vw, 38px); min-height: 270px;
+  background: var(--color-secondary); color: var(--color-secondary-content);
+  border-radius: var(--radius-box);
+ }
+ .site-shell .site-header .header-mega-promo h2 {
+  color: inherit; font-size: var(--type-h4); line-height: var(--leading-h4);
+ }
+ .site-shell .site-header .header-mega-promo p {
+  color: var(--color-dark-muted); font-size: var(--type-meta);
+  line-height: var(--leading-body); margin: 16px 0 28px;
+ }
+ .site-shell .site-header .header-mega-promo .btn {
+  margin-top: auto; width: 100%; display: inline-flex;
+  align-items: center; justify-content: center; gap: 10px;
+  text-align: center; text-decoration: none; padding: 12px 18px;
+  font-size: var(--type-button-sm); white-space: normal;
+ }
+ .site-shell .site-header [data-nav-open] > .header-nav-parent {
+  background: var(--color-base-300); border-radius: var(--radius-field);
+ }
+ @media (max-width: 1100px) and (min-width: 901px) {
+  .site-shell .site-header .header-mega-inner.shell { gap: 18px; }
+  .site-shell .site-header .header-mega-columns { gap: 14px; }
+  .site-shell .site-header .header-mega-promo { padding: 22px; }
+ }
+ @media (max-width: 900px) {
+  .site-shell .site-header .header-mega-menu {
+   position: static; inset: auto; width: 100%; padding: 14px 10px 22px;
+   box-shadow: none; border: 0; background: var(--color-base-100);
+  }
+  .site-shell .site-header .header-mega-inner.shell {
+   width: 100%; display: flex; flex-direction: column; gap: 22px;
+  }
+  .site-shell .site-header .header-mega-columns {
+   grid-template-columns: 1fr; gap: 22px;
+  }
+  .site-shell .site-header .header-mega-promo { min-height: 0; padding: 24px; }
+  .site-shell .site-header .header-mega-links.menu > li > a {
+   border: 0; padding: 10px 8px;
+  }
+ }
+}
+
+/* Visual language selector: use the existing Optimalisering Oslo theme.
+   NO is current; EN is not interactive until there is a published EN route. */
+@layer project {
+ .site-shell .site-header .language-switch {
+  display: inline-flex; align-items: center; flex: 0 0 auto;
+  gap: 2px; padding: 3px;
+  border: 1px solid var(--color-base-300);
+  border-radius: var(--radius-field);
+  background: var(--color-base-100);
+  font-family: var(--body);
+  line-height: 1;
+ }
+ .site-shell .site-header .language-switch__choice {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 40px; min-height: 38px; padding: 6px 9px;
+  border-radius: calc(var(--radius-field) - 3px);
+  font-size: var(--type-label); font-weight: var(--weight-label);
+  text-decoration: none; white-space: nowrap;
+  color: var(--ink);
+ }
+ .site-shell .site-header .language-switch__choice.is-active {
+  background: var(--color-secondary);
+  color: var(--color-secondary-content);
+ }
+ .site-shell .site-header .language-switch__choice.is-disabled {
+  opacity: .6; cursor: default; user-select: none;
+ }
+ .site-shell .site-header .language-switch a.language-switch__choice:hover {
+  background: var(--color-base-300);
+ }
+ .site-shell .site-header .language-switch--mobile { display: none; }
+ @media (max-width: 900px) {
+  .site-shell .site-header .language-switch--desktop { display: none; }
+  .site-shell .site-header .language-switch--mobile {
+   display: inline-flex; margin: 18px 0 4px;
+  }
+  .site-shell .site-header .mobile-menu .language-switch__choice {
+   padding: 6px 9px; border: 0; min-height: 38px;
+  }
+ }
+}
+
+/* Optional static Pagefind search, inheriting the existing Oslo design system.
+   The icon belongs to the right-side action group; mobile gets its own row. */
+@layer project {
+ .site-shell .site-header .site-search-trigger {
+  display: inline-flex; align-items: center; justify-content: center;
+  flex: 0 0 auto; min-width: 42px; min-height: 44px;
+  color: var(--color-base-content);
+  --pf-text: var(--color-base-content);
+  --pf-text-secondary: var(--muted);
+  --pf-background: transparent;
+  --pf-border: transparent;
+  --pf-border-focus: var(--color-focus);
+  --pf-hover: var(--color-base-300);
+  --pf-outline-focus: var(--color-focus);
+  --pf-font: var(--body);
+ }
+ .site-shell .site-header .site-search-trigger--mobile { display: none; }
+ .site-shell pagefind-modal {
+  --pf-text: var(--ink);
+  --pf-text-secondary: var(--muted);
+  --pf-text-muted: var(--muted);
+  --pf-background: var(--color-base-100);
+  --pf-border: var(--color-base-300);
+  --pf-border-focus: var(--color-focus);
+  --pf-hover: var(--color-base-300);
+  --pf-outline-focus: var(--color-focus);
+  --pf-mark: var(--color-secondary);
+  --pf-font: var(--body);
+  --pf-modal-max-width: 680px;
+  --pf-border-radius: var(--radius-field);
+ }
+ @media (max-width: 900px) {
+  .site-shell .site-header .site-search-trigger--desktop { display: none; }
+  .site-shell .site-header .site-search-trigger--mobile {
+   display: flex; justify-content: flex-start;
+   width: max-content; max-width: 100%;
+   margin: 14px 0 4px;
+  }
+ }
+}
+
+/* Pagefind's generated icon rules use triple-ID specificity. Limit the
+   necessary overrides to the header trigger; keep its 44px hit target. */
+.site-shell .site-header pagefind-modal-trigger.site-search-trigger {
+  --pf-text-muted: var(--color-base-content);
+}
+.site-shell .site-header pagefind-modal-trigger.site-search-trigger :is(.pf-trigger-icon, .trigger-icon) {
+  width: 16px !important;
+  height: 16px !important;
+  background: var(--color-base-content) !important;
+}
+
+/* Highlighted submenu items use theme secondary + secondary-content.
+   Both title and description remain legible on active/focused/hovered items. */
+@layer project {
+ .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) {
+  background: var(--color-secondary);
+  color: var(--color-secondary-content);
+ }
+ .site-shell .site-header :is(.header-mega-links, .header-submenu).menu > li > a:is(:hover, :focus-visible, :active, [aria-current="page"]) :is(.header-submenu-label, .header-submenu-description) {
+  color: var(--color-secondary-content);
+ }
+}
+
+
+/* Native daisyUI theme-controller, adapted to approved Oslo header. */
+@layer project {
+ .site-shell .site-header .mws-chrome-theme-switch.swap {
+  display: inline-grid; place-items: center; flex: 0 0 auto;
+  width: 44px; height: 44px; min-width: 44px;
+  border-radius: var(--radius-field); color: var(--color-base-content);
+  cursor: pointer;
+ }
+ .site-shell .site-header .mws-chrome-theme-switch.swap > svg { width: 23px; height: 23px; }
+ @media (prefers-reduced-motion: reduce) {
+  .site-shell .site-header .mws-chrome-theme-switch.swap > svg { transition: none; }
+ }
+ .site-shell .site-header .mws-chrome-theme-switch.swap:focus-within {
+  outline: 2px solid var(--color-focus); outline-offset: 2px;
+ }
+ .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--mobile { display: none; }
+ @media (max-width: 900px) {
+  .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--desktop { display: none; }
+  .site-shell .site-header .mws-chrome-theme-switch.swap.mws-chrome-theme-switch--mobile {
+   display: inline-grid; margin: 14px 0 4px;
+  }
+ }
+}
+
+/* Older client-only palette aliases not exported by the 20 standard daisyUI tokens. */
+html[data-mws-theme-mode="dark"] {
+ --color-muted: oklch(76% 0.025 310);
+ --color-dark-muted: oklch(82% 0.018 310);
+ --color-dark-line: oklch(48% 0.04 314);
+ --color-control-line: oklch(51% 0.025 307);
+ --color-focus: oklch(82% 0.12 64);
+ --color-error-on-dark: oklch(80% 0.12 45);
+}

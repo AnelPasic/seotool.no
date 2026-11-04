@@ -1,0 +1,52 @@
+---
+import type { SpecimenContent as HomepageContent } from '../../design-system/fixtures';
+import '../../styles/compositions/package.css';
+import Arrow from '../Arrow.astro';
+import Visual from './PackageVisual.astro';
+import FocusIcon from '../PackageFocusIcon.astro';
+import TermText from '../TermText.astro';
+import PackageOrder from './PackageOrder.astro';
+interface Props {
+  content: HomepageContent['packages'];
+  showHeading?: boolean;
+  showNotes?: boolean;
+  headingTag?: 'h2' | 'h3';
+  labelledBy?: string;
+  recommendedAnchor?: string;
+  mode?: 'compact' | 'expanded';
+}
+const { content, showHeading = true, showNotes = true, headingTag: Heading = 'h3', labelledBy, recommendedAnchor, mode = 'compact' } = Astro.props;
+const expanded = mode === 'expanded';
+const formatPrice = (value: number) => new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 0 }).format(value);
+---
+<section id="priser" class:list={['package-section', 'package-offer', 'section-space', { 'package-offer-full': expanded }]} aria-labelledby={labelledBy}>
+  <div class="shell">
+    {showHeading && <div class="section-heading"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p></div>}
+    <span id="bestill" class="sr-only" aria-hidden="true"></span>
+    <div class="package-grid">{content.items.map((item, index) => <article id={expanded ? item.detailLink.href.split('#')[1] : undefined} class:list={['package-card',`package-card-${index}`,'card card-border min-w-0',item.recommended?'is-recommended bg-base-300 border-2 border-secondary':'bg-base-100 border-base-300']}>
+      {expanded && index === 1 && recommendedAnchor && item.detailLink.href.split('#')[1] !== recommendedAnchor && <span id={recommendedAnchor} aria-hidden="true"></span>}
+      <div class="card-body min-w-0 gap-0">
+      <div class="package-top"><div class="package-heading"><Heading>{item.title}</Heading>{item.recommended && item.badge && <span class="package-badge badge badge-success">{item.badge}</span>}</div>
+      <div class="package-price"><p>{item.pricePrefix && <span class="package-price-prefix">{item.pricePrefix} </span>}<span class="package-price-amount">{formatPrice(item.price)}</span> <span class="package-price-unit">{item.priceSuffix}</span></p><p class="small-copy">{item.vatSuffix}</p></div></div>
+      <p class="package-descriptor">{item.descriptor}</p>
+      <Visual kind={item.visual} motifId={`package-${expanded ? 'pricing' : 'home'}-${item.key}`} asset={item.visualAsset} caption={item.visualCaption} />
+      <h3 class="package-block-heading">{content.fitLabel}</h3>
+      <p class="package-fit">{item.compact.fit}</p>
+        <div class="package-situations"><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.compact.situations.map(text => <li>{text}</li>)}</ul></div>
+        <div class="package-focus"><ul class:list={['package-icon-items', { 'package-combos': index === 1 }]}>{item.iconItems.map(focus => <li><FocusIcon kind={focus.icon} /><span><TermText text={focus.compactLabel} terms={[]} /></span></li>)}</ul></div>
+      <PackageOrder item={item} featured={item.recommended} orderIntro={content.orderIntro} orderSubmitLabel={content.orderSubmitLabel} />
+      <details class="package-details" open={expanded}><summary>{item.detailLink.label}</summary><div class="package-detail">
+        <div><h3 class="package-block-heading">{content.fitLabel}</h3><p>{item.fit}</p></div>
+        {item.typicalBusiness && <div><h3 class="package-block-heading">{content.labels.typicalBusiness}</h3><p>{item.typicalBusiness}</p></div>}
+        <div><h3 class="package-block-heading">{content.labels.situations}</h3><ul>{item.situations.map(text => <li>{text}</li>)}</ul></div>
+        <div><h3 class="package-block-heading">{index === 1 ? content.labels.combinations : index === 2 ? content.labels.workAreas : content.labels.focus}</h3><ul class="package-long-icons">{item.iconItems.map(focus => <li><p class="package-focus-label">{focus.label}</p>{focus.description && <p class="package-focus-description">{focus.description}</p>}</li>)}</ul></div>
+        {item.scope && <div class="package-work"><h3 class="package-block-heading">{content.scopeLabel}</h3><p>{item.scope}</p></div>}
+        {item.distinction && <p class="package-distinction">{item.distinction}</p>}
+        <p class="package-selection">{item.selectionRule}</p>
+        {item.priceNote && <p class="package-price-note">{item.priceNote}</p>}
+      </div></details>
+      </div>
+    </article>)}</div>
+    {showNotes && <div class="package-notes body-copy"><p class="package-budget-note">{content.adBudgetNote}</p><a class="text-link package-uncertain" href="/design-system/">{content.labels.uncertain}<Arrow /></a></div>}
+  </div>
+</section>

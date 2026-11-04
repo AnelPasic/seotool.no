@@ -1,0 +1,10 @@
+---
+import { resolvePackageAsset, type PackageAsset } from '../../lib/package-visual';
+import Motif from './PackageMotif.astro';
+interface Props { kind: 'controlled' | 'accelerating' | 'tracks'; motifId: string; asset?: PackageAsset; caption?: { label: string; support?: string }; }
+const { kind, motifId, asset, caption } = Astro.props;
+const supplied = resolvePackageAsset(asset);
+---
+<div class={`package-visual-area package-visual-area-${kind}`} data-supplied={String(Boolean(supplied))} data-editorial={String(!supplied)}>
+{supplied ? <img class="package-visual-asset" src={supplied.src} alt={supplied.alt} loading="lazy" decoding="async" width="640" height="480" data-vector={String(supplied.src.endsWith('.svg'))} style={{ objectPosition: `${supplied.positionX ?? 50}% ${supplied.positionY ?? 50}%` }} /> : <div class:list={['package-infographic', { 'has-caption': Boolean(caption) }]}><Motif kind={kind} id={motifId} />{caption && <div class="package-visual-caption"><p>{caption.label}</p>{caption.support && <p>{caption.support}</p>}</div>}</div>}
+</div>

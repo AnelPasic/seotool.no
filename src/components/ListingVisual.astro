@@ -1,0 +1,16 @@
+---
+import type { ListingVisual } from '../page-builder';
+import PackageFocusIcon from './PackageFocusIcon.astro';
+interface Props { visual: ListingVisual; }
+const { visual } = Astro.props;
+---
+<div class="listing-visual" data-kind={visual.kind} aria-hidden={visual.kind === 'icon' ? 'true' : undefined}>
+  {visual.kind === 'image' ? <img src={visual.src} alt={visual.alt} width="1200" height="800" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /> :
+    visual.icon === 'trend' ? <svg class="package-focus-icon" width="96" height="96" viewBox="0 0 256 256" fill="currentColor" aria-hidden="true" focusable="false"><path d="M240,56v64a8,8,0,0,1-16,0V75.31l-82.34,82.35a8,8,0,0,1-11.32,0L96,123.31,29.66,189.66a8,8,0,0,1-11.32-11.32l72-72a8,8,0,0,1,11.32,0L136,140.69,212.69,64H168a8,8,0,0,1,0-16h64A8,8,0,0,1,240,56Z"/></svg> : <PackageFocusIcon kind={visual.icon} />}
+</div>
+<style>
+  .listing-visual { width: 100%; min-width: 0; aspect-ratio: 3 / 2; overflow: hidden; border-radius: var(--radius-card-lg); }
+  .listing-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .listing-visual[data-kind="icon"] { aspect-ratio: 16 / 9; display: grid; place-items: center; background: var(--color-base-300); color: var(--surface-light-ink); padding: var(--panel-pad-lg); }
+  .listing-visual :global(svg) { width: clamp(64px, 8vw, 112px); height: auto; }
+</style>

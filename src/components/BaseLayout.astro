@@ -1,0 +1,38 @@
+---
+import type { BuilderPage } from '../page-builder';
+import { publicPath } from '../page-builder';
+import { chrome } from '../lib/load-site';
+import SiteChromeHeader from './SiteChromeHeader.astro';
+import SiteChromeFooter from './SiteChromeFooter.astro';
+import SiteChromeThemeHead from './SiteChromeThemeHead.astro';
+import SiteChromeSearchHead from './SiteChromeSearchHead.astro';
+import '@fontsource-variable/instrument-sans';
+import '@fontsource-variable/figtree';
+import '../styles/global.css';
+type Props = {page:BuilderPage;title?:never;description?:never;noindex?:never}|{page?:never;title:string;description:string;noindex:true};
+const { page } = Astro.props;
+const noindex=Astro.props.noindex||page?.slug==='404';
+const seo=page?.seo??{title:Astro.props.title!,description:Astro.props.description!};
+const canonical = new URL(page?publicPath(page.slug):Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="nb">
+<head>
+  <!-- Establish order before Astro's component CSS chunks can create a layer. -->
+  <style is:inline>@layer theme, base, composition, components, utilities, project;</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {noindex && <meta name="robots" content="noindex,nofollow" />}
+  <meta name="description" content={seo.description} />
+  <link rel="canonical" href={canonical.href} />
+  <title>{seo.title}</title>
+  <SiteChromeThemeHead themes={chrome.themes} typography={chrome.typography} enabled={chrome.headerOptions.showThemeSwitch} />
+  <SiteChromeSearchHead config={chrome} />
+</head>
+<body class="site-shell" data-ui-shell>
+  <SiteChromeHeader config={chrome} />
+  <main id="main" data-pagefind-body={noindex ? undefined : ''} data-pagefind-ignore={noindex ? 'all' : undefined}><slot /></main>
+  <SiteChromeFooter config={chrome} />
+  {chrome.headerOptions.showSearch && chrome.search?.mode === 'pagefind' && <pagefind-modal reset-on-close></pagefind-modal>}
+</body>
+</html>

@@ -1,0 +1,8 @@
+---
+import PageList from '../PageList.astro';
+import {listItems} from '../../design-system/fixtures';
+import type {PageListConfig} from '../../page-builder';
+interface Props {section:{id:string;heading:string;pageList:Partial<PageListConfig>};}
+const {section}=Astro.props;
+---
+<PageList id={section.id} heading={section.heading} items={listItems} layout={section.pageList.layout??'cards'} columns={section.pageList.columns}/>

@@ -1,0 +1,23 @@
+---
+import SiteLayout from '../../components/BaseLayout.astro';
+import ProofList from '../../components/specimens/ProofList.astro';
+const specimens:{id:string;title:string;description:string;count:number;layout:'mediaCards'|'alternating'}[]=[
+ {id:'proof-list-standard',title:'Global standard – fiktiv',description:'Tre fiktive oppføringer.',count:3,layout:'mediaCards'},
+ {id:'proof-list-kort',title:'Bildekort – to fiktive oppføringer',description:'Kun komponentkontroll.',count:2,layout:'mediaCards'},
+ {id:'proof-list-vekslende',title:'Vekslende – fiktive oppføringer',description:'Fiktivt innhold i vekslende oppsett.',count:2,layout:'alternating'},
+ {id:'proof-list-en',title:'Én fiktiv oppføring',description:'Ingen reell virksomhet eller resultatpåstand.',count:1,layout:'mediaCards'},
+];
+---
+<SiteLayout title="ProofList – intern komponentkontroll" description="Visuell kontroll av ProofList i begge daisyUI-temaer." noindex>
+  <header class="section-space bg-base-100 text-base-content">
+    <div class="shell">
+      <p class="eyebrow">Designsystem · intern QA</p>
+      <h1>ProofList</h1>
+      <p>Her sammenlignes én, to og flere caser med ulike visninger. Alle navn og tall er fiktive. Ingen produksjonsdata eller godkjenninger lastes. Produksjons-ProofList er fortsatt en separat, beskyttet integrasjon.</p>
+    </div>
+  <div class="shell"><a class="link" href="/design-system/">Til designsystemet</a></div></header>
+  {specimens.map(item=><div data-proof-list-specimen={item.id}>
+    <div class="shell pt-12 pb-4"><h2>{item.title}</h2><p>{item.description}</p></div>
+    <ProofList sectionId={item.id} count={item.count} layout={item.layout} />
+  </div>)}
+</SiteLayout>

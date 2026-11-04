@@ -1,0 +1,12 @@
+---
+import type { SharedContent, BuilderPage } from '../page-builder';
+import OsloHomeSection from './OsloHomeSection.astro';
+import OsloContentSection from './OsloContentSection.astro';
+type Section=Partial<SharedContent> & Pick<SharedContent,'id'|'heading'>;
+interface Props {section:Section;family?:BuilderPage['kind'];index?:number;}
+const {section,family='home',index=0}=Astro.props;
+const cta=section.presentation==='cta';
+---
+{cta||family==='home'||family==='service'||family==='index'
+  ? <OsloHomeSection section={section} infoSurface={cta} linkVariant={cta?'button':undefined}/>
+  : <OsloContentSection section={section} index={index}/>}

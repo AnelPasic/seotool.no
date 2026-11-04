@@ -1,0 +1,7 @@
+---
+import type { faqItemSchema } from '../page-builder';
+import type { z } from 'astro/zod';
+interface Props {items:readonly z.infer<typeof faqItemSchema>[];id?:string;heading?:string;eyebrow?:string;}
+const {items,id='sporsmal',heading,eyebrow='Greit å vite'}=Astro.props;
+---
+{items.length > 0 && <section id={id} class="faq-section section-space"><div class="shell faq-grid"><div><p class="eyebrow">{eyebrow}</p><h2>{heading??<>Før du tar<br />neste steg.</>}</h2></div><div class="faq-list">{items.map(item => <details class="collapse collapse-plus"><summary class="collapse-title">{item.question}</summary><div class="collapse-content"><p>{item.answer}</p></div></details>)}</div></div></section>}

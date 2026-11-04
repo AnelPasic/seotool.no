@@ -1,0 +1,174 @@
+---
+// Oslo design-system.astro @9719e4c; UI copied, all data replaced by fictional fixtures.
+import SiteLayout from '../components/BaseLayout.astro';
+import PackageSection from '../components/specimens/PackageSection.astro';
+import PageList from '../components/specimens/PageList.astro';
+import CommercialHero from '../components/Hero.astro';
+import HomeSection from '../components/OsloHomeSection.astro';
+import ContentCard from '../components/ContentCard.astro';
+import HomeAssessment from '../components/specimens/HomeAssessment.astro';
+import Faq from '../components/Faq.astro';
+import {fixtureHero,heroProofFixture,ordinary,assessment,faq,packages} from '../design-system/fixtures';
+import {contentLayoutValues,boxVariantValues} from '../lib/content-presentation';
+import type {PageListConfig} from '../page-builder';
+import '../styles/compositions/home.css';
+const isHomepageSectionVisible=(_section:unknown)=>true;
+const examples=[{...ordinary,id:'ds-shared-one'},{...ordinary,id:'ds-shared-two',heading:'En annen plassering av en felles kilde'}];
+const pageList={id:'ds-list',heading:'Fiktiv liste',pageList:{}};
+const layoutLabels={'default':'Standard (automatisk)','two-columns':'To kolonner','three-columns':'Tre kolonner','stacked':'Liste (én kolonne)'};
+const boxLabels={'default':'Standard (automatisk)','plain':'Åpen boks (eldre data)','card':'Kort'};
+const pageListLayouts: {key:PageListConfig['layout'];label:string;description:string}[]=[
+ {key:'cards',label:'Kort',description:'Kortliste med tittel, beskrivelse og eventuell lenke.'},
+ {key:'mediaCards',label:'Bildekort',description:'Kort med bilde eller illustrasjon og tilhørende tekst.'},
+ {key:'alternating',label:'Vekslende bilde og tekst',description:'Én fullbredde oppføring med bilde og tekst annenhver side.'},
+ {key:'compact',label:'Kompakt',description:'Tette redaksjonelle rader uten kortflate.'},
+ {key:'links',label:'Lenker',description:'Enkel lenkeliste uten ekstra kortinnhold.'},
+];
+const pageListColumns=[1,2,3] as const;
+const heroLayoutValues=['split-right','split-left','centered','centered-none'] as const;
+const heroPresetLabels={'split-right':'Tekst til venstre, bilde til høyre','split-left':'Bilde til venstre, tekst til høyre','centered':'Sentrert med bilde','centered-none':'Sentrert uten bilde'};
+const heroExamples=[
+ ...heroLayoutValues.map(layout=>({key:layout,label:heroPresetLabels[layout],purpose:'CMS-valg',preset:layout,hero:{...fixtureHero,layout}})),
+ {key:'short',label:'Kort overskrift',purpose:'Stresstest',preset:undefined,hero:{...fixtureHero,title:'Et tydelig sted.'}},
+ {key:'service',label:'Tjeneste – samme CMS-valg og bevart bilde',purpose:'Sidekilde / kontekst',preset:undefined,hero:{...fixtureHero,family:undefined},family:'service' as const},
+ {key:'pricing',label:'Priser – fiktivt eksempel',purpose:'Sidekilde / kontekst',preset:undefined,hero:{...fixtureHero,family:'pricing' as const,secondaryCta:undefined}},
+ {key:'long',label:'Lang overskrift',purpose:'Stresstest',preset:undefined,hero:{...fixtureHero,layout:'centered' as const,title:'En bevisst lang norsk overskrift som viser hvordan innhold og naturlig linjebryting fungerer for dem som vurderer et tydelig neste steg.'}},
+];
+const colors=['base-100','base-200','base-300','base-content','primary','primary-content','secondary','secondary-content','accent','accent-content','neutral','neutral-content','info','info-content','success','success-content','warning','warning-content','error','error-content'];
+const daisyCardSamples = [
+  {name:'base-100',classes:'bg-base-100 text-base-content'},
+  {name:'base-200',classes:'bg-base-200 text-base-content'},
+  {name:'base-300',classes:'bg-base-300 text-base-content'},
+  {name:'primary',classes:'bg-primary text-primary-content'},
+  {name:'secondary',classes:'bg-secondary text-secondary-content'},
+  {name:'accent',classes:'bg-accent text-accent-content'},
+  {name:'neutral',classes:'bg-neutral text-neutral-content'},
+  {name:'info',classes:'bg-info text-info-content'},
+  {name:'success',classes:'bg-success text-success-content'},
+  {name:'warning',classes:'bg-warning text-warning-content'},
+  {name:'error',classes:'bg-error text-error-content'},
+] as const;
+const ds={section:'ds-section border-t border-base-300 pt-12 md:pt-16 space-y-8 md:space-y-10',group:'ds-group space-y-5 md:space-y-6',specimen:'ds-specimen rounded-box border border-base-300 bg-base-100 p-6 md:p-8',type:'ds-type-specimen grid gap-4 md:grid-cols-[10rem_minmax(0,1fr)] md:gap-8 py-7 md:py-9 border-b border-base-300',grid:'ds-grid-demo space-y-6 md:space-y-8'};
+---
+<SiteLayout title="Designsystem – intern gjennomgang" description="Intern gjennomgang av tema, typografi og komponenter." noindex>
+ <div data-theme-root class="design-system bg-base-200 text-base-content">
+  <header class="mx-auto max-w-7xl px-5 pt-12 pb-16 md:pt-16 md:pb-20 space-y-8">
+   <div class={ds.group}><p class="badge badge-warning">Internt / kun for gjennomgang · DRAFT</p><h1>Felles designsystem</h1><p class="type-lead">Tema, typografi og komponenter – visuell kontroll i Light og Dark.</p></div>
+   <fieldset class={ds.specimen} data-ds-theme-picker><legend class="font-semibold px-2">Temasammenligning</legend><div class="flex flex-col md:flex-row flex-wrap gap-5 md:gap-8">
+    <label class="flex items-center gap-3"><input type="radio" name="design-system-theme" class="radio" value="light" data-design-theme-mode checked /> Light</label>
+    <label class="flex items-center gap-3"><input type="radio" name="design-system-theme" class="radio" value="dark" data-design-theme-mode /> Dark</label>
+   </div><p class="text-sm mt-4 opacity-75">Bruker nettsidens faktiske Light- og Dark-tema fra Pages CMS. Valget oppdaterer også header og footer.</p></fieldset>
+   <p>Eksemplene er til intern visuell vurdering. Skjemaet sender ingen opplysninger.</p>
+  <nav class="flex flex-wrap gap-5" aria-label="Interne komponentgallerier"><a class="link" href="/design-system/global-elements/">Globale elementer</a><a class="link" href="/design-system/proof-list/">ProofList</a></nav></header>
+  <div class="mx-auto max-w-7xl px-5 pb-20 md:pb-28 space-y-16 md:space-y-24">
+   <section class={ds.section}><div class={ds.group}><h2>Semantiske farger og geometri</h2><p>Farger, radiuser og felthøyder fra det felles temaet.</p></div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">{colors.map(color=><div class="card bg-base-100 border border-base-300 overflow-hidden"><div class="h-16" style={`background:var(--color-${color})`}></div><p class="p-4 break-words">{color}</p></div>)}</div>
+    <div class={ds.group}><h3>Geometri</h3><div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><div class="border border-base-300 rounded-selector p-5">Valg: 6 px</div><div class="border border-base-300 rounded-field p-5">Felt: 8 px / 48 px høyde</div><div class="border border-base-300 rounded-box p-5">Kort: 20 px</div><div class="border border-base-300 rounded-feature p-5">Fremhevet: 24 px</div></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Typografi</h2><p>Hver rad viser én rolle i den godkjente skalaen.</p></div>
+    <div class={ds.specimen}>
+     <article class={ds.type}><p class="eyebrow">Display</p><p class="type-display">Mer ut av trafikken.</p></article>
+     <article class={ds.type}><p class="eyebrow">H1</p><p class="type-h1">Et tydelig utgangspunkt</p></article>
+     <article class={ds.type}><p class="eyebrow">H2</p><h2>Bedre sammenheng</h2></article>
+     <article class={ds.type}><p class="eyebrow">H3</p><h3>Små forbedringer som virker sammen</h3></article>
+     <article class={ds.type}><p class="eyebrow">H4</p><h4>Neste steg</h4></article>
+     <article class={ds.type}><p class="eyebrow">Lead</p><p class="type-lead">Vi ser på hele veien fra søk til henvendelse.</p></article>
+     <article class={ds.type}><p class="eyebrow">Body</p><p>En god nettside gjør det lett å forstå tilbudet og velge neste steg. Når innhold og struktur virker sammen, blir det enklere å finne frem. Dette er et internt eksempel med flere setninger og naturlig linjebryting.</p></article>
+     <article class={ds.type}><p class="eyebrow">Meta / Eyebrow</p><div class="space-y-5"><p class="eyebrow">Liten overskrift / eyebrow</p><p class="small-copy">Metadata · Oppdatert 15. oktober 2026</p></div></article>
+    </div>
+    <div class={ds.group}><h3>Lang overskrift</h3><div class={ds.specimen}><h2>En svært lang norsk overskrift om hvordan synlighet og konvertering kan gjøre det enklere å finne et tydelig sted å starte</h2></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Hero-varianter</h2><p>De fire første eksemplene er valgene i Hero → Oppsett i Pages CMS, med samme navn og samme Hero. Sentrert uten bilde skjuler bildet uten å slette det, beskrivelsen eller utsnittet. Sentrert med bilde viser bare tekst når siden ikke har et lagret bilde. Kort/lang overskrift er stresstester; Tjeneste/Priser viser ulike sidekilder og er ikke ekstra oppsett.</p></div>
+    <div class="space-y-16 md:space-y-24">{heroExamples.map(example=><div class={ds.group} data-hero-demo={example.key} data-cms-hero-preset={example.preset}><p class="eyebrow">{example.purpose}</p><h3>{example.label}</h3><div class="rounded-box border border-base-300 bg-base-100"><CommercialHero hero={example.hero} family={'family' in example?example.family:undefined} featuredProof={'family' in example||example.hero.family?undefined:heroProofFixture} demo /></div></div>)}</div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Knapper og status</h2><p>Varianter og tilstander vurderes i egne grupper.</p></div>
+    <div class={ds.group}><h3>Knapper</h3><div class="flex flex-wrap items-center gap-4"><button class="btn btn-primary" data-theme-sample>Se hvor vi ville startet</button><button class="btn btn-secondary">Les om arbeidsmåten</button><button class="btn btn-ghost">Tilbake</button><a class="btn btn-link" href="#eksempelskjema">Gå til eksempelskjemaet</a><button class="btn btn-primary" disabled>Innsending er stengt</button></div></div>
+    <div class={ds.group}><h3>Merker</h3><div class="flex flex-wrap gap-4"><span class="badge badge-primary">Synlighet</span><span class="badge badge-secondary">Konvertering</span><span class="badge badge-success">Eksempelstatus</span></div></div>
+    <div class={ds.group}><h3>Meldinger</h3><div class="space-y-5"><p class="alert alert-info">Informasjon: Dette er en intern gjennomgang.</p><p class="alert alert-success">Bekreftelse: Eksempelet er klart for vurdering.</p><p class="alert alert-warning">Forhåndsvisning: Innsending er ikke åpnet.</p><p class="alert alert-error">Eksempelfeil: Fyll ut en gyldig nettadresse.</p></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Kort og varierende antall</h2><p>Hver rad viser et eget antall kort med samme indre avstand.</p></div>
+    <div class="space-y-12 md:space-y-16">{[2,3,4].map(count=><div class={ds.grid}><h3>{count} kort</h3><div class:list={['grid gap-6',count===2?'md:grid-cols-2':count===3?'md:grid-cols-3':'md:grid-cols-2 xl:grid-cols-4']}>{Array.from({length:count},(_,index)=><ContentCard title={index===0?'Et tydelig utgangspunkt':'Et neste steg med en bevisst lang norsk overskrift'} text="Vurder innhold, struktur og veien videre i sammenheng." surface={index===1?'base-200':index===2?'secondary':'base-100'}><button slot="actions" class="btn btn-primary">Se eksempelet</button></ContentCard>)}</div></div>)}</div>
+    <div class={ds.group} id="daisyui-kort">
+     <h3>daisyUI Card – semantiske farger</h3>
+     <p>Samme rene daisyUI-kort i alle 11 temafarger. Her kan du sammenligne bakgrunn, tekstkontrast og en standardknapp uten prosjektets egne fargealiaser. Knappene er kun visuelle eksempler.</p>
+     <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-daisy-card-gallery>
+      {daisyCardSamples.map(sample=><article class:list={['card min-w-0 min-h-64 border border-current/10',sample.classes]} data-daisy-card-color={sample.name}>
+       <div class="card-body gap-4">
+        <p class="text-sm font-semibold opacity-80">{sample.name}</p>
+        <h4 class="card-title">Et tydelig kort</h4>
+        <p class="card-copy">Vurder hvordan bakgrunn, overskrift og brødtekst fungerer sammen i et ekte daisyUI-kort.</p>
+        <div class="card-actions mt-auto justify-end"><span class="btn btn-sm">Knapp (demo)</span></div>
+       </div>
+      </article>)}
+     </div>
+    </div>
+    <div class={ds.group}><h3>Kort med bilde</h3><article class="card md:card-side bg-base-100"><figure class="md:w-1/2"><img src="/images/pages/hero-demo.svg" alt="Fiktiv illustrasjon for komponentkontroll" loading="lazy" /></figure><div class="card-body gap-5"><p class="card-copy">Medieeksempel med eksisterende bilde. Ingen ny kundehistorie.</p></div></article></div>
+    <div class={ds.group}><h3>Resultatprimitiv</h3><div class="stats stats-vertical md:stats-horizontal bg-base-100 w-full"><div class="stat"><div class="stat-title">Resultatprimitiv</div><div class="stat-value">–</div><div class="stat-desc">Ingen nye resultatpåstander. Ingen reelle bevisdata er lastet.</div></div><div class="stat"><div class="stat-title">Datagrunnlag</div><div class="stat-value">–</div><div class="stat-desc">Kun demonstrasjon av komponenten.</div></div></div></div>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Spørsmål og skjema</h2><p>Skjemaet er et internt eksempel med deaktivert innsending.</p></div>
+    <div class={ds.group}><h3>Generisk daisyUI collapse</h3><p>Én frittstående accordion. Forsidens faktiske FAQ-seksjon vises separat nedenfor.</p><details class="collapse collapse-plus bg-base-100"><summary class="collapse-title">Kan jeg bruke skjemaet i denne gjennomgangen?</summary><div class="collapse-content"><p>Dette er et internt eksempel. Innsending er deaktivert.</p></div></details></div>
+    <p>Skjemaet nedenfor viser generiske felt og tilstander. Det er en annen komponent enn forsideskjemaet.</p>
+    <form id="eksempelskjema" class="ds-form card bg-base-100" method="dialog" onsubmit="return false" data-specimen-form><div class="card-body gap-7 md:gap-8"><h3>Et uforpliktende eksempel</h3>
+     <label>Nettside eller nettbutikk<input class="input w-full" type="url" placeholder="https://example.invalid" /></label>
+     <label>Hva vil du se nærmere på?<select class="select w-full"><option>Velg et område</option><option>Synlighet og konvertering</option></select></label>
+     <label>En bevisst lang norsk feltetikett som skal kunne brytes over flere linjer på en smal skjerm<textarea class="textarea w-full" rows="3" placeholder="Beskriv kort hva du vil vurdere"></textarea></label>
+     <label>Illustrativt nivå<input class="range range-primary w-full" type="range" min="0" max="100" value="40" /></label>
+     <button class="btn btn-primary self-start" type="submit" disabled>Innsending er ikke åpnet</button>
+    </div></form>
+   </section>
+   <section class={ds.section}><div class={ds.group}><h2>Seksjonsflater og justering</h2><p>Lik ytre avstand og indre polstring i alle flateeksempler.</p></div><div class="grid gap-6 md:gap-8">{['base-100','base-200','info','base-300','secondary'].map((surface,index)=><section class:list={['ds-surface rounded-box p-6 md:p-10 space-y-5',index%2===0?'text-center':'text-left']} style={`background:var(--color-${surface});color:var(--color-${surface==='secondary'?'secondary-content':surface==='info'?'info-content':'base-content'})`}><p class="eyebrow">{surface}</p><h3>{index%2===0?'Sentrert overskrift':'Venstrejustert overskrift'}</h3><p>Felles farger og lesbar tekst i samme designsystem.</p></section>)}</div></section>
+   {isHomepageSectionVisible(ordinary)&&<>
+   <section class={ds.section} id="cms-content-variants"><div class={ds.group}><h2>CMS: seksjonstype, oppsett og boksvariant</h2>
+    <p>Innholdsseksjoner bruker de eksisterende MWS-komponentene. Kalkulator, pakker, kontakt og ProofList vises med fiktive data; produksjonsmodulene er fortsatt beskyttet og deaktivert.</p>
+    <p>Lokale innholdsseksjoner redigeres på siden, felles kilder under Global Innhold. Seksjonsfarge gjelder hele flaten, boksfarge én boks, og oppsett fordeler innholdet. Vanlige bokser bruker alltid native Card. Eldre boksvariantdata er kompatible, men gir ikke en alternativ boksdesign.</p>
+    <p>Hero ligger først. Globale innholdsseksjoner kan gjenbrukes uten å kopiere innholdet. De kommersielle demonstrasjonene nedenfor er interne fixtures, ikke nye aktive CMS-moduler eller godkjente kundeopplysninger.</p>
+   </div>
+    <div class="space-y-12 md:space-y-16">{contentLayoutValues.map(layout=><div class={ds.group} data-content-layout-demo={layout}><h3>Seksjonsoppsett: {layoutLabels[layout]}</h3><p>CMS: Seksjonsoppsett. Samme innhold og samme bokser. Valgte kolonneoppsett blir én kolonne på mobil; Standard beholder seksjonens automatiske fordeling.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,layout}} anchor={`ds-layout-${layout}`} /></div></div>)}</div>
+    <div class={ds.group}><h3>Boksvariant</h3><p>CMS: Alternativer eller steg → Boksvariant. Her holdes innhold, kolonneoppsett og boksfarge like. OWNER #87: alle vanlige bokser bruker native Card. Eldre boksvalg beholdes som data, men endrer ikke dette. Boksfarge velges separat.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-variants',heading:'Samme innhold, tre boksvalg',body:[],layout:'three-columns',items:boxVariantValues.map(boxVariant=>({...ordinary.items![0],title:boxLabels[boxVariant],boxVariant}))}} /></div></div>
+    <div class={ds.group}><h3>Standard følger seksjonen</h3><p>Samme kildeinnhold som Mekanisme, vist med Standard og uten valgt boksfarge. I MWS brukes native Card også for eldre Standard/Åpen boks. Dette er det dokumenterte OWNER-unntaket fra Oslo.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,items:ordinary.items!.map(item=>({...item,boxVariant:'default',surface:'default'}))}} anchor="ds-auto-editorial" /></div></div>
+    <div class={ds.group}><h3>Farge velges separat</h3><p>Kort med tre av de eksisterende H-019-fargene. Oppsett og boksvariant er like.</p><div class="ds-real-example invite-home"><HomeSection section={{...ordinary,id:'ds-box-colors',heading:'Samme kort, ulike flater',body:[],layout:'three-columns',items:(['info','base-300','secondary'] as const).map(surface=>({...ordinary.items![0],title:surface,boxVariant:'card',surface}))}} /></div></div>
+   </section>
+   </>}
+   {isHomepageSectionVisible(ordinary)&&<section class={ds.section}><div class={ds.group}><h2>Kommersielle komponenter – demo</h2><p>Kopierte komponenter med fiktive pakker og testenheter. Ingen tilbud eller bestilling.</p></div><div class="ds-real-example invite-home"><PackageSection content={packages} /></div></section>}
+   <section class={ds.section} id="pagelist-varianter">
+    <div class={ds.group}><h2>PageList – visningstyper og kolonner</h2>
+     <p>Alle fem visningstyper rendres med den samme PageList-komponenten og fiktivt eksempelinnhold. «Antall per rad» kan settes til 1, 2 eller 3 i Pages CMS. På mobil brukes én kolonne; på nettbrett maksimalt to.</p>
+     <p>Vekslende bilde og tekst beholder alltid én oppføring per rad. Hver oppføring inneholder allerede to interne kolonner. Uten et eksplisitt kolonnevalg beholdes dagens automatiske oppsett.</p>
+    </div>
+    <div class="space-y-16 md:space-y-24">
+     {pageListLayouts.map(layout=><div class={ds.group} data-page-list-type={layout.key}>
+      <h3>{layout.label}</h3><p>{layout.description}</p>
+      {(layout.key==='alternating'?([1] as const):pageListColumns).map(columns=><div class={ds.grid} data-page-list-demo-layout={layout.key} data-page-list-demo-columns={columns}>
+       <h4>{columns} {columns===1?'oppføring':'oppføringer'} per rad</h4>
+       <div class="ds-real-example"><PageList section={{...pageList,id:`ds-page-list-${layout.key}-${columns}`,heading:`${layout.label} · ${columns} per rad`,pageList:{...pageList.pageList!,source:'articles',mode:'automatic',limit:3,layout:layout.key,columns}}}  /></div>
+      </div>)}
+     </div>)}
+    </div>
+    <div class="mt-16 space-y-12 md:space-y-16">{examples.map(section=><div class={ds.group}><HomeSection section={section} /></div>)}</div>
+   </section>
+  </div>
+  <section class="space-y-8" id="production-home-sections"><div class="shell space-y-5"><h2>Felles seksjonskomponenter – fiktive data</h2><p>Samme komponentstruktur med nøytralt, fiktivt innhold, vist i hele sidebredden. Eksempel-ID-er er egne; skjemaet har deaktivert innsending og ingen endepunktadresse.</p>{isHomepageSectionVisible(ordinary)&&<><h3>Kontakt: To kolonner (dagens)</h3><p>Demo: samme kontaktkomponent i to oppsett. Et aktivt kundeskjema krever separat godkjent Lead Intake. Disse visningene er ikke aktive CMS-moduler.</p></>}</div>{isHomepageSectionVisible(ordinary)&&<><div class="invite-home"><HomeAssessment section={assessment.section} content={assessment.form} layout="split" specimen /></div><div class="shell space-y-5"><h3>Kontakt: Vannrett (kompakt skjema)</h3><p>Alternativ demonstrasjon med samme fiktive innhold. Nettside, e-post og knapp står på én rad på desktop. Dette er en intern kontroll, ikke et aktivt skjema eller et nytt CMS-valg.</p></div><div class="invite-home"><HomeAssessment section={assessment.section} content={assessment.form} layout="horizontal" specimen /></div></>}{isHomepageSectionVisible(ordinary)&&<><div class="shell"><h3>Forsidens FAQ</h3></div><div class="invite-home"><Faq id="ds-home-faq" {...faq} /></div></>}</section>
+ </div>
+</SiteLayout>
+<script>
+ import {setChromeThemeMode} from '../lib/site-chrome-theme-interactions.ts';
+ const inputs=document.querySelectorAll<HTMLInputElement>('[data-design-theme-mode]');
+ const sync=()=>{
+   const mode=document.documentElement.dataset.mwsThemeMode==='dark'?'dark':'light';
+   inputs.forEach(input=>{input.checked=input.value===mode;});
+ };
+ inputs.forEach(input=>input.addEventListener('change',()=>{
+   if(input.checked&&(input.value==='light'||input.value==='dark'))setChromeThemeMode(input.value);
+ }));
+ new MutationObserver(sync).observe(document.documentElement,{attributes:true,attributeFilter:['data-mws-theme-mode']});
+ sync();
+</script>
+<style>
+ .design-system { overflow-wrap: anywhere; }
+ .design-system section, .ds-type-specimen > * { min-width: 0; }
+ .ds-form label { display: block; font-size: var(--type-form-label); line-height: var(--leading-small); }
+ .ds-form label input, .ds-form label select, .ds-form label textarea { display: block; margin-top: 12px; }
+ .ds-real-example :global(.section-space) { padding-block: 24px; }
+ .type-display, .type-h1 { font-family: var(--heading); font-size: var(--type-display); font-weight: var(--weight-heading); line-height: var(--leading-display); }
+ .type-lead { font-size: var(--type-lead); line-height: var(--leading-lead); }
+</style>

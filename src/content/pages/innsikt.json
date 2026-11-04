@@ -1,0 +1,65 @@
+{
+  "slug": "innsikt",
+  "kind": "service",
+  "seo": {
+    "title": "Innsikt og artikler – SeoTool",
+    "description": "Faglige artikler om søkemotoroptimalisering, AI-synlighet og datadrevet forbedring fra SeoTool."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Kunnskapsbase",
+    "title": "Innsikt om søk, kunstig intelligens og synlighet.",
+    "support": "Lær hvordan søkemotorene og AI-modellene henter informasjon, og hvordan du forbedrer nettsidens autoritet basert på observerbare data.",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Analyser nettsiden",
+      "href": "/gratis-analyse/"
+    }
+  },
+  "listing": {
+    "title": "Innsikt",
+    "summary": "Fagartikler, veiledninger og oppdateringer innen SEO og AI-søk.",
+    "order": 6,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Hvilke temaer dekkes i innsiktsartiklene?",
+      "answer": "Vi dekker teknisk SEO, Search Console-analyse, AI Overviews, kildehenvisninger i språkmodeller og metoder for datadrevet optimalisering."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "pageList",
+      "id": "artikler",
+      "heading": "Publiserte artikler og analyser",
+      "visibility": "visible",
+      "pageList": {
+        "source": "articles",
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 6,
+        "layout": "cards",
+        "entries": []
+      }
+    },
+    {
+      "_block": "content",
+      "id": "om-innsikten",
+      "heading": "Saklig kunnskap uten myter",
+      "visibility": "visible",
+      "body": [
+        "Søkebransjen er preget av spekulasjoner og udokumenterte påstander. Våre artikler tar utgangspunkt i faktiske målinger, offisiell dokumentasjon fra søkemotorene og etterprøvbare tester.",
+        "Vi skiller tydelig mellom direkte observasjoner og tolkninger, slik at du kan ta trygge beslutninger for ditt eget nettsted."
+      ],
+      "links": [
+        {
+          "label": "Be om en analyse av ditt nettsted",
+          "href": "/gratis-analyse/"
+        }
+      ]
+    }
+  ]
+}

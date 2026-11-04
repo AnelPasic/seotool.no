@@ -1,0 +1,139 @@
+/* H-023B: component-owned package composition; palette and primitives belong to app.css/daisyUI. */
+@layer composition {
+
+.invite-home .package-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-lg); margin-top: 44px; }
+.invite-home .package-section { background: var(--color-base-200); }
+.invite-home .package-heading { display: flex; align-items: center; justify-content: space-between; gap: var(--gap-sm); flex-wrap: wrap; }
+.invite-home .package-descriptor { font-size: var(--type-body-lg); margin-top: 14px; line-height: var(--leading-body); }
+.invite-home .package-card dl { margin: 32px 0; }
+.invite-home .package-card dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
+.invite-home .package-card dd { margin: 6px 0 18px; font-size: var(--type-body-sm); color: var(--muted); line-height: var(--leading-body); }
+.invite-home .package-price { margin-top: auto; padding-top: 20px; border-top: 1px solid var(--line); }
+.invite-home .package-price > p:first-child { font-family: var(--heading); font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); letter-spacing: -.03em; }
+.invite-home .package-price-amount { font-size: var(--type-h3); line-height: var(--leading-h3); }
+.invite-home .package-price-unit { font-family: var(--body); font-size: var(--type-meta); letter-spacing: 0; white-space: nowrap; line-height: var(--leading-small); }
+.invite-home .package-price .small-copy { font-size: var(--type-meta); margin-top: 14px; line-height: var(--leading-small); }
+.invite-home .package-notes { margin-top: 40px; font-size: var(--type-meta); line-height: var(--leading-small); color: var(--muted); }
+.invite-home .package-notes p + p { margin-top: 10px; }
+.invite-home .package-budget-note { font-weight: var(--weight-heading); color: var(--ink); }
+.invite-home .package-card .button { margin-top: 24px; }
+@media (max-width: 900px) {
+  .invite-home .package-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .invite-home .package-card .button { align-self: start; }
+}
+@media (max-width: 650px) {
+  .invite-home .package-grid { gap: var(--gap); margin-top: 32px; }
+}
+.invite-home .package-offer .package-grid { align-items: start; gap: var(--gap); }
+.invite-home .package-offer-full { padding-block: 24px 36px; }
+/* Package-card remains only as a feature-specific hook; daisyUI owns border, surface, padding and radius. */
+.invite-home .package-offer .package-card { min-height: 770px; }
+.invite-home .package-offer .package-top { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: var(--gap-sm); min-height: 68px; }
+.invite-home .package-offer .package-heading { display: flex; flex-direction: column; align-items: start; gap: var(--gap-xs); }
+.invite-home .package-offer .package-heading h2, .invite-home .package-offer .package-heading h3 { font-size: var(--type-h4); line-height: var(--leading-h4); }
+.invite-home .package-offer .package-price { margin: 0; border: 0; padding: 0; text-align: right; }
+.invite-home .package-offer .package-price > p:first-child { font-size: var(--type-body-lg); line-height: var(--leading-body); }
+.invite-home .package-offer .package-price-amount { font-size: var(--type-h3); line-height: var(--leading-h3); }
+.invite-home .package-offer .package-price-unit { font-size: var(--type-meta); line-height: var(--leading-small); }
+.invite-home .package-offer .package-price .small-copy { margin-top: 4px; }
+.invite-home .package-offer .package-price-prefix { font-size: var(--type-meta); margin-right: .2em; line-height: var(--leading-small); }
+.invite-home .package-offer .package-descriptor { font-family: var(--heading); font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); margin-top: 12px; min-height: 28px; }
+.invite-home .package-offer .package-visual-area { height: 120px; width: 100%; margin-block: 16px; border-radius: var(--radius-md); overflow: hidden; display: grid; place-items: center; background: var(--color-info); color: var(--color-primary); }
+.invite-home .package-offer .package-visual-area-accelerating { background: #e4dbf1; color: var(--color-secondary); }
+.invite-home .package-offer .package-visual-area-tracks { background: #efe8f1; color: #5a4070; }
+.invite-home .package-offer .package-visual { width: 100%; height: 100%; }
+.invite-home .package-offer .package-visual-area[data-supplied="true"] { background: transparent; }
+.invite-home .package-offer .package-block-heading { font-family: var(--body); font-size: var(--type-label); font-weight: var(--weight-heading); line-height: var(--leading-small); letter-spacing: 0; margin-bottom: 6px; }
+.invite-home .package-offer .package-fit, .invite-home .package-offer .package-detail { font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
+.invite-home .package-offer .package-fit { margin-bottom: 16px; }
+.invite-home .package-offer .package-situations { margin-bottom: 16px; }
+.invite-home .package-offer .package-situations ul, .invite-home .package-offer .package-icon-items { margin: 0; }
+.invite-home .package-offer .package-situations ul { padding-left: 18px; font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--muted); }
+.invite-home .package-offer .package-situations li + li { margin-top: 7px; }
+.invite-home .package-offer .package-focus { margin-bottom: 16px; }
+.invite-home .package-offer .package-icon-items { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap-sm); }
+.invite-home .package-offer .package-icon-items li { display: flex; gap: var(--gap-xs); align-items: start; min-width: 0; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+.invite-home .package-offer .package-icon-items span { min-width: 0; overflow-wrap: anywhere; }
+.invite-home .package-offer .package-focus-icon { flex-shrink: 0; width: 20px; height: 20px; color: var(--color-primary); }
+.invite-home .package-offer .is-recommended .package-focus-icon { color: var(--color-secondary); }
+.invite-home .package-offer .package-icon-items.package-combos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-sm); }
+.invite-home .package-offer .package-combos li { flex-direction: column; }
+.invite-home .package-offer .package-card .button { margin-top: auto; align-self: stretch; justify-content: space-between; }
+.invite-home .package-offer .package-uncertain { margin-top: 16px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+.invite-home .package-offer .package-details { margin-top: 12px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+.invite-home .package-offer .package-details summary { cursor: pointer; padding-block: 8px; }
+.invite-home .package-offer .package-details summary:focus-visible, .invite-home .multiplier-detail summary:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+.invite-home .package-offer .package-detail { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 24px; }
+.invite-home .package-offer .package-detail > * + * { margin-top: 24px; }
+.invite-home .package-offer .package-detail ul { padding-left: 18px; }
+.invite-home .package-offer .package-detail li + li { margin-top: 12px; }
+.invite-home .package-offer .package-focus-label { color: var(--ink); }
+.invite-home .package-offer .package-focus-description { margin-top: 6px; }
+.invite-home .package-offer .package-price-note { font-size: var(--type-meta); color: var(--muted); line-height: var(--leading-small); }
+.invite-home .pricing-decision { background: var(--color-base-100); padding-block: 40px 48px; }
+.invite-home .pricing-decision h2 { max-width: 900px; }
+.invite-home .pricing-decision-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 24px; }
+.invite-home .pricing-decision-grid p { border-top: 2px solid var(--line); padding-top: 24px; line-height: var(--leading-body); }
+.invite-home .pricing-multiplier { background: var(--color-secondary); color: var(--color-base-100); padding-block: 48px; }
+.invite-home .pricing-multiplier h2 { max-width: 900px; }
+.invite-home .pricing-multiplier .body-copy { color: var(--color-dark-muted); margin-top: 20px; }
+.invite-home .pricing-multiplier .eyebrow { color: var(--color-accent); }
+.invite-home .multiplier-row { margin-block: 24px; font-family: var(--heading); font-size: var(--type-body-lg); font-weight: var(--weight-heading); line-height: var(--leading-body); }
+.invite-home .multiplier-detail { max-width: 880px; }
+.invite-home .multiplier-detail summary { cursor: pointer; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+/* Former stand-alone order layout removed: forms now expand in each global package card. */
+@media (max-width: 1100px) {
+  .invite-home .package-offer .package-grid { gap: var(--gap-md); }
+}
+@media (max-width: 900px) { .invite-home .package-offer .package-icon-items.package-combos { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .invite-home .package-offer .package-combos li { flex-direction: row; } }
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-grid { gap: var(--gap-lg); }
+}
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-card { min-height: 0; }
+}
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-visual-area { height: 110px; }
+}
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-card .button { margin-top: 0; }
+}
+@media (max-width: 650px) {
+  .invite-home .package-offer .package-descriptor { min-height: 0; }
+}
+@media (max-width: 650px) {
+  .invite-home .pricing-decision-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 359px) { .invite-home .package-offer .package-top { gap: var(--gap-xs); } }
+@media (max-width: 359px) { .invite-home .package-offer .package-price-unit { display: block; } }
+.invite-home .package-offer .package-infographic { display: grid; align-items: center; width: 100%; height: 100%; min-height: 0; min-width: 0; padding: 6px 10px; }
+.invite-home .package-offer .package-infographic.has-caption { grid-template-columns: minmax(0, 1.65fr) minmax(104px, 1fr); gap: 10px; }
+.invite-home .package-offer .package-infographic .package-visual { display: block; min-width: 0; min-height: 0; }
+.invite-home .package-offer .package-visual-caption { min-width: 0; padding: 6px 8px; background: #e9fbf5; border-radius: var(--radius-md); overflow-wrap: break-word; }
+.invite-home .package-offer .package-visual-caption p:first-child { font-family: var(--heading); font-size: var(--type-meta); font-weight: var(--weight-heading); line-height: var(--leading-small); letter-spacing: -.01em; }
+.invite-home .package-offer .package-visual-caption p + p { margin-top: 6px; font-size: var(--type-meta); line-height: var(--leading-small); }
+.invite-home .package-offer .package-visual-area[data-editorial="true"] { background: linear-gradient(115deg, var(--color-base-100), #f7fffc); color: var(--ink); }
+.invite-home .package-offer .package-visual-area-accelerating[data-editorial="true"] { background: linear-gradient(115deg, #f7fffc, #e6faf2); }
+@media (max-width: 359px) { .invite-home .package-offer .package-infographic.has-caption { gap: 6px; } }
+
+/* Global package order: compact in-card reveal using existing daisyUI inputs. */
+.invite-home .package-offer .package-order-inline { margin-top: auto; min-width: 0; }
+.invite-home .package-offer .package-order-inline > summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--gap-xs); width: 100%; }
+.invite-home .package-offer .package-order-inline > summary::-webkit-details-marker { display: none; }
+.invite-home .package-offer .package-order-inline > summary:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+.invite-home .package-offer .package-order-inline[open] > summary { margin-bottom: 16px; }
+.invite-home .package-offer .package-order-panel { border-top: 1px solid var(--line); padding-top: 16px; }
+.invite-home .package-offer .package-order-panel h4 { font-size: var(--type-body-lg); line-height: var(--leading-body); font-weight: var(--weight-heading); }
+.invite-home .package-offer .package-order-panel > p { color: var(--muted); font-size: var(--type-body-sm); line-height: var(--leading-body); margin-top: 8px; }
+.invite-home .package-offer .package-order-panel form { display: grid; gap: 12px; margin-top: 16px; }
+.invite-home .package-offer .package-order-panel label { font-size: var(--type-label); font-weight: var(--weight-label); }
+.invite-home .package-offer .package-order-fields { display: grid; gap: 8px; }
+.invite-home .package-offer .package-order-panel .form-privacy { font-size: var(--type-helper); color: var(--muted); line-height: var(--leading-small); }
+.invite-home .package-offer .package-order-panel .form-notice { font-size: var(--type-helper); line-height: var(--leading-small); }
+.invite-home .package-offer .package-order-panel .package-order-submit { margin: 4px 0 0; width: 100%; }
+.invite-home .package-offer .package-order-panel .package-order-submit:disabled { opacity: .65; cursor: not-allowed; }
+
+}

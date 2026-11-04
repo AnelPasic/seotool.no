@@ -1,0 +1,78 @@
+---
+// Specimen-only Oslo HomeProof presentation. Production approval registries are never imported.
+import TermText from '../TermText.astro';
+import ListingVisual from '../ListingVisual.astro';
+import {proofRecords} from '../../design-system/fixtures';
+interface Props {sectionId:string;count?:number;layout?:'mediaCards'|'alternating';primary?:boolean;}
+const {sectionId,count=3,layout='mediaCards',primary=false}=Astro.props;
+const cases=proofRecords.slice(0,count);
+const content={eyebrow:'Fiktive testenheter – ingen kundebevis',heading:'Eksempler på ProofList',beforeLabel:'Eksempel A',afterLabel:'Eksempel B'};
+const visuals=cases.map(()=>({src:'/images/pages/hero-demo.svg',alt:'Nøytral illustrasjon',positionX:50,positionY:50}));
+const visual=visuals[0];
+---
+{cases.length > 0 && <section id={sectionId} class="proof-section section-space bg-base-200 text-base-content"><div class="shell">
+  <div class:list={['section-heading', {'mb-(--gap-lg)': !primary}]}><p class="eyebrow">{content.eyebrow}</p><h2><TermText text={content.heading} terms={['roas', 'checkout', 'organisk-trafikk']} /></h2></div>
+  {primary ? <div class="proof-grid proof-primary">{cases.map((proof,index)=><article class:list={['proof-card',index===0?'proof-featured bg-secondary text-secondary-content':'bg-info text-info-content']}>
+
+    <div class="proof-context">
+      {!primary && index === 0 && visual && <div class="proof-media"><img src={visual.src} alt={visual.alt} width="1011" height="674" loading="lazy" decoding="async" style={{ objectPosition: `${visual.positionX}% ${visual.positionY}%` }} /></div>}
+      <div class="proof-identity"><h3>{proof.displayName}</h3>
+        {(primary || index > 0) && <><p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads', 'checkout', 'organisk-trafikk', 'google-search-console']} /></p>{proof.delta && <p class="proof-delta">{proof.delta}</p>}</>}
+      </div>
+    </div>
+    <div class:list={['proof-result-area', { 'proof-result-featured': !primary && index === 0 }]}>
+      <div class="proof-result-main">
+        {!primary && index === 0 && <p class="proof-metric"><TermText text={proof.dominantMetric} terms={['roas', 'google-ads']} /></p>}
+        <div class="proof-comparison"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="proof-arrow" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
+      </div>
+      {!primary && index === 0 && proof.delta && <p class="proof-delta proof-result-support">{proof.delta}</p>}
+    </div>
+
+  </article>)}</div> :
+  <ul class:list={['proof-home grid list-none p-0 mt-(--gap-lg)',layout==='alternating'?'gap-[clamp(48px,5vw,80px)]':'gap-(--gap)',layout==='mediaCards'&&(cases.length===1?'grid-cols-1':cases.length===2?'grid-cols-1 min-[701px]:grid-cols-2':'grid-cols-1 min-[701px]:grid-cols-2 min-[1101px]:grid-cols-3')]} data-proof-layout={layout} data-count={cases.length}>
+    {cases.map((proof,index)=>{
+      const image=visuals[index];
+      const editorial=layout==='alternating'&&!!image;
+      return <li class="min-w-0"><article class:list={[editorial?'grid grid-cols-1 min-[701px]:grid-cols-2 gap-(--gap) min-[701px]:gap-[clamp(24px,4vw,64px)] items-center':'card card-border bg-base-100 text-base-content h-full overflow-hidden',{'proof-featured':index===0}]} data-proof-index={index} data-has-visual={!!image}>
+        {layout==='mediaCards'&&image&&<div class="[&_.listing-visual]:rounded-none"><ListingVisual visual={{kind:'image',...image}} /></div>}
+        <div class:list={[editorial?'min-w-0 space-y-5':'card-body min-w-0 gap-5 p-(--panel-pad)',editorial&&index%2===1&&'min-[701px]:col-start-2 min-[701px]:row-start-1']}>
+          <h3 class:list={{'card-title':!editorial}}>{proof.displayName}</h3>
+          <p class="card-copy grow-0"><TermText text={proof.dominantMetric} terms={['roas','google-ads','checkout','organisk-trafikk','google-search-console']} /></p>
+          <div class="proof-values grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-start gap-4"><dl><dt>{content.beforeLabel}</dt><dd><strong>{proof.before}</strong><span>{proof.period.before}</span></dd></dl><span class="self-center" aria-hidden="true">-&gt;</span><dl><dt>{content.afterLabel}</dt><dd><strong>{proof.after}</strong><span>{proof.period.after}</span></dd></dl></div>
+          {proof.delta&&<p class="card-copy grow-0">{proof.delta}</p>}
+        </div>
+        {editorial&&image&&<div class:list={['min-w-0',index%2===1&&'min-[701px]:col-start-1 min-[701px]:row-start-1']}><ListingVisual visual={{kind:'image',...image}} /></div>}
+      </article></li>;
+    })}
+  </ul>}
+
+</div></section>}
+
+<style>
+  .proof-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--gap); }
+  .proof-card { min-width: 0; padding: var(--panel-pad-feature); border-radius: var(--radius-card-lg); }
+  .proof-primary .proof-featured { grid-column: 1 / -1; }
+  .proof-primary { grid-template-columns: minmax(0, 1fr); }
+  .proof-primary h3 { margin: 0 0 12px; font-size: var(--type-h3); line-height: var(--leading-h3); }
+  .proof-metric { margin: 0; font-weight: var(--weight-heading); }
+  .proof-delta { margin: 8px 0 0; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+  .proof-comparison { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: start; gap: var(--gap-md); margin: 24px 0 0; max-width: 800px; }
+  .proof-comparison dl { margin: 0; }
+  .proof-primary dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
+  .proof-primary dd { margin: 0; }
+  .proof-comparison strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-stat); line-height: var(--leading-stat); font-weight: var(--weight-heading); overflow-wrap: anywhere; }
+  .proof-primary .proof-featured .proof-comparison strong { font-size: var(--type-display); line-height: var(--leading-stat); }
+  .proof-comparison dd span { display: block; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
+  .proof-arrow { font-size: var(--type-icon); align-self: center; line-height: var(--leading-small); }
+  .proof-primary .proof-context { display: contents; }
+  .proof-identity, .proof-result-area, .proof-result-main { display: contents; }
+  /* Only numerical and period roles are specific to proof; Cards use the theme. */
+  .proof-values dl, .proof-values dd { margin: 0; }
+  .proof-values dt { font-size: var(--type-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
+  .proof-values strong { display: block; font-family: 'Instrument Sans Variable', sans-serif; font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-stat); white-space: nowrap; }
+  .proof-values dd span { display: block; margin-top: var(--gap-xs); font-size: var(--type-meta); line-height: var(--leading-small); }
+  @media (max-width: 700px) {
+    .proof-grid { grid-template-columns: minmax(0, 1fr); }
+    .proof-comparison { gap: var(--gap-xs); }
+  }
+</style>

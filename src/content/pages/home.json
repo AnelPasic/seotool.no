@@ -1,0 +1,85 @@
+{
+  "slug": "home",
+  "kind": "home",
+  "seo": {
+    "title": "SeoTool – Finn ut hva du bør gjøre først i søk og AI",
+    "description": "SeoTool samler data fra nettstedet, Google og AI-tjenester for å gi deg konkrete, prioriterte tiltak for synlighet."
+  },
+  "hero": {
+    "layout": "split-right",
+    "eyebrow": "Søkeinnsikt og handling",
+    "title": "SeoTool forteller deg hva du bør gjøre først — og hvorfor.",
+    "support": "Tradisjonelle verktøy viser hva som skjedde. SeoTool analyserer tekniske feil, søkeintensjon og AI-synlighet for å prioritere dine neste tiltak.",
+    "primaryCta": {
+      "label": "Analyser nettsiden",
+      "href": "/gratis-analyse/"
+    },
+    "secondaryCta": {
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
+    },
+    "visual": {
+      "kind": "image",
+      "image": {
+        "src": "/images/pages/hero-demo.svg",
+        "alt": "SeoTool oversikt",
+        "positionX": 50,
+        "positionY": 50,
+        "kind": "photo"
+      }
+    }
+  },
+  "listing": {
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Hva skiller SeoTool fra tradisjonelle SEO-verktøy?",
+      "answer": "Tradisjonelle verktøy overøser deg med ufiltrerte rapporter. SeoTool prioriterer oppgavene etter forventet effekt og forklarer hvorfor et tiltak bør gjennomføres først."
+    },
+    {
+      "question": "Hvor logger eksisterende brukere inn?",
+      "answer": "Eksisterende brukere logger inn direkte på app.seotool.no."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "kjernefilosofi",
+      "heading": "Fra datafangst til handling",
+      "body": "SeoTool henter tekniske observasjoner, Search Console-data og siteringer fra kunstig intelligens. I stedet for abstrakte poengsummer får du en sortert tiltaksliste forankret i observerbare data.",
+      "visibility": "visible"
+    },
+    {
+      "_block": "sharedContent",
+      "entry": "felles-eksempel",
+      "visibility": "visible"
+    },
+    {
+      "_block": "global",
+      "id": "prosess",
+      "element": "process",
+      "visibility": "visible"
+    },
+    {
+      "_block": "global",
+      "id": "sporsmal",
+      "element": "faq",
+      "visibility": "visible"
+    },
+    {
+      "_block": "pageList",
+      "id": "artikler",
+      "heading": "Siste innsikt",
+      "visibility": "visible",
+      "pageList": {
+        "source": "articles",
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 3,
+        "layout": "alternating",
+        "entries": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+---
+import '../styles/compositions/sections.css';
+import type { SharedContent } from '../page-builder';
+import Arrow from './Arrow.astro';
+import TermText from './TermText.astro';
+import ContentCard from './ContentCard.astro';
+import RichMarkdown from './RichMarkdown.astro';
+import {hasRichMarkdown} from '../lib/rich-markdown';
+import {surfaceAttribute} from '../lib/surface';
+import {headingAlignAttribute} from '../lib/heading-alignment';
+import {contentLayoutAttribute,paragraphLayoutAttribute} from '../lib/content-presentation';
+type Section=Partial<SharedContent> & Pick<SharedContent,'id'|'heading'>;
+interface Props {section:Section;index?:number;visualId?:'behov'|'kanaler';linkVariant?:'button';defaultSurface?:'secondary';anchor?:string;infoSurface?:boolean;}
+const {section:input,visualId,linkVariant,defaultSurface,anchor,infoSurface=false}=Astro.props;
+const section={...input,_block:'content' as 'content'|'protected',body:typeof input.body==='string'?(input.body?[input.body]:[]):input.body??[]};
+const protectedRow=section._block==='protected';
+const terms:string[]=[];
+---
+<section id={anchor??section.id} class:list={[`content-section section-space home-section-${visualId ?? section.id}`,{'bg-info text-info-content':infoSurface}]} data-surface={infoSurface?'info':surfaceAttribute(section.surface, protectedRow)??(protectedRow?undefined:defaultSurface)}>
+  <div class="shell">
+    <div class="section-heading" data-heading-align={headingAlignAttribute(section.headingAlign)}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,protectedRow)}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms}/></p>)}</div></div>
+    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'mechanism-steps': section.id === 'mekanisme', 'max-sm:grid-cols-1':section.id==='mekanisme' }]} data-content-layout={contentLayoutAttribute(section.layout,protectedRow)}>{section.items.map((item,i)=><ContentCard title={item.title} text={item.text} surface={surfaceAttribute(item.surface)??'secondary'} number={section.id==='mekanisme'?String(i+1).padStart(2,'0'):undefined} href={item.href} label={item.label} textTerms={terms} linkVariant="button"/>)}</div>}
+    {section.links && <div class="section-links">{section.links.map(link => <a class:list={['text-link', {'btn btn-primary':protectedRow||linkVariant==='button'}]} href={link.href}>{link.label}<Arrow /></a>)}</div>}
+    <slot />
+  </div>
+</section>

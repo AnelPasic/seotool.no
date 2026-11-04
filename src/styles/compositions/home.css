@@ -1,0 +1,15 @@
+/* H-023B: component-owned home composition; palette and primitives belong to app.css/daisyUI. */
+@layer composition {
+
+.invite-home .need-section { background: var(--color-base-100); padding-block: 64px 88px; }
+.invite-home .item-number { color: var(--green); display: block; font-size: var(--type-label); font-family: var(--body); margin-bottom: 20px; line-height: var(--leading-small); }
+.invite-home .section-links { margin-top: 24px; }
+@media (max-width: 1100px) {
+  .invite-home .need-section { padding-block: 56px 72px; }
+}
+
+@media (max-width: 650px) {
+  .invite-home .need-section { padding-block: 40px 56px; }
+}
+
+}

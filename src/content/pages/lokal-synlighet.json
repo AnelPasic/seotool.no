@@ -1,0 +1,92 @@
+{
+  "slug": "lokal-synlighet",
+  "kind": "service",
+  "seo": {
+    "title": "Lokal synlighet – SeoTool (Under utvikling)",
+    "description": "SeoTool utvikler støtte for lokal synlighet, Google Bedriftsprofil og lokale søkeresultater."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Planlagt modul / Veikart",
+    "title": "Lokal synlighet: Innsikt for bedrifter med fysisk tilstedeværelse.",
+    "support": "Vi bygger dedikert støtte for Google Bedriftsprofil og lokale rangeringer. Modulen er for tiden under aktiv utvikling og lanseres fortløpende.",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Motta varsel ved lansering",
+      "href": "/kontakt/"
+    }
+  },
+  "listing": {
+    "title": "Lokal synlighet",
+    "summary": "Planlagt funksjonalitet for lokal SEO, Google Maps og Google Bedriftsprofil.",
+    "order": 3,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Er lokal synlighet tilgjengelig i dag?",
+      "answer": "Nei, lokal synlighet og Maps-integrasjoner er for tiden under utvikling og ikke aktivert i produksjon. Vi tester funksjonaliteten med utvalgte pilotkunder."
+    },
+    {
+      "question": "Hva vil modulen omfatte når den lanseres?",
+      "answer": "Modulen vil gi innsikt i lokal rangering, sporing av visninger i kartvisning og automatisert oppfølging av Google Bedriftsprofil."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "veikart",
+      "heading": "Kommende funksjonalitet for lokale bedrifter",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "For mange virksomheter er lokal synlighet den mest verdifulle trafikkilden. Vi utvikler verktøy som kobler lokale data direkte til prioriterte tiltak.",
+        "SeoTool publiserer ikke uferdige funksjoner. Nedenfor ser du hva vi arbeider med i neste versjon."
+      ],
+      "items": [
+        {
+          "title": "Google Bedriftsprofil (GBP)",
+          "text": "Overvåking av profilfullføring, kategorivalg og oppdateringsbehov.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Lokal posisjonssporing",
+          "text": "Kartlegging av synlighet i Map Pack basert på geografiske søkeområder.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Lokal autoritet og omtaler",
+          "text": "Systematisering av kundeomtaler og lokale referanser som påvirker tillit.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Integrert prioritering",
+          "text": "Lokale tiltak vektes sammen med teknisk SEO og AI-synlighet i én samlet handlingsplan.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "kontakt-oss",
+      "heading": "Ønsker du pilot-tilgang?",
+      "visibility": "visible",
+      "body": [
+        "Ta kontakt dersom din bedrift ønsker tidlig tilgang til lokalmodulen når den rulles ut til testing.",
+        "I mellomtiden kan du benytte våre operative moduler for teknisk SEO og AI-synlighet."
+      ],
+      "links": [
+        {
+          "label": "Ta kontakt med oss",
+          "href": "/kontakt/"
+        },
+        {
+          "label": "Se operativ SEO-analyse",
+          "href": "/seo/"
+        }
+      ]
+    }
+  ]
+}

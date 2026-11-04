@@ -1,0 +1,92 @@
+{
+  "slug": "slik-fungerer-det",
+  "kind": "service",
+  "seo": {
+    "title": "Slik fungerer SeoTool – Fra data til prioritert handling",
+    "description": "Lær hvordan SeoTool samler inn bevis fra nettstedet, Google og AI for å gi deg en prioritert handlingsplan."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Metode og arkitektur",
+    "title": "Fra spredte datapunkter til en prioritert handlingsplan.",
+    "support": "Nettsted + Google + søkemarked + AI gir bevisgrunnlag. SeoTool prioriterer oppgavene slik at du vet nøyaktig hva du skal gjennomføre først.",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Start en analyse",
+      "href": "/gratis-analyse/"
+    }
+  },
+  "listing": {
+    "title": "Slik fungerer det",
+    "summary": "Den strukturerte metoden bak SeoTool: Bevis, prioritering, handling og måling.",
+    "order": 4,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Hvorfor er prioritering viktigere enn flere feillister?",
+      "answer": "Et nettsted kan ha hundrevis av teoretiske mangler, men bare noen få har faktisk innvirkning på rangering og kundeopplevelse. SeoTool skiller støy fra kritiske flaskehalser."
+    },
+    {
+      "question": "Hvor ofte oppdateres anbefalingene?",
+      "answer": "Når nye data innhentes fra gjennomsøking, Search Console eller AI-kilder, rekalkuleres prioriteringene automatisk."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "prosessen",
+      "heading": "Fire steg fra analyse til resultat",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "Tradisjonell optimalisering stopper ofte ved rapporten. SeoTool er bygget som en beslutningsmotor som leder direkte til handling.",
+        "Modellen bygger på fire sammenhengende faser som sikrer at ressursene brukes der de gir størst uttelling."
+      ],
+      "items": [
+        {
+          "title": "1. Bevisinnsamling",
+          "text": "Teknisk analyse, Search Console-statistikk, søkeintensjon og AI-siteringer samles inn som et samlet faktagrunnlag.",
+          "surface": "base-200"
+        },
+        {
+          "title": "2. Prioritering",
+          "text": "Funnene vektes etter forventet gevinst, vanskelighetsgrad og forretningsmessig verdi fremfor tilfeldige 'helsepoeng'.",
+          "surface": "base-200"
+        },
+        {
+          "title": "3. Konkret handling",
+          "text": "Hver oppgave forklares med hvorfor den betyr noe og hvilke spesifikke endringer som må gjøres på siden.",
+          "surface": "base-200"
+        },
+        {
+          "title": "4. Kontinuerlig måling",
+          "text": "Effekten av gjennomførte tiltak spores over tid for å verifisere forbedring i indeksering og synlighet.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Klar for å oppleve forskjellen?",
+      "visibility": "visible",
+      "body": [
+        "Få en vurdering av nettstedets tilstand og se hvilke oppgaver som bør tas tak i først.",
+        "Ingen binding, ingen automatiserte salgstriks – kun saklig innsikt."
+      ],
+      "links": [
+        {
+          "label": "Gå til gratis analyse",
+          "href": "/gratis-analyse/"
+        },
+        {
+          "label": "Utforsk artikler og veiledninger",
+          "href": "/innsikt/"
+        }
+      ]
+    }
+  ]
+}

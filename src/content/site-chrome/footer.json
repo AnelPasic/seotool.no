@@ -1,0 +1,58 @@
+{
+  "footer": {
+    "about": "SeoTool samler data fra nettstedet, Google og AI-modeller for å gi deg konkrete, prioriterte tiltak for synlighet og organisk vekst.",
+    "groups": [
+      {
+        "heading": "Produktet",
+        "headingHref": "/seo/",
+        "links": [
+          {
+            "label": "SEO",
+            "href": "/seo/"
+          },
+          {
+            "label": "AI-synlighet",
+            "href": "/ai-synlighet/"
+          },
+          {
+            "label": "Lokal synlighet",
+            "href": "/lokal-synlighet/"
+          },
+          {
+            "label": "Slik fungerer det",
+            "href": "/slik-fungerer-det/"
+          }
+        ]
+      },
+      {
+        "heading": "Ressurser",
+        "links": [
+          {
+            "label": "Innsikt og artikler",
+            "href": "/innsikt/"
+          },
+          {
+            "label": "Gratis analyse",
+            "href": "/gratis-analyse/"
+          },
+          {
+            "label": "Kontakt oss",
+            "href": "/kontakt/"
+          }
+        ]
+      },
+      {
+        "heading": "Innlogging",
+        "links": [
+          {
+            "label": "SeoTool App",
+            "href": "https://app.seotool.no"
+          }
+        ]
+      }
+    ],
+    "copyright": "SeoTool",
+    "note": "Offentlig produktnettsted for SeoTool. Den autentiserte applikasjonen kjører på app.seotool.no.",
+    "legalLinks": []
+  }
+}

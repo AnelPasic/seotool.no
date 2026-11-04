@@ -1,0 +1,76 @@
+{
+  "slug": "kontakt",
+  "kind": "utility",
+  "seo": {
+    "title": "Kontakt oss – SeoTool",
+    "description": "Ta kontakt for spørsmål om SeoTool, rådgivning innen SEO og AI-synlighet, eller teknisk veiledning."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "Kundestøtte og dialog",
+    "title": "Hvordan kan vi hjelpe deg?",
+    "support": "Ta kontakt for veiledning om verktøyet, bistand med nettstedet eller spørsmål om våre tjenester.",
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "listing": {
+    "title": "Kontakt",
+    "visible": false
+  },
+  "faq": [
+    {
+      "question": "Hvor henvender eksisterende brukere seg?",
+      "answer": "Brukere med aktivt abonnement eller prosjekt i SeoTool finner prosjektspesifikk hjelp direkte i app.seotool.no."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "henvendelser",
+      "heading": "Velg type henvendelse",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "Vi bistår bedrifter med alt fra tekniske søkerevisjoner til oppsett av kontinuerlig synlighetsovervåking.",
+        "Velg området som passer ditt behov best, så hjelper vi deg videre."
+      ],
+      "items": [
+        {
+          "title": "Bistand med SEO og AI-synlighet",
+          "text": "For virksomheter som ønsker hjelp til å analysere og forbedre sine plasseringer og siteringer.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Spørsmål om SeoTool-plattformen",
+          "text": "Teknisk innsikt, funksjonalitet, demonstrasjoner og tilpasning for organisasjoner.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Eksisterende kunder",
+          "text": "Tilgang til prosjekter, crawler-logger og kontoadministrasjon via app.seotool.no.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "innlogging",
+      "heading": "Allerede bruker av SeoTool?",
+      "visibility": "visible",
+      "body": [
+        "Dersom du har en aktiv SeoTool-konto, logger du inn i den fullstendige applikasjonen nedenfor."
+      ],
+      "links": [
+        {
+          "label": "Be om gratis analyse",
+          "href": "/gratis-analyse/"
+        },
+        {
+          "label": "Les mer om tjenestene våre",
+          "href": "/seo/"
+        }
+      ]
+    }
+  ]
+}

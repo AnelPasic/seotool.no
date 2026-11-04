@@ -1,0 +1,48 @@
+---
+import type { SpecimenContent as HomepageContent } from '../../design-system/fixtures';
+import '../../styles/compositions/assessment.css';
+import Arrow from '../Arrow.astro';
+type AssessmentLayout='split'|'horizontal';
+
+interface Props {
+  section: {id:string;eyebrow?:string;heading:string;body:readonly string[]};
+  content: HomepageContent['form'];
+  specimen?: boolean;
+  layout?: AssessmentLayout;
+}
+const { section, content, specimen = true, layout = 'split' } = Astro.props;
+const horizontal=layout==='horizontal';
+const prefix=horizontal?'ds-home-horizontal':'ds-home';
+const fieldId = (name: string) => specimen ? `${prefix}-${name}` : name;
+const enabled = false;
+---
+<section id={specimen ? `${prefix}-assessment` : section.id} class="assessment-section section-space bg-info text-info-content" data-assessment-layout={layout}><div class:list={['shell assessment-grid grid grid-cols-1 items-start gap-(--gap-lg) min-[1101px]:gap-16',{'min-[901px]:grid-cols-2':!horizontal}]}>
+  <div class:list={['assessment-copy',{'grid min-[901px]:grid-cols-2 gap-x-(--gap-lg) pt-0':horizontal}]}><div class={horizontal?'min-w-0':'contents'}><p class="eyebrow">{section.eyebrow}</p><h2>{section.heading}</h2></div><div class={horizontal?'min-w-0':'contents'}><p class="assessment-promise">{content.promise}</p>{section.body.map(text => <p>{text}</p>)}</div></div>
+  <form id={fieldId('skjema')} class="assessment-form card min-w-0 p-0 text-base-content" method="dialog" data-specimen-form onsubmit="return false" data-home-assessment data-enabled={String(enabled)} data-specimen={specimen || undefined} data-disabled-status={content.disabledStatus}>
+   <div class:list={['card-body min-w-0 gap-0 p-(--panel-pad) min-[651px]:p-(--panel-pad-lg) text-(length:--type-body) leading-(--leading-body)',{'grid min-[901px]:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] gap-x-(--gap)':horizontal}]}>
+    <div class:list={['form-heading',{'col-span-full':horizontal}]}><h3>{content.heading}</h3></div>
+    <div class={horizontal?'min-w-0':'contents'}>
+    <label for={fieldId('website')}>{content.websiteLabel} <span aria-hidden="true">*</span></label>
+    <input class="input w-full" id={fieldId('website')} name="website" type="text" inputmode="url" placeholder={content.websitePlaceholder} required maxlength="2048" autocomplete="url" />
+    </div><div class={horizontal?'min-w-0':'contents'}>
+    <label for={fieldId('email')}>{content.emailLabel} <span aria-hidden="true">*</span></label>
+    <input class="input w-full" id={fieldId('email')} name="email" type="email" placeholder={content.emailPlaceholder} required maxlength="254" autocomplete="email" />
+    </div><div class={horizontal?'min-w-0 col-span-full':'contents'}>
+    <label for={fieldId('message')}>{content.messageLabel} <span class="optional">{content.optional}</span></label>
+    <textarea class="textarea w-full" id={fieldId('message')} name="message" rows="3" maxlength="2000" placeholder={content.messagePlaceholder}></textarea>
+    </div>
+    <div class="honeypot" hidden aria-hidden="true"><label for={fieldId('website-confirmation')}>La feltet stå tomt</label><input id={fieldId('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" /></div>
+    <p class:list={['form-privacy',{'col-span-full':horizontal}]}>{content.sensitiveNotice}</p>
+    {!enabled && <p class:list={['form-notice alert alert-warning',{'col-span-full':horizontal}]}>{content.previewNotice}</p>}
+    <button type="submit" class:list={['button form-submit btn btn-primary',{'min-[901px]:row-start-2 min-[901px]:col-start-3 min-[901px]:self-end min-[901px]:mt-0':horizontal}]} disabled>{content.submitLabel}<Arrow diagonal /></button>
+    <p class:list={['form-privacy',{'col-span-full':horizontal}]}>{content.privacyText} <a href={content.privacyLink.href}>{content.privacyLink.label}</a>.</p>
+    <p class:list={['form-status',{'col-span-full':horizontal}]} role="status" tabindex="-1" hidden></p>
+   </div>
+  </form>
+</div></section>
+<script>
+ document.querySelectorAll<HTMLFormElement>('[data-specimen-form]').forEach(form=>{
+  form.addEventListener('submit',event=>event.preventDefault());
+  form.submit=()=>{};
+ });
+</script>

@@ -1,0 +1,168 @@
+---
+import type { SpecimenContent as HomepageContent } from '../../design-system/fixtures';
+import '../../styles/compositions/calculator.css';
+import { calculateScenario } from '../../lib/leverage';
+import { formatScenarioRatio } from '../../lib/scenario-ratio';
+import { SCENARIO_MONTHS } from '../../lib/scenario-chart';
+import TermText from '../TermText.astro';
+interface Props { content: HomepageContent['calculator']; }
+const { content } = Astro.props;
+const { labels, defaults } = content;
+const result = calculateScenario(defaults.visits, defaults.conversion, defaults.trafficIncrease, defaults.newConversion, SCENARIO_MONTHS);
+const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+const ratio = formatScenarioRatio(result.current, result.scenario);
+---
+<section id="regneeksempel" class="leverage-section section-space bg-secondary text-secondary-content" data-leverage data-undefined-increase={labels.undefinedIncrease}>
+  <div class="shell calculator-introduction"><p class="eyebrow">{content.eyebrow}</p><h2>{content.heading}</h2><p class="body-copy">{content.intro}</p><p class="calculator-formula"><TermText text={content.formula} terms={['konverteringsrate', 'relevant-trafikk']} /></p></div>
+  <div class="shell leverage-grid">
+    <div class="leverage-copy">
+      <div class="calculator-inputs">
+        <div class="calculator-field"><label for="calc-visits">{labels.visits}<input class="input w-full" id="calc-visits" name="visits" type="number" min="0" max="10000000" step="250" value={defaults.visits} inputmode="numeric" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-conversion-label" for="calc-conversion">{labels.conversion}<input class="input w-full" id="calc-conversion" name="conversion" type="number" min="0" max="100" step="0.5" value={defaults.conversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input class="range range-accent" type="range" min="0" max="100" step="0.5" value={defaults.conversion} data-slider="conversion" aria-labelledby="calc-conversion-label" disabled /></div>
+        <div class="calculator-field"><label for="calc-traffic">{labels.trafficIncrease}<input class="input w-full" id="calc-traffic" name="trafficIncrease" type="number" min="0" max="1000" step="any" value={defaults.trafficIncrease} inputmode="decimal" aria-describedby="calculator-error" /></label></div>
+        <div class="calculator-field"><label id="calc-new-conversion-label" for="calc-new-conversion">{labels.newConversion}<input class="input w-full" id="calc-new-conversion" name="newConversion" type="number" min="0" max="100" step="0.5" value={defaults.newConversion} inputmode="decimal" aria-describedby="calculator-error" /></label><input class="range range-accent" type="range" min="0" max="100" step="0.5" value={defaults.newConversion} data-slider="newConversion" aria-labelledby="calc-new-conversion-label" disabled /></div>
+      </div>
+      <p id="calculator-error" class="calculator-error" role="status" hidden>{labels.invalid}</p>
+      <div class="calculator-results" role="status" aria-live="polite" aria-atomic="true">
+        <div class="math-results">
+          <div class="leverage-result bg-base-200 text-base-content"><span>{labels.current}</span><output data-current>{format.format(result.current)}</output><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-current-equation>{format.format(defaults.visits)} × {String(defaults.conversion).replace('.', ',')} %</span></div>
+          <div class="leverage-comparison bg-accent text-accent-content"><span>{labels.scenario}</span><output data-scenario>{format.format(result.scenario)}</output><span class="scenario-period">Måned {SCENARIO_MONTHS}</span><span class="outcome-label">{labels.outcome}</span><span class="math-equation" data-scenario-equation>{format.format(result.scenarioVisits)} × {String(defaults.newConversion).replace('.', ',')} %</span></div>
+        </div>
+        <p class="calculator-multiplier">{labels.difference}: <output data-multiplier>{ratio?.multiplier ?? '–'}</output><span data-percentage>{ratio?.percentage ?? labels.undefinedIncrease}</span></p>
+      </div>
+    </div>
+    <div class="leverage-tool">
+      <figure class="scenario-chart bg-base-200 text-base-content" data-scenario-chart hidden>
+        <figcaption id="scenario-illustration-label">Illustrasjon - ikke prognose <span>{SCENARIO_MONTHS} måneder</span></figcaption>
+        <div class="scenario-legend"><span id="scenario-current-label" class="scenario-current">Uten optimalisering</span><span id="scenario-improved-label" class="scenario-improved">Med optimalisering</span></div>
+        <svg viewBox="0 0 480 128" role="img" aria-labelledby="scenario-illustration-label scenario-current-label scenario-improved-label" aria-describedby="scenario-current-value scenario-improved-value">
+          <path class="scenario-grid" data-chart-grid />
+          <path class="scenario-current-line" data-chart-current />
+          <path class="scenario-improved-line" data-chart-improved />
+          <circle class="scenario-current-dot" data-chart-current-dot r="3" />
+          <circle class="scenario-improved-dot" data-chart-improved-dot r="3" />
+          <text id="scenario-current-value" class="scenario-current-value" data-chart-current-value />
+          <text id="scenario-improved-value" class="scenario-improved-value" data-chart-improved-value />
+          {Array.from({ length: SCENARIO_MONTHS }, (_, index) => <text class="scenario-month" data-chart-month y="122" text-anchor="middle">{index + 1}</text>)}
+        </svg>
+      </figure>
+    </div>
+  </div>
+</section>
+<script>
+  import { calculateScenario } from '../../lib/leverage';
+  import { formatScenarioRatio } from '../../lib/scenario-ratio';
+  import { createScenarioIllustration, SCENARIO_MONTHS } from '../../lib/scenario-chart';
+  const tool = document.querySelector<HTMLElement>('[data-leverage]');
+  if (tool) {
+    const inputs = ['visits', 'conversion', 'trafficIncrease', 'newConversion'].map(name => tool.querySelector<HTMLInputElement>(`[name="${name}"]`)!);
+    const current = tool.querySelector<HTMLOutputElement>('[data-current]')!;
+    const scenario = tool.querySelector<HTMLOutputElement>('[data-scenario]')!;
+    const multiplier = tool.querySelector<HTMLOutputElement>('[data-multiplier]')!;
+    const percentage = tool.querySelector<HTMLElement>('[data-percentage]')!;
+    const currentEquation = tool.querySelector<HTMLElement>('[data-current-equation]')!;
+    const scenarioEquation = tool.querySelector<HTMLElement>('[data-scenario-equation]')!;
+    const error = tool.querySelector<HTMLElement>('#calculator-error')!;
+    const chart = tool.querySelector<HTMLElement>('[data-scenario-chart]')!;
+    const svg = chart.querySelector('svg')!;
+    const sliders = [...tool.querySelectorAll<HTMLInputElement>('[data-slider]')];
+    const format = new Intl.NumberFormat('nb-NO', { maximumFractionDigits: 1 });
+    const compact = new Intl.NumberFormat('nb-NO', { notation: 'compact', maximumFractionDigits: 1 });
+    function update() {
+      const valid = inputs.every(input => input.value !== '' && input.checkValidity());
+      inputs.forEach(input => input.setAttribute('aria-invalid', String(input.value === '' || !input.checkValidity())));
+      error.hidden = valid;
+      chart.hidden = !valid;
+      sliders.forEach(slider => {
+        const input = inputs.find(input => input.name === slider.dataset.slider)!;
+        if (input.value !== '' && input.checkValidity()) slider.value = input.value;
+      });
+      if (!valid) {
+        [current, scenario, multiplier, percentage, currentEquation, scenarioEquation].forEach(output => output.textContent = '–');
+        return;
+      }
+      const [visits, conversion, traffic, newConversion] = inputs.map(input => Number(input.value));
+      const result = calculateScenario(visits, conversion, traffic, newConversion, SCENARIO_MONTHS);
+      current.value = format.format(result.current);
+      scenario.value = format.format(result.scenario);
+      const ratio = formatScenarioRatio(result.current, result.scenario);
+      multiplier.value = ratio?.multiplier ?? '–';
+      percentage.textContent = ratio?.percentage ?? tool!.dataset.undefinedIncrease!;
+      currentEquation.textContent = `${format.format(visits)} × ${inputs[1].value.replace('.', ',')} %`;
+      scenarioEquation.textContent = `${format.format(result.scenarioVisits)} × ${inputs[3].value.replace('.', ',')} %`;
+      const { width, height } = svg.getBoundingClientRect();
+      const monthly = Array.from({ length: SCENARIO_MONTHS }, (_, index) => calculateScenario(visits, conversion, traffic, newConversion, index + 1).scenario);
+      const illustration = createScenarioIllustration(result.current, monthly, width, height);
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      chart.querySelector('[data-chart-grid]')!.setAttribute('d', `M 12 ${height - 40} H ${width - 92}`);
+      chart.querySelector('[data-chart-current]')!.setAttribute('d', illustration.currentPath);
+      chart.querySelector('[data-chart-improved]')!.setAttribute('d', illustration.scenarioPath);
+      for (const [name, series, value, labelY] of [
+        ['current', illustration.current, result.current, illustration.currentLabelY],
+        ['improved', illustration.scenario, result.scenario, illustration.scenarioLabelY],
+      ] as const) {
+        const end = series[SCENARIO_MONTHS - 1];
+        const dot = chart.querySelector(`[data-chart-${name}-dot]`)!;
+        dot.setAttribute('cx', String(end.x)); dot.setAttribute('cy', String(end.y));
+        const label = chart.querySelector(`[data-chart-${name}-value]`)!;
+        label.setAttribute('x', String(end.x + 10)); label.setAttribute('y', String(labelY));
+        const fullValue = format.format(value);
+        label.textContent = fullValue.length > 10 ? compact.format(value) : fullValue;
+        label.setAttribute('aria-label', fullValue);
+      }
+      chart.querySelectorAll('[data-chart-month]').forEach((month, index) => {
+        month.setAttribute('x', String(illustration.current[index].x));
+        month.setAttribute('y', String(height - 6));
+      });
+    }
+    inputs.forEach(input => input.addEventListener('input', update));
+    sliders.forEach(slider => {
+      slider.disabled = false;
+      slider.addEventListener('input', () => {
+        const value = String(Math.round(Number(slider.value) * 10) / 10);
+        inputs.find(input => input.name === slider.dataset.slider)!.value = value;
+        update();
+      });
+    });
+    new ResizeObserver(update).observe(svg);
+    update();
+  }
+</script>
+
+<style>
+  .calculator-introduction { text-align: center; margin-bottom: 40px; }
+  .calculator-introduction h2 { max-width: 850px; margin: 16px auto 0; }
+  .calculator-introduction .body-copy { margin: 20px auto 0; color: inherit; font-size: var(--type-body); line-height: var(--leading-body); }
+  :global(.invite-home) .calculator-introduction .calculator-formula { border: 0; padding: 0; margin-top: 20px; }
+  :global(.invite-home) .leverage-grid { align-items: stretch; }
+  :global(.invite-home) .leverage-tool { display: flex; }
+  :global(.invite-home) .math-results output { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+  .math-equation { max-width: 100%; overflow-wrap: anywhere; }
+  .calculator-multiplier { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-top: 20px; font-size: var(--type-body-sm); line-height: var(--leading-body); }
+  .calculator-multiplier output { min-width: 0; overflow-wrap: anywhere; font-family: var(--heading); font-size: var(--type-h3); font-weight: var(--weight-heading); line-height: var(--leading-h3); }
+  .calculator-multiplier [data-percentage] { font-size: var(--type-meta); color: inherit; overflow-wrap: anywhere; line-height: var(--leading-small); }
+  .calculator-field { min-width: 0; }
+  .calculator-inputs { margin-top: 0; }
+  .scenario-period { font-size: var(--type-meta); margin-bottom: 4px; line-height: var(--leading-small); }
+  .scenario-chart { display: flex; flex-direction: column; flex: 1; min-width: 0; margin: 0; padding: var(--panel-pad-xs); border-radius: var(--radius-md);  }
+  .scenario-chart figcaption { display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; font-size: var(--type-meta); line-height: var(--leading-small); }
+  .scenario-chart figcaption span { color: inherit; }
+  .scenario-legend { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: var(--type-meta); line-height: var(--leading-small); }
+  .scenario-legend span { display: flex; align-items: center; gap: 6px; }
+  .scenario-legend span::before { content: ''; width: 16px; border-top: 2px dashed var(--color-base-content); }
+  .scenario-legend .scenario-improved::before { border-top: 3px solid var(--color-primary); }
+  .scenario-chart svg { display: block; width: 100%; height: 0; min-height: 240px; flex: 1; overflow: visible; }
+  .scenario-chart path { fill: none; }
+  .scenario-grid { stroke: var(--color-base-300); }
+  .scenario-current-line { stroke: var(--color-base-content); opacity: .6; stroke-width: 2; stroke-dasharray: 5 4; }
+  .scenario-improved-line { stroke: var(--color-primary); stroke-width: 3; }
+  .scenario-current-dot, .scenario-current-value { fill: var(--color-base-content); }
+  .scenario-improved-dot, .scenario-improved-value { fill: var(--color-base-content); }
+  .scenario-chart text { font-family: var(--body); font-size: var(--type-meta); line-height: var(--leading-small); }
+  /* Keep the longest valid compact value on its light surface at 320px. */
+  .scenario-current-value, .scenario-improved-value { letter-spacing: -.075em; }
+  .scenario-month { fill: var(--color-base-content); opacity: .8; letter-spacing: -.025em; }
+  .scenario-current-line, .scenario-improved-line { transition: d 160ms ease; }
+  .scenario-chart circle { transition: cy 160ms ease; }
+  @media (prefers-reduced-motion: reduce) { .scenario-chart path, .scenario-chart circle { transition: none; } }
+</style>

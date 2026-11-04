@@ -1,0 +1,54 @@
+---
+/** Oslo HeaderNavigation HTML template, with only MWS's customer-neutral nav data adapter.
+ * Source: Optimalisering Oslo app/src/components/HeaderNavigation.astro
+ */
+import type { ChromeNavItem } from '../lib/site-chrome';
+import {navigationActive,navContainsCurrent} from '../lib/site-chrome';
+import Arrow from './Arrow.astro';
+interface Props {items:ChromeNavItem[];placement:'desktop'|'mobile';instanceId?:string;}
+const {items,placement,instanceId='site'}=Astro.props;
+const pathname=Astro.url.pathname;
+---
+<ul class:list={['menu',{'menu-horizontal':placement==='desktop','w-full':placement==='mobile'}]}>
+ {items.map((item,index)=>{
+  const state={current:navigationActive(item.href,pathname),within:navContainsCurrent(item,pathname)&&!navigationActive(item.href,pathname)};
+  const id='header-'+instanceId+'-'+placement+'-submenu-'+index;
+  const mega=item.kind==='mega';
+  const disclosure=item.kind!=='link';
+  return <li class:list={['header-nav-item',{'header-nav-item--mega':mega}]} data-active-parent={state.within||undefined} data-mega={mega||undefined}>
+   <div class="header-nav-parent">
+    <a href={item.href} aria-current={state.current?'page':undefined}>{item.label}{placement==='mobile'&&!disclosure&&<Arrow/>}</a>
+    {disclosure&&<button type="button" class="nav-disclosure btn btn-ghost btn-square"
+      aria-expanded="false" aria-controls={id} aria-label={item.toggleLabel} data-nav-disclosure><Arrow/></button>}
+   </div>
+   {item.kind==='mega'&&<div id={id} class="header-mega-menu bg-base-100" hidden>
+    <div class="header-mega-inner shell">
+     <div class="header-mega-columns">
+      {item.columns.map(column=><section class="header-mega-column" aria-label={column.heading}>
+       <p class="header-mega-heading">{column.heading}</p>
+       <ul class="menu header-mega-links">
+        {column.links.map(child=><li><a href={child.href}
+          aria-current={navigationActive(child.href,pathname)?'page':undefined}>
+          <span class="header-submenu-label">{child.label}</span>
+          <span class="header-submenu-description">{child.description}</span>
+        </a></li>)}
+       </ul>
+      </section>)}
+     </div>
+     {item.promo&&<aside class="header-mega-promo">
+      <h2>{item.promo.heading}</h2>
+      <p>{item.promo.body}</p>
+      <a class="btn btn-primary" href={item.promo.cta.href}>{item.promo.cta.label}<Arrow diagonal/></a>
+     </aside>}
+    </div>
+   </div>}
+   {item.kind==='dropdown'&&<ul id={id} class="header-submenu menu bg-base-100" hidden>
+    {item.links.map(child=><li><a href={child.href}
+      aria-current={navigationActive(child.href,pathname)?'page':undefined}>
+      <span class="header-submenu-label">{child.label}</span>
+      <span class="header-submenu-description">{child.description}</span>
+     </a></li>)}
+   </ul>}
+  </li>;
+ })}
+</ul>

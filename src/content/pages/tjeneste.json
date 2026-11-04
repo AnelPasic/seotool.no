@@ -1,0 +1,80 @@
+{
+  "slug": "tjeneste",
+  "kind": "service",
+  "seo": {
+    "title": "Tjeneste | SeoTool",
+    "description": "Eksempelmetabeskrivelse for en tjeneste."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "title": "En tydelig tjeneste",
+    "support": "Hva får kunden, og hvordan kommer kunden videre?",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Se kontaktmuligheter",
+      "href": "/kontakt/"
+    }
+  },
+  "listing": {
+    "title": "Tjeneste",
+    "summary": "Et eksempel på tjenestebeskrivelse",
+    "order": 1,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Hva gjelder denne tjenesten?",
+      "answer": "Et lokalt, redigerbart demospørsmål."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "innhold",
+      "heading": "Kort om tjenesten",
+      "body": [
+        "Dette er et lokalt eksempel.",
+        "Denne tekstseksjonen kan bruke flere avsnitt, lenker og egne kort."
+      ],
+      "visibility": "visible",
+      "layout": "two-columns",
+      "items": [
+        {
+          "title": "Lokal",
+          "text": "Eies av siden.",
+          "surface": "base-200",
+          "boxVariant": "card"
+        },
+        {
+          "title": "Redigerbar",
+          "text": "Sorteres sammen med globale seksjoner.",
+          "surface": "base-100",
+          "boxVariant": "plain"
+        }
+      ]
+    },
+    {
+      "_block": "sharedContent",
+      "entry": "felles-eksempel",
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Hvordan går du videre?",
+      "visibility": "visible",
+      "body": [
+        "Beskriv behovet og hva du ønsker å oppnå. Undersøk deretter hva leverandøren faktisk tilbyr og hvilke opplysninger som mangler før du tar en beslutning.",
+        "Dette er et fiktivt eksempel på et naturlig neste steg i en tjenesteside, ikke et løfte om respons, kapasitet eller priser."
+      ],
+      "links": [
+        {
+          "label": "Se kontaktmuligheter",
+          "href": "/kontakt/"
+        }
+      ]
+    }
+  ]
+}

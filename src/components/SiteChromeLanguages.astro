@@ -1,0 +1,26 @@
+---
+/** The approved Oslo LanguageSwitch HTML; routes are gated against actual
+ * exported MWS pages, never linked merely because a CMS URL was typed. */
+import type {SiteChrome} from '../lib/site-chrome';
+import {pages} from '../lib/load-site';
+import {publicPath} from '../page-builder';
+interface Props {languages:SiteChrome['languages'];placement:'desktop'|'mobile';}
+const {languages,placement}=Astro.props;
+const normalize=(url:string)=>url.split(/[?#]/,1)[0].replace(/\/+$/,'')||'/';
+const availablePaths=new Set(pages.map(page=>normalize(publicPath(page.slug))));
+---
+<div class:list={['language-switch',placement==='mobile'?'language-switch--mobile':'language-switch--desktop']}
+ role="group" aria-label="Språkvalg">
+ {languages.map(language=>{
+  const isCurrent=language.current;
+  const destination=language.href&&availablePaths.has(normalize(language.href))
+   ?language.href:undefined;
+  return isCurrent
+   ?<span class="language-switch__choice is-active" aria-current="true" lang={language.locale}>{language.label}</span>
+   :destination
+    ?<a class="language-switch__choice" href={destination} lang={language.locale}
+       hreflang={language.locale}>{language.label}</a>
+    :<span class="language-switch__choice is-disabled" aria-disabled="true" lang={language.locale}
+       title="Språkversjonen er ikke publisert">{language.label}</span>;
+ })}
+</div>

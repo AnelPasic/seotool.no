@@ -1,0 +1,992 @@
+# Integrated Pages CMS — MWS-052 step 3. Native shared-content collection, no promotion workflow.
+media:
+  - name: brandLogos
+    label: Logoer
+    input: public/images/branding
+    output: /images/branding
+    extensions: [svg, png, webp, jpg, jpeg, avif]
+  - name: pageHeroImages
+    label: Hero-bilder
+    input: public/images/pages
+    output: /images/pages
+    extensions: [svg, png, webp, jpg, jpeg, avif]
+  - name: builderListingImages
+    label: Bilder i innholdslister
+    input: public/images/listing
+    output: /images/listing
+    extensions: [webp, png, jpg, jpeg, avif]
+settings:
+  content:
+    merge: true
+components:
+  richSurface:
+    type: select
+    default: default
+    options:
+      values: [ { name: default, label: Standard }, { name: base-100, label: base-100 }, { name: base-200, label: base-200 }, { name: base-300, label: base-300 }, { name: primary, label: primary }, { name: secondary, label: secondary }, { name: accent, label: accent }, { name: neutral, label: neutral }, { name: info, label: info }, { name: success, label: success }, { name: warning, label: warning }, { name: error, label: error } ]
+  richLayout:
+    type: select
+    default: default
+    options:
+      values: [ { name: default, label: Standard }, { name: two-columns, label: To kolonner }, { name: three-columns, label: Tre kolonner }, { name: stacked, label: Én kolonne } ]
+  richAlign:
+    type: select
+    default: center
+    options:
+      values: [ { name: center, label: Sentrert }, { name: left, label: Venstre } ]
+  builderSharedPlacement:
+    type: object
+    fields:
+      - name: entry
+        label: Velg global innholdsseksjon
+        type: reference
+        required: true
+        options:
+          collection: sharedContent
+          search: "name,heading,id"
+          value: "{fields.id}"
+          label: "{fields.name}"
+      - { name: visibility, label: Visning bare på denne siden, component: builderVisibility }
+  globalMarkdownBody:
+    type: rich-text
+    list: {}
+    description: "Ett Markdown-felt per avsnitt eller kolonne. H2–H6, lister, lenker, fet og kursiv. H1 tilhører Hero."
+    options: { format: markdown, media: false, switcher: true }
+  globalMarkdownItems:
+    type: object
+    list:
+      collapsible: { collapsed: true, summary: "{title}" }
+    fields:
+      - { name: title, label: Tittel, type: string, required: true }
+      - name: text
+        label: Beskrivelse (rik tekst / Markdown)
+        type: rich-text
+        required: true
+        options: { format: markdown, media: false, switcher: true }
+      - { name: href, label: Intern lenke, type: string, pattern: '^(\s*|/(?![/\\])[^<>"\s]*)$' }
+      - { name: label, label: Lenketekst, type: string }
+      - { name: surface, label: Boksfarge, component: richSurface }
+  richBody:
+    type: text
+    list: {}
+    description: Avsnittene får egne kolonner, uavhengig av kortene, ved valgt seksjonsoppsett.
+  richItems:
+    type: object
+    list:
+      collapsible: { collapsed: true, summary: "{title}" }
+    fields:
+      - { name: title, label: Tittel, type: string, required: true }
+      - { name: text, label: Tekst, type: text, required: true }
+      - { name: href, label: Intern lenke, type: string, pattern: '^(\s*|/(?![/\\])[^<>"\s]*)$', description: 'Valgfritt. Bruk /sti/ eller la feltet stå tomt hvis kortet ikke skal ha lenke.' }
+      - { name: label, label: Lenketekst, type: string }
+      - { name: surface, label: Boksfarge, component: richSurface }
+  richLinks:
+    type: object
+    list:
+      collapsible: { collapsed: true, summary: "{label}" }
+    fields:
+      - { name: label, label: Lenketekst, type: string, required: true }
+      - { name: href, label: Intern lenke, type: string, required: true, pattern: '^/' }
+  richPresentation:
+    label: Seksjonstype
+    type: select
+    options:
+      values: [ { name: content, label: Vanlig innhold }, { name: cta, label: CTA – Oslo-blåkopi (info/info-content) } ]
+  builderRichLocal:
+    type: object
+    fields:
+      - { name: id, label: Seksjonens lenkeanker, type: string, required: true, pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$' , description: "Unikt anker på denne siden, for eksempel testing-links. Bruk små bokstaver og bindestrek. Endre ikke eksisterende ankere uten å oppdatere interne lenker." }
+      - { name: eyebrow, label: Overtekst, type: string }
+      - { name: heading, label: Overskrift, type: string, required: true }
+      - { name: headingAlign, label: Overskriftsjustering, component: richAlign }
+      - { name: layout, label: Avsnitt og bokser - layout, component: richLayout }
+      - { name: presentation, label: Seksjonstype, component: richPresentation, description: 'CTA bruker alltid bg-info text-info-content og Oslo sin seksjonsstruktur. Tomt felt = vanlig innhold.' }
+      - { name: surface, label: Seksjonsfarge, component: richSurface }
+      - { name: body, label: Avsnitt, component: richBody }
+      - { name: items, label: Alternativer eller steg, component: richItems }
+      - { name: links, label: Lenker, component: richLinks }
+      - { name: visibility, label: Visning, component: builderVisibility }
+  standardPageHero:
+    type: object
+    label: Hero
+    fields:
+      - name: layout
+        label: Oppsett
+        type: select
+        required: true
+        options:
+          values:
+            - { name: split-right, label: Tekst venstre / bilde høyre }
+            - { name: split-left, label: Bilde venstre / tekst høyre }
+            - { name: centered, label: Sentrert med bilde }
+            - { name: centered-none, label: Sentrert uten bilde }
+      - name: family
+        label: Hero-variant (kun spesialsider)
+        description: Tomt felt bruker sidetypen. Bruk Oslo sine varianter for pris, vurdering, begrep og 404.
+        type: select
+        options:
+          values:
+            - { name: pricing, label: Prisside }
+            - { name: assessment, label: Vurdering / skjema }
+            - { name: glossary, label: Begrepsside }
+            - { name: error, label: 404 / feilside }
+      - { name: eyebrow, label: Overtekst, type: string }
+      - { name: title, label: Hovedoverskrift, type: string, required: true }
+      - { name: support, label: Ingress, type: text, required: true }
+      - name: primaryCta
+        label: Primær handling
+        type: object
+        fields:
+          - { name: label, label: Knappetekst, type: string, required: true }
+          - { name: href, label: Adresse (intern eller https), type: string, required: true, pattern: '^(/|https?://)' }
+      - name: secondaryCta
+        label: Sekundær handling
+        type: object
+        fields:
+          - { name: label, label: Knappetekst, type: string, required: true }
+          - { name: href, label: Adresse (intern eller https), type: string, required: true, pattern: '^(/|https?://)' }
+      - name: titleEmphasis
+        label: Fremhev første setning
+        type: select
+        options:
+          values:
+            - { name: none, label: Ingen }
+            - { name: first-sentence, label: Fremhev første setning }
+      - { name: featuredProofCaseId, label: Godkjent case-ID (krever godkjent proof-kilde og dokumentasjon), type: string }
+      - name: visual
+        label: Visuelt innhold
+        type: block
+        blockKey: kind
+        required: true
+        blocks:
+          - name: none
+            label: Ingen
+            type: object
+            fields: []
+          - name: image
+            label: Bilde
+            type: object
+            fields:
+              - name: image
+                label: Valgt bilde og utsnitt
+                type: object
+                required: true
+                fields:
+                  - { name: src, label: Bildefil, type: image, required: true, options: { media: pageHeroImages } }
+                  - name: kind
+                    label: Bildetype
+                    type: select
+                    options:
+                      values:
+                        - { name: photo, label: Foto }
+                        - { name: illustration, label: Illustrasjon }
+                  - { name: alt, label: Alternativ tekst, type: string }
+                  - { name: positionX, label: Horisontalt utsnitt (%), type: number, default: 50, required: true, options: { min: 0, max: 100 } }
+                  - { name: positionY, label: Vertikalt utsnitt (%), type: number, default: 50, required: true, options: { min: 0, max: 100 } }
+  builderVisibility:
+    type: select
+    default: visible
+    options:
+      values:
+        - { name: visible, label: Publisert }
+        - { name: hidden, label: Skjult - behold i CMS }
+  builderHeroVisual:
+    type: block
+    label: Visuelt innhold
+    blockKey: kind
+    required: true
+    blocks:
+      - name: none
+        label: Ingen
+        type: object
+        fields: []
+      - name: image
+        label: Bilde
+        type: object
+        fields:
+          - name: image
+            label: Valgt bilde og utsnitt
+            type: object
+            required: true
+            fields:
+              - { name: src, label: Bilde, type: image, required: true, options: { media: pageHeroImages } }
+              - { name: alt, label: Alternativ tekst, type: string }
+              - { name: positionX, label: Horisontalt utsnitt (%), type: number, default: 50, required: true, options: { min: 0, max: 100 } }
+              - { name: positionY, label: Vertikalt utsnitt (%), type: number, default: 50, required: true, options: { min: 0, max: 100 } }
+  builderFaq:
+    type: object
+    label: Egne spørsmål og svar
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{question}"
+    fields:
+      - { name: question, label: Spørsmål, type: string, required: true }
+      - { name: answer, label: Svar, type: text, required: true }
+  builderListing:
+    type: object
+    fields:
+      - { name: title, label: Tittel i lister, type: string }
+      - { name: summary, label: Sammendrag i lister, type: text }
+      - { name: label, label: Lenketekst i lister, type: string }
+      - { name: order, label: Sorteringsnummer, type: number }
+      - { name: visible, label: Synlig i automatiske lister, type: boolean, default: true }
+      - name: visual
+        label: Listevisual
+        type: block
+        blockKey: kind
+        list:
+          max: 1
+        blocks:
+          - { name: none, label: Ingen, type: object, fields: [] }
+          - name: image
+            label: Bilde
+            type: object
+            fields:
+              - { name: src, label: Bildefil, type: image, required: true, options: { media: builderListingImages } }
+              - { name: alt, label: Alternativ tekst, type: string, required: true }
+              - { name: positionX, label: Horisontalt utsnitt (%), type: number, default: 50, options: { min: 0, max: 100 } }
+              - { name: positionY, label: Vertikalt utsnitt (%), type: number, default: 50, options: { min: 0, max: 100 } }
+          - name: icon
+            label: Ikon
+            type: object
+            fields:
+              - name: icon
+                label: Symbol
+                type: select
+                required: true
+                options:
+                  values:
+                    - { name: search, label: Søk }
+                    - { name: conversion, label: Handling }
+                    - { name: analytics, label: Analyse }
+                    - { name: trend, label: Vekst }
+                    - { name: page, label: Side }
+                    - { name: route, label: Veivalg }
+  builderContentMaster:
+    type: object
+    description: Gjenbrukbart redigerbart innhold. Samme Oslo-seksjon og daisyUI-kort som lokalt innhold.
+    fields:
+      - { name: type, label: Innholdstype, type: string, readonly: true, required: true }
+      - { name: eyebrow, label: Overtekst, type: string }
+      - { name: heading, label: Overskrift, type: string, required: true }
+      - { name: body, label: Tekst, type: text, required: true }
+      - { name: headingAlign, label: Overskriftsjustering, component: richAlign }
+      - { name: layout, label: Avsnitt og bokser - layout, component: richLayout }
+      - { name: surface, label: Seksjonsfarge, component: richSurface }
+      - { name: presentation, label: Seksjonstype, component: richPresentation }
+      - { name: items, label: Kort / alternativer, component: richItems }
+      - { name: links, label: Lenker, component: richLinks }
+  builderProtectedMaster:
+    type: object
+    description: Prosjektspesifikke beskyttede komponenter må kobles til før publisering.
+    fields:
+      - { name: type, label: Innholdstype, type: string, readonly: true, required: true }
+      - { name: renderKey, label: Komponentnøkkel, type: string, readonly: true, required: true }
+      - { name: publicationApproved, label: Godkjent for publisering, type: boolean, default: false }
+  builderPageReference:
+    type: select
+    description: Genereres fra kanoniske side-JSON via scripts/sync-page-options.mjs.
+    options:
+      values:
+# PAGE_BUILDER_CHOICES_BEGIN
+        - { name: "404", label: "Siden finnes ikke | SeoTool" }
+        - { name: "home", label: "SeoTool – Finn ut hva du bør gjøre først i søk og AI" }
+        - { name: "innsikt/artikkel", label: "Velge tjeneste: en enkel sjekkliste | SeoTool" }
+        - { name: "kontakt", label: "Kontakt oss – SeoTool" }
+        - { name: "om", label: "Om | SeoTool" }
+        - { name: "priser", label: "Tilbud | SeoTool" }
+        - { name: "tjeneste", label: "Tjeneste | SeoTool" }
+# PAGE_BUILDER_CHOICES_END
+  builderSections:
+    type: block
+    label: Innholdsseksjoner
+    blockKey: _block
+    required: true
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{index}. {heading}{element}"
+    blocks:
+      - name: content
+        label: Innholdsseksjon
+        component: builderRichLocal
+      - name: sharedContent
+        label: Global innholdsseksjon
+        component: builderSharedPlacement
+      - name: global
+        label: Globalt element
+        type: object
+        fields:
+          - { name: id, label: Seksjonsanker, type: string, required: true, pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$' }
+          - name: element
+            label: Felles kilde
+            type: select
+            required: true
+            options:
+              values:
+                - { name: faq, label: Felles FAQ }
+                - { name: services, label: Tjenester }
+                - { name: pricing, label: Pakker og priser }
+                - { name: proof, label: Resultater og kundecaser }
+                - { name: contact, label: Kontaktskjema }
+                - { name: process, label: Slik jobber vi }
+                - { name: calculator, label: Kalkulator }
+                - { name: benefits, label: Fordeler }
+          - { name: visibility, label: Visning, component: builderVisibility }
+      - name: pageList
+        label: Innholdsliste
+        type: object
+        fields:
+          - { name: id, label: Seksjonsanker, type: string, required: true, pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$' }
+          - { name: heading, label: Overskrift, type: string, required: true }
+          - { name: visibility, label: Visning, component: builderVisibility }
+          - name: pageList
+            label: Innholdsliste
+            type: object
+            required: true
+            fields:
+              - name: source
+                label: Automatisk kilde
+                description: "Tjenester og produkter viser sider med sidetype service, også produktsider. Manuelt utvalg påvirkes ikke."
+                type: select
+                default: articles
+                options:
+                  values:
+                    - { name: articles, label: Artikler }
+                    - { name: pages, label: Tjenester og produkter }
+                    - { name: cases, label: Godkjente kundecaser }
+              - name: mode
+                label: Utvalg
+                type: select
+                required: true
+                default: automatic
+                options:
+                  values:
+                    - { name: automatic, label: Automatisk }
+                    - { name: manual, label: Manuelt }
+              - name: sort
+                label: Sortering
+                type: select
+                default: editorial
+                options:
+                  values:
+                    - { name: editorial, label: Redaksjonell }
+                    - { name: title, label: Tittel }
+              - { name: limit, label: Maks antall automatisk, type: number, default: 6, options: { min: 1, max: 12, step: 1 } }
+              - name: layout
+                label: Visning
+                type: select
+                required: true
+                default: cards
+                options:
+                  values:
+                    - { name: cards, label: Kort }
+                    - { name: mediaCards, label: Bildekort }
+                    - { name: alternating, label: Bilde og tekst annenhver side }
+                    - { name: compact, label: Kompakt }
+                    - { name: links, label: Lenker }
+              - name: columns
+                label: Items per row
+                type: number
+                description: Optional. Mobile uses one column; tablet at most two. Alternating keeps one entry per row.
+                options: { min: 1, max: 3, step: 1 }
+              - name: entries
+                label: Velg 2 til 9 manuelt
+                type: block
+                blockKey: _block
+                list:
+                  max: 9
+                  collapsible:
+                    collapsed: true
+                    summary: "{index}. {title}{slug}{caseId}"
+                blocks:
+                  - name: page
+                    label: Nettside eller artikkel
+                    type: object
+                    fields:
+                      - { name: slug, label: Side, component: builderPageReference, required: true }
+                  - name: case
+                    label: Godkjent kundecase
+                    type: object
+                    fields:
+                      - { name: caseId, label: Case-ID fra godkjent register, type: string, required: true }
+                  - name: url
+                    label: Manuell URL
+                    type: object
+                    fields:
+                      - { name: href, label: URL (intern eller http/https), type: string, required: true }
+                      - { name: title, label: Tittel, type: string, required: true }
+                      - { name: summary, label: Sammendrag, type: text }
+                      - { name: label, label: Lenketekst, type: string }
+content:
+  - name: globalUi
+    label: Globale Elementer
+    type: group
+    items:
+      - name: siteHeader
+        label: Toppmeny
+        type: file
+        path: src/content/site-chrome/header.json
+        format: json
+        operations: { create: false, delete: false, rename: false }
+        fields:
+          - name: brand
+            label: Merkevare
+            type: object
+            fields:
+              - { name: name, label: Bedriftsnavn, type: string, required: true }
+              - { name: homeHref, label: Hjem-adresse, type: string, required: true }
+              - { name: logoSrc, label: Logofilbane, type: string }
+              - { name: logoAlt, label: Logotekst, type: string }
+          - name: logoLight
+            label: Headerlogo - Light
+            type: image
+            options:
+              media: brandLogos
+          - name: logoDark
+            label: Headerlogo - Dark
+            type: image
+            options:
+              media: brandLogos
+          - name: mobileLogoLight
+            label: Liten mobil-logo - Light
+            type: image
+            options:
+              media: brandLogos
+          - name: mobileLogoDark
+            label: Liten mobil-logo - Dark
+            type: image
+            options:
+              media: brandLogos
+          - { name: skipLabel, label: Hopp til innhold, type: string, required: true }
+          - { name: navigationLabel, label: Hovedmenynavn, type: string, required: true }
+          - { name: mobileNavigationLabel, label: Mobilmenynavn, type: string, required: true }
+          - { name: openMenuLabel, label: Åpne mobilmeny, type: string, required: true }
+          - { name: closeMenuLabel, label: Lukk mobilmeny, type: string, required: true }
+          - name: headerOptions
+            label: Header-innstillinger (av/på)
+            type: object
+            required: true
+            fields:
+              - { name: sticky, label: Sticky ved scrolling, type: boolean, required: true }
+              - { name: showLanguageSwitch, label: Vis NO / EN, type: boolean, required: true }
+              - { name: showSearch, label: Vis søk, type: boolean, required: true }
+              - { name: showCta, label: Vis CTA-knapp, type: boolean, required: true }
+          - name: navigation
+            label: Meny (dra for å sortere)
+            type: block
+            blockKey: kind
+            list:
+              min: 1
+              max: 12
+              collapsible: { collapsed: true, summary: "{label}" }
+            blocks:
+              - name: link
+                label: Enkel lenke
+                fields:
+                  - { name: id, label: Unik ID, type: string, required: true }
+                  - { name: label, label: Tittel, type: string, required: true }
+                  - { name: href, label: Adresse, type: string, required: true }
+              - name: dropdown
+                label: Dropdown
+                fields:
+                  - { name: id, label: Unik ID, type: string, required: true }
+                  - { name: label, label: Tittel, type: string, required: true }
+                  - { name: href, label: Landingsside, type: string, required: true }
+                  - { name: toggleLabel, label: Åpne-knapp tekst, type: string, required: true }
+                  - name: links
+                    label: Undersider
+                    type: object
+                    list:
+                      min: 1
+                      max: 12
+                      collapsible: { collapsed: true, summary: "{label}" }
+                    fields:
+                      - { name: label, label: Tittel, type: string, required: true }
+                      - { name: href, label: Intern lenke, type: string, required: true }
+                      - { name: description, label: Forklaring, type: string }
+              - name: mega
+                label: Mega-meny
+                fields:
+                  - { name: id, label: Unik ID, type: string, required: true }
+                  - { name: label, label: Tittel, type: string, required: true }
+                  - { name: href, label: Landingsside, type: string, required: true }
+                  - { name: toggleLabel, label: Åpne-knapp tekst, type: string, required: true }
+                  - name: columns
+                    label: Kolonner (sorterbare)
+                    type: object
+                    list:
+                      min: 2
+                      max: 4
+                      collapsible: { collapsed: true, summary: "{heading}" }
+                    fields:
+                      - { name: heading, label: Overskrift, type: string, required: true }
+                      - name: links
+                        label: Lenker
+                        type: object
+                        list:
+                          min: 1
+                          max: 12
+                          collapsible: { collapsed: true, summary: "{label}" }
+                        fields:
+                          - { name: label, label: Tittel, type: string, required: true }
+                          - { name: href, label: Intern lenke, type: string, required: true }
+                          - { name: description, label: Forklaring, type: string }
+                  - name: promo
+                    label: Valgfritt tilbudskort
+                    type: object
+                    fields:
+                      - { name: eyebrow, label: Overtekst, type: string }
+                      - { name: heading, label: Overskrift, type: string }
+                      - { name: body, label: Tekst, type: text }
+                      - name: cta
+                        label: Knapp
+                        type: object
+                        fields:
+                          - { name: label, label: Knappetekst, type: string }
+                          - { name: href, label: Intern adresse, type: string }
+          - name: primaryCta
+            label: Handlingsknapp i header
+            type: object
+            fields:
+              - { name: label, label: Knappetekst, type: string }
+              - { name: href, label: Intern eller HTTPS-adresse, type: string }
+              - name: variant
+                label: Knappfarge (daisyUI)
+                type: select
+                options:
+                  values:
+                    - { name: primary, label: Primary }
+                    - { name: secondary, label: Secondary }
+                    - { name: accent, label: Accent }
+                    - { name: neutral, label: Neutral }
+                    - { name: info, label: Info }
+                    - { name: success, label: Success }
+                    - { name: warning, label: Warning }
+                    - { name: error, label: Error }
+          - name: search
+            label: Søk (Pagefind eller søkeside)
+            type: object
+            description: Pagefind er klart ved vanlig bygg. Vis søk viser eller skjuler søkeknappen. Lenke til søkeside er fortsatt mulig.
+            fields:
+              - { name: label, label: Søk-tekst, type: string, required: true }
+              - name: mode
+                label: Søkemetode
+                type: select
+                options:
+                  values:
+                    - { name: pagefind, label: Pagefind – søk i nettstedet }
+                    - { name: link, label: Lenke til eksisterende søkeside }
+              - { name: href, label: Adresse (påkrevd ved lenke), type: string }
+          - name: utilityLinks
+            label: Ekstralenker
+            type: object
+            list:
+              max: 3
+              collapsible: { collapsed: true, summary: "{label}" }
+            fields:
+              - { name: label, label: Tekst, type: string }
+              - { name: href, label: Adresse, type: string }
+          - name: languages
+            label: Språklenker (bare publiserte sider)
+            type: object
+            list:
+              max: 4
+              collapsible: { collapsed: true, summary: "{label}" }
+            fields:
+              - { name: label, label: Språk, type: string, required: true }
+              - { name: locale, label: Språkkode, type: string, required: true }
+              - { name: href, label: Lenke (tom = deaktivert språk), type: string }
+              - { name: current, label: Aktuelt språk, type: boolean, required: true }
+      - name: siteAppearance
+        label: Tema og utseende
+        type: file
+        path: src/content/site-chrome/appearance.json
+        format: json
+        operations: { create: false, delete: false, rename: false }
+        fields:
+          - { name: showThemeSwitch, label: Vis Light / Dark-bryter, type: boolean, required: true }
+          - name: typography
+            label: Skriftfamilie (Oslo-blåkopi)
+            type: object
+            description: Kun skriftfamilien kan velges. Alle andre typografiske størrelser og stiler er låst til Optimalisering Oslo. Farger styres gjennom daisyUI Light/Dark-temaene.
+            fields:
+              - name: fontFamily
+                label: Skriftfamilie (font-sans)
+                type: select
+                options:
+                  values:
+                    - { name: system, label: Systemskrift }
+                    - { name: serif, label: Georgia (serif) }
+                    - { name: mono, label: System monospace }
+          - name: themes
+            label: Tema og utseende (lim inn fra daisyUI Theme Generator)
+            type: object
+            required: true
+            fields:
+              - name: defaultMode
+                label: Standard ved første besøk
+                type: select
+                required: true
+                options:
+                  values:
+                    - { name: light, label: Light }
+                    - { name: dark, label: Dark }
+              - { name: lightLabel, label: Tekst på lys knapp, type: string, required: true }
+              - { name: darkLabel, label: Tekst på mørk knapp, type: string, required: true }
+              - name: lightCss
+                label: Light – komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra Theme Generator. Må ha color-scheme light og et unikt name.
+              - name: darkCss
+                label: Dark – komplett daisyUI-temakode
+                type: text
+                required: true
+                description: Lim inn hele blokken fra Theme Generator. Må ha color-scheme dark og et annet name.
+      - name: siteFooter
+        label: Footer
+        type: file
+        path: src/content/site-chrome/footer.json
+        format: json
+        operations: { create: false, delete: false, rename: false }
+        fields:
+          - name: footerLogoLight
+            label: Footerlogo - Light (arver header)
+            type: image
+            options:
+              media: brandLogos
+          - name: footerLogoDark
+            label: Footerlogo - Dark (arver header)
+            type: image
+            options:
+              media: brandLogos
+          - name: footer
+            label: Bunntekst
+            type: object
+            fields:
+              - { name: about, label: Bedriftsbeskrivelse, type: text, required: true }
+              - name: groups
+                label: Bunntekstkolonner
+                type: object
+                list:
+                  min: 1
+                  max: 4
+                  collapsible: { collapsed: true, summary: "{heading}" }
+                fields:
+                  - { name: heading, label: Overskrift, type: string, required: true }
+                  - { name: headingHref, label: Lenke fra overskrift (valgfritt), type: string }
+                  - name: links
+                    label: Lenker
+                    type: object
+                    list:
+                      min: 1
+                      max: 12
+                      collapsible: { collapsed: true, summary: "{label}" }
+                    fields:
+                      - { name: label, label: Tekst, type: string, required: true }
+                      - { name: href, label: Adresse, type: string, required: true }
+              - { name: copyright, label: Opphavsrett, type: string, required: true }
+              - { name: note, label: Avsluttende tekst, type: string }
+              - name: legalLinks
+                label: Juridiske lenker
+                type: object
+                list:
+                  max: 5
+                  collapsible: { collapsed: true, summary: "{label}" }
+                fields:
+                  - { name: label, label: Tekst, type: string, required: true }
+                  - { name: href, label: Intern adresse, type: string, required: true }
+  - name: globalContentGroup
+    label: Global Innhold
+    type: group
+    items:
+      - name: sharedContent
+        label: Egendefinerte seksjoner
+        type: collection
+        path: src/content/global-content
+        format: json
+        subfolders: false
+        filename: "{fields.id}.json"
+        operations: { create: true, rename: false, delete: false }
+        view:
+          primary: name
+          fields: [name, id, heading]
+          search: [name, heading, id]
+        fields:
+          - { name: _block, type: string, hidden: true, readonly: true, required: true, default: content }
+          - name: uid
+            type: uuid
+            hidden: true
+            required: true
+            options: { editable: false, generate: true }
+          - { name: id, label: Stabil ID og anker, type: string, required: true, pattern: '^[a-z0-9]+(?:-[a-z0-9]+)*$' }
+          - { name: name, label: Navn i seksjonslisten, type: string, required: true }
+          - { name: eyebrow, label: Overtekst, type: string }
+          - { name: heading, label: Overskrift, type: string, required: true }
+          - { name: headingAlign, label: Overskriftsjustering, component: richAlign }
+          - { name: layout, label: Seksjonsoppsett, component: richLayout }
+          - { name: presentation, label: Seksjonstype, component: richPresentation }
+          - { name: surface, label: Seksjonsfarge, component: richSurface }
+          - { name: body, label: Avsnitt / kolonner (Markdown), component: globalMarkdownBody }
+          - { name: items, label: Kort / alternativer (Markdown), component: globalMarkdownItems }
+          - { name: links, label: Lenker, component: richLinks }
+      - name: builderGlobalMasters
+        label: Beskyttede og faste elementer
+        type: file
+        path: src/content/global-masters.json
+        format: json
+        operations: { create: false, rename: false, delete: false }
+        fields:
+          - name: faq
+            label: Ofte stilte spørsmål
+            type: object
+            fields:
+              - { name: type, label: Innholdstype, type: string, readonly: true, required: true }
+              - { name: items, label: Spørsmål og svar, component: builderFaq }
+          - { name: services, label: Tjenester, component: builderContentMaster }
+          - { name: process, label: Slik jobber vi, component: builderContentMaster }
+          - { name: benefits, label: Fordeler, component: builderContentMaster }
+          - { name: pricing, label: Priser (beskyttet), component: builderProtectedMaster }
+          - { name: proof, label: Resultater (beskyttet), component: builderProtectedMaster }
+          - { name: contact, label: Kontaktskjema (beskyttet), component: builderProtectedMaster }
+          - { name: calculator, label: Kalkulator (beskyttet), component: builderProtectedMaster }
+  - name: contentTone
+    label: Språk og tone
+    type: file
+    path: coordination/CONTENT-TONE.json
+    format: json
+    operations:
+      create: false
+      rename: false
+      delete: false
+    fields:
+      - name: defaultPreset
+        label: Normal tone på nettsiden
+        type: select
+        required: true
+        description: Brukes først ved neste redaksjonelle omskriving. Endrer ikke eksisterende innhold automatisk.
+        options:
+          values:
+            - name: noktern
+              label: Nøktern - presis og rett på sak
+            - name: balansert
+              label: Balansert - naturlig, konkret og kommersiell
+            - name: spiss
+              label: Spiss - tørr observasjonshumor
+            - name: spissplus
+              label: Spiss+ - skarpere kontrast og kommersiell brodd
+            - name: spisspluskomisk
+              label: Spiss+ komisk - med faktisk humor
+            - name: spisspluskomiskplus
+              label: Spiss+ komisk+ - absurd vri og treffende punchline
+            - name: spissplushysterisk
+              label: Spiss+ Hysterisk - standup og absurd bransjesatire (mest SoMe)
+      - name: heroPreset
+        label: Hero og hovedoverskrifter
+        type: select
+        required: true
+        description: Følg normal tone med mindre denne teksttypen trenger en særskilt styrke.
+        options: &contentVoiceOverrides
+          values:
+            - name: inherit
+              label: Følg normal tone
+            - name: noktern
+              label: Nøktern
+            - name: balansert
+              label: Balansert
+            - name: spiss
+              label: Spiss
+            - name: spissplus
+              label: Spiss+
+            - name: spisspluskomisk
+              label: Spiss+ komisk
+            - name: spisspluskomiskplus
+              label: Spiss+ komisk+
+            - name: spissplushysterisk
+              label: Spiss+ Hysterisk
+      - name: servicePreset
+        label: Tjenestekort og salgstekster
+        type: select
+        required: true
+        options: *contentVoiceOverrides
+      - name: explanationPreset
+        label: Begrepsforklaringer og innsikt
+        type: select
+        required: true
+        options: *contentVoiceOverrides
+      - name: faqPreset
+        label: Spørsmål og svar
+        type: select
+        required: true
+        options: *contentVoiceOverrides
+      - name: editorNotes
+        label: Særlige ønsker for tonen
+        type: text
+        required: false
+        options:
+          maxlength: 2000
+        description: Gjelder fremtidige redaksjonelle endringer. Pris, vilkår, resultater, sikkerhet og personvern beholder presist, nøkternt språk.
+  - name: starterHome
+    label: Forside
+    type: file
+    path: src/content/pages/home.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - &rootSlug
+        name: slug
+        label: URL-slug
+        type: string
+        readonly: true
+        required: true
+      - &rootSeo
+        name: seo
+        label: SEO
+        type: object
+        required: true
+        fields:
+          - { name: title, label: Sidetittel, type: string, required: true }
+          - { name: description, label: Metabeskrivelse, type: text, required: true }
+      - &rootHero
+        name: hero
+        label: Hero
+        component: standardPageHero
+        required: true
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: serviceGroup
+    label: Tjenester
+    type: group
+    items:
+      - name: services
+        label: Alle tjenester
+        type: collection
+        path: src/content/pages
+        exclude:
+          - 404.json
+          - home.json
+          - kontakt.json
+          - om.json
+          - priser.json
+        format: json
+        subfolders: false
+        filename: { template: "{fields.slug}.json", field: false }
+        operations: { create: true, rename: false, delete: true }
+        description: "Create, edit or delete services here. Delete also applies to existing services. Check inbound links and redirects first. Core and article pages stay protected."
+        view:
+          primary: seo.title
+          fields: [seo.title, slug]
+          search: [seo.title, slug]
+        fields:
+          - name: slug
+            label: Page URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use lowercase letters, numbers and hyphens."
+            description: "Public URL /your-slug/. Existing page URLs must keep their original filenames."
+          - *rootSeo
+          - *rootHero
+          - { name: sections, component: builderSections }
+          - { name: faq, component: builderFaq }
+          - { name: listing, component: builderListing }
+          - { name: kind, label: Page type, type: string, required: true, readonly: true, hidden: true, default: service }
+
+  - name: starterPriser
+    label: Tilbud og priser
+    type: file
+    path: src/content/pages/priser.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: starterKontakt
+    label: Kontakt
+    type: file
+    path: src/content/pages/kontakt.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: starterOm
+    label: Om denne demonstrasjonen
+    type: file
+    path: src/content/pages/om.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: starter404
+    label: 404
+    type: file
+    path: src/content/pages/404.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: insightGroup
+    label: Innsikt
+    type: group
+    items:
+      - name: managedArticles
+        label: Artikler
+        type: collection
+        path: src/content/pages/managed-articles
+        format: json
+        subfolders: false
+        filename: { template: "{fields.slug}.json", field: false }
+        operations: { create: true, rename: false, delete: true }
+        description: "Create, edit and delete articles here, including the original article. Check inbound links and redirects first; other fixed pages stay protected."
+        view:
+          primary: seo.title
+          fields: [seo.title, slug]
+          search: [seo.title, slug]
+        fields:
+          - name: slug
+            label: Article URL slug
+            type: string
+            required: true
+            pattern:
+              regex: "^innsikt/[a-z0-9]+(?:-[a-z0-9]+)*$"
+              message: "Use lowercase letters, numbers and hyphens; articles start with innsikt/."
+            description: "Unique public URL /innsikt/your-guide/. Choose it before saving."
+          - *rootSeo
+          - *rootHero
+          - { name: sections, component: builderSections }
+          - { name: faq, component: builderFaq }
+          - { name: listing, component: builderListing }
+          - { name: kind, label: Page type, type: string, required: true, readonly: true, hidden: true, default: article }

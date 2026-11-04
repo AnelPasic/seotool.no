@@ -1,0 +1,92 @@
+{
+  "slug": "ai-synlighet",
+  "kind": "service",
+  "seo": {
+    "title": "AI-synlighet – Overvåk omtale i ChatGPT og Google AI",
+    "description": "Spor hvordan merkevaren og nettstedet ditt siteres i ChatGPT, Google AI Overviews og AI Mode med SeoTool."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "AI-søk og siteringer",
+    "title": "Se hvordan kunstig intelligens omtaler og siterer nettstedet ditt.",
+    "support": "Kartlegg hvilke kilder og konkurrenter som trekkes frem i ChatGPT og Google AI Overviews, basert på observerte siteringer framfor spekulative poengsummer.",
+    "visual": {
+      "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Utforsk AI-synlighet",
+      "href": "/gratis-analyse/"
+    }
+  },
+  "listing": {
+    "title": "AI-synlighet",
+    "summary": "Overvåk kildesiteringer og omtaler i ChatGPT, Google AI Overviews og AI Mode.",
+    "order": 2,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Kan man manipulere svar i ChatGPT og Google AI?",
+      "answer": "Nei. Kunstig intelligens trekker ut informasjon fra kilder modellene oppfatter som autoritative. SeoTool observerer og dokumenterer faktiske siteringer fremfor å love urealistiske snarveier."
+    },
+    {
+      "question": "Hva er forskjellen mellom omtale og sitering?",
+      "answer": "En omtale betyr at merkevaren eller produktet nevnes i svaret, mens en sitering inkluderer en eksplisitt lenke til nettstedet ditt som kilde."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "ai-kilder",
+      "heading": "Hva SeoTool måler i AI-modeller",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "Brukeratferd flytter seg mot AI-drevne søkeflater. SeoTool kartlegger hvorvidt innholdet ditt blir brukt som referansekilde når brukere stiller spørsmål innen din bransje.",
+        "Målingene bygger på observerbare svar og kildelister, uten konstruerte 'AI-rangeringer' som mangler forankring i virkeligheten."
+      ],
+      "items": [
+        {
+          "title": "ChatGPT og nettmodeller",
+          "text": "Sporer hvordan spørsmål besvares og om nettstedet ditt oppgis som autoritativ referanse.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Google AI Overviews",
+          "text": "Overvåker AI-sammendrag i Googles søkeresultater og hvilke URL-er som inkluderes i kildekarusellen.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Siteringer og kildeanalyse",
+          "text": "Viser hvilke konkurrenter og domener som oftest siteres på dine kjerneområder.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Historisk utvikling",
+          "text": "Observerer hvordan omtalen og kildebruken endrer seg over tid etter innholdsoppdateringer.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Vil du vite om du siteres i AI-søk?",
+      "visibility": "visible",
+      "body": [
+        "Start med en enkel kartlegging for å se hvordan nettsiden din fremstår i søkemotorer og AI-modeller.",
+        "Vi analyserer faktiske kildehenvisninger og gir deg konkrete råd for innholdsautoritet."
+      ],
+      "links": [
+        {
+          "label": "Analyser nettsiden",
+          "href": "/gratis-analyse/"
+        },
+        {
+          "label": "Les om hvordan det fungerer",
+          "href": "/slik-fungerer-det/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+---
+import SiteLayout from '../../components/BaseLayout.astro';
+import HomeLeverage from '../../components/specimens/HomeLeverage.astro';
+import HomeSection from '../../components/OsloHomeSection.astro';
+import ContentSection from '../../components/OsloContentSection.astro';
+import {ordinary,calculator} from '../../design-system/fixtures';
+import '../../styles/compositions/home.css';
+---
+<SiteLayout title="Globale elementer – intern gjennomgang" description="Fiktive delte og lokale seksjoner og regneeksempel." noindex>
+ <div class="shell section-space"><h1>Globale elementer</h1><p>Kun fiktive data. Ingen kalkulatorprognose, kundepåstand eller innsending.</p><a class="link" href="/design-system/">Til designsystemet</a></div>
+ <div class="invite-home"><HomeLeverage content={calculator}/><HomeSection section={{...ordinary,id:'ds-global-content'}}/></div>
+ <ContentSection section={{...ordinary,id:'ds-local-content'}}/>
+</SiteLayout>

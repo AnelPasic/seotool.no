@@ -1,0 +1,29 @@
+---
+import '../styles/compositions/home.css';
+import '../styles/compositions/service.css';
+import '../styles/compositions/pricing.css';
+import type { BuilderPage } from '../page-builder';
+import { pages, masters, sharedContent, heroProofCases } from '../lib/load-site';
+import { resolveHeroProof } from '../lib/hero-proof';
+import BaseLayout from './BaseLayout.astro';
+import Hero from './Hero.astro';
+import PageSections from './PageSections.astro';
+interface Props { page:BuilderPage; }
+const {page}=Astro.props;
+const featuredProof=resolveHeroProof(page.hero,masters,heroProofCases);
+const heroFamily=page.hero.family??page.kind;
+const commercial=heroFamily==='home'||heroFamily==='service'||heroFamily==='index'||heroFamily==='pricing';
+---
+<BaseLayout page={page}>
+  {commercial
+    ? <div class:list={['invite-home',(heroFamily==='service'||heroFamily==='index')&&'invite-service',heroFamily==='pricing'&&'invite-pricing']}>
+        <Hero hero={page.hero} family={page.kind} featuredProof={featuredProof}/>
+        <PageSections page={page} pages={pages} masters={masters} sharedContent={sharedContent}/>
+      </div>
+    : <>
+        <Hero hero={page.hero} family={page.kind} featuredProof={featuredProof}/>
+        <div class:list={{'article-content':page.kind==='article'}}>
+          <PageSections page={page} pages={pages} masters={masters} sharedContent={sharedContent}/>
+        </div>
+      </>}
+</BaseLayout>

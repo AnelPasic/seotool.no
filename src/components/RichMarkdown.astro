@@ -1,0 +1,25 @@
+---
+import {renderSafeMarkdown} from '../lib/rich-markdown';
+interface Props {text:string; variant?:'body'|'card';}
+const {text,variant='body'}=Astro.props;
+const safeHtml=renderSafeMarkdown(text);
+---
+<div class:list={['rich-markdown',variant==='card'&&'card-copy']} set:html={safeHtml}></div>
+<style is:global>
+.rich-markdown{min-width:0;overflow-wrap:anywhere;line-height:inherit;color:inherit;}
+.rich-markdown :is(p,h2,h3,h4,h5,h6,ul,ol){margin:0;}
+.rich-markdown>*+*{margin-top:.85em!important;}
+.rich-markdown :is(h2,h3,h4,h5,h6){font-weight:700;line-height:1.25;letter-spacing:normal;color:inherit;}
+.rich-markdown h2{font-size:1.45em;}
+.rich-markdown h3{font-size:1.3em;}
+.rich-markdown h4{font-size:1.17em;}
+.rich-markdown h5{font-size:1.05em;}
+.rich-markdown h6{font-size:1em;}
+.rich-markdown ul{list-style:disc outside;padding-inline-start:1.45em;}
+.rich-markdown ol{list-style:decimal outside;padding-inline-start:1.45em;}
+.rich-markdown li+li{margin-top:.3em;}
+.rich-markdown a{text-decoration:underline;text-underline-offset:.15em;overflow-wrap:anywhere;}
+.rich-markdown a:focus-visible{outline:2px solid currentColor;outline-offset:3px;}
+.rich-markdown strong{font-weight:700;}
+.rich-markdown em{font-style:italic;}
+</style>

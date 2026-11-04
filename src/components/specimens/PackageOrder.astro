@@ -1,0 +1,47 @@
+---
+import type { SpecimenContent as HomepageContent } from '../../design-system/fixtures';
+import Arrow from '../Arrow.astro';
+
+type Package = HomepageContent['packages']['items'][number];
+interface Props { item: Package; featured?: boolean; orderIntro: string; orderSubmitLabel: string; }
+const { item, featured = false, orderIntro, orderSubmitLabel } = Astro.props;
+const id = (field: string) => `package-${item.key}-${field}`;
+const enabled = false;
+// Real intake requires backend, privacy, notification and launch approval.
+---
+<details id={`package-order-${item.key}`} class="package-order-inline" data-package-order data-package-key={item.key}>
+  <summary class:list={['button', 'btn', featured ? 'btn-secondary' : 'btn-primary']}>{item.cta.label}<Arrow diagonal /></summary>
+  <div class="package-order-panel">
+    <h4>Demo: {item.title}</h4>
+    <p>{orderIntro}</p>
+    <p class="package-focus-order-summary" data-package-focus-summary aria-live="polite"></p>
+    <form data-package-order-form data-enabled={String(enabled)} method="dialog" data-specimen-form onsubmit="return false">
+      <input type="hidden" name="form" value="pakke-bestilling" />
+      <input type="hidden" name="package" value={item.key} />
+      <div class="package-order-fields">
+        <label for={id('website')}>Nettside <span aria-hidden="true">*</span></label>
+        <input class="input w-full" id={id('website')} name="website" type="text" inputmode="url" autocomplete="url" placeholder="example.invalid" maxlength="2048" required />
+        <label for={id('email')}>E-post <span aria-hidden="true">*</span></label>
+        <input class="input w-full" id={id('email')} name="email" type="email" autocomplete="off" placeholder="navn på eksempel" maxlength="254" required />
+        <label for={id('phone')}>Telefon <span aria-hidden="true">*</span></label>
+        <input class="input w-full" id={id('phone')} name="phone" type="tel" autocomplete="tel" placeholder="+47 900 00 000" maxlength="40" required />
+        {false && <>
+          <label for={id('partner-needs')}>Hva ønsker du hjelp med? (valgfritt)</label>
+          <textarea class="textarea w-full" id={id('partner-needs')} name="partnerNeeds" rows="3" maxlength="650" placeholder="Fortell kort om tjenester, markeder eller mål dere vil prioritere."></textarea>
+        </>}
+      </div>
+      <div hidden aria-hidden="true"><label for={id('website-confirmation')}>La feltet stå tomt</label><input id={id('website-confirmation')} name="website_confirmation" tabindex="-1" autocomplete="off" maxlength="200" /></div>
+      <p class="form-privacy">Ikke send innlogging eller sensitive opplysninger. <a href="/design-system/">Les om personvern</a>.</p>
+      {!enabled && <p class="form-notice alert alert-warning">Dette er en forhåndsvisning. Bestilling er ikke åpnet ennå. Ingen opplysninger blir sendt.</p>}
+      <button type="submit" class="button btn btn-primary package-order-submit" disabled>{orderSubmitLabel}<Arrow diagonal /></button>
+      <p class="form-status" data-order-status role="status" aria-live="polite" tabindex="-1" hidden></p>
+      <noscript><p>Bestilling er ikke åpnet i denne forhåndsvisningen.</p></noscript>
+    </form>
+  </div>
+</details>
+<script>
+ document.querySelectorAll<HTMLFormElement>('[data-specimen-form]').forEach(form=>{
+  form.addEventListener('submit',event=>event.preventDefault());
+  form.submit=()=>{};
+ });
+</script>

@@ -1,0 +1,89 @@
+{
+  "slug": "gratis-analyse",
+  "kind": "service",
+  "seo": {
+    "title": "Gratis nettstedsanalyse – SeoTool",
+    "description": "Be om en innledende vurdering av nettstedets tekniske tilstand, indeksering og synlighet i søk og AI."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "family": "assessment",
+    "eyebrow": "Nettstedsanalyse",
+    "title": "Få en vurdering av nettstedets synlighet.",
+    "support": "Oppgi nettadressen din for å få en innledende gjennomgang av tekniske flaskehalser, indekseringsfeil og uutnyttet potensial i søk og AI-modeller.",
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "listing": {
+    "title": "Gratis analyse",
+    "summary": "Innledende vurdering av nettstedets synlighet og tekniske forutsetninger.",
+    "order": 5,
+    "visible": true
+  },
+  "faq": [
+    {
+      "question": "Er dette en automatisert eller manuell gjennomgang?",
+      "answer": "Vi foretar en innledende skanning av sentrale tekniske parametere og kontrollerer dataene før du mottar et sammendrag med prioriterte anbefalinger."
+    },
+    {
+      "question": "Må jeg oppgi telefonnummer eller forplikte meg?",
+      "answer": "Nei, vi krever kun nettadresse og e-postadresse for å sende deg analysen. Det er ingen forpliktelser eller skjulte kostnader."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "vurderingskriterier",
+      "heading": "Hva vurderes i analysen?",
+      "visibility": "visible",
+      "layout": "two-columns",
+      "body": [
+        "En grundig analyse avdekker hvorfor enkelte sider underpresterer, og hvilke endringer som må til for å oppnå bedre indeksering og synlighet.",
+        "Vi fokuserer på observerbare fakta framfor overfladiske poengsummer som ikke gir praktisk veiledning."
+      ],
+      "items": [
+        {
+          "title": "Teknisk fundament",
+          "text": "Status på gjennomsøking, svarkoder, robots-direktiver og kanoniske lenker.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Søkeintensjon & relevans",
+          "text": "Samsvar mellom sidens innhold og hva brukerne faktisk søker etter i Google.",
+          "surface": "base-200"
+        },
+        {
+          "title": "AI-kildepotensial",
+          "text": "Struktur og autoritet som avgjør om innholdet kan brukes som kilde i ChatGPT og AI Overviews.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Prioriterte tiltak",
+          "text": "En kortfattet liste over de tre viktigste grepene du bør ta først.",
+          "surface": "base-200"
+        }
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "bestill-analyse",
+      "heading": "Slik ber du om analyse",
+      "visibility": "visible",
+      "body": [
+        "Send inn nettadressen din og en kort kommentar om hvilke områder du ønsker svar på via vår kontaktside.",
+        "Dersom du allerede har en aktiv konto på SeoTool, logger du inn i verktøyet for å se sanntidsstatus på alle dine prosjekter."
+      ],
+      "links": [
+        {
+          "label": "Gå til henvendelsesskjema",
+          "href": "/kontakt/"
+        },
+        {
+          "label": "Les om hvordan SeoTool fungerer",
+          "href": "/slik-fungerer-det/"
+        }
+      ]
+    }
+  ]
+}

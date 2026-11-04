@@ -1,0 +1,104 @@
+---
+/** Exact Oslo PageList structure and CSS, fed by MWS's neutral Pages CMS resolver.
+ * Canonical markup/CSS: optimalisering.oslo.noV3.3 app/src/components/PageList.astro
+ * pinned at 0a81b0b8. No customer source data is transplanted.
+ */
+import type { PageListConfig, PageListItem } from '../page-builder';
+import { presentationVisual } from '../page-builder';
+import Arrow from './Arrow.astro';
+import ContentCard from './ContentCard.astro';
+import ListingVisual from './ListingVisual.astro';
+interface Props {
+  id: string;
+  heading: string;
+  items: readonly PageListItem[];
+  layout: PageListConfig['layout'];
+  columns?:PageListConfig['columns'];
+}
+const { id, heading, items, layout, columns } = Astro.props;
+const displayedItems = items.map(item => ({...item, displayVisual: presentationVisual(item,layout)}));
+---
+<section id={id} class:list={['content-section section-space',`home-section-${id}`]}>
+  <div class="shell">
+    <div class="section-heading" data-heading-align="center">
+      <div><h2>{heading}</h2></div>
+      <div class="body-copy" data-content-layout="default"></div>
+    </div>
+    {layout === 'cards'
+      ? <div class="section-items" data-content-layout={columns===1?'stacked':columns===2?'two-columns':columns===3?'three-columns':undefined} data-page-list-columns={columns}>
+          {items.map(item=><ContentCard title={item.title} text={item.summary} surface="secondary" href={item.href} label={item.label} />)}
+        </div>
+      : <ul class:list={['page-list', `page-list-${layout}`]} data-count={items.length} data-columns={layout==='alternating'?undefined:columns}>
+          {displayedItems.map(item => <li>
+            {layout === 'mediaCards' || layout === 'alternating' ?
+              <article class:list={['listing-item min-w-0',layout === 'mediaCards'?'card card-border bg-base-100 h-full overflow-hidden':'info-item']} data-has-visual={!!item.displayVisual} data-visual-kind={item.displayVisual?.kind ?? 'none'} data-surface={layout === 'mediaCards' ? 'base-100' : undefined}>
+                {layout === 'mediaCards' && item.displayVisual && <figure class="listing-media"><ListingVisual visual={item.displayVisual}/></figure>}
+                <div class:list={['listing-copy',layout === 'mediaCards'&&'card-body min-w-0 flex-1 items-start gap-0']}>
+                  <h3 class:list={[layout === 'mediaCards'&&'card-title mb-4 text-2xl']}>{item.title}</h3>
+                  <p class:list={[layout === 'mediaCards'&&'mb-6 text-base-content']}>{item.summary}</p>
+                  {item.href&&(layout === 'mediaCards'?<div class="card-actions mt-auto"><a class="text-link text-base-content" href={item.href}>{item.label}<Arrow diagonal /></a></div>:<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>)}
+                </div>
+                {layout === 'alternating' && item.displayVisual && <ListingVisual visual={item.displayVisual}/>}
+              </article>
+              : layout === 'links' ? (item.href?<a class="text-link" href={item.href}>{item.title}<Arrow diagonal /></a>:<span class="font-semibold">{item.title}</span>)
+              : <article class="info-item page-list-row"><h3>{item.title}</h3><p>{item.summary}</p>{item.href&&<a class="text-link" href={item.href}>{item.label}<Arrow diagonal /></a>}</article>}
+          </li>)}
+        </ul>}
+  </div>
+</section>
+<style>
+  .page-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--gap); }
+  .page-list li { min-width: 0; }
+  .page-list .page-list-row { padding: var(--panel-pad-sm) 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+  .page-list-alternating .listing-item { padding: 0; border: 0; min-width: 0; }
+  .listing-copy { min-width: 0; }
+  .listing-copy .text-link { margin-top: var(--gap); }
+  .page-list-alternating { gap: clamp(48px, 5vw, 80px); margin-top: var(--gap-lg); }
+  .page-list-alternating .listing-item { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: center; }
+  .page-list-alternating .listing-item[data-visual-kind="icon"] :global(.listing-visual) { aspect-ratio: auto; height: clamp(180px, 18vw, 240px); }
+  @media (min-width: 701px) {
+    .page-list-alternating .listing-item[data-visual-kind="icon"] { grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); }
+    .page-list-alternating > li:nth-child(even) .listing-item[data-visual-kind="icon"] { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); }
+  }
+  .page-list-alternating > li:nth-child(even) .listing-copy { grid-column: 2; grid-row: 1; }
+  .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: 1; grid-row: 1; }
+  .page-list-alternating > li:nth-child(even) :global(.listing-visual[data-kind="icon"]) { background: var(--color-info); }
+  .page-list-mediaCards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); margin-top: var(--gap-lg); }
+  .page-list-mediaCards[data-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-list-mediaCards[data-count="1"] { grid-template-columns: minmax(0, 1fr); }
+  .page-list-mediaCards :global(.listing-visual) { aspect-ratio: 3 / 2; border-radius: 0; }
+  /* Intentional Oslo typography exception: legacy media cards used H4 on <=1100px, H3 above. */
+  @media (min-width: 1101px) { .page-list-mediaCards .card-title { font-size: var(--type-h3); line-height: var(--leading-h3); } }
+  @media (max-width: 1100px) { .page-list-mediaCards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 700px) {
+    .page-list-mediaCards, .page-list-mediaCards[data-count="2"] { grid-template-columns: minmax(0, 1fr); }
+    .page-list-alternating .listing-item { grid-template-columns: minmax(0, 1fr); gap: var(--gap); }
+    .page-list-alternating .listing-item[data-visual-kind="icon"] :global(.listing-visual) { height: clamp(140px, 40vw, 180px); }
+    .page-list-alternating > li:nth-child(even) .listing-copy, .page-list-alternating > li:nth-child(even) :global(.listing-visual) { grid-column: auto; grid-row: auto; }
+  }
+
+  /* HomeSection renders PageList cards; keep its existing desktop grid,
+     but constrain 3 chosen columns to 2 at tablet widths and 1 on phones. */
+  @media (min-width: 701px) and (max-width: 1100px) {
+    :global(.content-section .section-items[data-content-layout="three-columns"][data-page-list-columns="3"]) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 700px) {
+    :global(.content-section .section-items[data-page-list-columns]) {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  /* A selected 1/2/3-column grid applies to independent list items only.
+     Alternating preserves its full-width split-image composition. */
+  @media (min-width: 701px) {
+    .page-list[data-columns="1"] { grid-template-columns: minmax(0, 1fr); }
+    .page-list[data-columns="2"], .page-list[data-columns="3"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1101px) {
+    .page-list[data-columns="3"] { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (max-width: 700px) {
+    .page-list[data-columns] { grid-template-columns: minmax(0, 1fr); }
+  }
+</style>

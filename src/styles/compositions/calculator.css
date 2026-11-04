@@ -1,0 +1,41 @@
+/* H-023B: component-owned calculator composition; palette and primitives belong to app.css/daisyUI. */
+@layer composition {
+
+.invite-home .leverage-grid { grid-template-columns: .9fr 1.1fr; gap: 96px; align-items: center; }
+.invite-home .leverage-copy .body-copy { color: inherit; margin-top: 28px; }
+.invite-home .calculator-formula { border-left: 2px solid currentColor; padding-left: 18px; font-size: var(--type-meta); margin-top: 24px; line-height: var(--leading-small); }
+.invite-home .leverage-tool { background: none; border: 0; padding: 0; min-width: 0; width: 100%; max-width: 680px; justify-self: end; }
+.invite-home .calculator-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); }
+.invite-home .calculator-inputs label { font-size: var(--type-form-label); display: flex; flex-direction: column; justify-content: space-between; gap: var(--gap-xs); min-width: 0; line-height: var(--leading-small); }
+.invite-home .calculator-error { font-size: var(--type-helper); margin-top: 18px; color: var(--color-secondary-content); font-weight: var(--weight-label); line-height: var(--leading-small); }
+.invite-home .math-results { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 32px; }
+.invite-home .leverage-result, .invite-home .leverage-comparison { border: 0; border-radius: var(--radius-md); padding: var(--panel-pad); display: flex; flex-direction: column; align-items: start; gap: 0; min-width: 0; }
+.invite-home .leverage-result > span:first-child, .invite-home .leverage-comparison > span:first-child { font-size: var(--type-body-sm); font-weight: var(--weight-heading); line-height: var(--leading-body); }
+.invite-home .math-results output { display: block; font-family: var(--heading); font-size: var(--type-stat); font-weight: var(--weight-heading); line-height: var(--leading-stat); letter-spacing: -.045em; margin-block: 14px 10px; white-space: nowrap; }
+.invite-home .math-results .outcome-label { font-size: var(--type-label); font-family: var(--body); line-height: var(--leading-small); }
+.invite-home .math-equation { font-size: var(--type-meta); margin-top: 13px; line-height: var(--leading-small); }
+@media (max-width: 1100px) {
+  .invite-home .leverage-grid { gap: 36px; }
+}
+@media (max-width: 900px) {
+  .invite-home .leverage-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 650px) {
+  .invite-home .leverage-grid { gap: 40px; }
+}
+@media (max-width: 650px) {
+  .invite-home .calculator-inputs { gap: 16px 12px; }
+}
+@media (max-width: 650px) {
+  .invite-home .math-results { gap: var(--gap-sm); }
+}
+@media (max-width: 650px) {
+  .invite-home .leverage-result, .invite-home .leverage-comparison { padding: var(--panel-pad-sm) var(--panel-pad-xs); }
+}
+@media (max-width: 650px) {
+  .invite-home .math-results .outcome-label, .invite-home .math-equation { font-size: var(--type-label); line-height: var(--leading-small); }
+}
+@media (max-width: 359px) {
+  .invite-home .leverage-result, .invite-home .leverage-comparison { padding-inline: var(--panel-pad-xs); }
+}
+}

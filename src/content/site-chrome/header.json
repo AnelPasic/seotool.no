@@ -1,0 +1,83 @@
+{
+  "brand": {
+    "name": "SeoTool",
+    "homeHref": "/"
+  },
+  "skipLabel": "Hopp til innhold",
+  "navigationLabel": "Hovedmeny",
+  "mobileNavigationLabel": "Mobilmeny",
+  "openMenuLabel": "Åpne meny",
+  "closeMenuLabel": "Lukk meny",
+  "navigation": [
+    {
+      "kind": "dropdown",
+      "id": "produktet",
+      "label": "Produktet",
+      "href": "/seo/",
+      "toggleLabel": "Vis produktmenyen",
+      "links": [
+        {
+          "label": "SEO",
+          "href": "/seo/",
+          "description": "Kjernesøk, tekniske feil og Search Console"
+        },
+        {
+          "label": "AI-synlighet",
+          "href": "/ai-synlighet/",
+          "description": "Siteringer i ChatGPT og Google AI Overviews"
+        },
+        {
+          "label": "Lokal synlighet",
+          "href": "/lokal-synlighet/",
+          "description": "Lokal SEO og Google Bedriftsprofil (under utvikling)"
+        },
+        {
+          "label": "Slik fungerer det",
+          "href": "/slik-fungerer-det/",
+          "description": "Fra bevis til prioritert handling"
+        }
+      ]
+    },
+    {
+      "kind": "link",
+      "id": "innsikt",
+      "label": "Innsikt",
+      "href": "/innsikt/"
+    },
+    {
+      "kind": "link",
+      "id": "gratis-analyse",
+      "label": "Gratis analyse",
+      "href": "/gratis-analyse/"
+    }
+  ],
+  "primaryCta": {
+    "label": "Logg inn",
+    "href": "https://app.seotool.no",
+    "variant": "primary"
+  },
+  "utilityLinks": [],
+  "languages": [
+    {
+      "label": "NO",
+      "locale": "nb",
+      "href": "/",
+      "current": true
+    },
+    {
+      "label": "EN",
+      "locale": "en",
+      "current": false
+    }
+  ],
+  "search": {
+    "label": "Søk på nettstedet",
+    "mode": "pagefind"
+  },
+  "headerOptions": {
+    "sticky": true,
+    "showLanguageSwitch": true,
+    "showSearch": true,
+    "showCta": true
+  }
+}

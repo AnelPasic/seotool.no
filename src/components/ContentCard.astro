@@ -1,0 +1,19 @@
+---
+import Arrow from './Arrow.astro';
+import TermText from './TermText.astro';
+import RichMarkdown from './RichMarkdown.astro';
+import {hasRichMarkdown} from '../lib/rich-markdown';
+import {surfaceAttribute,type Surface} from '../lib/surface';
+interface Props {title:string;text:string;surface?:Surface;number?:string;href?:string;label?:string;titleTerms?:string[];textTerms?:string[];linkVariant?:'button'|'text';transparent?:boolean;}
+const {title,text,surface,number,href,label,titleTerms=[],textTerms=[],linkVariant='button',transparent=false}=Astro.props;
+const selected=surfaceAttribute(surface)??'base-100';
+const surfaces={'base-100':'bg-base-100 text-base-content','base-200':'bg-base-200 text-base-content border border-base-300','base-300':'bg-base-300 text-base-content','primary':'bg-primary text-primary-content','secondary':'bg-secondary text-secondary-content','accent':'bg-accent text-accent-content','neutral':'bg-neutral text-neutral-content','info':'bg-info text-info-content','success':'bg-success text-success-content','warning':'bg-warning text-warning-content','error':'bg-error text-error-content'};
+---
+<article class:list={['card min-w-0 wrap-anywhere',transparent?'bg-transparent text-base-content card-border border-base-300':surfaces[selected]]} data-content-card data-box-variant="card" data-surface={transparent?undefined:selected}>
+ <div class="card-body min-w-0 gap-5">
+  {number&&<span class="font-semibold" aria-hidden="true" data-card-number>{number}</span>}
+  <h3 class="card-title"><TermText text={title} terms={titleTerms}/></h3>
+  {hasRichMarkdown(text)?<RichMarkdown text={text} variant="card"/>:<p class="card-copy"><TermText text={text} terms={textTerms}/></p>}
+  {(href||Astro.slots.has('actions'))&&<div class:list={['card-actions',linkVariant==='text'?'mt-auto pt-3':'mt-3']}><slot name="actions">{href&&<a class={linkVariant==='text'?'text-link':'btn btn-primary'} href={href}>{label||title}<Arrow diagonal/></a>}</slot></div>}
+ </div>
+</article>

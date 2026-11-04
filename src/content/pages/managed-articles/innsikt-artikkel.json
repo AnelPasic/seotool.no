@@ -1,0 +1,70 @@
+{
+  "slug": "innsikt/artikkel",
+  "kind": "article",
+  "seo": {
+    "title": "Velge tjeneste: en enkel sjekkliste | SeoTool",
+    "description": "Et nøytralt artikkelexempel om å avklare behov, sammenligne innhold og velge et nyttig neste steg."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "title": "Hva bør du sjekke før du velger en tjeneste?",
+    "support": "Start med behovet, sammenlign det som faktisk inngår, og finn riktig neste steg. Dette er en fiktiv eksempelartikkel.",
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "listing": {
+    "title": "Sjekkliste før du velger tjeneste",
+    "summary": "Hva bør du avklare før du sammenligner tjenester og tilbud? Et eksempel på en nyttig veiledningsartikkel.",
+    "order": 5,
+    "visible": true,
+    "label": "Les sjekklisten"
+  },
+  "faq": [
+    {
+      "question": "Er dette en anbefaling av en bestemt leverandør?",
+      "answer": "Nei. Dette er en fiktiv artikkel som demonstrerer en tydelig veiledende struktur."
+    }
+  ],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "avklar-behovet",
+      "heading": "Begynn med behovet",
+      "visibility": "visible",
+      "body": [
+        "Skriv ned hvilket problem du vil løse, hvem som skal bruke løsningen, og hva som er viktigst. Det gjør det enklere å vurdere om en tjeneste faktisk passer.",
+        "Se etter konkrete beskrivelser av leveransen fremfor bare brede løfter."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "sammenlign-innholdet",
+      "heading": "Sammenlign hva som inngår",
+      "visibility": "visible",
+      "body": [
+        "Undersøk hva som er inkludert, hvilke forutsetninger som gjelder, og hvem som har ansvar for neste steg.",
+        "Dette er kontrollpunkter du kan bruke selv. Artikkelen oppgir ikke priser, referanser eller dokumenterte resultater for en virkelig bedrift."
+      ]
+    },
+    {
+      "_block": "content",
+      "id": "neste-steg",
+      "heading": "Les om tjenesten før du tar kontakt",
+      "visibility": "visible",
+      "body": [
+        "Når behovet er klart, bør du lese en relevant tjenestebeskrivelse. Kontakt først leverandøren når du vet hvilke spørsmål du trenger svar på."
+      ],
+      "links": [
+        {
+          "label": "Se tjenesteeksemplet",
+          "href": "/tjeneste/"
+        },
+        {
+          "label": "Se kontaktmuligheter",
+          "href": "/kontakt/"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+/* Transitional adapters to native Tailwind v4 tokens: original Oslo sizes preserved.
+   Instrument Sans and Figtree remain defined by the existing global font setup.
+   The smallest public role is 0.875rem (14px at the default root size).
+   Narrow-column headings/results reflow; there are no sub-14px exceptions. */
+:root {
+  --type-display: var(--text-6xl);
+  --type-h1: var(--type-display);
+  --type-h2: var(--text-4xl);
+  --type-h3: var(--text-3xl);
+  --type-h4: var(--text-2xl);
+  --type-lead: var(--text-xl);
+  --type-body-lg: var(--text-lg);
+  --type-body: var(--text-base);
+  --type-body-sm: 1rem;
+  --type-label: .875rem;
+  --type-eyebrow: .875rem;
+  --type-meta: 0.9375rem;
+  --type-caption: var(--type-meta);
+  --type-button: 1rem;
+  --type-button-sm: .875rem;
+  --type-form-label: .875rem;
+  --type-helper: .875rem;
+  --type-caveat: var(--type-helper);
+  --type-stat: clamp(2rem, 3.5vw, 3.5rem);
+  --type-icon: 1.5rem;
+
+  --leading-display: var(--text-6xl--line-height);
+  --leading-h2: var(--text-4xl--line-height);
+  --leading-h3: var(--text-3xl--line-height);
+  --leading-h4: var(--text-2xl--line-height);
+  --leading-lead: var(--text-xl--line-height);
+  --leading-body: var(--text-base--line-height);
+  --leading-small: 1.5;
+  --leading-stat: 1.15;
+  --weight-heading: var(--font-weight-semibold);
+  --weight-body: var(--font-weight-normal);
+  --weight-label: var(--font-weight-semibold);
+  --weight-button: var(--font-weight-semibold);
+  --tracking-eyebrow: .055em;
+}

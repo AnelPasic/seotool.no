@@ -1,0 +1,17 @@
+# CONTENT-04 — Page archetype examples (no new CMS or blueprint)
+
+This is a **short application guide** for the existing [Page Builder + CRO Baseline](../../docs/PAGE-BUILDER-AND-CRO-BASELINE.md) and [Content Quality Gate](../../docs/CONTENT-QUALITY-AND-VOICE.md). It is not a second specification, a hard-coded section order, or an instruction to reuse demo wording. The existing `CONTENT-SOURCE-OF-TRUTH.md` defines each field's actual source.
+
+Validated **Oslo pilot:** [PR #59](https://github.com/AnelPasic/optimalisering.oslo.noV3.3/pull/59) used the real Home, `/seo/` and Google Business Profile guide *read-only*. Its content, page SEO, CTA, global refs and sequencing were checked without modifying live content. This MWS port improves only the neutral starter examples.
+
+| Archetype / starter file | Visitor's main job | Recommended content jobs (optional and reorderable after Hero) | Next step |
+| --- | --- | --- | --- |
+| **Home** `src/content/pages/home.json` | Understand who this business helps and choose a direction | Hero promise → actual offer/needs → appropriate process/benefits → **real** proof if available → pricing if beneficial → FAQ and route to conversion. Existing demo already shows content, shared reference, process, FAQ and PageList | Relevant service link in Hero; functional lead CTA only after separate intake setup |
+| **Service** `src/content/pages/tjeneste.json` | See whether the service is relevant and what happens next | Hero → situation/problem → what is included → practical next step/process → optional genuine proof and offer → FAQ/CTA. The neutral demo now has a contact-route CTA and a local next-step section **without implying functional intake** | `/kontakt/` as a page link, not a submission promise |
+| **Article** `src/content/pages/managed-articles/innsikt-artikkel.json` | Get a useful answer before committing to a purchase | Direct answer → specific checks/explanation → actionable summary and contextual links. The neutral demo now has three locally authored sections and one optional FAQ; it is **not** a disguised commercial page | `/tjeneste/` and `/kontakt/` where genuinely useful |
+
+**Rules to apply, not mechanically enforce:** Hero is first and separately edited. The `sections` list governs the rest; omit irrelevant blocks rather than filling empty proof/pricing slots. FAQ is optional. Keep one source for reusable text (`sharedContent`) or fixed masters (`global`) instead of copying it into pages. Protect pricing, verified customer proof, contact implementation and other production capabilities. Article content must provide real information gain and honest source/factual context when used on a client site. A new important page still requires its own buyer/search intent and quality review; these neutral pages are **fictional examples**, not client-ready copy.
+
+**Implementation boundary:** No new Pages CMS menu, custom editor, component family, template engine, approval/status workflow, source migration or fabricated case/pricing data. These pages deliberately keep their current slugs and PageList identities. **New page creation/deletion belongs to [CONTENT-06](https://github.com/AnelPasic/MedonWebSystem/issues/55)**. CMS interface labels are not being translated as part of CONTENT-04; any future new CMS labels/helpers should be in English.
+
+**Validation:** Oslo PR checks, MWS builder schema and regression checks, local Astro/second-brand browser checks where available. Those are not evidence of actual logged-in Pages CMS save→reopen.

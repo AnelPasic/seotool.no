@@ -1,0 +1,48 @@
+---
+/** OWNER #87: same structure, daisyUI classes and theme-aware logo behavior
+ * as Oslo app/src/components/HomeFooter.astro@9719e4c.
+ * grid-flow-row! prevents native footer-horizontal from creating implicit tablet columns.
+ * Source data remains client-owned in Pages CMS footer.json.
+ */
+import type { SiteChrome } from '../lib/site-chrome';
+import { siteChromeSchema } from '../lib/site-chrome';
+import { resolveSiteChromeLogos } from '../lib/site-chrome-logos';
+interface Props { config: SiteChrome; }
+const config=siteChromeSchema.parse(Astro.props.config);
+const logos=resolveSiteChromeLogos(config);
+---
+<footer class="site-footer bg-secondary text-secondary-content">
+  <div class="shell">
+    <div class="footer footer-grid footer-grid--columns footer-vertical min-[651px]:footer-horizontal grid-flow-row! gap-x-5 gap-y-8 pb-9 min-[651px]:pb-[55px] text-(length:--type-body) leading-(--leading-body) *:w-full">
+      <div class="footer-about block justify-items-normal">
+        <a class="footer-title footer-brand normal-case opacity-100 mb-0" href={config.brand.homeHref}
+          aria-label={config.brand.name}>
+          {logos.footerLight || logos.footerDark
+            ? <span class="site-brand-image-pair site-brand-image-pair--footer" aria-hidden="true">
+                <img class="site-brand-image site-brand-image--light"
+                  src={logos.footerLight ?? logos.footerDark} alt="" width="220" height="60" />
+                <img class="site-brand-image site-brand-image--dark"
+                  src={logos.footerDark ?? logos.footerLight} alt="" width="220" height="60" />
+              </span>
+            : <>{config.brand.name}<span>.</span></>}
+        </a>
+        <p>{config.footer.about}</p>
+      </div>
+      {config.footer.groups.map(group => (
+        <nav class="footer-link-group" aria-label={group.heading}>
+          <h2 class="footer-title footer-group-title">{group.headingHref
+            ? <a href={group.headingHref}>{group.heading}</a>
+            : group.heading}</h2>
+          {group.links.map(link => <a href={link.href}>{link.label}</a>)}
+        </nav>
+      ))}
+    </div>
+  </div>
+  <div class="shell footer-bottom footer-bottom--columns">
+    <span>© {new Date().getFullYear()} {config.footer.copyright}</span>
+    <span>{config.footer.note}</span>
+    {config.footer.legalLinks.length > 0 && <nav aria-label="Personvern og informasjon">
+      {config.footer.legalLinks.map(link => <a href={link.href}>{link.label}</a>)}
+    </nav>}
+  </div>
+</footer>

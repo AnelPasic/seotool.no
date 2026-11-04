@@ -1,0 +1,24 @@
+---
+import '../styles/compositions/sections.css';
+import type { SharedContent } from '../page-builder';
+import Arrow from './Arrow.astro';
+import TermText from './TermText.astro';
+import ContentCard from './ContentCard.astro';
+import RichMarkdown from './RichMarkdown.astro';
+import {hasRichMarkdown} from '../lib/rich-markdown';
+import {surfaceAttribute} from '../lib/surface';
+import {headingAlignAttribute} from '../lib/heading-alignment';
+import {contentLayoutAttribute,paragraphLayoutAttribute} from '../lib/content-presentation';
+type Section=Partial<SharedContent> & Pick<SharedContent,'id'|'heading'>;
+interface Props {section:Section;index?:number;}
+const {section:input,index=0}=Astro.props;
+const section={...input,_block:'content' as 'content'|'protected',body:typeof input.body==='string'?(input.body?[input.body]:[]):input.body??[]};
+const terms:string[]=[];
+---
+<section id={section.id} class:list={['content-section section-space', { 'section-tint': index % 3 === 1 }]} data-surface={surfaceAttribute(section.surface, section._block === 'protected')}>
+  <div class="shell">
+    <div class="section-heading" data-heading-align={headingAlignAttribute(section.headingAlign)}><div>{section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}<h2>{section.heading}</h2></div><div class="body-copy" data-content-layout={paragraphLayoutAttribute(section,section._block === 'protected')}>{section.body.map(text => hasRichMarkdown(text)?<RichMarkdown text={text}/>:<p><TermText text={text} terms={terms} /></p>)}</div></div>
+    {section.items && <div class:list={['section-items', { 'two-items': section.items.length === 2, 'process-items': section.id === 'sjekk' }]} data-content-layout={contentLayoutAttribute(section.layout,section._block==='protected')}>{section.items.map((item,i)=><ContentCard title={item.title} text={item.text} surface={surfaceAttribute(item.surface)??'secondary'} number={String(i+1).padStart(2,'0')} href={item.href} label={item.label} textTerms={terms}/>)}</div>}
+    {section.links && <div class="section-links">{section.links.map(link => <a class="text-link" href={link.href}>{link.label}<Arrow /></a>)}</div>}
+  </div>
+</section>

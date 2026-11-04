@@ -1,0 +1,50 @@
+/* Semantic adapters and shared typography, not a second component library. */
+[data-ui-shell] {
+  --ink: var(--color-base-content);
+  --muted: var(--color-muted);
+  --green: var(--color-primary);
+  --paper: var(--color-base-100);
+  --cream: var(--color-base-200);
+  --line: var(--color-base-300);
+  --surface-notice: var(--color-warning);
+  --surface-dark-muted: var(--color-dark-muted);
+  --surface-dark-line: var(--color-dark-line);
+  background: var(--color-base-200);
+  color: var(--color-base-content);
+}
+.btn { font-family: var(--body); font-size: var(--type-button); font-weight: var(--weight-button); line-height: var(--leading-small); min-height: 48px; height: auto; white-space: normal; padding-block: 12px; }
+.btn-sm { min-height: 44px; font-size: var(--type-button-sm); }
+.input, .textarea, .select { font-family: var(--body); font-size: var(--type-body-sm); line-height: var(--leading-body); color: var(--color-base-content); background-color: var(--color-base-200); }
+.input, .select { min-height: var(--control-height); }
+.textarea { min-height: 100px; }
+.input::placeholder, .textarea::placeholder { color: var(--color-muted); opacity: 1; }
+.assessment-form .btn { transition: none; }
+.assessment-form.card { background: var(--color-base-100); }
+.assessment-form[data-assessment] { padding: var(--panel-pad-lg); }
+.info-item:not(.card):not([data-box-variant="plain"]):not([data-surface]) { border-radius: 0; padding: var(--panel-pad) 0 0; }
+.info-item:not(.card):not([data-surface]) { border: 0; border-top: var(--border-subtle); background: none; }
+.package-order-form label { font-size: var(--type-form-label); font-weight: var(--weight-label); line-height: var(--leading-small); }
+.input[aria-invalid="true"] { border-color: var(--color-error); }
+.badge { font-size: var(--type-label); line-height: var(--leading-small); height: auto; white-space: normal; padding-block: 4px; }
+.card-title { font-size: var(--type-h4); line-height: var(--leading-h4); }
+.card-copy { font-size: var(--type-body); line-height: var(--leading-body); }
+.alert { font-size: var(--type-helper); line-height: var(--leading-small); }
+.collapse-title { font-size: var(--type-body); line-height: var(--leading-body); font-weight: var(--weight-label); }
+.collapse-content { font-size: var(--type-body); line-height: var(--leading-body); }
+.stat-title, .stat-desc { font-size: var(--type-meta); line-height: var(--leading-small); opacity: 1; white-space: normal; }
+.stat-value { font-family: var(--heading); font-size: var(--type-stat); line-height: var(--leading-stat); overflow-wrap: anywhere; }
+.menu { font-size: var(--type-label); line-height: var(--leading-small); }
+.header-inner.navbar { padding: 0; width: min(1440px, calc(100% - 80px)); }
+.desktop-nav .menu { padding: 0; }
+.mobile-menu .menu { padding: 0; }
+.faq-list .collapse { border-radius: 0; border-bottom: var(--border-subtle); }
+.faq-list .collapse-title { padding-left: 0; }
+.faq-list .collapse-content { padding-left: 0; }
+.calculator-inputs .input { font-size: var(--type-body-lg); }
+.calculator-inputs .range { margin-top: 6px; width: 100%; }
+.assessment-form .alert { margin-top: 18px; }
+[data-ui-shell] :focus-visible { outline: 3px solid var(--color-focus); outline-offset: var(--focus-gap); }
+@media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
+/* Preserve native text-sized menu controls at the existing breakpoint. */
+@media (max-width: 900px) { .header-inner.navbar { width: calc(100% - 40px); } }
+@media (max-width: 360px) { .header-inner.navbar { width: calc(100% - 32px); } }
