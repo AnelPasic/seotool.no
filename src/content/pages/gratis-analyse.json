@@ -3,23 +3,23 @@
   "kind": "service",
   "seo": {
     "title": "SEO-vurdering – finn hva du bør gjøre først | SeoTool",
-    "description": "Få en kort vurdering av hvilke SEO-tiltak som er mest verdt å ta først, hva du kan gjøre selv og hva som eventuelt bør delegeres."
+    "description": "Få et tydeligere beslutningsgrunnlag for hvilke SEO-tiltak du bør gjøre selv, hva som kan vente og hvilke saker som faktisk fortjener eksperthjelp."
   },
   "hero": {
     "layout": "centered-none",
     "eyebrow": "START MED DET VIKTIGSTE",
-    "title": "Få en kort SEO-arbeidsliste — sortert etter hva som er mest verdt å gjøre først.",
-    "support": "Målet er ikke å gi deg flest mulig feil. Målet er å gjøre neste steg åpenbart: dette bør du gjøre nå, dette kan vente, dette kan du fikse selv — og dette kan være verdt å få hjelp med.",
+    "title": "Finn hva du bør gjøre selv — og hva du ikke bør kaste tiden på.",
+    "support": "En god SEO-vurdering bør spare deg både tid og eksperttimer. Målet er å skille enkle forbedringer du kan gjøre selv fra tekniske eller risikofylte saker som bør håndteres av en SEO-ekspert.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Be om en vurdering",
-      "href": "https://medon.no/kontakt"
+      "label": "Se hva du kan gjøre selv",
+      "href": "/seo/"
     },
     "secondaryCta": {
-      "label": "Se hvordan SeoTool fungerer",
-      "href": "/slik-fungerer-det/"
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
     }
   },
   "listing": {
@@ -30,8 +30,8 @@
   },
   "faq": [
     {
-      "question": "Er dette bare et salgstriks for å selge SEO-tjenester?",
-      "answer": "Nei. Vurderingen skal være nyttig også om du gjør hele jobben selv. Medon er et alternativ når du vil ha hjelp, ikke en forutsetning for at rådene skal ha verdi."
+      "question": "Hva er poenget med vurderingen?",
+      "answer": "Å gjøre arbeidslisten mindre og mer nyttig: hva du bør ta først, hva du kan gjøre selv, hva som kan vente og hva som faktisk krever ekspertise."
     },
     {
       "question": "Hva får jeg ut av vurderingen?",
@@ -77,23 +77,23 @@
     {
       "_block": "content",
       "id": "selv-eller-hjelp",
-      "eyebrow": "DU BEHOLDER VALGET",
-      "heading": "Bruk arbeidslisten selv — eller send den videre.",
+      "eyebrow": "SPAR EKSPERTTIMENE",
+      "heading": "Gjør rutinearbeidet selv. Bruk ekspert på de krevende sakene.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Det fine med en prioritert arbeidsliste er at den fungerer uansett hvem som utfører jobben.",
-        "Du kan gjøre én oppgave selv i kveld, delegere neste til noen internt og sende den tredje til Medon. Ingen religiøs binding til én leveransemodell."
+        "Riktig adresse, en bedre metatittel, internlenker, FAQ og innholdsforbedringer er ofte oppgaver du kan gjøre selv når du først vet at de er verdt tiden.",
+        "Teknisk diagnose, canonical-problemer, migrering, JavaScript-indeksering og kritiske CMS-/serverfeil er der eksperthjelp vanligvis gir langt mer mening."
       ],
       "links": [
         {
-          "label": "Kontakt Medon om vurdering",
-          "href": "https://medon.no/kontakt"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Les om gjør-det-selv SEO",
-          "href": "/seo/"
+          "label": "Når trenger du SEO-ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
