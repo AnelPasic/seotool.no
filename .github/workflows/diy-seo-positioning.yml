@@ -3,6 +3,8 @@ name: Temporary DIY SEO positioning verification
 on:
   push:
     branches: [diy-seo-positioning]
+  pull_request:
+    branches: [main]
 
 permissions:
   contents: read
