@@ -7,7 +7,7 @@ Editorial authority in this standalone exported site: `AGENTS.md`, `coordination
 
 Business / brand: SeoTool (https://seotool.no)
 Primary buyer and awareness: Ledere, markedsansvarlige og nettstedeiere som trenger oversikt over hva de skal gjøre i søk og AI-synlighet.
-Core service, user job and conversion: SeoTool samler inn bevis fra nettsted, Google og AI, prioriterer tiltakene og viser hva man bør gjøre først og hvorfor. Primær konvertering er vurdering/analyse via /gratis-analyse/ og innlogging til https://app.seotool.no.
+Core service, user job and conversion: SeoTool samler dokumenterte observasjoner fra nettsted og Google i ett historisk evidensgrunnlag. Live i dag er crawler, Issue Engine og Search Console/Top Queries. AI Visibility er neste interne pilot; Core Search, Conversion og Priority/Recommendation er senere produktlag. Primær konvertering er menneskelig vurdering via /gratis-analyse/ og innlogging til https://app.seotool.no.
 Market, actual geography, regulatory sensitivity: Norge først, skandinavisk/nordisk marked. Nøkternhet og etterrettelighet.
 Real customer words or questions: "Hva bør vi fikse først?", "Hvorfor syns vi ikke i ChatGPT eller Google AI Overviews?", "Hvilke tekniske feil påvirker faktisk rangeringen?"
 Competitors' generic clichés to avoid: "Revolusjonerende AI-plattform", "Få 100% SEO-helse", overfladiske 'helsescorer' uten forklaring, tomme løfter om 1. plass på Google.
@@ -20,7 +20,7 @@ OWNER approval/date: 2026-11-04 (Issue #86)
 2. Kommersiell logikk / **Commercial Value Gate on sales-intent copy**: lead with a desirable buyer outcome and why hiring the provider is worth more than doing visible tasks alone. Make delivery believable, timing honest, ownership/effort clear and the approved next step easy; avoid the 'I can update this myself' response. Value Equation diagnoses outcome x likelihood vs delay x effort, not copy to quote or guaranteed results. Educational/how-to content must still genuinely help.
 3. Honesty and evidence: no invented facts, rankings, reviews, guarantees, claims, AI mentions, prices or proof.
 4. SEO/AIO and CRO: content must answer its search/buyer question and support an appropriate, truthful next action.
-5. No forced jokes; reject humour that obscures the answer or disrespects the buyer.
+5. No forced jokes; reject humour that obscures the answer or disrespects the buyer.\n6. Product-status truth: never write a pilot, roadmap item or planned module as a live customer feature.
 
 ## Supported presets
 
