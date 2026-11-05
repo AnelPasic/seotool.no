@@ -1,6 +1,6 @@
 {
   "footer": {
-    "about": "SeoTool samler data fra nettstedet, Google og AI-modeller for å gi deg konkrete, prioriterte tiltak for synlighet og organisk vekst.",
+    "about": "SeoTool samler tekniske observasjoner og Google-data med historikk og tydelig kilde. Nye lag for AI-synlighet, søkeintelligens og prioritering bygges oppå samme evidensgrunnlag.",
     "groups": [
       {
         "heading": "Produktet",
@@ -28,31 +28,35 @@
         "heading": "Ressurser",
         "links": [
           {
-            "label": "Innsikt og artikler",
+            "label": "Innsikt",
             "href": "/innsikt/"
           },
           {
-            "label": "Gratis analyse",
+            "label": "Nettstedsanalyse",
             "href": "/gratis-analyse/"
           },
           {
-            "label": "Kontakt oss",
+            "label": "Kontakt",
             "href": "/kontakt/"
           }
         ]
       },
       {
-        "heading": "Innlogging",
+        "heading": "SeoTool",
         "links": [
           {
-            "label": "SeoTool App",
+            "label": "Logg inn",
             "href": "https://app.seotool.no"
+          },
+          {
+            "label": "Kontakt Medon",
+            "href": "https://medon.no/kontakt"
           }
         ]
       }
     ],
     "copyright": "SeoTool",
-    "note": "Offentlig produktnettsted for SeoTool. Den autentiserte applikasjonen kjører på app.seotool.no.",
+    "note": "SeoTool utvikles av Medon. Appen kjører separat på app.seotool.no.",
     "legalLinks": []
   }
 }
