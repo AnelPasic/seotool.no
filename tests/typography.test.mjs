@@ -32,8 +32,11 @@ test('Oslo baseline font is Instrument Sans + Figtree, only CMS font family can 
 test('optional customer font overrides apply to both actual CMS theme names without changing geometry',()=>{
  const chrome=composeSiteChrome(header,footer,{...appearance,typography:{fontFamily:'serif'}});
  const css=typographyOverridesCss(chrome.themes,chrome.typography);
- assert.match(css, /html\[data-theme="optimalisering"\]/);
- assert.match(css, /html\[data-theme="sunset"\]/);
+ const themeNames=[chrome.themes.lightCss,chrome.themes.darkCss].map(source=>source.match(/\bname:\s*"([^"]+)"/)?.[1]);
+ for(const name of themeNames){
+  assert.ok(name);
+  assert.ok(css.includes('html[data-theme="'+name+'"]'));
+ }
  assert.match(css, /--font-heading:Georgia, serif;/);
  assert.match(css, /--font-body:Georgia, serif;/);
  assert.doesNotMatch(css,/--text-|--leading-|--tracking-|--color-|--radius-|--font-weight-|url\(/);
