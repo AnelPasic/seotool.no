@@ -2,73 +2,73 @@
   "slug": "gratis-analyse",
   "kind": "service",
   "seo": {
-    "title": "Nettstedsanalyse med SeoTool – be om en vurdering",
-    "description": "Be om en menneskelig kvalitetssikret vurdering med SeoTool som analysegrunnlag. Offentlig selvbetjent analyse er ikke lansert ennå."
+    "title": "SEO-vurdering – finn hva du bør gjøre først | SeoTool",
+    "description": "Få et tydeligere beslutningsgrunnlag for hvilke SEO-tiltak du bør gjøre selv, hva som kan vente og hvilke saker som faktisk fortjener eksperthjelp."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "MENNESKELIG KVALITETSSIKRET",
-    "title": "Få en vurdering med SeoTool som analysegrunnlag.",
-    "support": "Den offentlige selvbetjente analysen er ikke lansert ennå. Inntil videre kan Medon bruke dagens SeoTool-grunnlag til en innledende vurdering og kvalitetssikre funnene før du får dem.",
+    "eyebrow": "START MED DET VIKTIGSTE",
+    "title": "Finn hva du bør gjøre selv — og hva du ikke bør kaste tiden på.",
+    "support": "En god SEO-vurdering bør spare deg både tid og eksperttimer. Målet er å skille enkle forbedringer du kan gjøre selv fra tekniske eller risikofylte saker som bør håndteres av en SEO-ekspert.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Kontakt Medon om analyse",
-      "href": "https://medon.no/kontakt"
+      "label": "Se hva du kan gjøre selv",
+      "href": "/seo/"
     },
     "secondaryCta": {
-      "label": "Se hva SeoTool kan i dag",
-      "href": "/seo/"
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
     }
   },
   "listing": {
-    "title": "Nettstedsanalyse",
-    "summary": "Menneskelig kvalitetssikret vurdering med dagens SeoTool-grunnlag.",
+    "title": "SEO-vurdering",
+    "summary": "Finn hva du bør gjøre først, hva du kan gjøre selv og hva som kan vente.",
     "order": 5,
     "visible": true
   },
   "faq": [
     {
-      "question": "Er dette en automatisk selvbetjent analyse?",
-      "answer": "Nei. Den offentlige selvbetjeningen er ikke lansert. Vurderingen gjøres med dagens SeoTool-grunnlag og kvalitetssikres av et menneske."
+      "question": "Hva er poenget med vurderingen?",
+      "answer": "Å gjøre arbeidslisten mindre og mer nyttig: hva du bør ta først, hva du kan gjøre selv, hva som kan vente og hva som faktisk krever ekspertise."
     },
     {
-      "question": "Hva kan vurderes uten Search Console-tilgang?",
-      "answer": "Offentlig tilgjengelige tekniske forhold kan undersøkes uten kontotilgang. Search Console-data krever tilgang til den aktuelle eiendommen og inngår ikke automatisk."
+      "question": "Hva får jeg ut av vurderingen?",
+      "answer": "Et kortere og tydeligere beslutningsgrunnlag: hva som fortjener oppmerksomhet først, hva du sannsynligvis kan håndtere selv, hva som kan vente og hvor det kan være fornuftig å hente inn hjelp."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "hva-vi-kan-se",
-      "eyebrow": "DAGENS GRUNNLAG",
-      "heading": "Vi begynner med det som faktisk kan dokumenteres.",
+      "id": "fire-bokser",
+      "eyebrow": "FRA RAPPORT TIL ARBEIDSLISTE",
+      "heading": "Fire svar er mer nyttige enn hundre røde varsler.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "En nyttig vurdering trenger ikke hundre tilfeldige checks. Den bør skille mellom observerte tekniske forhold, Google-data vi faktisk har tilgang til og hypoteser som må undersøkes videre.",
-        "Derfor lover vi heller ikke en automatisk «prioritert fasit» før Priority Engine faktisk finnes."
+        "SEO-verktøy er flinke til å finne ting. Det betyr ikke at alt de finner fortjener tiden din.",
+        "En god vurdering bør hjelpe deg skille mellom arbeid som kan gi verdi og arbeid som bare gjør rapporten penere."
       ],
       "items": [
         {
-          "title": "Teknisk crawl",
-          "text": "Sider, statuskoder, metadata, lenker og andre observerbare forhold.",
+          "title": "Gjør nå",
+          "text": "Tiltak som er mest verdt å undersøke eller forbedre først.",
           "surface": "base-200"
         },
         {
-          "title": "Issues",
-          "text": "Konkrete tekniske funn fra dagens Issue Engine.",
+          "title": "Gjør selv",
+          "text": "Oppgaver du normalt kan håndtere uten spesialist eller byrå.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console",
-          "text": "Kan brukes når riktig konto/eierskap er koblet til prosjektet.",
+          "title": "Kan vente",
+          "text": "Funn som ikke trenger å stjele oppmerksomhet akkurat nå.",
           "surface": "base-200"
         },
         {
-          "title": "Menneskelig vurdering",
-          "text": "Funnene settes i kontekst før de presenteres som anbefalinger.",
+          "title": "Få hjelp",
+          "text": "Oppgaver som krever mer tid, kode, innhold eller spesialistkompetanse enn du ønsker å bruke selv.",
           "surface": "base-200"
         }
       ],
@@ -76,24 +76,24 @@
     },
     {
       "_block": "content",
-      "id": "selvbetjening",
-      "eyebrow": "SENERE",
-      "heading": "Selvbetjent analyse kommer først når flyten tåler ekte trafikk.",
+      "id": "selv-eller-hjelp",
+      "eyebrow": "SPAR EKSPERTTIMENE",
+      "heading": "Gjør rutinearbeidet selv. Bruk ekspert på de krevende sakene.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "En offentlig URL-scan trenger rate limits, kostnadsgrenser, sikkerhet og personvern som er designet for Internett — ikke bare et skjema foran interne API-er.",
-        "Frem til det er på plass bruker vi en kontrollert, menneskelig kvalitetssikret vurdering."
+        "Riktig adresse, en bedre metatittel, internlenker, FAQ og innholdsforbedringer er ofte oppgaver du kan gjøre selv når du først vet at de er verdt tiden.",
+        "Teknisk diagnose, canonical-problemer, migrering, JavaScript-indeksering og kritiske CMS-/serverfeil er der eksperthjelp vanligvis gir langt mer mening."
       ],
       "links": [
         {
-          "label": "Kontakt Medon",
-          "href": "/kontakt/"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Se produktretningen",
-          "href": "/slik-fungerer-det/"
+          "label": "Når trenger du SEO-ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"

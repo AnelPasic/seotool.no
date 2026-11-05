@@ -2,16 +2,16 @@
   "slug": "home",
   "kind": "home",
   "seo": {
-    "title": "SeoTool – Teknisk SEO og Search Console med historikk",
-    "description": "SeoTool samler crawl, tekniske funn og Search Console-data i ett historisk evidensgrunnlag. AI-synlighet og prioritering bygges videre på samme fundament."
+    "title": "SeoTool – Gjør mer SEO selv. Prioriter det som betyr mest.",
+    "description": "SeoTool hjelper deg finne hvilke SEO-tiltak som er mest verdt å ta først. Gjør det enkle selv og spar eksperttimene til de krevende sakene."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "SEO-DATA MED KILDE OG HISTORIKK",
-    "title": "Se hva som faktisk skjer med nettstedet ditt i Google.",
-    "support": "Live i dag: crawler, Issue Engine og Search Console med Top Queries. AI Visibility er i intern pilot; Core Search og prioritering kommer senere. Illustrasjonen viser målbildet, ikke dagens featureliste.",
+    "eyebrow": "GJØR MER SEO SELV",
+    "title": "Du kan gjøre mye av SEO-jobben selv. SeoTool viser deg hva du bør gjøre først.",
+    "support": "Du trenger ikke en SEO-ekspert for å skrive riktig adresse, forbedre en metatittel eller legge inn en internlenke. SeoTool hjelper deg finne det du kan gjøre selv — og spare eksperttimene til det som faktisk krever ekspertise.",
     "primaryCta": {
-      "label": "Be om vurdering",
+      "label": "Finn ut hva du bør gjøre først",
       "href": "/gratis-analyse/"
     },
     "secondaryCta": {
@@ -22,7 +22,7 @@
       "kind": "image",
       "image": {
         "src": "/images/pages/seotool-hero-flow.webp",
-        "alt": "Illustrasjon av SeoTools produktretning fra nettsted og søkedata til senere prioritering",
+        "alt": "Illustrasjon av SeoTool som samler SEO-data og gjør dem om til prioriterte tiltak",
         "positionX": 50,
         "positionY": 50,
         "kind": "illustration"
@@ -34,45 +34,45 @@
   },
   "faq": [
     {
-      "question": "Hva er tilgjengelig i SeoTool i dag?",
-      "answer": "Crawler, historiske sideobservasjoner, Issue Engine og Search Console-integrasjon med Top Queries er levert. AI Visibility er neste lag i intern pilot. Core Search Intelligence og Priority / Recommendation Engine er senere produktsteg."
+      "question": "Kan jeg faktisk gjøre SEO selv?",
+      "answer": "Ja. Mye SEO er konkrete forbedringer du kan gjøre selv når du vet hva som er viktigst: innhold, titler, internlenking, struktur og en del tekniske feil. SeoTool hjelper deg få oversikt og prioritere. Du bestemmer hvor mye du vil gjøre selv."
     },
     {
-      "question": "Hvor logger eksisterende brukere inn?",
-      "answer": "Eksisterende brukere logger inn på app.seotool.no."
+      "question": "Når bør jeg bruke en SEO-ekspert?",
+      "answer": "Når oppgaven er teknisk, risikofylt eller dyr å lære seg bare for å gjøre én gang — for eksempel canonical-problemer, migrering, JavaScript-indeksering eller alvorlige CMS-/serverfeil. Enkle innholds- og sideforbedringer kan du ofte gjøre selv."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "live-i-dag",
-      "eyebrow": "LIVE I DAG",
-      "heading": "Et faktisk SEO-grunnlag før anbefalingene kommer.",
+      "id": "diy-seo",
+      "eyebrow": "SEO UTEN UNØDVENDIG MYSTIKK",
+      "heading": "Du trenger ikke betale et byrå for hver SEO-oppgave.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool starter med det som kan observeres og dokumenteres. Det gjør det mulig å bygge mer avansert beslutningsstøtte uten å late som et estimat er et faktum.",
-        "Dagens produksjonsgrunnlag dekker nettstedet og Googles egne Search Console-data. Hvert lag beholdes separat med historikk."
+        "Mye SEO er ganske jordnært når noen først har pekt ut riktig problem. Utfordringen er at det finnes hundre ting du kan gjøre — og bare noen få som fortjener oppmerksomheten først.",
+        "SeoTool er laget for å kutte ned den listen. Du får et bedre grunnlag for å velge neste tiltak, gjøre jobben selv og se hva som endrer seg."
       ],
       "items": [
         {
-          "title": "Crawler",
-          "text": "Lagrer sideobservasjoner og tekniske forhold over tid.",
+          "title": "1. Finn problemet",
+          "text": "SeoTool samler signalene og viser hvor det er mest interessant å se nærmere.",
           "surface": "base-200"
         },
         {
-          "title": "Issue Engine",
-          "text": "Gjør observerte tekniske forhold om til tydelige issues uten en oppdiktet universalscore.",
+          "title": "2. Prioriter",
+          "text": "Skill tiltak med reell betydning fra ting som bare fyller en rapport.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console",
-          "text": "Kobler sideytelse fra Google til samme nettstedshistorikk.",
+          "title": "3. Gjør det enkle selv",
+          "text": "Adresse, metatitler, innhold, internlenker, FAQ og bilder trenger sjelden eksperttimepris.",
           "surface": "base-200"
         },
         {
-          "title": "Top Queries",
-          "text": "Viser hvilke søk Google faktisk har registrert visninger og klikk for.",
+          "title": "4. Bruk ekspert på det vanskelige",
+          "text": "Spar eksperttimene til tekniske, risikofylte eller komplekse saker.",
           "surface": "base-200"
         }
       ],
@@ -90,9 +90,33 @@
       "visibility": "visible"
     },
     {
+      "_block": "content",
+      "id": "bruk-ekspert-smart",
+      "eyebrow": "SPAR EKSPERTTIMENE",
+      "heading": "Du trenger ikke en ekspert for å skrive riktig adresse eller endre en metatittel.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
+      "body": [
+        "Mye SEO er enkelt arbeid når du først vet hva som bør gjøres. Det er dårlig økonomi å betale eksperttimepris for oppgaver du fint kan håndtere selv.",
+        "Bruk heller eksperten på canonical-feil, migrering, JavaScript-indeksering, kritiske tekniske problemer og andre saker der feil kan koste mer enn hjelpen."
+      ],
+      "links": [
+        {
+          "label": "Se hva du kan gjøre selv",
+          "href": "/seo/"
+        },
+        {
+          "label": "Når bør du bruke ekspert?",
+          "href": "/kontakt/"
+        }
+      ],
+      "visibility": "visible"
+    },
+    {
       "_block": "pageList",
       "id": "produktomrader",
-      "heading": "Utforsk produktet",
+      "heading": "Utforsk SeoTool",
       "visibility": "visible",
       "pageList": {
         "source": "pages",
@@ -107,7 +131,7 @@
     {
       "_block": "pageList",
       "id": "artikler",
-      "heading": "Siste innsikt",
+      "heading": "Lær det du trenger — ikke mer",
       "visibility": "visible",
       "pageList": {
         "source": "articles",

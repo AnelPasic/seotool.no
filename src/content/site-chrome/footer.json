@@ -1,22 +1,18 @@
 {
   "footer": {
-    "about": "SeoTool samler tekniske observasjoner og Google-data med historikk og tydelig kilde. Nye lag for AI-synlighet, søkeintelligens og prioritering bygges oppå samme evidensgrunnlag.",
+    "about": "SeoTool hjelper deg forstå hva som er viktigst i SEO, gjøre mer selv og bruke eksperthjelp bare når kompetansen faktisk gir verdi.",
     "groups": [
       {
-        "heading": "Produktet",
+        "heading": "SeoTool",
         "headingHref": "/seo/",
         "links": [
           {
-            "label": "SEO",
+            "label": "Gjør det selv SEO",
             "href": "/seo/"
           },
           {
             "label": "AI-synlighet",
             "href": "/ai-synlighet/"
-          },
-          {
-            "label": "Lokal synlighet",
-            "href": "/lokal-synlighet/"
           },
           {
             "label": "Slik fungerer det",
@@ -32,31 +28,27 @@
             "href": "/innsikt/"
           },
           {
-            "label": "Nettstedsanalyse",
+            "label": "SEO-vurdering",
             "href": "/gratis-analyse/"
           },
           {
-            "label": "Kontakt",
+            "label": "Når trenger du ekspert?",
             "href": "/kontakt/"
           }
         ]
       },
       {
-        "heading": "SeoTool",
+        "heading": "Konto",
         "links": [
           {
             "label": "Logg inn",
             "href": "https://app.seotool.no"
-          },
-          {
-            "label": "Kontakt Medon",
-            "href": "https://medon.no/kontakt"
           }
         ]
       }
     ],
     "copyright": "SeoTool",
-    "note": "SeoTool utvikles av Medon. Appen kjører separat på app.seotool.no.",
+    "note": "Gjør det enkle selv. Spar eksperttimene til det som faktisk krever ekspertise.",
     "legalLinks": []
   }
 }

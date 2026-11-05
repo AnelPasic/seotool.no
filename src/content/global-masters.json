@@ -6,40 +6,40 @@
   "services": {
     "type": "content",
     "heading": "Produktområder",
-    "body": "SeoTool bygges lagvis fra observerbare data til bedre beslutningsstøtte."
+    "body": "SeoTool hjelper deg gå fra SEO-data til en tydeligere arbeidsliste og bedre prioritering."
   },
   "process": {
     "type": "content",
-    "eyebrow": "PRODUKTSTATUS",
-    "heading": "Bygg evidens før du bygger anbefalinger.",
+    "eyebrow": "SEO UTEN KAOS",
+    "heading": "Finn. Prioriter. Gjør. Mål.",
     "body": [
-      "Live i dag: crawler, historikk, Issue Engine og Search Console med Top Queries.",
-      "Neste lag er AI Visibility i intern pilot. Core Search Intelligence, Conversion Layer og Priority / Recommendation Engine kommer senere."
+      "SeoTool skal redusere antallet ting du trenger å tenke på, ikke gi deg enda en endeløs sjekkliste.",
+      "Bruk dataene til å velge neste tiltak, gjør rutinearbeidet selv og bruk SEO-ekspert på de tekniske eller risikofylte sakene."
     ],
     "headingAlign": "left",
     "layout": "two-columns",
     "items": [
       {
-        "title": "Live",
-        "text": "Crawler, Issues, Search Console og Top Queries.",
+        "title": "Finn",
+        "text": "Samle relevante signaler fra nettstedet og søkedataene.",
         "surface": "base-200",
         "boxVariant": "card"
       },
       {
-        "title": "Neste",
-        "text": "AI Visibility som kontrollerte, historiske observasjoner.",
+        "title": "Prioriter",
+        "text": "Velg det som er mest verdt tiden din først.",
         "surface": "base-200",
         "boxVariant": "card"
       },
       {
-        "title": "Senere",
-        "text": "Core Search Intelligence og Conversion Layer.",
+        "title": "Gjør",
+        "text": "Fiks det enkle selv. Bruk ekspert når oppgaven faktisk krever ekspertise.",
         "surface": "base-200",
         "boxVariant": "card"
       },
       {
-        "title": "Målbildet",
-        "text": "Prioritering og anbefalinger bygget på dokumentert evidens.",
+        "title": "Mål",
+        "text": "Følg utviklingen og bruk den som grunnlag for neste valg.",
         "surface": "base-200",
         "boxVariant": "card"
       }
@@ -47,8 +47,8 @@
   },
   "benefits": {
     "type": "content",
-    "heading": "Hvorfor dette fundamentet betyr noe",
-    "body": "Et beslutningslag er bare så godt som dataene og proveniensen det bygger på."
+    "heading": "Mindre SEO-støy. Mer faktisk arbeid.",
+    "body": "Et godt verktøy skal hjelpe deg bruke tiden bedre, ikke bare produsere flere varsler."
   },
   "pricing": {
     "type": "protected",

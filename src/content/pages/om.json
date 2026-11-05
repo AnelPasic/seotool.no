@@ -2,24 +2,24 @@
   "slug": "om",
   "kind": "utility",
   "seo": {
-    "title": "Om SeoTool – søkeinnsikt bygget på dokumentert evidens",
-    "description": "SeoTool utvikles av Medon for å samle tekniske SEO-observasjoner og Google-data med historikk, og bygge bedre beslutningsstøtte lagvis."
+    "title": "Om SeoTool – spar eksperttimene til det vanskelige",
+    "description": "SeoTool er laget for å hjelpe bedrifter gjøre mer SEO selv, prioritere bedre og bruke eksperthjelp bare der kompetansen faktisk gir verdi."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "OM SEOTOOL",
-    "title": "Et SEO-verktøy som heller sier «vi vet ikke ennå» enn å finne på en score.",
-    "support": "SeoTool utvikles av Medon. Produktet bygges fra observerbare data og historikk mot bedre søkeintelligens og senere prioritering — uten å presentere roadmap som ferdige funksjoner.",
+    "eyebrow": "HVORFOR SEOTOOL FINNES",
+    "title": "Du skal ikke trenge en SEO-ekspert for hver liten endring.",
+    "support": "SeoTool er laget for å gjøre SEO mindre mystisk: forstå hva som er viktig, gjør det enkle selv og bruk ekspertise når problemet faktisk krever den.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Slik fungerer det",
+      "label": "Se hvordan SeoTool fungerer",
       "href": "/slik-fungerer-det/"
     },
     "secondaryCta": {
-      "label": "Kontakt Medon",
-      "href": "https://medon.no/kontakt"
+      "label": "Når trenger du SEO-ekspert?",
+      "href": "/kontakt/"
     }
   },
   "listing": {
@@ -31,28 +31,33 @@
     {
       "_block": "content",
       "id": "hvorfor",
-      "eyebrow": "HVORFOR VI BYGGER DET",
-      "heading": "SEO-verktøy har nok data. Problemet er å vite hva dataene faktisk betyr.",
+      "eyebrow": "HVORFOR SEOTOOL FINNES",
+      "heading": "Vi vil gjøre deg mindre avhengig av eksperter på rutineoppgaver.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool er bygget rundt et enkelt prinsipp: behold kilden, tidspunktet og usikkerheten før du lager konklusjonen.",
-        "Det gir et bedre fundament for å koble teknisk SEO, Google-data, senere AI-observasjoner og etter hvert forretningssignaler."
+        "Det er lite poeng i å betale eksperttimepris for å rette en adresse, skrive en metatittel eller legge inn en internlenke.",
+        "SeoTool skal hjelpe deg forstå hva som kan gjøres enkelt og trygt selv — og hva som faktisk fortjener spesialistkompetanse."
       ],
       "items": [
         {
-          "title": "Observasjon før tolkning",
-          "text": "Kilden skal kunne spores tilbake når noen spør hvorfor et funn finnes.",
+          "title": "Forstå først",
+          "text": "Se hva problemet er og hvorfor det betyr noe.",
           "surface": "base-200"
         },
         {
-          "title": "Historikk før øyeblikksbilde",
-          "text": "Endring over tid er ofte mer nyttig enn en isolert score i dag.",
+          "title": "Prioriter",
+          "text": "Bruk tiden på tiltak som fortjener den.",
           "surface": "base-200"
         },
         {
-          "title": "Produktstatus uten teater",
-          "text": "Live, pilot og roadmap skal merkes som det de faktisk er.",
+          "title": "Gjør selv",
+          "text": "Ta rutineoppgavene du kan håndtere trygt og effektivt.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Bruk ekspert smart",
+          "text": "Kjøp kompetanse når problemet er teknisk, risikofylt eller kostbart å lære.",
           "surface": "base-200"
         }
       ],
@@ -60,23 +65,23 @@
     },
     {
       "_block": "content",
-      "id": "medon",
-      "heading": "Utviklet av Medon",
+      "id": "prinsipp",
+      "heading": "Eksperthjelp skal være et valg, ikke en forutsetning.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "SeoTool er et Medon-produkt og brukes som grunnlag for å bygge en mer sammenhengende arbeidsflyt rundt SEO og AI-søk.",
-        "Den autentiserte applikasjonen kjører separat fra dette offentlige produktnettstedet."
+        "SeoTool skal være nyttig selv om du aldri kjøper SEO-tjenester. Det er hele poenget.",
+        "Når du først trenger en ekspert, har du et tydeligere problem, bedre kontekst og mindre risiko for å betale noen for å bruke de første timene på å finne ut hva som er galt."
       ],
       "links": [
         {
-          "label": "Kontakt",
-          "href": "/kontakt/"
+          "label": "Gjør det selv",
+          "href": "/seo/"
         },
         {
-          "label": "Se SEO-delen",
-          "href": "/seo/"
+          "label": "Når trenger du ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"

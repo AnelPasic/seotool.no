@@ -26,10 +26,10 @@ test('CONTENT-04: actual neutral Home/Service/Article retain their own SEO, Hero
 });
 
 test('CONTENT-04: service supports an actual next step without activating a lead form',()=>{
- assert.equal(service.hero.primaryCta.href,'/kontakt/');
+ assert.equal(service.hero.primaryCta.href,'/seo/');
  assert.ok(service.sections.some(s=>s._block==='content'&&s.id==='innhold'));
  const next=service.sections.find(s=>s._block==='content'&&s.id==='neste-steg');
- assert.ok(next&&next.links.some(l=>l.href==='/kontakt/'));
+ assert.ok(next&&next.links.some(l=>l.href==='/seo/')&&next.links.some(l=>l.href==='/kontakt/'));
  assert.ok(service.faq.length>0);
  assert.ok(resolveSections(service,masters,[home,service,article],[],shared).length>=3);
 });

@@ -2,50 +2,50 @@
   "slug": "tjeneste",
   "kind": "service",
   "seo": {
-    "title": "SeoTool – produktgrunnlaget",
-    "description": "En oversikt over hvordan SeoTool samler tekniske SEO-observasjoner og Google-data før senere intelligens- og prioriteringslag."
+    "title": "SeoTool – fra SEO-data til neste tiltak",
+    "description": "SeoTool samler tekniske funn og Google-data slik at du lettere kan velge hva som er mest verdt å gjøre først."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "PRODUKTGRUNNLAG",
-    "title": "Et bedre beslutningsgrunnlag starter med data du kan spore tilbake.",
-    "support": "SeoTool samler nettstedets tekniske observasjoner og Search Console-data med historikk. Senere produktlag skal bygge videre på dette — ikke erstatte det med en magisk score.",
+    "eyebrow": "FRA DATA TIL ARBEID",
+    "title": "SEO-data er først nyttige når de hjelper deg velge neste oppgave.",
+    "support": "SeoTool samler observasjoner fra nettstedet og Google i samme arbeidsgrunnlag. Målet er enkelt: mindre støy, tydeligere prioritering og mer arbeid du faktisk kan få gjort.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Se kontaktmuligheter",
-      "href": "/kontakt/"
+      "label": "Se gjør-det-selv SEO",
+      "href": "/seo/"
     }
   },
   "listing": {
-    "title": "SeoTool – produktgrunnlag",
-    "summary": "Hvordan nettsted-, Google- og historikkdata holdes sammen uten å blande kildene.",
+    "title": "SeoTool – arbeidsgrunnlaget",
+    "summary": "Samle signalene, forstå dem og velg neste tiltak.",
     "order": 90,
-    "visible": true
+    "visible": false
   },
   "faq": [
     {
-      "question": "Er dette hele SeoTool-produktet?",
-      "answer": "Nei. Dette beskriver fundamentet. AI Visibility er neste interne pilot, mens Core Search, Conversion og Priority / Recommendation kommer senere."
+      "question": "Hva er poenget med å samle flere datakilder?",
+      "answer": "Fordi et teknisk funn og et fall i Google ikke er samme ting. Når kilden beholdes tydelig, blir det lettere å forstå problemet før du bestemmer hva som skal gjøres."
     }
   ],
   "sections": [
     {
       "_block": "content",
       "id": "innhold",
-      "eyebrow": "FUNDAMENTET",
-      "heading": "Kilder beholdes separate, men kan forstås i samme prosjekt.",
+      "eyebrow": "GRUNNLAGET",
+      "heading": "Kilder holdes separate, men brukes i samme beslutning.",
       "body": [
-        "Crawler og Issue Engine forteller hva SeoTool har observert på nettstedet.",
-        "Search Console forteller hva Google har registrert. De to kildene skal ses sammen uten å late som de måler det samme."
+        "Crawler og Issues forteller hva som er observert på nettstedet.",
+        "Search Console forteller hva Google har registrert. Når de ses sammen uten å blandes, blir det lettere å velge riktig neste oppgave."
       ],
       "visibility": "visible",
       "layout": "two-columns",
       "items": [
         {
           "title": "Nettstedet",
-          "text": "Observerbare tekniske forhold med historikk.",
+          "text": "Tekniske forhold og sideobservasjoner med historikk.",
           "surface": "base-200",
           "boxVariant": "card"
         },
@@ -65,20 +65,20 @@
     {
       "_block": "content",
       "id": "neste-steg",
-      "heading": "Vil du se hva dette betyr for et faktisk nettsted?",
+      "heading": "Fra observasjon til noe du faktisk kan gjøre.",
       "visibility": "visible",
       "body": [
-        "Start med SEO-siden for dagens funksjoner, eller ta kontakt hvis du vil ha en menneskelig vurdering.",
-        "Vi holder pilot- og roadmap-funksjoner tydelig adskilt fra det som er produksjonsklart."
+        "Start med SEO-siden hvis du vil gjøre mer selv.",
+        "Når en oppgave blir teknisk, risikofylt eller dyr å lære seg bare for å løse én gang, er det et godt tidspunkt å bruke SEO-ekspert."
       ],
       "links": [
         {
-          "label": "Se kontaktmuligheter",
-          "href": "/kontakt/"
+          "label": "Gjør det selv",
+          "href": "/seo/"
         },
         {
-          "label": "Se dagens SEO-funksjoner",
-          "href": "/seo/"
+          "label": "Når trenger du ekspert?",
+          "href": "/kontakt/"
         }
       ]
     }

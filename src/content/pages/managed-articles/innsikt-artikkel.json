@@ -45,7 +45,7 @@
       "visibility": "visible",
       "body": [
         "En ekstern SERP-måling prøver i stedet å observere hva som vises for et bestemt søk under definerte forhold, for eksempel sted og enhet.",
-        "SeoTools planlagte Core Search Intelligence skal behandle slike observasjoner som en egen kilde. Den modulen er ikke live i dag."
+        "Det viktige er å behandle slike SERP-observasjoner som en egen kilde, ikke som en erstatning for Search Console."
       ]
     },
     {

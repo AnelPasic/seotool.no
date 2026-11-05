@@ -2,20 +2,20 @@
   "slug": "kontakt",
   "kind": "utility",
   "seo": {
-    "title": "Kontakt om SeoTool – Medon",
-    "description": "Kontakt Medon om SeoTool, nettstedsanalyse, tilgang eller produktspørsmål."
+    "title": "Når bør du bruke SEO-ekspert? | SeoTool",
+    "description": "Gjør enkle SEO-oppgaver selv og bruk SEO-ekspert når saken er teknisk, risikofylt eller dyr å lære seg bare for å løse én gang."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "SEOTOOL · UTVIKLET AV MEDON",
-    "title": "Spørsmål om SeoTool? Snakk med teamet som bygger det.",
-    "support": "For produktspørsmål, vurdering av et nettsted eller dialog om tilgang bruker vi Medons eksisterende kontaktkanal. Eksisterende SeoTool-brukere kan logge inn direkte i appen.",
+    "eyebrow": "BRUK EKSPERTEN DER EKSPERTISEN BETYR NOE",
+    "title": "Spar eksperttimene til de krevende sakene.",
+    "support": "Du trenger ikke en SEO-ekspert for å skrive riktig adresse, forbedre en metatittel eller legge inn en internlenke. Bruk eksperthjelp når problemet er teknisk, risikofylt eller kan koste mer å løse feil enn å få det gjort riktig.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Kontakt Medon",
-      "href": "https://medon.no/kontakt"
+      "label": "Se hva du kan gjøre selv",
+      "href": "/seo/"
     },
     "secondaryCta": {
       "label": "Logg inn",
@@ -28,40 +28,35 @@
   },
   "faq": [
     {
-      "question": "Hvor logger eksisterende brukere inn?",
-      "answer": "Eksisterende brukere logger inn på app.seotool.no."
+      "question": "Hvilke SEO-oppgaver kan jeg normalt gjøre selv?",
+      "answer": "Riktig bedriftsinformasjon, metatitler og beskrivelser, innholdsforbedringer, internlenker, FAQ, bilder og andre tydelige sideendringer er ofte gode gjør-det-selv-oppgaver."
     },
     {
-      "question": "Har seotool.no et eget leadskjema?",
-      "answer": "Ikke nå. Offentlig kontakt går via Medons eksisterende kontaktkanal inntil et eget SeoTool-inntak er eksplisitt satt opp og godkjent."
+      "question": "Hvilke saker bør en SEO-ekspert typisk ta?",
+      "answer": "Canonical-problemer, migrering, JavaScript-indeksering, avansert teknisk SEO og kritiske CMS-/serverfeil er typiske saker der feil kan bli dyrere enn eksperthjelpen."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "henvendelser",
-      "eyebrow": "RASKESTE VEI VIDERE",
-      "heading": "Velg riktig kanal.",
+      "id": "selv-vs-ekspert",
+      "eyebrow": "RUTINEARBEID VS. EKSPERTARBEID",
+      "heading": "Ikke betal samme timepris for begge.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Vi holder offentlig markedsnettsted og autentisert produkt tydelig adskilt. Det gjør det enklere å vite om du skal snakke med et menneske eller jobbe direkte i SeoTool.",
-        "Ingen fiktive skjemaer, ingen «send inn» som ikke sender noe."
+        "Mye SEO er helt vanlig nettstedarbeid. Når SeoTool har forklart hva som bør endres, er det ofte liten grunn til å kjøpe eksperttimer bare for å utføre en enkel oppgave.",
+        "Ekspertisen er mest verdifull når problemet krever diagnose, teknisk forståelse eller trygg håndtering av endringer som kan påvirke hele nettstedet."
       ],
       "items": [
         {
-          "title": "Nytt spørsmål eller analyse",
-          "text": "Bruk Medons kontaktkanal for produktdialog og menneskelig vurdering.",
+          "title": "Gjør selv",
+          "text": "Adresse, metatitler, metabeskrivelser, innhold, internlenker, FAQ og bilder.",
           "surface": "base-200"
         },
         {
-          "title": "Eksisterende SeoTool-konto",
-          "text": "Logg inn på app.seotool.no for prosjektdata og arbeidsflyten i produktet.",
-          "surface": "base-200"
-        },
-        {
-          "title": "Funksjonsstatus",
-          "text": "Se «Slik fungerer det» for tydelig skille mellom live, pilot og senere roadmap.",
+          "title": "Bruk SEO-ekspert",
+          "text": "Canonical, migrering, JavaScript-indeksering, avansert teknisk SEO og alvorlige CMS-/serverfeil.",
           "surface": "base-200"
         }
       ],
@@ -69,20 +64,23 @@
     },
     {
       "_block": "content",
-      "id": "produktstatus",
-      "heading": "Vil du først se hva som faktisk er live?",
+      "id": "tommelfingerregel",
+      "eyebrow": "EN ENKEL TOMMELFINGERREGEL",
+      "heading": "Hvis feil løsning kan skade hele nettstedet, kjøp ekspertise. Hvis det bare er arbeid, gjør det selv.",
       "headingAlign": "left",
       "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "SEO-siden beskriver dagens produksjonsgrunnlag. AI- og Local-sidene er eksplisitt merket med sin faktiske status."
+        "Eksperthjelp bør kjøpe deg kompetanse, risikoreduksjon eller stor tidsbesparelse — ikke bare noen som kan klikke på samme felt som deg.",
+        "SeoTool skal hjelpe deg se forskjellen før du bruker pengene."
       ],
       "links": [
         {
-          "label": "Se SEO-delen",
+          "label": "Se gjør-det-selv SEO",
           "href": "/seo/"
         },
         {
-          "label": "Se produktstatus",
+          "label": "Slik fungerer prioriteringen",
           "href": "/slik-fungerer-det/"
         }
       ],

@@ -2,80 +2,80 @@
   "slug": "slik-fungerer-det",
   "kind": "service",
   "seo": {
-    "title": "Slik fungerer SeoTool – evidens først, prioritering senere",
-    "description": "Se hva SeoTool har live i dag, hva som er under pilot og hvordan Core Search, Conversion og Priority bygges videre på samme evidensgrunnlag."
+    "title": "Slik fungerer SeoTool – fra SEO-data til neste tiltak",
+    "description": "SeoTool samler relevante SEO-signaler, setter dem i kontekst og hjelper deg finne hva som er mest verdt å gjøre først."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "METODEN OG PRODUKTRETNINGEN",
-    "title": "Bygg prioritering på dokumenterte observasjoner — ikke omvendt.",
-    "support": "SeoTool starter med data som kan spores tilbake til nettstedet eller Google. Illustrasjonen viser målbildet for Decision Engine. Selve Priority / Recommendation Engine er et senere produktsteg, ikke en live funksjon i dag.",
+    "eyebrow": "FRA 50 MULIGE OPPGAVER TIL DEN NESTE RIKTIGE",
+    "title": "SeoTool gjør SEO til en arbeidsflyt — ikke et fag du må mestre først.",
+    "support": "Samle signalene. Forstå hva de betyr. Prioriter det som er mest verdt tiden din. Gjør enkle forbedringer selv, og bruk SEO-ekspert bare når oppgaven faktisk krever det.",
     "visual": {
       "kind": "image",
       "image": {
         "src": "/images/pages/seotool-decision-engine.webp",
-        "alt": "Illustrasjon av SeoTools fremtidige Decision Engine og produktretning",
+        "alt": "Illustrasjon av SeoTool som kobler SEO-signaler til prioriterte tiltak",
         "positionX": 50,
         "positionY": 50,
         "kind": "illustration"
       }
     },
     "primaryCta": {
-      "label": "Se dagens SEO-grunnlag",
-      "href": "/seo/"
+      "label": "Finn mine viktigste tiltak",
+      "href": "/gratis-analyse/"
     },
     "secondaryCta": {
-      "label": "Logg inn",
-      "href": "https://app.seotool.no"
+      "label": "Se SEO",
+      "href": "/seo/"
     }
   },
   "listing": {
     "title": "Slik fungerer det",
-    "summary": "Hva som er live, hva som testes og hvordan SeoTool bygges mot beslutningsstøtte.",
+    "summary": "Fra SEO-data til en tydeligere rekkefølge på hva du bør gjøre.",
     "order": 4,
     "visible": true
   },
   "faq": [
     {
-      "question": "Prioriterer SeoTool automatisk alle tiltak i dag?",
-      "answer": "Nei. Dagens produksjonsgrunnlag er crawler, Issue Engine og Search Console/Top Queries. Priority / Recommendation Engine er et senere produktsteg."
+      "question": "Må jeg fikse alt SeoTool finner?",
+      "answer": "Nei. Det er hele poenget. Et funn er ikke automatisk en viktig oppgave. Du bør bruke tiden der problemet og muligheten faktisk forsvarer innsatsen."
     },
     {
-      "question": "Hvorfor bygge evidenslaget først?",
-      "answer": "Fordi anbefalinger blir svake hvis kilder, tidspunkt og målemetoder blandes sammen. SeoTool beholder observasjonene separat før de brukes til beslutningsstøtte."
+      "question": "Hva gjør jeg når en oppgave er for teknisk?",
+      "answer": "Da er det et godt tegn på at den bør delegeres. Canonical-problemer, migrering, JavaScript-indeksering og kritiske CMS-/serverfeil er typiske saker der eksperthjelp kan være billigere enn prøving og feiling."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "live-grunnlag",
-      "eyebrow": "DET SOM ER LEVERT",
-      "heading": "Dagens SeoTool dokumenterer nettstedet og Google-dataene.",
+      "id": "fire-steg",
+      "eyebrow": "EN ENKLERE SEO-LOOP",
+      "heading": "Finn. Prioriter. Gjør. Mål.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Crawler og Issue Engine beskriver hva som faktisk finnes på nettstedet. Search Console kobler Googles egne ytelsesdata til samme prosjekt og historikk.",
-        "Dette er ikke hele målbildet. Det er fundamentet som de neste lagene må kunne stole på."
+        "SEO blir langt mer håndterbart når du slutter å behandle alt som ett stort prosjekt. Ta én viktig forbedring av gangen og bruk dataene til å velge neste.",
+        "Den samme arbeidsflyten fungerer enten du gjør jobben selv eller lar noen andre utføre den."
       ],
       "items": [
         {
-          "title": "Crawler + historikk",
-          "text": "Tidsstemplete observasjoner av sider og tekniske forhold.",
+          "title": "1. Finn",
+          "text": "SeoTool samler relevante observasjoner fra nettstedet og søkedataene.",
           "surface": "base-200"
         },
         {
-          "title": "Issue Engine",
-          "text": "Konkrete issues fra observerte forhold.",
+          "title": "2. Prioriter",
+          "text": "Velg det som er mest verdt å ta først.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console",
-          "text": "Sideytelse fra Googles egen datakilde.",
+          "title": "3. Gjør",
+          "text": "Fiks det enkle selv. Send tekniske eller risikofylte saker til en SEO-ekspert.",
           "surface": "base-200"
         },
         {
-          "title": "Top Queries",
-          "text": "Søk, visninger og klikk fra Search Console.",
+          "title": "4. Mål",
+          "text": "Se hva som endrer seg, og bruk det som grunnlag for neste beslutning.",
           "surface": "base-200"
         }
       ],
@@ -83,34 +83,24 @@
     },
     {
       "_block": "content",
-      "id": "roadmap",
-      "eyebrow": "REKKEFØLGEN VIDERE",
-      "heading": "Mer intelligens kommer lagvis — i riktig rekkefølge.",
+      "id": "to-mater",
+      "eyebrow": "BRUK PENGENE DER KOMPETANSEN BETYR NOE",
+      "heading": "Gjør rutinejobben selv. Betal eksperten for ekspertjobben.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Neste godkjente byggemål er AI Visibility i intern pilot. Deretter følger Core Search Intelligence og Conversion Layer før en eksplisitt Priority / Recommendation Engine.",
-        "Poenget er enkelt: beslutningsmotoren skal bygges på faktisk evidens, ikke på en pen mockup."
+        "Riktig adresse, metatitler, innhold, internlenker, FAQ og bilder er ikke magi. Når SeoTool peker ut oppgaven, kan mye gjøres direkte av deg eller noen internt.",
+        "Eksperthjelp gir mest mening når oppgaven krever teknisk diagnose, innebærer risiko eller kan skade synligheten hvis den løses feil."
       ],
       "items": [
         {
-          "title": "1. AI Visibility",
-          "text": "Neste byggemål: kontrollerte AI-observasjoner med historikk og kilde.",
+          "title": "Gjør selv",
+          "text": "Adresse, titler, metabeskrivelser, innhold, internlenker, FAQ, bilder og andre tydelige forbedringer.",
           "surface": "base-200"
         },
         {
-          "title": "2. Core Search Intelligence",
-          "text": "Egne SERP-observasjoner og søkemarkedsdata, separat fra Search Console.",
-          "surface": "base-200"
-        },
-        {
-          "title": "3. Conversion Layer",
-          "text": "Business- og konverteringssignaler som senere kan berike prioriteringen.",
-          "surface": "base-200"
-        },
-        {
-          "title": "4. Priority / Recommendation",
-          "text": "Målbildet: forklarbar prioritering bygget på de tidligere evidenslagene.",
+          "title": "Bruk SEO-ekspert",
+          "text": "Canonical, migrering, JavaScript-indeksering, avansert teknisk SEO og kritiske CMS-/serverfeil.",
           "surface": "base-200"
         }
       ],
@@ -119,23 +109,23 @@
     {
       "_block": "content",
       "id": "neste-steg",
-      "eyebrow": "SE DET SOM FINNES NÅ",
-      "heading": "Start med evidensgrunnlaget, ikke roadmap-grafikken.",
+      "eyebrow": "START ENKELT",
+      "heading": "Finn én ting som er mer verdt å gjøre enn de andre.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Den praktiske verdien i dag ligger i crawler, Issues og Search Console-data med historikk.",
-        "Vil du vurdere et nettsted med dagens funksjoner, kan du be om en menneskelig gjennomgang. Har du konto, logger du rett inn i appen."
+        "Du trenger ikke en 40-siders SEO-rapport for å komme i gang. Du trenger et godt neste steg.",
+        "Start med en vurdering, eller logg inn hvis du allerede bruker SeoTool."
       ],
       "links": [
         {
-          "label": "Be om vurdering",
-          "href": "/gratis-analyse/"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Se SEO-delen",
-          "href": "/seo/"
+          "label": "Når trenger du SEO-ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"

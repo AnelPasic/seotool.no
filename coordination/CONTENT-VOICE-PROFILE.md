@@ -6,8 +6,8 @@ Editorial authority in this standalone exported site: `AGENTS.md`, `coordination
 ## Project DNA and buyer language
 
 Business / brand: SeoTool (https://seotool.no)
-Primary buyer and awareness: Ledere, markedsansvarlige og nettstedeiere som trenger oversikt over hva de skal gjøre i søk og AI-synlighet.
-Core service, user job and conversion: SeoTool samler dokumenterte observasjoner fra nettsted og Google i ett historisk evidensgrunnlag. Live i dag er crawler, Issue Engine og Search Console/Top Queries. AI Visibility er neste interne pilot; Core Search, Conversion og Priority/Recommendation er senere produktlag. Primær konvertering er menneskelig vurdering via /gratis-analyse/ og innlogging til https://app.seotool.no.
+Primary buyer and awareness: Ledere, markedsansvarlige og nettstedeiere som vil gjøre mer SEO selv, men trenger hjelp til å forstå hva som er viktigst og hva som bør gjøres først.
+Core service, user job and conversion: SeoTool hjelper brukeren forstå SEO-signaler, prioritere arbeidet og gjøre mest mulig selv. Hovedmodellen er DIY-first: rutineoppgaver håndteres selv, mens SEO-ekspert brukes når teknikk, risiko eller kompleksitet faktisk forsvarer kostnaden. Primær konvertering er SEO-vurdering via /gratis-analyse/ og produktbruk via https://app.seotool.no.
 Market, actual geography, regulatory sensitivity: Norge først, skandinavisk/nordisk marked. Nøkternhet og etterrettelighet.
 Real customer words or questions: "Hva bør vi fikse først?", "Hvorfor syns vi ikke i ChatGPT eller Google AI Overviews?", "Hvilke tekniske feil påvirker faktisk rangeringen?"
 Competitors' generic clichés to avoid: "Revolusjonerende AI-plattform", "Få 100% SEO-helse", overfladiske 'helsescorer' uten forklaring, tomme løfter om 1. plass på Google.
@@ -17,10 +17,11 @@ OWNER approval/date: 2026-11-04 (Issue #86)
 ## Non-negotiable standards
 
 1. Norsk klarhet: a real buyer understands what is offered and the practical outcome immediately.
-2. Kommersiell logikk / **Commercial Value Gate on sales-intent copy**: lead with a desirable buyer outcome and why hiring the provider is worth more than doing visible tasks alone. Make delivery believable, timing honest, ownership/effort clear and the approved next step easy; avoid the 'I can update this myself' response. Value Equation diagnoses outcome x likelihood vs delay x effort, not copy to quote or guaranteed results. Educational/how-to content must still genuinely help.
+2. Kommersiell logikk / **DIY-first Commercial Value Gate**: lead with the buyer outcome of knowing what to do first, doing routine SEO themselves and saving expert spend for problems that truly require expertise. Do not manufacture dependency on a provider. Expert help should be framed as valuable when technical difficulty, risk or opportunity cost makes delegation rational.
 3. Honesty and evidence: no invented facts, rankings, reviews, guarantees, claims, AI mentions, prices or proof.
 4. SEO/AIO and CRO: content must answer its search/buyer question and support an appropriate, truthful next action.
-5. No forced jokes; reject humour that obscures the answer or disrespects the buyer.\n6. Product-status truth: never write a pilot, roadmap item or planned module as a live customer feature.
+5. No forced jokes; reject humour that obscures the answer or disrespects the buyer.
+6. Public copy is not a roadmap/status log. If a capability is not appropriate to sell to the buyer, omit or hide it rather than filling sales pages with pilot, roadmap or "not live yet" caveats. Never invent a capability.
 
 ## Supported presets
 
@@ -36,7 +37,7 @@ For this brand, the OWNER can choose different values. Do not copy another clien
 
 ## How to apply
 
-- Hero: identify real service, buyer value and action. For a commercial Hero, H1 sells the outcome and ingress explains why a professional takes responsibility rather than handing the buyer a DIY task list. Keep process and effort credible; tone does not replace the Commercial Value Gate. Normally restrain edge, but **honor explicit level-7 Hero part choices**: a real comedy setup may lead while H1 remains standalone recognizable. Do not neuter Hysterisk into a polite quip.
+- Hero: identify the buyer outcome: know what to do first, do more SEO themselves and save expert spend for cases that genuinely require expertise. DIY is a core product benefit, not an objection to overcome. Keep process and effort credible; tone does not replace the Commercial Value Gate. Normally restrain edge, but **honor explicit level-7 Hero part choices**: a real comedy setup may lead while H1 remains standalone recognizable. Do not neuter Hysterisk into a polite quip.
 - Services/sales: real buyer outcome, relevant scope, correct promises.
 - Educational/explainer: when fitting, use vivid real examples and a dry observation to make the lesson stick.
 - FAQ: answer first, then optional sharp observation; keep actual policy/price/scope accurate.

@@ -17,24 +17,19 @@
       "toggleLabel": "Vis produktmenyen",
       "links": [
         {
-          "label": "SEO",
+          "label": "Gjør det selv SEO",
           "href": "/seo/",
-          "description": "Live: crawl, Issues og Search Console"
+          "description": "Finn hva som er viktigst og gjør mer selv"
         },
         {
           "label": "AI-synlighet",
           "href": "/ai-synlighet/",
-          "description": "Under utvikling: målbare AI-observasjoner"
-        },
-        {
-          "label": "Lokal synlighet",
-          "href": "/lokal-synlighet/",
-          "description": "Planlagt Local/Geo-lag"
+          "description": "Følg omtaler, kilder og synlighet i AI-svar"
         },
         {
           "label": "Slik fungerer det",
           "href": "/slik-fungerer-det/",
-          "description": "Hva som er live, og hva som bygges videre"
+          "description": "Fra data til neste beste tiltak"
         }
       ]
     },
@@ -47,7 +42,7 @@
     {
       "kind": "link",
       "id": "gratis-analyse",
-      "label": "Nettstedsanalyse",
+      "label": "SEO-vurdering",
       "href": "/gratis-analyse/"
     }
   ],
