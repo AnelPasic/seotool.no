@@ -2,91 +2,143 @@
   "slug": "slik-fungerer-det",
   "kind": "service",
   "seo": {
-    "title": "Slik fungerer SeoTool – Fra data til prioritert handling",
-    "description": "Lær hvordan SeoTool samler inn bevis fra nettstedet, Google og AI for å gi deg en prioritert handlingsplan."
+    "title": "Slik fungerer SeoTool – evidens først, prioritering senere",
+    "description": "Se hva SeoTool har live i dag, hva som er under pilot og hvordan Core Search, Conversion og Priority bygges videre på samme evidensgrunnlag."
   },
   "hero": {
-    "layout": "centered-none",
-    "eyebrow": "Metode og arkitektur",
-    "title": "Fra spredte datapunkter til en prioritert handlingsplan.",
-    "support": "Nettsted + Google + søkemarked + AI gir bevisgrunnlag. SeoTool prioriterer oppgavene slik at du vet nøyaktig hva du skal gjennomføre først.",
+    "layout": "split-right",
+    "eyebrow": "METODEN OG PRODUKTRETNINGEN",
+    "title": "Bygg prioritering på dokumenterte observasjoner — ikke omvendt.",
+    "support": "SeoTool starter med data som kan spores tilbake til nettstedet eller Google. Illustrasjonen viser målbildet for Decision Engine. Selve Priority / Recommendation Engine er et senere produktsteg, ikke en live funksjon i dag.",
     "visual": {
-      "kind": "none"
+      "kind": "image",
+      "image": {
+        "src": "/images/pages/seotool-decision-engine.webp",
+        "alt": "Illustrasjon av SeoTools fremtidige Decision Engine og produktretning",
+        "positionX": 50,
+        "positionY": 50,
+        "kind": "illustration"
+      }
     },
     "primaryCta": {
-      "label": "Start en analyse",
-      "href": "/gratis-analyse/"
+      "label": "Se dagens SEO-grunnlag",
+      "href": "/seo/"
+    },
+    "secondaryCta": {
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
     }
   },
   "listing": {
     "title": "Slik fungerer det",
-    "summary": "Den strukturerte metoden bak SeoTool: Bevis, prioritering, handling og måling.",
+    "summary": "Hva som er live, hva som testes og hvordan SeoTool bygges mot beslutningsstøtte.",
     "order": 4,
     "visible": true
   },
   "faq": [
     {
-      "question": "Hvorfor er prioritering viktigere enn flere feillister?",
-      "answer": "Et nettsted kan ha hundrevis av teoretiske mangler, men bare noen få har faktisk innvirkning på rangering og kundeopplevelse. SeoTool skiller støy fra kritiske flaskehalser."
+      "question": "Prioriterer SeoTool automatisk alle tiltak i dag?",
+      "answer": "Nei. Dagens produksjonsgrunnlag er crawler, Issue Engine og Search Console/Top Queries. Priority / Recommendation Engine er et senere produktsteg."
     },
     {
-      "question": "Hvor ofte oppdateres anbefalingene?",
-      "answer": "Når nye data innhentes fra gjennomsøking, Search Console eller AI-kilder, rekalkuleres prioriteringene automatisk."
+      "question": "Hvorfor bygge evidenslaget først?",
+      "answer": "Fordi anbefalinger blir svake hvis kilder, tidspunkt og målemetoder blandes sammen. SeoTool beholder observasjonene separat før de brukes til beslutningsstøtte."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "prosessen",
-      "heading": "Fire steg fra analyse til resultat",
-      "visibility": "visible",
+      "id": "live-grunnlag",
+      "eyebrow": "DET SOM ER LEVERT",
+      "heading": "Dagens SeoTool dokumenterer nettstedet og Google-dataene.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Tradisjonell optimalisering stopper ofte ved rapporten. SeoTool er bygget som en beslutningsmotor som leder direkte til handling.",
-        "Modellen bygger på fire sammenhengende faser som sikrer at ressursene brukes der de gir størst uttelling."
+        "Crawler og Issue Engine beskriver hva som faktisk finnes på nettstedet. Search Console kobler Googles egne ytelsesdata til samme prosjekt og historikk.",
+        "Dette er ikke hele målbildet. Det er fundamentet som de neste lagene må kunne stole på."
       ],
       "items": [
         {
-          "title": "1. Bevisinnsamling",
-          "text": "Teknisk analyse, Search Console-statistikk, søkeintensjon og AI-siteringer samles inn som et samlet faktagrunnlag.",
+          "title": "Crawler + historikk",
+          "text": "Tidsstemplete observasjoner av sider og tekniske forhold.",
           "surface": "base-200"
         },
         {
-          "title": "2. Prioritering",
-          "text": "Funnene vektes etter forventet gevinst, vanskelighetsgrad og forretningsmessig verdi fremfor tilfeldige 'helsepoeng'.",
+          "title": "Issue Engine",
+          "text": "Konkrete issues fra observerte forhold.",
           "surface": "base-200"
         },
         {
-          "title": "3. Konkret handling",
-          "text": "Hver oppgave forklares med hvorfor den betyr noe og hvilke spesifikke endringer som må gjøres på siden.",
+          "title": "Search Console",
+          "text": "Sideytelse fra Googles egen datakilde.",
           "surface": "base-200"
         },
         {
-          "title": "4. Kontinuerlig måling",
-          "text": "Effekten av gjennomførte tiltak spores over tid for å verifisere forbedring i indeksering og synlighet.",
+          "title": "Top Queries",
+          "text": "Søk, visninger og klikk fra Search Console.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "roadmap",
+      "eyebrow": "REKKEFØLGEN VIDERE",
+      "heading": "Mer intelligens kommer lagvis — i riktig rekkefølge.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "body": [
+        "Neste godkjente byggemål er AI Visibility i intern pilot. Deretter følger Core Search Intelligence og Conversion Layer før en eksplisitt Priority / Recommendation Engine.",
+        "Poenget er enkelt: beslutningsmotoren skal bygges på faktisk evidens, ikke på en pen mockup."
+      ],
+      "items": [
+        {
+          "title": "1. AI Visibility",
+          "text": "Neste byggemål: kontrollerte AI-observasjoner med historikk og kilde.",
+          "surface": "base-200"
+        },
+        {
+          "title": "2. Core Search Intelligence",
+          "text": "Egne SERP-observasjoner og søkemarkedsdata, separat fra Search Console.",
+          "surface": "base-200"
+        },
+        {
+          "title": "3. Conversion Layer",
+          "text": "Business- og konverteringssignaler som senere kan berike prioriteringen.",
+          "surface": "base-200"
+        },
+        {
+          "title": "4. Priority / Recommendation",
+          "text": "Målbildet: forklarbar prioritering bygget på de tidligere evidenslagene.",
+          "surface": "base-200"
+        }
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
       "id": "neste-steg",
-      "heading": "Klar for å oppleve forskjellen?",
-      "visibility": "visible",
+      "eyebrow": "SE DET SOM FINNES NÅ",
+      "heading": "Start med evidensgrunnlaget, ikke roadmap-grafikken.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "Få en vurdering av nettstedets tilstand og se hvilke oppgaver som bør tas tak i først.",
-        "Ingen binding, ingen automatiserte salgstriks – kun saklig innsikt."
+        "Den praktiske verdien i dag ligger i crawler, Issues og Search Console-data med historikk.",
+        "Vil du vurdere et nettsted med dagens funksjoner, kan du be om en menneskelig gjennomgang. Har du konto, logger du rett inn i appen."
       ],
       "links": [
         {
-          "label": "Gå til gratis analyse",
+          "label": "Be om vurdering",
           "href": "/gratis-analyse/"
         },
         {
-          "label": "Utforsk artikler og veiledninger",
-          "href": "/innsikt/"
+          "label": "Se SEO-delen",
+          "href": "/seo/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }
