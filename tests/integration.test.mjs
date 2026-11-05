@@ -70,9 +70,9 @@ test('PageList pages source retains legacy key but shows only services and produ
   const index=builderPageSchema.parse({...service,slug:'oversikt',kind:'index'});
   const available=[...pages,product,index];
   const auto=resolvePageList(saved,available).map(x=>x.slug);
-  assert.ok(auto.includes('tjeneste'));
+  assert.ok(!auto.includes('tjeneste'));
   assert.ok(auto.includes('produkter/produkt'));
-  for(const excluded of ['home','innsikt/artikkel','oversikt','om','priser','kontakt','404'])assert.ok(!auto.includes(excluded),excluded);
+  for(const excluded of ['home','innsikt/artikkel','oversikt','om','priser','kontakt','tjeneste','404'])assert.ok(!auto.includes(excluded),excluded);
   assert.deepEqual(resolvePageList({...saved,source:'articles'},available).map(x=>x.slug),['innsikt/artikkel']);
   assert.deepEqual(resolvePageList({...saved,mode:'manual',entries:[{_block:'page',slug:'innsikt/artikkel'},{_block:'page',slug:'oversikt'}]},available).map(x=>x.slug),['innsikt/artikkel','oversikt']);
 });
