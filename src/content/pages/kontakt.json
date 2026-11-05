@@ -2,16 +2,24 @@
   "slug": "kontakt",
   "kind": "utility",
   "seo": {
-    "title": "Kontakt oss – SeoTool",
-    "description": "Ta kontakt for spørsmål om SeoTool, rådgivning innen SEO og AI-synlighet, eller teknisk veiledning."
+    "title": "Kontakt om SeoTool – Medon",
+    "description": "Kontakt Medon om SeoTool, nettstedsanalyse, tilgang eller produktspørsmål."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "Kundestøtte og dialog",
-    "title": "Hvordan kan vi hjelpe deg?",
-    "support": "Ta kontakt for veiledning om verktøyet, bistand med nettstedet eller spørsmål om våre tjenester.",
+    "eyebrow": "SEOTOOL · UTVIKLET AV MEDON",
+    "title": "Spørsmål om SeoTool? Snakk med teamet som bygger det.",
+    "support": "For produktspørsmål, vurdering av et nettsted eller dialog om tilgang bruker vi Medons eksisterende kontaktkanal. Eksisterende SeoTool-brukere kan logge inn direkte i appen.",
     "visual": {
       "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Kontakt Medon",
+      "href": "https://medon.no/kontakt"
+    },
+    "secondaryCta": {
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
     }
   },
   "listing": {
@@ -20,57 +28,65 @@
   },
   "faq": [
     {
-      "question": "Hvor henvender eksisterende brukere seg?",
-      "answer": "Brukere med aktivt abonnement eller prosjekt i SeoTool finner prosjektspesifikk hjelp direkte i app.seotool.no."
+      "question": "Hvor logger eksisterende brukere inn?",
+      "answer": "Eksisterende brukere logger inn på app.seotool.no."
+    },
+    {
+      "question": "Har seotool.no et eget leadskjema?",
+      "answer": "Ikke nå. Offentlig kontakt går via Medons eksisterende kontaktkanal inntil et eget SeoTool-inntak er eksplisitt satt opp og godkjent."
     }
   ],
   "sections": [
     {
       "_block": "content",
       "id": "henvendelser",
-      "heading": "Velg type henvendelse",
-      "visibility": "visible",
+      "eyebrow": "RASKESTE VEI VIDERE",
+      "heading": "Velg riktig kanal.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Vi bistår bedrifter med alt fra tekniske søkerevisjoner til oppsett av kontinuerlig synlighetsovervåking.",
-        "Velg området som passer ditt behov best, så hjelper vi deg videre."
+        "Vi holder offentlig markedsnettsted og autentisert produkt tydelig adskilt. Det gjør det enklere å vite om du skal snakke med et menneske eller jobbe direkte i SeoTool.",
+        "Ingen fiktive skjemaer, ingen «send inn» som ikke sender noe."
       ],
       "items": [
         {
-          "title": "Bistand med SEO og AI-synlighet",
-          "text": "For virksomheter som ønsker hjelp til å analysere og forbedre sine plasseringer og siteringer.",
+          "title": "Nytt spørsmål eller analyse",
+          "text": "Bruk Medons kontaktkanal for produktdialog og menneskelig vurdering.",
           "surface": "base-200"
         },
         {
-          "title": "Spørsmål om SeoTool-plattformen",
-          "text": "Teknisk innsikt, funksjonalitet, demonstrasjoner og tilpasning for organisasjoner.",
+          "title": "Eksisterende SeoTool-konto",
+          "text": "Logg inn på app.seotool.no for prosjektdata og arbeidsflyten i produktet.",
           "surface": "base-200"
         },
         {
-          "title": "Eksisterende kunder",
-          "text": "Tilgang til prosjekter, crawler-logger og kontoadministrasjon via app.seotool.no.",
+          "title": "Funksjonsstatus",
+          "text": "Se «Slik fungerer det» for tydelig skille mellom live, pilot og senere roadmap.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
-      "id": "innlogging",
-      "heading": "Allerede bruker av SeoTool?",
-      "visibility": "visible",
+      "id": "produktstatus",
+      "heading": "Vil du først se hva som faktisk er live?",
+      "headingAlign": "left",
+      "layout": "two-columns",
       "body": [
-        "Dersom du har en aktiv SeoTool-konto, logger du inn i den fullstendige applikasjonen nedenfor."
+        "SEO-siden beskriver dagens produksjonsgrunnlag. AI- og Local-sidene er eksplisitt merket med sin faktiske status."
       ],
       "links": [
         {
-          "label": "Be om gratis analyse",
-          "href": "/gratis-analyse/"
+          "label": "Se SEO-delen",
+          "href": "/seo/"
         },
         {
-          "label": "Les mer om tjenestene våre",
-          "href": "/seo/"
+          "label": "Se produktstatus",
+          "href": "/slik-fungerer-det/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }
