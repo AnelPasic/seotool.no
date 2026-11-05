@@ -1,6 +1,6 @@
 {
   "footer": {
-    "about": "SeoTool hjelper deg forstå hva som er viktigst i SEO, gjøre mer selv og bruke hjelp bare når det faktisk gir mening.",
+    "about": "SeoTool hjelper deg forstå hva som er viktigst i SEO, gjøre mer selv og bruke eksperthjelp bare når kompetansen faktisk gir verdi.",
     "groups": [
       {
         "heading": "SeoTool",
@@ -32,7 +32,7 @@
             "href": "/gratis-analyse/"
           },
           {
-            "label": "Få hjelp",
+            "label": "Når trenger du ekspert?",
             "href": "/kontakt/"
           }
         ]
@@ -43,16 +43,12 @@
           {
             "label": "Logg inn",
             "href": "https://app.seotool.no"
-          },
-          {
-            "label": "Kontakt Medon",
-            "href": "https://medon.no/kontakt"
           }
         ]
       }
     ],
     "copyright": "SeoTool",
-    "note": "Gjør så mye SEO du vil selv. Medon kan ta over når du vil slippe.",
+    "note": "Gjør det enkle selv. Spar eksperttimene til det som faktisk krever ekspertise.",
     "legalLinks": []
   }
 }
