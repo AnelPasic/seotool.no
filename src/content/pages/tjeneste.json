@@ -68,8 +68,8 @@
       "heading": "Fra observasjon til noe du faktisk kan gjøre.",
       "visibility": "visible",
       "body": [
-        "Start med SEO-siden hvis du vil gjøre mer selv, eller kontakt Medon hvis du vil slippe hele eller deler av jobben.",
-        "Samme grunnlag fungerer uansett hvem som utfører tiltaket."
+        "Start med SEO-siden hvis du vil gjøre mer selv.",
+        "Når en oppgave blir teknisk, risikofylt eller dyr å lære seg bare for å løse én gang, er det et godt tidspunkt å bruke SEO-ekspert."
       ],
       "links": [
         {
@@ -77,7 +77,7 @@
           "href": "/seo/"
         },
         {
-          "label": "Få hjelp",
+          "label": "Når trenger du ekspert?",
           "href": "/kontakt/"
         }
       ]
