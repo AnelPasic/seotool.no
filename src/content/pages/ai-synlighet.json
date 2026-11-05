@@ -2,73 +2,73 @@
   "slug": "ai-synlighet",
   "kind": "service",
   "seo": {
-    "title": "AI-synlighet – SeoTool (under intern pilot)",
-    "description": "SeoTool bygger AI Visibility som historiske observasjoner av svar, omtaler, siteringer og kilder. Modulen er ikke åpnet som kundeprodukt ennå."
+    "title": "AI-synlighet – se omtaler, kilder og konkurrenter | SeoTool",
+    "description": "Følg hvordan virksomheten din dukker opp i AI-svar, hvilke kilder som brukes og hvilke konkurrenter som nevnes."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "NESTE PRODUKTLAG · INTERN PILOT",
-    "title": "AI-synlighet som observasjoner — ikke en oppdiktet AI-rangering.",
-    "support": "SeoTool bygger AI Visibility for å lagre konkrete, tidsstemplete observasjoner av svar, omtaler, siteringer, kilder og konkurrenter. Modulen er under intern pilot og er ikke åpnet som kundeprodukt ennå.",
+    "eyebrow": "AI-SYNLIGHET",
+    "title": "Se om du blir nevnt — og hvilke kilder AI-svarene bygger på.",
+    "support": "AI-synlighet er ikke én fast rangering. SeoTool følger konkrete spørsmål og observasjoner over tid, slik at du kan se omtaler, siteringer, kilder og konkurrenter i riktig kontekst.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Se produktretningen",
-      "href": "/slik-fungerer-det/"
-    },
-    "secondaryCta": {
       "label": "Be om en vurdering",
       "href": "/gratis-analyse/"
+    },
+    "secondaryCta": {
+      "label": "Slik fungerer SeoTool",
+      "href": "/slik-fungerer-det/"
     }
   },
   "listing": {
     "title": "AI-synlighet",
-    "summary": "Under intern pilot: historiske AI-observasjoner med kilde og tidspunkt.",
+    "summary": "Følg omtaler, siteringer, kilder og konkurrenter i AI-svar.",
     "order": 2,
     "visible": true
   },
   "faq": [
     {
-      "question": "Er AI Visibility tilgjengelig for kunder nå?",
-      "answer": "Ikke ennå. Modulen er neste godkjente byggemål og testes som intern pilot før eventuell kundeaktivering."
+      "question": "Har AI-søk én fast rangering?",
+      "answer": "Nei. Svar kan variere med spørsmål, tidspunkt og flate. Derfor er historiske observasjoner mer nyttige enn å late som én plassering er en permanent fasit."
     },
     {
-      "question": "Hvorfor bruker SeoTool ikke én fast AI-rangering?",
-      "answer": "AI-svar kan variere mellom spørsmål, tidspunkt og flater. SeoTool er derfor designet for å behandle hver måling som en konkret observasjon med historikk, ikke som en universell fasit."
+      "question": "Hva kan jeg gjøre selv med AI-synlighet?",
+      "answer": "Du kan blant annet forbedre sider som bør være gode kilder, gjøre virksomheten tydeligere, dekke viktige spørsmål bedre og styrke konsistente fakta på tvers av nettstedet. SeoTool hjelper deg se hvor det er mest verdt å undersøke først."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "mvp-prinsipp",
+      "id": "observer",
       "eyebrow": "MÅLBART FØR MAGISK",
-      "heading": "Vi lagrer det som faktisk kan observeres.",
+      "heading": "Følg det som faktisk kan observeres.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Målet er ikke å forklare hva en modell «tenkte». Det som kan dokumenteres er selve svaret, omtaler, siteringer, kilder, konkurrenter og tidspunktet for testen.",
-        "Samme prinsipp brukes i resten av SeoTool: observasjon først, tolkning etterpå."
+        "Det er vanskelig nok å forstå AI-søk uten å finne opp nye magiske scorer. Vi holder oss til det som faktisk vises i svarene.",
+        "Over tid blir det mulig å se mønstre: hvilke spørsmål du dukker opp på, hvem som nevnes i stedet og hvilke kilder som ofte brukes."
       ],
       "items": [
         {
           "title": "Svar",
-          "text": "Det konkrete svaret fra den målte AI-flaten.",
+          "text": "Det konkrete svaret på spørsmålet som ble undersøkt.",
           "surface": "base-200"
         },
         {
           "title": "Omtaler",
-          "text": "Om virksomhet, merkevare eller andre relevante aktører nevnes.",
+          "text": "Om virksomheten, merkevaren eller relevante konkurrenter nevnes.",
           "surface": "base-200"
         },
         {
           "title": "Siteringer og kilder",
-          "text": "Hvilke URL-er eller domener som faktisk vises som referanser.",
+          "text": "Hvilke URL-er eller domener som brukes som referanser.",
           "surface": "base-200"
         },
         {
           "title": "Historikk",
-          "text": "Gjentatte observasjoner kan senere skille tilfeldig variasjon fra mer varige endringer.",
+          "text": "Hvordan observasjonene endrer seg når de gjentas over tid.",
           "surface": "base-200"
         }
       ],
@@ -76,24 +76,24 @@
     },
     {
       "_block": "content",
-      "id": "status",
-      "eyebrow": "PRODUKTSTATUS",
-      "heading": "Pilot først. Kommersiell aktivering senere.",
+      "id": "gjore-selv",
+      "eyebrow": "FRA OBSERVASJON TIL TILTAK",
+      "heading": "Mye av forbedringsarbeidet kan du gjøre på ditt eget nettsted.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "AI Visibility er neste produktlag, men offentlig nettside skal ikke selge en intern pilot som en ferdig funksjon.",
-        "Når modulen er produksjonsverifisert og eksplisitt åpnet for kunder, oppdateres denne siden fra «under pilot» til faktisk tilgjengelighet."
+        "Hvis viktige spørsmål ikke dekkes godt, virksomheten er uklar eller gode kilder mangler, er mye av jobben vanlig innholds- og nettstedarbeid.",
+        "SeoTool hjelper deg finne hvor det er mest interessant å grave. Du velger om du gjør forbedringene selv eller bruker Medon."
       ],
       "links": [
         {
-          "label": "Se dagens SEO-grunnlag",
+          "label": "Se gjør-det-selv SEO",
           "href": "/seo/"
         },
         {
-          "label": "Se hva som kommer etterpå",
-          "href": "/slik-fungerer-det/"
+          "label": "Få hjelp",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
