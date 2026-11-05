@@ -9,7 +9,7 @@
     "layout": "split-right",
     "eyebrow": "FRA 50 MULIGE OPPGAVER TIL DEN NESTE RIKTIGE",
     "title": "SeoTool gjør SEO til en arbeidsflyt — ikke et fag du må mestre først.",
-    "support": "Samle signalene. Forstå hva de betyr. Prioriter det som er mest verdt tiden din. Gjør jobben selv eller send den videre når du vil.",
+    "support": "Samle signalene. Forstå hva de betyr. Prioriter det som er mest verdt tiden din. Gjør enkle forbedringer selv, og bruk SEO-ekspert bare når oppgaven faktisk krever det.",
     "visual": {
       "kind": "image",
       "image": {
@@ -42,7 +42,7 @@
     },
     {
       "question": "Hva gjør jeg når en oppgave er for teknisk?",
-      "answer": "Da kan du sende den til utvikler, innholdsansvarlig eller Medon. SeoTool skal hjelpe deg forstå hva som bør gjøres og hvorfor — ikke tvinge deg til å bli utvikler på fritiden."
+      "answer": "Da er det et godt tegn på at den bør delegeres. Canonical-problemer, migrering, JavaScript-indeksering og kritiske CMS-/serverfeil er typiske saker der eksperthjelp kan være billigere enn prøving og feiling."
     }
   ],
   "sections": [
@@ -65,17 +65,17 @@
         },
         {
           "title": "2. Prioriter",
-          "text": "Sett funnene i kontekst og velg det som er mest verdt å ta først.",
+          "text": "Velg det som er mest verdt å ta først.",
           "surface": "base-200"
         },
         {
           "title": "3. Gjør",
-          "text": "Fiks selv, deleger internt eller gi oppgaven til Medon.",
+          "text": "Fiks det enkle selv. Send tekniske eller risikofylte saker til en SEO-ekspert.",
           "surface": "base-200"
         },
         {
           "title": "4. Mål",
-          "text": "Se hva som endrer seg over tid og bruk det som grunnlag for neste beslutning.",
+          "text": "Se hva som endrer seg, og bruk det som grunnlag for neste beslutning.",
           "surface": "base-200"
         }
       ],
@@ -84,23 +84,23 @@
     {
       "_block": "content",
       "id": "to-mater",
-      "eyebrow": "SAMME DATA. TO MÅTER Å JOBBE.",
-      "heading": "Du velger hvor mye av jobben du vil eie selv.",
+      "eyebrow": "BRUK PENGENE DER KOMPETANSEN BETYR NOE",
+      "heading": "Gjør rutinejobben selv. Betal eksperten for ekspertjobben.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool er nyttig også når du ikke kjøper SEO-tjenester. Det er med vilje.",
-        "Når du vil jobbe selv, bruker du funnene som arbeidsliste og beslutningsgrunnlag. Når du vil slippe, har Medon samme kontekst og kan ta over uten at alt må kartlegges på nytt."
+        "Riktig adresse, metatitler, innhold, internlenker, FAQ og bilder er ikke magi. Når SeoTool peker ut oppgaven, kan mye gjøres direkte av deg eller noen internt.",
+        "Eksperthjelp gir mest mening når oppgaven krever teknisk diagnose, innebærer risiko eller kan skade synligheten hvis den løses feil."
       ],
       "items": [
         {
-          "title": "Gjør det selv",
-          "text": "Bruk SeoTool til å velge tiltak, gjennomføre dem og følge utviklingen.",
+          "title": "Gjør selv",
+          "text": "Adresse, titler, metabeskrivelser, innhold, internlenker, FAQ, bilder og andre tydelige forbedringer.",
           "surface": "base-200"
         },
         {
-          "title": "Gjør det for meg",
-          "text": "La Medon utføre hele eller deler av jobben med samme datagrunnlag.",
+          "title": "Bruk SEO-ekspert",
+          "text": "Canonical, migrering, JavaScript-indeksering, avansert teknisk SEO og kritiske CMS-/serverfeil.",
           "surface": "base-200"
         }
       ],
