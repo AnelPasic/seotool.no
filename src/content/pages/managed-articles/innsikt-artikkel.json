@@ -2,66 +2,68 @@
   "slug": "innsikt/artikkel",
   "kind": "article",
   "seo": {
-    "title": "Velge tjeneste: en enkel sjekkliste | SeoTool",
-    "description": "Et nøytralt artikkelexempel om å avklare behov, sammenligne innhold og velge et nyttig neste steg."
+    "title": "Search Console-posisjon er ikke det samme som rank tracking | SeoTool",
+    "description": "Search Console og en ekstern SERP-observasjon svarer på ulike spørsmål. Derfor bør de holdes separate i SEO-analyse."
   },
   "hero": {
     "layout": "centered-none",
-    "title": "Hva bør du sjekke før du velger en tjeneste?",
-    "support": "Start med behovet, sammenlign det som faktisk inngår, og finn riktig neste steg. Dette er en fiktiv eksempelartikkel.",
+    "eyebrow": "SEARCH CONSOLE VS. SERP",
+    "title": "Search Console-posisjon og rank tracking svarer på ulike spørsmål.",
+    "support": "Search Console beskriver Googles registrerte ytelse over faktiske visninger. En rank tracker observerer et bestemt søkeresultat under bestemte forhold. De kan utfylle hverandre, men bør ikke blandes.",
     "visual": {
       "kind": "none"
     }
   },
   "listing": {
-    "title": "Sjekkliste før du velger tjeneste",
-    "summary": "Hva bør du avklare før du sammenligner tjenester og tilbud? Et eksempel på en nyttig veiledningsartikkel.",
-    "order": 5,
+    "title": "Search Console-posisjon vs. rank tracking",
+    "summary": "Hvorfor Googles egne ytelsesdata og en ekstern SERP-observasjon bør behandles som to forskjellige datakilder.",
+    "order": 1,
     "visible": true,
-    "label": "Les sjekklisten"
+    "label": "Les forklaringen"
   },
   "faq": [
     {
-      "question": "Er dette en anbefaling av en bestemt leverandør?",
-      "answer": "Nei. Dette er en fiktiv artikkel som demonstrerer en tydelig veiledende struktur."
+      "question": "Betyr ulik posisjon at én av datakildene er feil?",
+      "answer": "Ikke nødvendigvis. De to målingene kan ha forskjellig tidsrom, søkekontekst og observasjonsmetode. Først når kildene holdes separate kan forskjellen undersøkes skikkelig."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "avklar-behovet",
-      "heading": "Begynn med behovet",
+      "id": "search-console",
+      "heading": "Search Console viser Googles registrerte ytelse",
       "visibility": "visible",
       "body": [
-        "Skriv ned hvilket problem du vil løse, hvem som skal bruke løsningen, og hva som er viktigst. Det gjør det enklere å vurdere om en tjeneste faktisk passer.",
-        "Se etter konkrete beskrivelser av leveransen fremfor bare brede løfter."
+        "Search Console er førstepartsdata fra Google om hvordan nettstedet har blitt vist og klikket i søk. Posisjonstallene hører sammen med disse faktiske visningene og bør leses i den konteksten.",
+        "Det gjør dataene svært verdifulle, men ikke til en øyeblikkelig måling av én bestemt SERP akkurat nå."
       ]
     },
     {
       "_block": "content",
-      "id": "sammenlign-innholdet",
-      "heading": "Sammenlign hva som inngår",
+      "id": "serp-observasjon",
+      "heading": "En rank tracker observerer et konkret søkeresultat",
       "visibility": "visible",
       "body": [
-        "Undersøk hva som er inkludert, hvilke forutsetninger som gjelder, og hvem som har ansvar for neste steg.",
-        "Dette er kontrollpunkter du kan bruke selv. Artikkelen oppgir ikke priser, referanser eller dokumenterte resultater for en virkelig bedrift."
+        "En ekstern SERP-måling prøver i stedet å observere hva som vises for et bestemt søk under definerte forhold, for eksempel sted og enhet.",
+        "SeoTools planlagte Core Search Intelligence skal behandle slike observasjoner som en egen kilde. Den modulen er ikke live i dag."
       ]
     },
     {
       "_block": "content",
-      "id": "neste-steg",
-      "heading": "Les om tjenesten før du tar kontakt",
+      "id": "hvorfor-separere",
+      "heading": "Forskjellen er hele poenget",
       "visibility": "visible",
       "body": [
-        "Når behovet er klart, bør du lese en relevant tjenestebeskrivelse. Kontakt først leverandøren når du vet hvilke spørsmål du trenger svar på."
+        "Hvis du tvinger Search Console og SERP-data inn i én «sann posisjon», mister du konteksten som kan forklare avviket.",
+        "Behold heller begge med kilde, tidspunkt og metode. Da kan du spørre hvorfor de skiller lag, i stedet for å krangle om hvilket tall som er «riktig»."
       ],
       "links": [
         {
-          "label": "Se tjenesteeksemplet",
+          "label": "Les om SeoTool-grunnlaget",
           "href": "/tjeneste/"
         },
         {
-          "label": "Se kontaktmuligheter",
+          "label": "Kontakt oss",
           "href": "/kontakt/"
         }
       ]
