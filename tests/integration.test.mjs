@@ -67,7 +67,7 @@ test('PageList pages source retains legacy key but shows only services and produ
   const saved=JSON.parse(JSON.stringify({source:'pages',mode:'automatic',sort:'editorial',limit:12,layout:'cards',entries:[]}));
   assert.equal(pageListSchema.parse(saved).source,'pages');
   const product=builderPageSchema.parse({...service,slug:'produkter/produkt',listing:{...service.listing,title:'Produkt',order:1,visible:true}});
-  const index=builderPageSchema.parse({...service,slug:'oversikt',kind:'index'});
+  const index=builderPageSchema.parse({...service,slug:'oversikt',kind:'index',listing:{...service.listing,visible:true,title:'Oversikt'}});
   const available=[...pages,product,index];
   const auto=resolvePageList(saved,available).map(x=>x.slug);
   assert.ok(!auto.includes('tjeneste'));
