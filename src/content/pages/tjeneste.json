@@ -2,13 +2,14 @@
   "slug": "tjeneste",
   "kind": "service",
   "seo": {
-    "title": "Tjeneste | SeoTool",
-    "description": "Eksempelmetabeskrivelse for en tjeneste."
+    "title": "SeoTool – produktgrunnlaget",
+    "description": "En oversikt over hvordan SeoTool samler tekniske SEO-observasjoner og Google-data før senere intelligens- og prioriteringslag."
   },
   "hero": {
     "layout": "centered-none",
-    "title": "En tydelig tjeneste",
-    "support": "Hva får kunden, og hvordan kommer kunden videre?",
+    "eyebrow": "PRODUKTGRUNNLAG",
+    "title": "Et bedre beslutningsgrunnlag starter med data du kan spore tilbake.",
+    "support": "SeoTool samler nettstedets tekniske observasjoner og Search Console-data med historikk. Senere produktlag skal bygge videre på dette — ikke erstatte det med en magisk score.",
     "visual": {
       "kind": "none"
     },
@@ -18,38 +19,39 @@
     }
   },
   "listing": {
-    "title": "Tjeneste",
-    "summary": "Et eksempel på tjenestebeskrivelse",
-    "order": 1,
+    "title": "SeoTool – produktgrunnlag",
+    "summary": "Hvordan nettsted-, Google- og historikkdata holdes sammen uten å blande kildene.",
+    "order": 90,
     "visible": true
   },
   "faq": [
     {
-      "question": "Hva gjelder denne tjenesten?",
-      "answer": "Et lokalt, redigerbart demospørsmål."
+      "question": "Er dette hele SeoTool-produktet?",
+      "answer": "Nei. Dette beskriver fundamentet. AI Visibility er neste interne pilot, mens Core Search, Conversion og Priority / Recommendation kommer senere."
     }
   ],
   "sections": [
     {
       "_block": "content",
       "id": "innhold",
-      "heading": "Kort om tjenesten",
+      "eyebrow": "FUNDAMENTET",
+      "heading": "Kilder beholdes separate, men kan forstås i samme prosjekt.",
       "body": [
-        "Dette er et lokalt eksempel.",
-        "Denne tekstseksjonen kan bruke flere avsnitt, lenker og egne kort."
+        "Crawler og Issue Engine forteller hva SeoTool har observert på nettstedet.",
+        "Search Console forteller hva Google har registrert. De to kildene skal ses sammen uten å late som de måler det samme."
       ],
       "visibility": "visible",
       "layout": "two-columns",
       "items": [
         {
-          "title": "Lokal",
-          "text": "Eies av siden.",
+          "title": "Nettstedet",
+          "text": "Observerbare tekniske forhold med historikk.",
           "surface": "base-200",
           "boxVariant": "card"
         },
         {
-          "title": "Redigerbar",
-          "text": "Sorteres sammen med globale seksjoner.",
+          "title": "Google",
+          "text": "Search Console-data på side- og query-nivå.",
           "surface": "base-100",
           "boxVariant": "plain"
         }
@@ -63,16 +65,20 @@
     {
       "_block": "content",
       "id": "neste-steg",
-      "heading": "Hvordan går du videre?",
+      "heading": "Vil du se hva dette betyr for et faktisk nettsted?",
       "visibility": "visible",
       "body": [
-        "Beskriv behovet og hva du ønsker å oppnå. Undersøk deretter hva leverandøren faktisk tilbyr og hvilke opplysninger som mangler før du tar en beslutning.",
-        "Dette er et fiktivt eksempel på et naturlig neste steg i en tjenesteside, ikke et løfte om respons, kapasitet eller priser."
+        "Start med SEO-siden for dagens funksjoner, eller ta kontakt hvis du vil ha en menneskelig vurdering.",
+        "Vi holder pilot- og roadmap-funksjoner tydelig adskilt fra det som er produksjonsklart."
       ],
       "links": [
         {
           "label": "Se kontaktmuligheter",
           "href": "/kontakt/"
+        },
+        {
+          "label": "Se dagens SEO-funksjoner",
+          "href": "/seo/"
         }
       ]
     }
