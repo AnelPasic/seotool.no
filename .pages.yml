@@ -291,12 +291,12 @@ components:
       values:
 # PAGE_BUILDER_CHOICES_BEGIN
         - { name: "404", label: "Siden finnes ikke | SeoTool" }
-        - { name: "home", label: "SeoTool – Teknisk SEO og Search Console med historikk" }
+        - { name: "home", label: "SeoTool – Gjør mer SEO selv. Prioriter det som betyr mest." }
         - { name: "innsikt/artikkel", label: "Search Console-posisjon er ikke det samme som rank tracking | SeoTool" }
-        - { name: "kontakt", label: "Kontakt om SeoTool – Medon" }
-        - { name: "om", label: "Om SeoTool – søkeinnsikt bygget på dokumentert evidens" }
+        - { name: "kontakt", label: "Når bør du bruke SEO-ekspert? | SeoTool" }
+        - { name: "om", label: "Om SeoTool – spar eksperttimene til det vanskelige" }
         - { name: "priser", label: "Tilgang og priser – SeoTool" }
-        - { name: "tjeneste", label: "SeoTool – produktgrunnlaget" }
+        - { name: "tjeneste", label: "SeoTool – fra SEO-data til neste tiltak" }
 # PAGE_BUILDER_CHOICES_END
   builderSections:
     type: block
