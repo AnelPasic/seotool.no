@@ -2,24 +2,24 @@
   "slug": "kontakt",
   "kind": "utility",
   "seo": {
-    "title": "Få hjelp med SEO når du vil slippe jobben – SeoTool / Medon",
-    "description": "Gjør så mye SEO du vil selv med SeoTool. Når du vil ha hjelp med resten, kan Medon ta over."
+    "title": "Når bør du bruke SEO-ekspert? | SeoTool",
+    "description": "Gjør enkle SEO-oppgaver selv og bruk SEO-ekspert når saken er teknisk, risikofylt eller dyr å lære seg bare for å løse én gang."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "DONE-FOR-YOU NÅR DU TRENGER DET",
-    "title": "Lei av å gjøre SEO selv? Da kan vi ta over.",
-    "support": "SeoTool gjør det enklere å forstå og prioritere SEO-arbeidet. Medon er der når du ikke har tid, ikke vil gjøre det selv eller møter en oppgave som trenger mer kompetanse.",
+    "eyebrow": "BRUK EKSPERTEN DER EKSPERTISEN BETYR NOE",
+    "title": "Spar eksperttimene til de krevende sakene.",
+    "support": "Du trenger ikke en SEO-ekspert for å skrive riktig adresse, forbedre en metatittel eller legge inn en internlenke. Bruk eksperthjelp når problemet er teknisk, risikofylt eller kan koste mer å løse feil enn å få det gjort riktig.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Kontakt Medon",
-      "href": "https://medon.no/kontakt"
+      "label": "Se hva du kan gjøre selv",
+      "href": "/seo/"
     },
     "secondaryCta": {
-      "label": "Jeg vil fortsette selv",
-      "href": "/seo/"
+      "label": "Logg inn",
+      "href": "https://app.seotool.no"
     }
   },
   "listing": {
@@ -28,35 +28,35 @@
   },
   "faq": [
     {
-      "question": "Må Medon ta over alt?",
-      "answer": "Nei. Du kan kjøpe hjelp til én konkret oppgave, deler av SEO-arbeidet eller la Medon håndtere mer løpende. Poenget er at du ikke trenger velge mellom «alt selv» og «alt byrå»."
+      "question": "Hvilke SEO-oppgaver kan jeg normalt gjøre selv?",
+      "answer": "Riktig bedriftsinformasjon, metatitler og beskrivelser, innholdsforbedringer, internlenker, FAQ, bilder og andre tydelige sideendringer er ofte gode gjør-det-selv-oppgaver."
     },
     {
-      "question": "Kan jeg bare bruke SeoTool og gjøre resten selv?",
-      "answer": "Ja. Det er en helt legitim måte å bruke produktet på."
+      "question": "Hvilke saker bør en SEO-ekspert typisk ta?",
+      "answer": "Canonical-problemer, migrering, JavaScript-indeksering, avansert teknisk SEO og kritiske CMS-/serverfeil er typiske saker der feil kan bli dyrere enn eksperthjelpen."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "to-veier",
-      "eyebrow": "TO VEIER. SAMME GRUNNLAG.",
-      "heading": "Gjør jobben selv — helt til du ikke vil lenger.",
+      "id": "selv-vs-ekspert",
+      "eyebrow": "RUTINEARBEID VS. EKSPERTARBEID",
+      "heading": "Ikke betal samme timepris for begge.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool og Medon er ikke to konkurrerende valg. De er to nivåer av samme arbeidsflyt.",
-        "Verktøyet gir deg oversikten og prioriteringen. Du velger hvem som utfører jobben."
+        "Mye SEO er helt vanlig nettstedarbeid. Når SeoTool har forklart hva som bør endres, er det ofte liten grunn til å kjøpe eksperttimer bare for å utføre en enkel oppgave.",
+        "Ekspertisen er mest verdifull når problemet krever diagnose, teknisk forståelse eller trygg håndtering av endringer som kan påvirke hele nettstedet."
       ],
       "items": [
         {
-          "title": "Jeg gjør det selv",
-          "text": "Bruk SeoTool til å forstå hva som bør gjøres og jobb deg gjennom tiltakene i ditt eget tempo.",
+          "title": "Gjør selv",
+          "text": "Adresse, metatitler, metabeskrivelser, innhold, internlenker, FAQ og bilder.",
           "surface": "base-200"
         },
         {
-          "title": "Jeg vil ha hjelp",
-          "text": "La Medon utføre konkrete oppgaver eller ta mer ansvar når du vil frigjøre tiden din.",
+          "title": "Bruk SEO-ekspert",
+          "text": "Canonical, migrering, JavaScript-indeksering, avansert teknisk SEO og alvorlige CMS-/serverfeil.",
           "surface": "base-200"
         }
       ],
@@ -64,22 +64,23 @@
     },
     {
       "_block": "content",
-      "id": "valg",
-      "heading": "Det er ikke nederlag å delegere SEO.",
+      "id": "tommelfingerregel",
+      "eyebrow": "EN ENKEL TOMMELFINGERREGEL",
+      "heading": "Hvis feil løsning kan skade hele nettstedet, kjøp ekspertise. Hvis det bare er arbeid, gjør det selv.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Målet med gjør-det-selv er kontroll, ikke å gjøre absolutt alt selv for enhver pris.",
-        "Når en oppgave koster mer tid enn den er verdt for deg, er det et godt tidspunkt å sende den videre."
+        "Eksperthjelp bør kjøpe deg kompetanse, risikoreduksjon eller stor tidsbesparelse — ikke bare noen som kan klikke på samme felt som deg.",
+        "SeoTool skal hjelpe deg se forskjellen før du bruker pengene."
       ],
       "links": [
         {
-          "label": "Kontakt Medon",
-          "href": "https://medon.no/kontakt"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Se hvordan SeoTool fungerer",
+          "label": "Slik fungerer prioriteringen",
           "href": "/slik-fungerer-det/"
         }
       ],
