@@ -9,7 +9,7 @@
     "layout": "centered-none",
     "eyebrow": "GJØR DET SELV SEO",
     "title": "Gjør mer av SEO-jobben selv — uten å bruke tiden på feil ting.",
-    "support": "Du trenger ikke være SEO-konsulent for å forbedre innhold, titler, internlenking eller mange tekniske feil. Det du trenger er et godt svar på ett spørsmål: Hva bør jeg gjøre først?",
+    "support": "Du trenger ikke være SEO-konsulent for å rette en adresse, skrive en bedre metatittel, forbedre innhold eller legge internlenker. Det du trenger er å vite hva som er verdt å gjøre først — og når en ekspert faktisk er verdt pengene.",
     "visual": {
       "kind": "none"
     },
@@ -34,8 +34,8 @@
       "answer": "Nei. Poenget er å gjøre SEO mer forståelig og prioritert. Du trenger ikke lære hele faget før du kan forbedre en side. Du trenger å vite hva problemet er, hvorfor det betyr noe og hva du bør gjøre med det."
     },
     {
-      "question": "Må jeg bruke Medon for å få verdi av SeoTool?",
-      "answer": "Nei. Målet er at du skal kunne gjøre så mye som du ønsker selv. Medon er der når du vil slippe jobben, trenger spesialistkompetanse eller bare har viktigere ting å gjøre."
+      "question": "Når bør jeg slutte å gjøre det selv?",
+      "answer": "Når oppgaven er teknisk, risikofylt eller vil koste deg mer tid å lære enn å få den løst. Canonical-feil, migrering, JavaScript-indeksering og alvorlige CMS-/serverproblemer er typiske ekspertoppgaver."
     }
   ],
   "sections": [
@@ -92,8 +92,8 @@
           "href": "/slik-fungerer-det/"
         },
         {
-          "label": "Start med en vurdering",
-          "href": "/gratis-analyse/"
+          "label": "Når trenger du SEO-ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
