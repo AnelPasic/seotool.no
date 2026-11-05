@@ -2,88 +2,101 @@
   "slug": "gratis-analyse",
   "kind": "service",
   "seo": {
-    "title": "Gratis nettstedsanalyse – SeoTool",
-    "description": "Be om en innledende vurdering av nettstedets tekniske tilstand, indeksering og synlighet i søk og AI."
+    "title": "Nettstedsanalyse med SeoTool – be om en vurdering",
+    "description": "Be om en menneskelig kvalitetssikret vurdering med SeoTool som analysegrunnlag. Offentlig selvbetjent analyse er ikke lansert ennå."
   },
   "hero": {
     "layout": "centered-none",
-    "family": "assessment",
-    "eyebrow": "Nettstedsanalyse",
-    "title": "Få en vurdering av nettstedets synlighet.",
-    "support": "Oppgi nettadressen din for å få en innledende gjennomgang av tekniske flaskehalser, indekseringsfeil og uutnyttet potensial i søk og AI-modeller.",
+    "eyebrow": "MENNESKELIG KVALITETSSIKRET",
+    "title": "Få en vurdering med SeoTool som analysegrunnlag.",
+    "support": "Den offentlige selvbetjente analysen er ikke lansert ennå. Inntil videre kan Medon bruke dagens SeoTool-grunnlag til en innledende vurdering og kvalitetssikre funnene før du får dem.",
     "visual": {
       "kind": "none"
+    },
+    "primaryCta": {
+      "label": "Kontakt Medon om analyse",
+      "href": "https://medon.no/kontakt"
+    },
+    "secondaryCta": {
+      "label": "Se hva SeoTool kan i dag",
+      "href": "/seo/"
     }
   },
   "listing": {
-    "title": "Gratis analyse",
-    "summary": "Innledende vurdering av nettstedets synlighet og tekniske forutsetninger.",
+    "title": "Nettstedsanalyse",
+    "summary": "Menneskelig kvalitetssikret vurdering med dagens SeoTool-grunnlag.",
     "order": 5,
     "visible": true
   },
   "faq": [
     {
-      "question": "Er dette en automatisert eller manuell gjennomgang?",
-      "answer": "Vi foretar en innledende skanning av sentrale tekniske parametere og kontrollerer dataene før du mottar et sammendrag med prioriterte anbefalinger."
+      "question": "Er dette en automatisk selvbetjent analyse?",
+      "answer": "Nei. Den offentlige selvbetjeningen er ikke lansert. Vurderingen gjøres med dagens SeoTool-grunnlag og kvalitetssikres av et menneske."
     },
     {
-      "question": "Må jeg oppgi telefonnummer eller forplikte meg?",
-      "answer": "Nei, vi krever kun nettadresse og e-postadresse for å sende deg analysen. Det er ingen forpliktelser eller skjulte kostnader."
+      "question": "Hva kan vurderes uten Search Console-tilgang?",
+      "answer": "Offentlig tilgjengelige tekniske forhold kan undersøkes uten kontotilgang. Search Console-data krever tilgang til den aktuelle eiendommen og inngår ikke automatisk."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "vurderingskriterier",
-      "heading": "Hva vurderes i analysen?",
-      "visibility": "visible",
+      "id": "hva-vi-kan-se",
+      "eyebrow": "DAGENS GRUNNLAG",
+      "heading": "Vi begynner med det som faktisk kan dokumenteres.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "En grundig analyse avdekker hvorfor enkelte sider underpresterer, og hvilke endringer som må til for å oppnå bedre indeksering og synlighet.",
-        "Vi fokuserer på observerbare fakta framfor overfladiske poengsummer som ikke gir praktisk veiledning."
+        "En nyttig vurdering trenger ikke hundre tilfeldige checks. Den bør skille mellom observerte tekniske forhold, Google-data vi faktisk har tilgang til og hypoteser som må undersøkes videre.",
+        "Derfor lover vi heller ikke en automatisk «prioritert fasit» før Priority Engine faktisk finnes."
       ],
       "items": [
         {
-          "title": "Teknisk fundament",
-          "text": "Status på gjennomsøking, svarkoder, robots-direktiver og kanoniske lenker.",
+          "title": "Teknisk crawl",
+          "text": "Sider, statuskoder, metadata, lenker og andre observerbare forhold.",
           "surface": "base-200"
         },
         {
-          "title": "Søkeintensjon & relevans",
-          "text": "Samsvar mellom sidens innhold og hva brukerne faktisk søker etter i Google.",
+          "title": "Issues",
+          "text": "Konkrete tekniske funn fra dagens Issue Engine.",
           "surface": "base-200"
         },
         {
-          "title": "AI-kildepotensial",
-          "text": "Struktur og autoritet som avgjør om innholdet kan brukes som kilde i ChatGPT og AI Overviews.",
+          "title": "Search Console",
+          "text": "Kan brukes når riktig konto/eierskap er koblet til prosjektet.",
           "surface": "base-200"
         },
         {
-          "title": "Prioriterte tiltak",
-          "text": "En kortfattet liste over de tre viktigste grepene du bør ta først.",
+          "title": "Menneskelig vurdering",
+          "text": "Funnene settes i kontekst før de presenteres som anbefalinger.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
-      "id": "bestill-analyse",
-      "heading": "Slik ber du om analyse",
-      "visibility": "visible",
+      "id": "selvbetjening",
+      "eyebrow": "SENERE",
+      "heading": "Selvbetjent analyse kommer først når flyten tåler ekte trafikk.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "Send inn nettadressen din og en kort kommentar om hvilke områder du ønsker svar på via vår kontaktside.",
-        "Dersom du allerede har en aktiv konto på SeoTool, logger du inn i verktøyet for å se sanntidsstatus på alle dine prosjekter."
+        "En offentlig URL-scan trenger rate limits, kostnadsgrenser, sikkerhet og personvern som er designet for Internett — ikke bare et skjema foran interne API-er.",
+        "Frem til det er på plass bruker vi en kontrollert, menneskelig kvalitetssikret vurdering."
       ],
       "links": [
         {
-          "label": "Gå til henvendelsesskjema",
+          "label": "Kontakt Medon",
           "href": "/kontakt/"
         },
         {
-          "label": "Les om hvordan SeoTool fungerer",
+          "label": "Se produktretningen",
           "href": "/slik-fungerer-det/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }
