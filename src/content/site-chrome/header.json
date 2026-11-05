@@ -56,7 +56,6 @@
     "href": "https://app.seotool.no",
     "variant": "primary"
   },
-  "utilityLinks": [],
   "languages": [
     {
       "label": "NO",
@@ -79,5 +78,6 @@
     "showLanguageSwitch": true,
     "showSearch": true,
     "showCta": true
-  }
+  },
+  "logoLight": "/images/branding/seotool-brand.webp"
 }
