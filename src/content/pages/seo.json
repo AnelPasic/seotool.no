@@ -2,73 +2,73 @@
   "slug": "seo",
   "kind": "service",
   "seo": {
-    "title": "Teknisk SEO og Search Console – SeoTool",
-    "description": "Crawler, Issue Engine og Search Console med historikk i samme SEO-grunnlag. Core Search Intelligence er et senere produktsteg."
+    "title": "Gjør SEO selv med bedre prioritering – SeoTool",
+    "description": "SeoTool hjelper deg finne hvilke SEO-tiltak som er mest verdt tiden din, så du kan gjøre mer selv og hente inn hjelp når du trenger det."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "LIVE PRODUKTGRUNNLAG",
-    "title": "Teknisk SEO og Search Console — med historikk, ikke bare et øyeblikksbilde.",
-    "support": "SeoTool dokumenterer nettstedet med crawler og Issue Engine og kobler dette til Search Console på side- og query-nivå. Core Search/rank tracking er planlagt senere, ikke en funksjon vi later som finnes nå.",
+    "eyebrow": "GJØR DET SELV SEO",
+    "title": "Gjør mer av SEO-jobben selv — uten å bruke tiden på feil ting.",
+    "support": "Du trenger ikke være SEO-konsulent for å forbedre innhold, titler, internlenking eller mange tekniske feil. Det du trenger er et godt svar på ett spørsmål: Hva bør jeg gjøre først?",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Be om vurdering",
+      "label": "Finn mine viktigste tiltak",
       "href": "/gratis-analyse/"
     },
     "secondaryCta": {
-      "label": "Se hvordan det fungerer",
+      "label": "Slik fungerer SeoTool",
       "href": "/slik-fungerer-det/"
     }
   },
   "listing": {
-    "title": "SEO",
-    "summary": "Live: crawler, Issue Engine, Search Console og Top Queries med historikk.",
+    "title": "Gjør det selv SEO",
+    "summary": "Finn hva som er viktigst, gjør det du kan selv og få hjelp med resten.",
     "order": 1,
     "visible": true
   },
   "faq": [
     {
-      "question": "Hva er live i SEO-delen nå?",
-      "answer": "Crawler, historiske sideobservasjoner, Issue Engine, Search Console-sideintegrasjon og Top Queries er levert."
+      "question": "Må jeg kunne SEO fra før?",
+      "answer": "Nei. Poenget er å gjøre SEO mer forståelig og prioritert. Du trenger ikke lære hele faget før du kan forbedre en side. Du trenger å vite hva problemet er, hvorfor det betyr noe og hva du bør gjøre med det."
     },
     {
-      "question": "Har SeoTool rank tracking og Core Search i dag?",
-      "answer": "Ikke ennå. Core Search Intelligence er planlagt etter AI Visibility-laget og skal gi egne SERP-observasjoner uten å blande dem sammen med Search Console-data."
+      "question": "Må jeg bruke Medon for å få verdi av SeoTool?",
+      "answer": "Nei. Målet er at du skal kunne gjøre så mye som du ønsker selv. Medon er der når du vil slippe jobben, trenger spesialistkompetanse eller bare har viktigere ting å gjøre."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "live-funksjoner",
-      "eyebrow": "DET SOM FINNES NÅ",
-      "heading": "Fire lag som allerede kan dokumenteres.",
+      "id": "jordnaert",
+      "eyebrow": "MYE SEO ER FAKTISK GANSKE JORDNÆRT",
+      "heading": "Problemet er ikke mangel på oppgaver. Problemet er rekkefølgen.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Hvert lag svarer på et annet spørsmål. SeoTool beholder derfor kilden og tidspunktet i stedet for å slå alt sammen til én helsepoengsum.",
-        "Det gjør det lettere å se om problemet ligger på nettstedet eller i Googles observerte ytelse."
+        "En typisk nettside kan ha dusinvis av tekniske funn, hundrevis av søk og mange sider som kan forbedres. Hvis alt ser like viktig ut, ender du enten med å gjøre feil ting — eller ingenting.",
+        "SeoTool samler observasjonene og gjør dem lettere å bruke som arbeidsgrunnlag, slik at du kan prioritere før du begynner å produsere arbeid."
       ],
       "items": [
         {
-          "title": "Crawler",
-          "text": "Observerer sider, statuskoder, metadata, lenker og andre crawlbare forhold.",
+          "title": "Innhold",
+          "text": "Forbedre sider som faktisk har en jobb å gjøre i søk, i stedet for å skrive nytt bare fordi kalenderen sier tirsdag.",
           "surface": "base-200"
         },
         {
-          "title": "Issue Engine",
-          "text": "Flagger konkrete tekniske forhold basert på observerte data.",
+          "title": "Titler og beskrivelser",
+          "text": "Gjør søkeforventningen tydeligere der det faktisk finnes synlighet eller potensial.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console – sider",
-          "text": "Viser Google-ytelse på sidenivå i samme prosjekt.",
+          "title": "Internlenking",
+          "text": "Knytt viktige sider bedre sammen når nettstedets struktur gjør dem vanskeligere å finne.",
           "surface": "base-200"
         },
         {
-          "title": "Top Queries",
-          "text": "Viser faktiske søk, visninger og klikk fra Search Console.",
+          "title": "Tekniske feil",
+          "text": "Rydd problemer som faktisk påvirker crawling, indeksering eller brukeropplevelse før kosmetiske småting.",
           "surface": "base-200"
         }
       ],
@@ -76,24 +76,24 @@
     },
     {
       "_block": "content",
-      "id": "core-search",
-      "eyebrow": "SENERE PRODUKTLAG",
-      "heading": "SERP-observasjoner skal komme som egen datakilde.",
+      "id": "prioritering",
+      "eyebrow": "FRA DATA TIL NESTE OPPGAVE",
+      "heading": "SeoTool skal spare deg for arbeid — ikke finne på mer.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Core Search Intelligence er ikke live ennå. Planen er å observere faktiske søkeresultater for strategiske søk og holde dette separat fra Search Console.",
-        "Det er viktig fordi en Search Console-posisjon og en ekstern SERP-observasjon ikke er samme måling."
+        "Et godt SEO-verktøy bør ikke belønne deg med en lengre oppgaveliste. Det bør hjelpe deg forstå hvilke funn som er verdt å bry seg om og hva du kan la ligge.",
+        "Da kan du bruke tiden på faktiske forbedringer i stedet for å jage en pen score."
       ],
       "links": [
         {
-          "label": "Se hele produktretningen",
+          "label": "Se hvordan prioriteringen fungerer",
           "href": "/slik-fungerer-det/"
         },
         {
-          "label": "Les om AI-synlighet",
-          "href": "/ai-synlighet/"
+          "label": "Start med en vurdering",
+          "href": "/gratis-analyse/"
         }
       ],
       "visibility": "visible"
