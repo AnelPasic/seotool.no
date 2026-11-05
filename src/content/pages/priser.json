@@ -3,24 +3,24 @@
   "kind": "utility",
   "seo": {
     "title": "Tilgang og priser – SeoTool",
-    "description": "Kontakt Medon om SeoTool-tilgang og hvilken arbeidsform som passer: gjør det selv, få hjelp med enkelte tiltak eller la Medon ta mer ansvar."
+    "description": "SeoTool lar deg gjøre mer SEO selv og bruke eksperthjelp bare der det gir mening. Se hvordan arbeidsformen fungerer."
   },
   "hero": {
     "layout": "centered-none",
     "family": "pricing",
     "eyebrow": "TILGANG",
-    "title": "Velg hvor mye du vil gjøre selv.",
-    "support": "SeoTool er laget for å fungere både når du vil jobbe selv og når du ønsker hjelp. Kontakt Medon om tilgang og hvilken modell som passer virksomheten din.",
+    "title": "Spar penger på det enkle. Bruk ekspert på det vanskelige.",
+    "support": "SeoTool er laget for å redusere behovet for eksperttimer på rutineoppgaver. Gjør det du kan selv, og bruk SEO-ekspert når teknikk, risiko eller kompleksitet forsvarer kostnaden.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Kontakt Medon",
-      "href": "https://medon.no/kontakt"
+      "label": "Se gjør-det-selv SEO",
+      "href": "/seo/"
     },
     "secondaryCta": {
-      "label": "Se hvordan SeoTool fungerer",
-      "href": "/slik-fungerer-det/"
+      "label": "Når trenger du ekspert?",
+      "href": "/kontakt/"
     }
   },
   "listing": {
@@ -32,28 +32,28 @@
     {
       "_block": "content",
       "id": "tilgang",
-      "eyebrow": "ÉN ARBEIDSFLYT, ULIK MENGDE HJELP",
-      "heading": "Fra gjør-det-selv til done-for-you.",
+      "eyebrow": "BETAL FOR KOMPETANSE, IKKE KLIKKARBEID",
+      "heading": "Eksperttimer bør brukes der de faktisk kjøper deg noe.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Noen vil bruke SeoTool som eget arbeidsverktøy. Andre vil bruke samme grunnlag og la Medon gjøre mer av jobben.",
-        "Det viktigste er at du ikke trenger bytte system eller starte analysen på nytt bare fordi du vil delegere mer."
+        "En SEO-ekspert kan være svært verdifull. Men ikke for å gjøre oppgaver du selv kan utføre trygt på noen minutter.",
+        "Bruk SeoTool til å skille rutinearbeid fra saker der spesialistkompetanse, risikoreduksjon eller stor tidsbesparelse faktisk er verdt pengene."
       ],
       "items": [
         {
-          "title": "Gjør det selv",
-          "text": "Bruk SeoTool som beslutningsgrunnlag og gjennomfør tiltakene selv.",
+          "title": "Gjør selv",
+          "text": "Riktig bedriftsinformasjon, titler, beskrivelser, innhold, internlenker, FAQ og bilder.",
           "surface": "base-200"
         },
         {
-          "title": "Få hjelp ved behov",
-          "text": "Send konkrete oppgaver videre når de krever mer tid eller kompetanse enn du vil bruke.",
+          "title": "Bruk ekspert",
+          "text": "Canonical, migrering, JavaScript-indeksering, avansert teknisk SEO og kritiske CMS-/serverfeil.",
           "surface": "base-200"
         },
         {
-          "title": "La Medon ta mer ansvar",
-          "text": "Bruk samme data og prioriteringer som grunnlag for en mer løpende leveranse.",
+          "title": "Behold kontrollen",
+          "text": "Du velger hvor grensen går mellom egen innsats og kjøpt kompetanse.",
           "surface": "base-200"
         }
       ],
