@@ -120,12 +120,12 @@
       ],
       "links": [
         {
-          "label": "Start med en vurdering",
-          "href": "/gratis-analyse/"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Logg inn",
-          "href": "https://app.seotool.no"
+          "label": "Når trenger du SEO-ekspert?",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
