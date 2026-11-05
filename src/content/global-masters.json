@@ -14,7 +14,7 @@
     "heading": "Finn. Prioriter. Gjør. Mål.",
     "body": [
       "SeoTool skal redusere antallet ting du trenger å tenke på, ikke gi deg enda en endeløs sjekkliste.",
-      "Bruk dataene til å velge neste tiltak, gjør jobben selv eller send den videre, og mål hva som faktisk endrer seg."
+      "Bruk dataene til å velge neste tiltak, gjør rutinearbeidet selv og bruk SEO-ekspert på de tekniske eller risikofylte sakene."
     ],
     "headingAlign": "left",
     "layout": "two-columns",
@@ -33,7 +33,7 @@
       },
       {
         "title": "Gjør",
-        "text": "Fiks selv, deleger internt eller bruk Medon.",
+        "text": "Fiks det enkle selv. Bruk ekspert når oppgaven faktisk krever ekspertise.",
         "surface": "base-200",
         "boxVariant": "card"
       },
