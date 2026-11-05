@@ -2,16 +2,16 @@
   "slug": "home",
   "kind": "home",
   "seo": {
-    "title": "SeoTool – Teknisk SEO og Search Console med historikk",
-    "description": "SeoTool samler crawl, tekniske funn og Search Console-data i ett historisk evidensgrunnlag. AI-synlighet og prioritering bygges videre på samme fundament."
+    "title": "SeoTool – Gjør mer SEO selv. Prioriter det som betyr mest.",
+    "description": "SeoTool hjelper deg finne hvilke SEO-tiltak som er mest verdt å ta først. Gjør jobben selv, eller få Medon til å ta over når du vil."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "SEO-DATA MED KILDE OG HISTORIKK",
-    "title": "Se hva som faktisk skjer med nettstedet ditt i Google.",
-    "support": "Live i dag: crawler, Issue Engine og Search Console med Top Queries. AI Visibility er i intern pilot; Core Search og prioritering kommer senere. Illustrasjonen viser målbildet, ikke dagens featureliste.",
+    "eyebrow": "GJØR MER SEO SELV",
+    "title": "Du kan gjøre mye av SEO-jobben selv. SeoTool viser deg hva du bør gjøre først.",
+    "support": "Det vanskelige med SEO er sjelden å endre en tittel, forbedre en side eller legge en internlenke. Det vanskelige er å vite hva som faktisk er verdt tiden din. SeoTool samler signalene og hjelper deg prioritere tiltakene med størst betydning.",
     "primaryCta": {
-      "label": "Be om vurdering",
+      "label": "Finn ut hva du bør gjøre først",
       "href": "/gratis-analyse/"
     },
     "secondaryCta": {
@@ -22,7 +22,7 @@
       "kind": "image",
       "image": {
         "src": "/images/pages/seotool-hero-flow.webp",
-        "alt": "Illustrasjon av SeoTools produktretning fra nettsted og søkedata til senere prioritering",
+        "alt": "Illustrasjon av SeoTool som samler SEO-data og gjør dem om til prioriterte tiltak",
         "positionX": 50,
         "positionY": 50,
         "kind": "illustration"
@@ -34,45 +34,45 @@
   },
   "faq": [
     {
-      "question": "Hva er tilgjengelig i SeoTool i dag?",
-      "answer": "Crawler, historiske sideobservasjoner, Issue Engine og Search Console-integrasjon med Top Queries er levert. AI Visibility er neste lag i intern pilot. Core Search Intelligence og Priority / Recommendation Engine er senere produktsteg."
+      "question": "Kan jeg faktisk gjøre SEO selv?",
+      "answer": "Ja. Mye SEO er konkrete forbedringer du kan gjøre selv når du vet hva som er viktigst: innhold, titler, internlenking, struktur og en del tekniske feil. SeoTool hjelper deg få oversikt og prioritere. Du bestemmer hvor mye du vil gjøre selv."
     },
     {
-      "question": "Hvor logger eksisterende brukere inn?",
-      "answer": "Eksisterende brukere logger inn på app.seotool.no."
+      "question": "Hva hvis jeg ikke vil gjøre jobben selv?",
+      "answer": "Da kan Medon hjelpe. Tanken er ikke å låse deg til et byrå, men å gi deg kontroll. Når du mangler tid, kapasitet eller lyst, kan du få hjelp med akkurat den delen du vil slippe."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "live-i-dag",
-      "eyebrow": "LIVE I DAG",
-      "heading": "Et faktisk SEO-grunnlag før anbefalingene kommer.",
+      "id": "diy-seo",
+      "eyebrow": "SEO UTEN UNØDVENDIG MYSTIKK",
+      "heading": "Du trenger ikke betale et byrå for hver SEO-oppgave.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool starter med det som kan observeres og dokumenteres. Det gjør det mulig å bygge mer avansert beslutningsstøtte uten å late som et estimat er et faktum.",
-        "Dagens produksjonsgrunnlag dekker nettstedet og Googles egne Search Console-data. Hvert lag beholdes separat med historikk."
+        "Mye SEO er ganske jordnært når noen først har pekt ut riktig problem. Utfordringen er at det finnes hundre ting du kan gjøre — og bare noen få som fortjener oppmerksomheten først.",
+        "SeoTool er laget for å kutte ned den listen. Du får et bedre grunnlag for å velge neste tiltak, gjøre jobben selv og se hva som endrer seg."
       ],
       "items": [
         {
-          "title": "Crawler",
-          "text": "Lagrer sideobservasjoner og tekniske forhold over tid.",
+          "title": "1. Finn problemet",
+          "text": "Samle tekniske funn, Google-data og andre relevante signaler i samme oversikt.",
           "surface": "base-200"
         },
         {
-          "title": "Issue Engine",
-          "text": "Gjør observerte tekniske forhold om til tydelige issues uten en oppdiktet universalscore.",
+          "title": "2. Prioriter",
+          "text": "Skill det som haster eller kan gi reell verdi fra ting som bare ser travle ut.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console",
-          "text": "Kobler sideytelse fra Google til samme nettstedshistorikk.",
+          "title": "3. Gjør det selv",
+          "text": "Fiks det du kan og vil gjøre selv, uten å vente på et byrå for hver lille endring.",
           "surface": "base-200"
         },
         {
-          "title": "Top Queries",
-          "text": "Viser hvilke søk Google faktisk har registrert visninger og klikk for.",
+          "title": "4. Få hjelp når du vil",
+          "text": "Når oppgaven krever mer tid, kode, innhold eller tålmodighet, kan Medon ta over.",
           "surface": "base-200"
         }
       ],
@@ -90,9 +90,33 @@
       "visibility": "visible"
     },
     {
+      "_block": "content",
+      "id": "medon-handoff",
+      "eyebrow": "NÅR DU HAR FÅTT NOK AV SEO",
+      "heading": "Gjør det selv så lenge det gir mening. Vi er her når det ikke gjør det.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
+      "body": [
+        "Noen vil gjøre alt selv. Noen vil ikke røre SEO med ildtang. De fleste ligger et sted i midten.",
+        "SeoTool gir deg kontrollen. Medon er done-for-you-alternativet når tiden, kapasiteten eller lysten tar slutt."
+      ],
+      "links": [
+        {
+          "label": "Jeg vil gjøre mer selv",
+          "href": "/seo/"
+        },
+        {
+          "label": "Jeg vil ha hjelp",
+          "href": "/kontakt/"
+        }
+      ],
+      "visibility": "visible"
+    },
+    {
       "_block": "pageList",
       "id": "produktomrader",
-      "heading": "Utforsk produktet",
+      "heading": "Utforsk SeoTool",
       "visibility": "visible",
       "pageList": {
         "source": "pages",
@@ -107,7 +131,7 @@
     {
       "_block": "pageList",
       "id": "artikler",
-      "heading": "Siste innsikt",
+      "heading": "Lær det du trenger — ikke mer",
       "visibility": "visible",
       "pageList": {
         "source": "articles",
