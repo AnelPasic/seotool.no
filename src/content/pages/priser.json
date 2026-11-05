@@ -3,23 +3,23 @@
   "kind": "utility",
   "seo": {
     "title": "Tilgang og priser – SeoTool",
-    "description": "SeoTool har ikke en offentlig selvbetjent prisliste eller checkout på seotool.no ennå. Kontakt Medon om tilgang og aktuell pilotstatus."
+    "description": "Kontakt Medon om SeoTool-tilgang og hvilken arbeidsform som passer: gjør det selv, få hjelp med enkelte tiltak eller la Medon ta mer ansvar."
   },
   "hero": {
     "layout": "centered-none",
     "family": "pricing",
     "eyebrow": "TILGANG",
-    "title": "Ingen fantasipakker. Pris publiseres når tilbudet faktisk er definert.",
-    "support": "SeoTool har ikke en offentlig selvbetjent prisliste eller checkout på seotool.no ennå. Tilgang og kommersielle vilkår avklares direkte mens produktlagene ferdigstilles.",
+    "title": "Velg hvor mye du vil gjøre selv.",
+    "support": "SeoTool er laget for å fungere både når du vil jobbe selv og når du ønsker hjelp. Kontakt Medon om tilgang og hvilken modell som passer virksomheten din.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Kontakt Medon om tilgang",
+      "label": "Kontakt Medon",
       "href": "https://medon.no/kontakt"
     },
     "secondaryCta": {
-      "label": "Se produktstatus",
+      "label": "Se hvordan SeoTool fungerer",
       "href": "/slik-fungerer-det/"
     }
   },
@@ -32,28 +32,28 @@
     {
       "_block": "content",
       "id": "tilgang",
-      "eyebrow": "STATUS",
-      "heading": "Vi publiserer ikke en pris før vi har et tilbud vi faktisk kan levere.",
+      "eyebrow": "ÉN ARBEIDSFLYT, ULIK MENGDE HJELP",
+      "heading": "Fra gjør-det-selv til done-for-you.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Den beskyttede prismasteren i nettstedet er fortsatt deaktivert. Det er bevisst.",
-        "Når kundeprodukt, omfang og prismodell er eksplisitt godkjent, kan denne siden få reelle pakker og vilkår."
+        "Noen vil bruke SeoTool som eget arbeidsverktøy. Andre vil bruke samme grunnlag og la Medon gjøre mer av jobben.",
+        "Det viktigste er at du ikke trenger bytte system eller starte analysen på nytt bare fordi du vil delegere mer."
       ],
       "items": [
         {
-          "title": "Ingen offentlig checkout",
-          "text": "seotool.no tar ikke imot betaling eller bestillinger i dag.",
+          "title": "Gjør det selv",
+          "text": "Bruk SeoTool som beslutningsgrunnlag og gjennomfør tiltakene selv.",
           "surface": "base-200"
         },
         {
-          "title": "Ingen oppdiktede pakker",
-          "text": "Vi viser ikke eksempelpriser som kan forveksles med et faktisk tilbud.",
+          "title": "Få hjelp ved behov",
+          "text": "Send konkrete oppgaver videre når de krever mer tid eller kompetanse enn du vil bruke.",
           "surface": "base-200"
         },
         {
-          "title": "Dialog om tilgang",
-          "text": "Kontakt Medon hvis du vil diskutere dagens produkt eller pilotstatus.",
+          "title": "La Medon ta mer ansvar",
+          "text": "Bruk samme data og prioriteringer som grunnlag for en mer løpende leveranse.",
           "surface": "base-200"
         }
       ],
