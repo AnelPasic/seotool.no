@@ -2,40 +2,40 @@
   "slug": "lokal-synlighet",
   "kind": "service",
   "seo": {
-    "title": "Lokal synlighet – planlagt Local/Geo-lag | SeoTool",
-    "description": "Local/Geo er et planlagt evidenslag i SeoTool. Det er ikke en aktiv produksjonsmodul i dag."
+    "title": "Lokal SEO – forstå Maps, nettsted og lokale signaler | SeoTool",
+    "description": "Lær hvilke lokale SEO-signaler som betyr noe, hva du kan forbedre selv og hvordan Maps og organisk søk bør vurderes separat."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "PLANLAGT BERIKELSE",
-    "title": "Lokal synlighet skal bli et eget evidenslag — men det er ikke live ennå.",
-    "support": "For lokale virksomheter kan Maps og geografisk synlighet være avgjørende. SeoTool har Local/Geo på produktretningen, men modulen er ikke dagens byggemål og skal ikke presenteres som ferdig.",
+    "eyebrow": "LOKAL SEO",
+    "title": "Lokal synlighet er mer enn én plassering i Google.",
+    "support": "En lokal bedrift kan være sterk organisk og svak i Maps — eller omvendt. God lokal SEO starter derfor med å forstå hvilket signal som faktisk trenger arbeid.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Se dagens SEO-funksjoner",
-      "href": "/seo/"
+      "label": "Be om en lokal SEO-vurdering",
+      "href": "/gratis-analyse/"
     },
     "secondaryCta": {
-      "label": "Se produktretningen",
-      "href": "/slik-fungerer-det/"
+      "label": "Se gjør-det-selv SEO",
+      "href": "/seo/"
     }
   },
   "listing": {
-    "title": "Lokal synlighet",
-    "summary": "Planlagt: Local/Geo-observasjoner som eget evidenslag.",
+    "title": "Lokal SEO",
+    "summary": "Forstå Maps, lokale signaler og hva du kan forbedre selv.",
     "order": 3,
-    "visible": true
+    "visible": false
   },
   "faq": [
     {
-      "question": "Er Local Visibility tilgjengelig nå?",
-      "answer": "Nei. Local/Geo er planlagt som et senere evidenslag og er ikke aktivert i produksjon."
+      "question": "Er lokal SEO bare Google Bedriftsprofil?",
+      "answer": "Nei. Google Bedriftsprofil er viktig, men lokal synlighet påvirkes også av nettstedet, lokale sider, tjenesteinformasjon, anmeldelser, konkurranse og hvor søket skjer."
     },
     {
-      "question": "Hva er målet med laget?",
-      "answer": "Å kunne dokumentere lokal synlighet separat fra organisk SEO, slik at Maps/Local Pack ikke blandes sammen med vanlige søkeresultater."
+      "question": "Hva kan jeg gjøre selv med lokal SEO?",
+      "answer": "Mye: holde bedriftsinformasjon riktig, gjøre tjenester og områder tydelige, forbedre lokale sider, svare på anmeldelser og sørge for at nettstedet støtter det du ønsker å bli funnet for."
     }
   ],
   "sections": [
@@ -43,32 +43,32 @@
       "_block": "content",
       "id": "hvorfor-local",
       "eyebrow": "ET EGET SIGNAL",
-      "heading": "Organisk synlighet og Maps-synlighet er ikke det samme.",
+      "heading": "Organisk synlighet og Maps-synlighet forteller ikke alltid samme historie.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "En lokal bedrift kan stå sterkt organisk og samtidig være svak i Maps — eller omvendt. Derfor bør lokale observasjoner få egen kilde og historikk.",
-        "Det er produktprinsippet. Den konkrete modulen bygges først når tidligere roadmap-steg er klare."
+        "Hvis du bare følger vanlig organisk ranking, kan du overse at lokale konkurrenter tar synligheten nær kunden. Hvis du bare ser på Maps, kan du gå glipp av sider som allerede har organisk potensial.",
+        "Prioriter først når du vet hvilket problem du faktisk prøver å løse."
       ],
       "items": [
         {
           "title": "Maps / Local Pack",
-          "text": "Planlagt som egne geografiske observasjoner, ikke som en del av Search Console-posisjon.",
+          "text": "Vurder lokal synlighet som et eget konkurransebilde.",
           "surface": "base-200"
         },
         {
           "title": "Geografisk kontekst",
-          "text": "Senere kan observasjoner knyttes til relevante steder og markeder.",
+          "text": "Det samme søket kan gi forskjellige konkurrenter og resultater avhengig av sted.",
           "surface": "base-200"
         },
         {
-          "title": "Konkurrentbildet",
-          "text": "Lokale konkurrenter bør observeres i samme lokale kontekst.",
+          "title": "Nettstedet",
+          "text": "Tydelige tjeneste- og områdesider gjør det lettere å forstå hva virksomheten faktisk tilbyr.",
           "surface": "base-200"
         },
         {
-          "title": "GBP-kontekst",
-          "text": "Google Bedriftsprofil kan senere berike analysen uten å bli masterdata for hele SeoTool.",
+          "title": "Google Bedriftsprofil",
+          "text": "Hold kategorier, tjenester, bilder, informasjon og anmeldelser relevante og oppdaterte.",
           "surface": "base-200"
         }
       ],
@@ -76,24 +76,24 @@
     },
     {
       "_block": "content",
-      "id": "status",
-      "eyebrow": "IKKE EN DEMO FORKLEDD SOM PRODUKT",
-      "heading": "Vi merker planlagt funksjonalitet som planlagt.",
+      "id": "diy-local",
+      "eyebrow": "GJØR DET SELV",
+      "heading": "Lokal SEO har mange oppgaver du kan håndtere uten et byrå.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Local/Geo kommer etter de mer grunnleggende evidence- og search-lagene. Det finnes derfor ingen grunn til å late som pilotknapper eller mockups er et ferdig produkt.",
-        "Vil du vurdere lokal synlighet i dag, kan Medon gjøre det som rådgivningsarbeid uten å påstå at SeoTool-modulen er live."
+        "Mange lokale forbedringer krever først og fremst konsekvens: riktige opplysninger, tydelige tjenester, gode lokale sider og ekte anmeldelser.",
+        "Bruk hjelp når arbeidet blir teknisk, tidkrevende eller du heller vil bruke tiden på selve virksomheten."
       ],
       "links": [
         {
-          "label": "Kontakt oss",
-          "href": "/kontakt/"
+          "label": "Se gjør-det-selv SEO",
+          "href": "/seo/"
         },
         {
-          "label": "Se SEO-funksjonene",
-          "href": "/seo/"
+          "label": "Få hjelp",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
