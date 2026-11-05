@@ -2,14 +2,14 @@
   "slug": "kontakt",
   "kind": "utility",
   "seo": {
-    "title": "Kontakt om SeoTool – Medon",
-    "description": "Kontakt Medon om SeoTool, nettstedsanalyse, tilgang eller produktspørsmål."
+    "title": "Få hjelp med SEO når du vil slippe jobben – SeoTool / Medon",
+    "description": "Gjør så mye SEO du vil selv med SeoTool. Når du vil ha hjelp med resten, kan Medon ta over."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "SEOTOOL · UTVIKLET AV MEDON",
-    "title": "Spørsmål om SeoTool? Snakk med teamet som bygger det.",
-    "support": "For produktspørsmål, vurdering av et nettsted eller dialog om tilgang bruker vi Medons eksisterende kontaktkanal. Eksisterende SeoTool-brukere kan logge inn direkte i appen.",
+    "eyebrow": "DONE-FOR-YOU NÅR DU TRENGER DET",
+    "title": "Lei av å gjøre SEO selv? Da kan vi ta over.",
+    "support": "SeoTool gjør det enklere å forstå og prioritere SEO-arbeidet. Medon er der når du ikke har tid, ikke vil gjøre det selv eller møter en oppgave som trenger mer kompetanse.",
     "visual": {
       "kind": "none"
     },
@@ -18,8 +18,8 @@
       "href": "https://medon.no/kontakt"
     },
     "secondaryCta": {
-      "label": "Logg inn",
-      "href": "https://app.seotool.no"
+      "label": "Jeg vil fortsette selv",
+      "href": "/seo/"
     }
   },
   "listing": {
@@ -28,40 +28,35 @@
   },
   "faq": [
     {
-      "question": "Hvor logger eksisterende brukere inn?",
-      "answer": "Eksisterende brukere logger inn på app.seotool.no."
+      "question": "Må Medon ta over alt?",
+      "answer": "Nei. Du kan kjøpe hjelp til én konkret oppgave, deler av SEO-arbeidet eller la Medon håndtere mer løpende. Poenget er at du ikke trenger velge mellom «alt selv» og «alt byrå»."
     },
     {
-      "question": "Har seotool.no et eget leadskjema?",
-      "answer": "Ikke nå. Offentlig kontakt går via Medons eksisterende kontaktkanal inntil et eget SeoTool-inntak er eksplisitt satt opp og godkjent."
+      "question": "Kan jeg bare bruke SeoTool og gjøre resten selv?",
+      "answer": "Ja. Det er en helt legitim måte å bruke produktet på."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "henvendelser",
-      "eyebrow": "RASKESTE VEI VIDERE",
-      "heading": "Velg riktig kanal.",
+      "id": "to-veier",
+      "eyebrow": "TO VEIER. SAMME GRUNNLAG.",
+      "heading": "Gjør jobben selv — helt til du ikke vil lenger.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Vi holder offentlig markedsnettsted og autentisert produkt tydelig adskilt. Det gjør det enklere å vite om du skal snakke med et menneske eller jobbe direkte i SeoTool.",
-        "Ingen fiktive skjemaer, ingen «send inn» som ikke sender noe."
+        "SeoTool og Medon er ikke to konkurrerende valg. De er to nivåer av samme arbeidsflyt.",
+        "Verktøyet gir deg oversikten og prioriteringen. Du velger hvem som utfører jobben."
       ],
       "items": [
         {
-          "title": "Nytt spørsmål eller analyse",
-          "text": "Bruk Medons kontaktkanal for produktdialog og menneskelig vurdering.",
+          "title": "Jeg gjør det selv",
+          "text": "Bruk SeoTool til å forstå hva som bør gjøres og jobb deg gjennom tiltakene i ditt eget tempo.",
           "surface": "base-200"
         },
         {
-          "title": "Eksisterende SeoTool-konto",
-          "text": "Logg inn på app.seotool.no for prosjektdata og arbeidsflyten i produktet.",
-          "surface": "base-200"
-        },
-        {
-          "title": "Funksjonsstatus",
-          "text": "Se «Slik fungerer det» for tydelig skille mellom live, pilot og senere roadmap.",
+          "title": "Jeg vil ha hjelp",
+          "text": "La Medon utføre konkrete oppgaver eller ta mer ansvar når du vil frigjøre tiden din.",
           "surface": "base-200"
         }
       ],
@@ -69,20 +64,22 @@
     },
     {
       "_block": "content",
-      "id": "produktstatus",
-      "heading": "Vil du først se hva som faktisk er live?",
+      "id": "valg",
+      "heading": "Det er ikke nederlag å delegere SEO.",
       "headingAlign": "left",
       "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "SEO-siden beskriver dagens produksjonsgrunnlag. AI- og Local-sidene er eksplisitt merket med sin faktiske status."
+        "Målet med gjør-det-selv er kontroll, ikke å gjøre absolutt alt selv for enhver pris.",
+        "Når en oppgave koster mer tid enn den er verdt for deg, er det et godt tidspunkt å sende den videre."
       ],
       "links": [
         {
-          "label": "Se SEO-delen",
-          "href": "/seo/"
+          "label": "Kontakt Medon",
+          "href": "https://medon.no/kontakt"
         },
         {
-          "label": "Se produktstatus",
+          "label": "Se hvordan SeoTool fungerer",
           "href": "/slik-fungerer-det/"
         }
       ],
