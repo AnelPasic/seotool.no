@@ -2,19 +2,19 @@
   "slug": "om",
   "kind": "utility",
   "seo": {
-    "title": "Om SeoTool – søkeinnsikt bygget på dokumentert evidens",
-    "description": "SeoTool utvikles av Medon for å samle tekniske SEO-observasjoner og Google-data med historikk, og bygge bedre beslutningsstøtte lagvis."
+    "title": "Om SeoTool – SEO trenger ikke starte med et byrå",
+    "description": "SeoTool er laget for bedrifter som vil forstå og gjøre mer SEO selv, med Medon tilgjengelig når de vil ha hjelp."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "OM SEOTOOL",
-    "title": "Et SEO-verktøy som heller sier «vi vet ikke ennå» enn å finne på en score.",
-    "support": "SeoTool utvikles av Medon. Produktet bygges fra observerbare data og historikk mot bedre søkeintelligens og senere prioritering — uten å presentere roadmap som ferdige funksjoner.",
+    "eyebrow": "HVORFOR SEOTOOL FINNES",
+    "title": "SEO trenger ikke starte med et byrå.",
+    "support": "Mange bedrifter kan gjøre langt mer SEO selv enn de tror. De trenger først og fremst bedre oversikt over hva som er viktig, hva som kan vente og hva som faktisk er verdt å bruke tid på.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Slik fungerer det",
+      "label": "Se hvordan SeoTool fungerer",
       "href": "/slik-fungerer-det/"
     },
     "secondaryCta": {
@@ -31,28 +31,33 @@
     {
       "_block": "content",
       "id": "hvorfor",
-      "eyebrow": "HVORFOR VI BYGGER DET",
-      "heading": "SEO-verktøy har nok data. Problemet er å vite hva dataene faktisk betyr.",
+      "eyebrow": "VERKTØY FØRST. BYRÅ NÅR DET TRENGS.",
+      "heading": "Vi vil heller gjøre deg mindre avhengig av oss.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SeoTool er bygget rundt et enkelt prinsipp: behold kilden, tidspunktet og usikkerheten før du lager konklusjonen.",
-        "Det gir et bedre fundament for å koble teknisk SEO, Google-data, senere AI-observasjoner og etter hvert forretningssignaler."
+        "Det høres kanskje ut som en dårlig byråmodell. Det er det ikke. Hvis SeoTool hjelper deg ta bedre valg og gjøre mer selv, har produktet levert verdi.",
+        "Og den dagen du går lei, mangler kapasitet eller møter noe som krever mer kompetanse, trenger du ikke starte fra null. Medon kan jobbe videre fra det samme grunnlaget."
       ],
       "items": [
         {
-          "title": "Observasjon før tolkning",
-          "text": "Kilden skal kunne spores tilbake når noen spør hvorfor et funn finnes.",
+          "title": "Forstå først",
+          "text": "Se hva dataene faktisk sier før du bestemmer hva som skal gjøres.",
           "surface": "base-200"
         },
         {
-          "title": "Historikk før øyeblikksbilde",
-          "text": "Endring over tid er ofte mer nyttig enn en isolert score i dag.",
+          "title": "Prioriter",
+          "text": "Bruk tiden på tiltak som fortjener den, ikke på å få alle lamper grønne.",
           "surface": "base-200"
         },
         {
-          "title": "Produktstatus uten teater",
-          "text": "Live, pilot og roadmap skal merkes som det de faktisk er.",
+          "title": "Gjør selv",
+          "text": "Behold oppgaver du har kapasitet og lyst til å håndtere.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Deleger smart",
+          "text": "Send bort arbeid når det er billigere enn tiden, frustrasjonen eller læringskurven.",
           "surface": "base-200"
         }
       ],
@@ -61,22 +66,22 @@
     {
       "_block": "content",
       "id": "medon",
-      "heading": "Utviklet av Medon",
+      "heading": "SeoTool utvikles av Medon",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "SeoTool er et Medon-produkt og brukes som grunnlag for å bygge en mer sammenhengende arbeidsflyt rundt SEO og AI-søk.",
-        "Den autentiserte applikasjonen kjører separat fra dette offentlige produktnettstedet."
+        "Medon jobber med SEO, AI-synlighet, nettsteder, CRO og betalt annonsering. SeoTool er laget for å gjøre dataene og prioriteringene mer brukbare både for kunder som gjør mye selv og for oss når vi tar over.",
+        "Det gir en enkel modell: samme grunnlag, valgfri mengde hjelp."
       ],
       "links": [
         {
-          "label": "Kontakt",
-          "href": "/kontakt/"
+          "label": "Gjør det selv",
+          "href": "/seo/"
         },
         {
-          "label": "Se SEO-delen",
-          "href": "/seo/"
+          "label": "Få hjelp",
+          "href": "/kontakt/"
         }
       ],
       "visibility": "visible"
