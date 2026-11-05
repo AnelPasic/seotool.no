@@ -2,29 +2,61 @@
   "slug": "priser",
   "kind": "utility",
   "seo": {
-    "title": "Tilbud | SeoTool",
-    "description": "Eksempel på CMS-redigerbar tilbudsside."
+    "title": "Tilgang og priser – SeoTool",
+    "description": "SeoTool har ikke en offentlig selvbetjent prisliste eller checkout på seotool.no ennå. Kontakt Medon om tilgang og aktuell pilotstatus."
   },
   "hero": {
     "layout": "centered-none",
-    "title": "Tilbud og priser",
-    "support": "Prisene er ikke definert i denne demonstrasjonen.",
+    "family": "pricing",
+    "eyebrow": "TILGANG",
+    "title": "Ingen fantasipakker. Pris publiseres når tilbudet faktisk er definert.",
+    "support": "SeoTool har ikke en offentlig selvbetjent prisliste eller checkout på seotool.no ennå. Tilgang og kommersielle vilkår avklares direkte mens produktlagene ferdigstilles.",
     "visual": {
       "kind": "none"
     },
-    "family": "pricing"
+    "primaryCta": {
+      "label": "Kontakt Medon om tilgang",
+      "href": "https://medon.no/kontakt"
+    },
+    "secondaryCta": {
+      "label": "Se produktstatus",
+      "href": "/slik-fungerer-det/"
+    }
   },
   "listing": {
-    "title": "Tilbud",
+    "title": "Tilgang og priser",
     "visible": false
   },
   "faq": [],
   "sections": [
     {
       "_block": "content",
-      "id": "tilbud",
-      "heading": "Ingen kundepakker er aktivert",
-      "body": "Kundepriser og pakker krever eksplisitt godkjenning. Dette er kun eksempelinnhold.",
+      "id": "tilgang",
+      "eyebrow": "STATUS",
+      "heading": "Vi publiserer ikke en pris før vi har et tilbud vi faktisk kan levere.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "body": [
+        "Den beskyttede prismasteren i nettstedet er fortsatt deaktivert. Det er bevisst.",
+        "Når kundeprodukt, omfang og prismodell er eksplisitt godkjent, kan denne siden få reelle pakker og vilkår."
+      ],
+      "items": [
+        {
+          "title": "Ingen offentlig checkout",
+          "text": "seotool.no tar ikke imot betaling eller bestillinger i dag.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Ingen oppdiktede pakker",
+          "text": "Vi viser ikke eksempelpriser som kan forveksles med et faktisk tilbud.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Dialog om tilgang",
+          "text": "Kontakt Medon hvis du vil diskutere dagens produkt eller pilotstatus.",
+          "surface": "base-200"
+        }
+      ],
       "visibility": "visible"
     }
   ]

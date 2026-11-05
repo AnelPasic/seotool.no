@@ -291,12 +291,12 @@ components:
       values:
 # PAGE_BUILDER_CHOICES_BEGIN
         - { name: "404", label: "Siden finnes ikke | SeoTool" }
-        - { name: "home", label: "SeoTool – Finn ut hva du bør gjøre først i søk og AI" }
-        - { name: "innsikt/artikkel", label: "Velge tjeneste: en enkel sjekkliste | SeoTool" }
-        - { name: "kontakt", label: "Kontakt oss – SeoTool" }
-        - { name: "om", label: "Om | SeoTool" }
-        - { name: "priser", label: "Tilbud | SeoTool" }
-        - { name: "tjeneste", label: "Tjeneste | SeoTool" }
+        - { name: "home", label: "SeoTool – Teknisk SEO og Search Console med historikk" }
+        - { name: "innsikt/artikkel", label: "Search Console-posisjon er ikke det samme som rank tracking | SeoTool" }
+        - { name: "kontakt", label: "Kontakt om SeoTool – Medon" }
+        - { name: "om", label: "Om SeoTool – søkeinnsikt bygget på dokumentert evidens" }
+        - { name: "priser", label: "Tilgang og priser – SeoTool" }
+        - { name: "tjeneste", label: "SeoTool – produktgrunnlaget" }
 # PAGE_BUILDER_CHOICES_END
   builderSections:
     type: block

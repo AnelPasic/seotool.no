@@ -5,18 +5,50 @@
   },
   "services": {
     "type": "content",
-    "heading": "Tjenester",
-    "body": "Bytt til godkjent kundespesifikt innhold."
+    "heading": "Produktområder",
+    "body": "SeoTool bygges lagvis fra observerbare data til bedre beslutningsstøtte."
   },
   "process": {
     "type": "content",
-    "heading": "Arbeidsprosess",
-    "body": "Rediger i globalt masterregister før lansering."
+    "eyebrow": "PRODUKTSTATUS",
+    "heading": "Bygg evidens før du bygger anbefalinger.",
+    "body": [
+      "Live i dag: crawler, historikk, Issue Engine og Search Console med Top Queries.",
+      "Neste lag er AI Visibility i intern pilot. Core Search Intelligence, Conversion Layer og Priority / Recommendation Engine kommer senere."
+    ],
+    "headingAlign": "left",
+    "layout": "two-columns",
+    "items": [
+      {
+        "title": "Live",
+        "text": "Crawler, Issues, Search Console og Top Queries.",
+        "surface": "base-200",
+        "boxVariant": "card"
+      },
+      {
+        "title": "Neste",
+        "text": "AI Visibility som kontrollerte, historiske observasjoner.",
+        "surface": "base-200",
+        "boxVariant": "card"
+      },
+      {
+        "title": "Senere",
+        "text": "Core Search Intelligence og Conversion Layer.",
+        "surface": "base-200",
+        "boxVariant": "card"
+      },
+      {
+        "title": "Målbildet",
+        "text": "Prioritering og anbefalinger bygget på dokumentert evidens.",
+        "surface": "base-200",
+        "boxVariant": "card"
+      }
+    ]
   },
   "benefits": {
     "type": "content",
-    "heading": "Fordeler",
-    "body": "Skriv faktiske dokumenterbare fordeler."
+    "heading": "Hvorfor dette fundamentet betyr noe",
+    "body": "Et beslutningslag er bare så godt som dataene og proveniensen det bygger på."
   },
   "pricing": {
     "type": "protected",

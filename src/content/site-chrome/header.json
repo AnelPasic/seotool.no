@@ -19,22 +19,22 @@
         {
           "label": "SEO",
           "href": "/seo/",
-          "description": "Kjernesøk, tekniske feil og Search Console"
+          "description": "Live: crawl, Issues og Search Console"
         },
         {
           "label": "AI-synlighet",
           "href": "/ai-synlighet/",
-          "description": "Siteringer i ChatGPT og Google AI Overviews"
+          "description": "Under utvikling: målbare AI-observasjoner"
         },
         {
           "label": "Lokal synlighet",
           "href": "/lokal-synlighet/",
-          "description": "Lokal SEO og Google Bedriftsprofil (under utvikling)"
+          "description": "Planlagt Local/Geo-lag"
         },
         {
           "label": "Slik fungerer det",
           "href": "/slik-fungerer-det/",
-          "description": "Fra bevis til prioritert handling"
+          "description": "Hva som er live, og hva som bygges videre"
         }
       ]
     },
@@ -47,7 +47,7 @@
     {
       "kind": "link",
       "id": "gratis-analyse",
-      "label": "Gratis analyse",
+      "label": "Nettstedsanalyse",
       "href": "/gratis-analyse/"
     }
   ],
@@ -56,17 +56,13 @@
     "href": "https://app.seotool.no",
     "variant": "primary"
   },
+  "utilityLinks": [],
   "languages": [
     {
       "label": "NO",
       "locale": "nb",
       "href": "/",
       "current": true
-    },
-    {
-      "label": "EN",
-      "locale": "en",
-      "current": false
     }
   ],
   "search": {
@@ -75,7 +71,7 @@
   },
   "headerOptions": {
     "sticky": true,
-    "showLanguageSwitch": true,
+    "showLanguageSwitch": false,
     "showSearch": true,
     "showCta": true
   },

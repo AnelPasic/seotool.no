@@ -2,91 +2,101 @@
   "slug": "seo",
   "kind": "service",
   "seo": {
-    "title": "SEO og organisk søk – SeoTool",
-    "description": "Få full oversikt over tekniske feil, søkeord, rangeringer og konkurrenter med SeoTool."
+    "title": "Teknisk SEO og Search Console – SeoTool",
+    "description": "Crawler, Issue Engine og Search Console med historikk i samme SEO-grunnlag. Core Search Intelligence er et senere produktsteg."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "Kjernesøk og analyse",
-    "title": "Teknisk innsikt og søkemuligheter uten gjetting.",
-    "support": "SeoTool overvåker nettsidens helse, Search Console-ytelse og faktiske rangeringer for å avdekke hvilke optimaliseringer som gir størst effekt.",
+    "eyebrow": "LIVE PRODUKTGRUNNLAG",
+    "title": "Teknisk SEO og Search Console — med historikk, ikke bare et øyeblikksbilde.",
+    "support": "SeoTool dokumenterer nettstedet med crawler og Issue Engine og kobler dette til Search Console på side- og query-nivå. Core Search/rank tracking er planlagt senere, ikke en funksjon vi later som finnes nå.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Be om analyse",
+      "label": "Be om vurdering",
       "href": "/gratis-analyse/"
+    },
+    "secondaryCta": {
+      "label": "Se hvordan det fungerer",
+      "href": "/slik-fungerer-det/"
     }
   },
   "listing": {
-    "title": "SEO og organisk søk",
-    "summary": "Teknisk gjennomsøking, Search Console-integrasjon, søkeord og konkurrentovervåking.",
+    "title": "SEO",
+    "summary": "Live: crawler, Issue Engine, Search Console og Top Queries med historikk.",
     "order": 1,
     "visible": true
   },
   "faq": [
     {
-      "question": "Hvor ofte gjennomsøker SeoTool nettstedet?",
-      "answer": "SeoTool utfører regelmessige tekniske gjennomganger for å identifisere brutte lenker, indekseringsfeil og manglende metadata."
+      "question": "Hva er live i SEO-delen nå?",
+      "answer": "Crawler, historiske sideobservasjoner, Issue Engine, Search Console-sideintegrasjon og Top Queries er levert."
     },
     {
-      "question": "Hvilke data hentes fra Search Console?",
-      "answer": "SeoTool kobler seg til Google Search Console for å analysere faktiske visninger, klikk, gjennomsnittlige posisjoner og søkeintensjon."
+      "question": "Har SeoTool rank tracking og Core Search i dag?",
+      "answer": "Ikke ennå. Core Search Intelligence er planlagt etter AI Visibility-laget og skal gi egne SERP-observasjoner uten å blande dem sammen med Search Console-data."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "funksjoner",
-      "heading": "Hva SeoTool overvåker",
-      "visibility": "visible",
+      "id": "live-funksjoner",
+      "eyebrow": "DET SOM FINNES NÅ",
+      "heading": "Fire lag som allerede kan dokumenteres.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "SEO handler om konkrete forbedringer på sider som faktisk kan rangere. SeoTool samler målinger fra flere kilder i én prioritert oversikt.",
-        "I stedet for lange feillister uten sammenheng, grupperes funnene etter forventet effekt på organisk trafikk."
+        "Hvert lag svarer på et annet spørsmål. SeoTool beholder derfor kilden og tidspunktet i stedet for å slå alt sammen til én helsepoengsum.",
+        "Det gjør det lettere å se om problemet ligger på nettstedet eller i Googles observerte ytelse."
       ],
       "items": [
         {
-          "title": "Teknisk gjennomsøking",
-          "text": "Identifiserer indekseringshindre, brutte lenker, kanoniske avvik og ytelsesflaskehalser.",
+          "title": "Crawler",
+          "text": "Observerer sider, statuskoder, metadata, lenker og andre crawlbare forhold.",
           "surface": "base-200"
         },
         {
-          "title": "Search Console & Søkeord",
-          "text": "Avdekker faktiske søkespørsmål, klikkdata og posisjonsendringer direkte fra Google.",
+          "title": "Issue Engine",
+          "text": "Flagger konkrete tekniske forhold basert på observerte data.",
           "surface": "base-200"
         },
         {
-          "title": "SERP & Konkurrentanalyse",
-          "text": "Følger utviklingen i søkeresultatene mot reelle konkurrenter og analyserer søkeintensjon.",
+          "title": "Search Console – sider",
+          "text": "Viser Google-ytelse på sidenivå i samme prosjekt.",
           "surface": "base-200"
         },
         {
-          "title": "Historiske observasjoner",
-          "text": "Dokumenterer endringer over tid slik at du ser effekten av utførte tiltak.",
+          "title": "Top Queries",
+          "text": "Viser faktiske søk, visninger og klikk fra Search Console.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
-      "id": "neste-steg",
-      "heading": "Klar for å kartlegge nettstedet?",
-      "visibility": "visible",
+      "id": "core-search",
+      "eyebrow": "SENERE PRODUKTLAG",
+      "heading": "SERP-observasjoner skal komme som egen datakilde.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "Få en innledende gjennomgang av nettstedets tekniske tilstand og søkepotensial.",
-        "Har du allerede en aktiv SeoTool-konto, kan du logge inn direkte i applikasjonen."
+        "Core Search Intelligence er ikke live ennå. Planen er å observere faktiske søkeresultater for strategiske søk og holde dette separat fra Search Console.",
+        "Det er viktig fordi en Search Console-posisjon og en ekstern SERP-observasjon ikke er samme måling."
       ],
       "links": [
         {
-          "label": "Gå til gratis analyse",
-          "href": "/gratis-analyse/"
+          "label": "Se hele produktretningen",
+          "href": "/slik-fungerer-det/"
         },
         {
-          "label": "Ta kontakt for rådgivning",
-          "href": "/kontakt/"
+          "label": "Les om AI-synlighet",
+          "href": "/ai-synlighet/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }

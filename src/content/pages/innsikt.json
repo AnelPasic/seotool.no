@@ -2,32 +2,36 @@
   "slug": "innsikt",
   "kind": "service",
   "seo": {
-    "title": "Innsikt og artikler – SeoTool",
-    "description": "Faglige artikler om søkemotoroptimalisering, AI-synlighet og datadrevet forbedring fra SeoTool."
+    "title": "Innsikt om SEO, Search Console og AI-søk – SeoTool",
+    "description": "Faglige forklaringer om teknisk SEO, Google-data, søkeobservasjoner og AI-synlighet med tydelig skille mellom dokumenterte fakta og tolkning."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "Kunnskapsbase",
-    "title": "Innsikt om søk, kunstig intelligens og synlighet.",
-    "support": "Lær hvordan søkemotorene og AI-modellene henter informasjon, og hvordan du forbedrer nettsidens autoritet basert på observerbare data.",
+    "eyebrow": "INNSIKT",
+    "title": "Forklar søkedataene før du bygger en strategi på dem.",
+    "support": "SeoTool-innsikt skal gjøre én ting godt: skille dokumentert observasjon fra tolkning, slik at Search Console, teknisk SEO og nye AI-flater ikke blir redusert til løse myter.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Analyser nettsiden",
-      "href": "/gratis-analyse/"
+      "label": "Se siste artikler",
+      "href": "/innsikt/#artikler"
+    },
+    "secondaryCta": {
+      "label": "Se hvordan SeoTool fungerer",
+      "href": "/slik-fungerer-det/"
     }
   },
   "listing": {
     "title": "Innsikt",
-    "summary": "Fagartikler, veiledninger og oppdateringer innen SEO og AI-søk.",
+    "summary": "Fagartikler om SEO, Google-data og AI-søk.",
     "order": 6,
     "visible": true
   },
   "faq": [
     {
-      "question": "Hvilke temaer dekkes i innsiktsartiklene?",
-      "answer": "Vi dekker teknisk SEO, Search Console-analyse, AI Overviews, kildehenvisninger i språkmodeller og metoder for datadrevet optimalisering."
+      "question": "Hva slags innhold publiseres her?",
+      "answer": "Forklaringer og analyser om teknisk SEO, Search Console, SERP-observasjoner og AI-søk. Påstander skal skilles fra dokumenterte observasjoner og offisiell dokumentasjon."
     }
   ],
   "sections": [
@@ -47,17 +51,18 @@
     },
     {
       "_block": "content",
-      "id": "om-innsikten",
-      "heading": "Saklig kunnskap uten myter",
+      "id": "redaksjonelt-prinsipp",
+      "eyebrow": "REDAKSJONELT PRINSIPP",
+      "heading": "Ingen SEO-folklore forkledd som produktdokumentasjon.",
       "visibility": "visible",
       "body": [
-        "Søkebransjen er preget av spekulasjoner og udokumenterte påstander. Våre artikler tar utgangspunkt i faktiske målinger, offisiell dokumentasjon fra søkemotorene og etterprøvbare tester.",
-        "Vi skiller tydelig mellom direkte observasjoner og tolkninger, slik at du kan ta trygge beslutninger for ditt eget nettsted."
+        "Søkebransjen har mer enn nok bastante påstander basert på én graf eller én test. Her prøver vi å være mer kjedelige — på den nyttige måten.",
+        "Når noe er observert, sier vi hva som ble observert. Når noe er en tolkning eller hypotese, merkes det som det."
       ],
       "links": [
         {
-          "label": "Be om en analyse av ditt nettsted",
-          "href": "/gratis-analyse/"
+          "label": "Se produktstatus",
+          "href": "/slik-fungerer-det/"
         }
       ]
     }

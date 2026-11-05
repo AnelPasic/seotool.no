@@ -2,41 +2,41 @@
   "_block": "content",
   "uid": "f4a35ce8-828d-4c62-ab14-7c3a56092532",
   "id": "felles-eksempel",
-  "name": "Felles eksempel",
-  "heading": "Én seksjon – flere sider",
-  "eyebrow": "GJENBRUK",
+  "name": "Evidensgrunnlaget",
+  "eyebrow": "SAMME DATA, RIKTIG KONTEKST",
+  "heading": "Flere signaler. Én dokumentert historikk.",
   "headingAlign": "center",
   "layout": "three-columns",
   "surface": "base-200",
   "body": [
-    "Globalt innhold har én kilde.",
-    "Hver side styrer rekkefølgen selv.",
-    "Endringer i kilden oppdaterer alle sider."
+    "Crawleren dokumenterer nettstedets faktiske tekniske tilstand.",
+    "Search Console viser hva Google faktisk har observert på side- og query-nivå.",
+    "Hver observasjon beholdes med kilde og tidspunkt, slik at data og tolkning ikke blandes."
   ],
   "items": [
     {
-      "title": "Kilde",
-      "text": "Én JSON-fil.",
-      "surface": "secondary",
+      "title": "Nettstedet",
+      "text": "Sider, statuskoder, metadata, lenker og andre observerbare tekniske forhold.",
+      "surface": "base-100",
       "boxVariant": "card"
     },
     {
-      "title": "Referanse",
-      "text": "Ingen kopier av teksten.",
-      "surface": "secondary",
+      "title": "Google",
+      "text": "Visninger, klikk, posisjoner og søk fra Search Console — som Google-data, ikke som en rank tracker.",
+      "surface": "base-100",
       "boxVariant": "card"
     },
     {
-      "title": "Synlighet",
-      "text": "Skjul per side.",
-      "surface": "secondary",
+      "title": "Historikken",
+      "text": "Endringer over tid gjør det mulig å se forskjell på et øyeblikksbilde og en faktisk utvikling.",
+      "surface": "base-100",
       "boxVariant": "card"
     }
   ],
   "links": [
     {
-      "label": "Se tjenesteeksemplet",
-      "href": "/tjeneste/"
+      "label": "Se hvordan SeoTool fungerer",
+      "href": "/slik-fungerer-det/"
     }
   ]
 }

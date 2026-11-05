@@ -16,7 +16,7 @@ test('CONTENT-04: actual neutral Home/Service/Article retain their own SEO, Hero
   assert.ok(page.seo.title?.trim()&&page.seo.description?.trim());
   assert.ok(page.hero.title?.trim()&&page.hero.support?.trim());
   assert.equal(page.hero.visual.kind,page===home?'image':'none');
-  if(page===home)assert.equal(page.hero.visual.image.src,'/images/pages/hero-demo.svg');
+  if(page===home)assert.match(page.hero.visual.image.src,/^\/images\/pages\/.+\.(?:webp|png|jpe?g|avif|svg)$/);
   assert.ok(builderPageSchema.safeParse(page).success,kind);
  }
  assert.notEqual(home.hero.title,service.hero.title);

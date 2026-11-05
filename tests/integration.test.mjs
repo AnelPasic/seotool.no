@@ -64,7 +64,7 @@ test('PageList pages source retains legacy key but shows only services and produ
     .find(f=>f.name==='pageList').fields.find(f=>f.name==='source');
   assert.equal(source.options.values.find(x=>x.name==='pages').label,'Tjenester og produkter');
   assert.deepEqual(source.options.values.map(x=>x.name),['articles','pages','cases']);
-  const saved=JSON.parse(JSON.stringify({source:'pages',mode:'automatic',sort:'editorial',limit:6,layout:'cards',entries:[]}));
+  const saved=JSON.parse(JSON.stringify({source:'pages',mode:'automatic',sort:'editorial',limit:12,layout:'cards',entries:[]}));
   assert.equal(pageListSchema.parse(saved).source,'pages');
   const product=builderPageSchema.parse({...service,slug:'produkter/produkt',listing:{...service.listing,title:'Produkt',order:1}});
   const index=builderPageSchema.parse({...service,slug:'oversikt',kind:'index'});
@@ -79,7 +79,7 @@ test('PageList pages source retains legacy key but shows only services and produ
 
 test('neutral navigation routes exist and search/languages are not fake', () => {
   assert.equal(chrome.headerOptions.showSearch,true);
-  assert.equal(chrome.headerOptions.showLanguageSwitch,true);
+  assert.equal(chrome.headerOptions.showLanguageSwitch,false);
   const paths=new Set(pages.map(p=>publicPath(p.slug)));
   const all=[...chrome.navigation.flatMap(n=>[n.href,...(n.kind==='dropdown'?n.links.map(x=>x.href):n.kind==='mega'?n.columns.flatMap(c=>c.links.map(x=>x.href)):[])]),chrome.primaryCta?.href,...chrome.footer.groups.flatMap(g=>g.links.map(x=>x.href)),...chrome.footer.legalLinks.map(x=>x.href)];
   for(const path of all)if(path?.startsWith('/'))assert.ok(paths.has(path),'Broken demo route '+path);
@@ -89,7 +89,11 @@ test('no invented active offer, protected source or lead submission', () => {
   assert.ok(!existsSync(join(root,'src/pages/api/leads.ts')));
   for(const master of Object.values(masters))if(master.type==='protected')assert.equal(master.publicationApproved,false);
   for(const p of pages){
-    if(p.hero.visual.kind==='image')assert.equal(p.hero.visual.image.src,'/images/pages/hero-demo.svg');
+    if(p.hero.visual.kind==='image'){
+      const asset=p.hero.visual.image.src.replace(/^\//,'');
+      assert.ok(asset.startsWith('images/pages/'));
+      assert.ok(existsSync(join(root,'public',asset)),asset);
+    }
     assert.ok(resolveSections(p,masters,pages,[],shared).every(s=>s.type!=='global'||s.master.type!=='protected'));
   }
 });

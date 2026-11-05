@@ -2,16 +2,16 @@
   "slug": "home",
   "kind": "home",
   "seo": {
-    "title": "SeoTool – Finn ut hva du bør gjøre først i søk og AI",
-    "description": "SeoTool samler data fra nettstedet, Google og AI-tjenester for å gi deg konkrete, prioriterte tiltak for synlighet."
+    "title": "SeoTool – Teknisk SEO og Search Console med historikk",
+    "description": "SeoTool samler crawl, tekniske funn og Search Console-data i ett historisk evidensgrunnlag. AI-synlighet og prioritering bygges videre på samme fundament."
   },
   "hero": {
     "layout": "split-right",
-    "eyebrow": "Søkeinnsikt og handling",
-    "title": "SeoTool forteller deg hva du bør gjøre først — og hvorfor.",
-    "support": "Tradisjonelle verktøy viser hva som skjedde. SeoTool analyserer tekniske feil, søkeintensjon og AI-synlighet for å prioritere dine neste tiltak.",
+    "eyebrow": "SEO-DATA MED KILDE OG HISTORIKK",
+    "title": "Se hva som faktisk skjer med nettstedet ditt i Google.",
+    "support": "Live i dag: crawler, Issue Engine og Search Console med Top Queries. AI Visibility er i intern pilot; Core Search og prioritering kommer senere. Illustrasjonen viser målbildet, ikke dagens featureliste.",
     "primaryCta": {
-      "label": "Analyser nettsiden",
+      "label": "Be om vurdering",
       "href": "/gratis-analyse/"
     },
     "secondaryCta": {
@@ -22,10 +22,10 @@
       "kind": "image",
       "image": {
         "src": "/images/pages/seotool-hero-flow.webp",
-        "alt": "SeoTool oversikt",
+        "alt": "Illustrasjon av SeoTools produktretning fra nettsted og søkedata til senere prioritering",
         "positionX": 50,
         "positionY": 50,
-        "kind": "photo"
+        "kind": "illustration"
       }
     }
   },
@@ -34,22 +34,48 @@
   },
   "faq": [
     {
-      "question": "Hva skiller SeoTool fra tradisjonelle SEO-verktøy?",
-      "answer": "Tradisjonelle verktøy overøser deg med ufiltrerte rapporter. SeoTool prioriterer oppgavene etter forventet effekt og forklarer hvorfor et tiltak bør gjennomføres først."
+      "question": "Hva er tilgjengelig i SeoTool i dag?",
+      "answer": "Crawler, historiske sideobservasjoner, Issue Engine og Search Console-integrasjon med Top Queries er levert. AI Visibility er neste lag i intern pilot. Core Search Intelligence og Priority / Recommendation Engine er senere produktsteg."
     },
     {
       "question": "Hvor logger eksisterende brukere inn?",
-      "answer": "Eksisterende brukere logger inn direkte på app.seotool.no."
+      "answer": "Eksisterende brukere logger inn på app.seotool.no."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "kjernefilosofi",
-      "heading": "Fra datafangst til handling",
-      "headingAlign": "center",
-      "layout": "default",
-      "surface": "default",
+      "id": "live-i-dag",
+      "eyebrow": "LIVE I DAG",
+      "heading": "Et faktisk SEO-grunnlag før anbefalingene kommer.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "body": [
+        "SeoTool starter med det som kan observeres og dokumenteres. Det gjør det mulig å bygge mer avansert beslutningsstøtte uten å late som et estimat er et faktum.",
+        "Dagens produksjonsgrunnlag dekker nettstedet og Googles egne Search Console-data. Hvert lag beholdes separat med historikk."
+      ],
+      "items": [
+        {
+          "title": "Crawler",
+          "text": "Lagrer sideobservasjoner og tekniske forhold over tid.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Issue Engine",
+          "text": "Gjør observerte tekniske forhold om til tydelige issues uten en oppdiktet universalscore.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Search Console",
+          "text": "Kobler sideytelse fra Google til samme nettstedshistorikk.",
+          "surface": "base-200"
+        },
+        {
+          "title": "Top Queries",
+          "text": "Viser hvilke søk Google faktisk har registrert visninger og klikk for.",
+          "surface": "base-200"
+        }
+      ],
       "visibility": "visible"
     },
     {
@@ -64,10 +90,19 @@
       "visibility": "visible"
     },
     {
-      "_block": "global",
-      "id": "sporsmal",
-      "element": "faq",
-      "visibility": "visible"
+      "_block": "pageList",
+      "id": "produktomrader",
+      "heading": "Utforsk produktet",
+      "visibility": "visible",
+      "pageList": {
+        "source": "pages",
+        "mode": "automatic",
+        "sort": "editorial",
+        "limit": 4,
+        "layout": "cards",
+        "columns": 2,
+        "entries": []
+      }
     },
     {
       "_block": "pageList",
@@ -79,8 +114,15 @@
         "mode": "automatic",
         "sort": "editorial",
         "limit": 3,
-        "layout": "alternating"
+        "layout": "alternating",
+        "entries": []
       }
+    },
+    {
+      "_block": "global",
+      "id": "sporsmal",
+      "element": "faq",
+      "visibility": "visible"
     }
   ]
 }

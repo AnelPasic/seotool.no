@@ -2,91 +2,101 @@
   "slug": "lokal-synlighet",
   "kind": "service",
   "seo": {
-    "title": "Lokal synlighet – SeoTool (Under utvikling)",
-    "description": "SeoTool utvikler støtte for lokal synlighet, Google Bedriftsprofil og lokale søkeresultater."
+    "title": "Lokal synlighet – planlagt Local/Geo-lag | SeoTool",
+    "description": "Local/Geo er et planlagt evidenslag i SeoTool. Det er ikke en aktiv produksjonsmodul i dag."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "Planlagt modul / Veikart",
-    "title": "Lokal synlighet: Innsikt for bedrifter med fysisk tilstedeværelse.",
-    "support": "Vi bygger dedikert støtte for Google Bedriftsprofil og lokale rangeringer. Modulen er for tiden under aktiv utvikling og lanseres fortløpende.",
+    "eyebrow": "PLANLAGT BERIKELSE",
+    "title": "Lokal synlighet skal bli et eget evidenslag — men det er ikke live ennå.",
+    "support": "For lokale virksomheter kan Maps og geografisk synlighet være avgjørende. SeoTool har Local/Geo på produktretningen, men modulen er ikke dagens byggemål og skal ikke presenteres som ferdig.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Motta varsel ved lansering",
-      "href": "/kontakt/"
+      "label": "Se dagens SEO-funksjoner",
+      "href": "/seo/"
+    },
+    "secondaryCta": {
+      "label": "Se produktretningen",
+      "href": "/slik-fungerer-det/"
     }
   },
   "listing": {
     "title": "Lokal synlighet",
-    "summary": "Planlagt funksjonalitet for lokal SEO, Google Maps og Google Bedriftsprofil.",
+    "summary": "Planlagt: Local/Geo-observasjoner som eget evidenslag.",
     "order": 3,
     "visible": true
   },
   "faq": [
     {
-      "question": "Er lokal synlighet tilgjengelig i dag?",
-      "answer": "Nei, lokal synlighet og Maps-integrasjoner er for tiden under utvikling og ikke aktivert i produksjon. Vi tester funksjonaliteten med utvalgte pilotkunder."
+      "question": "Er Local Visibility tilgjengelig nå?",
+      "answer": "Nei. Local/Geo er planlagt som et senere evidenslag og er ikke aktivert i produksjon."
     },
     {
-      "question": "Hva vil modulen omfatte når den lanseres?",
-      "answer": "Modulen vil gi innsikt i lokal rangering, sporing av visninger i kartvisning og automatisert oppfølging av Google Bedriftsprofil."
+      "question": "Hva er målet med laget?",
+      "answer": "Å kunne dokumentere lokal synlighet separat fra organisk SEO, slik at Maps/Local Pack ikke blandes sammen med vanlige søkeresultater."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "veikart",
-      "heading": "Kommende funksjonalitet for lokale bedrifter",
-      "visibility": "visible",
+      "id": "hvorfor-local",
+      "eyebrow": "ET EGET SIGNAL",
+      "heading": "Organisk synlighet og Maps-synlighet er ikke det samme.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "For mange virksomheter er lokal synlighet den mest verdifulle trafikkilden. Vi utvikler verktøy som kobler lokale data direkte til prioriterte tiltak.",
-        "SeoTool publiserer ikke uferdige funksjoner. Nedenfor ser du hva vi arbeider med i neste versjon."
+        "En lokal bedrift kan stå sterkt organisk og samtidig være svak i Maps — eller omvendt. Derfor bør lokale observasjoner få egen kilde og historikk.",
+        "Det er produktprinsippet. Den konkrete modulen bygges først når tidligere roadmap-steg er klare."
       ],
       "items": [
         {
-          "title": "Google Bedriftsprofil (GBP)",
-          "text": "Overvåking av profilfullføring, kategorivalg og oppdateringsbehov.",
+          "title": "Maps / Local Pack",
+          "text": "Planlagt som egne geografiske observasjoner, ikke som en del av Search Console-posisjon.",
           "surface": "base-200"
         },
         {
-          "title": "Lokal posisjonssporing",
-          "text": "Kartlegging av synlighet i Map Pack basert på geografiske søkeområder.",
+          "title": "Geografisk kontekst",
+          "text": "Senere kan observasjoner knyttes til relevante steder og markeder.",
           "surface": "base-200"
         },
         {
-          "title": "Lokal autoritet og omtaler",
-          "text": "Systematisering av kundeomtaler og lokale referanser som påvirker tillit.",
+          "title": "Konkurrentbildet",
+          "text": "Lokale konkurrenter bør observeres i samme lokale kontekst.",
           "surface": "base-200"
         },
         {
-          "title": "Integrert prioritering",
-          "text": "Lokale tiltak vektes sammen med teknisk SEO og AI-synlighet i én samlet handlingsplan.",
+          "title": "GBP-kontekst",
+          "text": "Google Bedriftsprofil kan senere berike analysen uten å bli masterdata for hele SeoTool.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
-      "id": "kontakt-oss",
-      "heading": "Ønsker du pilot-tilgang?",
-      "visibility": "visible",
+      "id": "status",
+      "eyebrow": "IKKE EN DEMO FORKLEDD SOM PRODUKT",
+      "heading": "Vi merker planlagt funksjonalitet som planlagt.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "Ta kontakt dersom din bedrift ønsker tidlig tilgang til lokalmodulen når den rulles ut til testing.",
-        "I mellomtiden kan du benytte våre operative moduler for teknisk SEO og AI-synlighet."
+        "Local/Geo kommer etter de mer grunnleggende evidence- og search-lagene. Det finnes derfor ingen grunn til å late som pilotknapper eller mockups er et ferdig produkt.",
+        "Vil du vurdere lokal synlighet i dag, kan Medon gjøre det som rådgivningsarbeid uten å påstå at SeoTool-modulen er live."
       ],
       "links": [
         {
-          "label": "Ta kontakt med oss",
+          "label": "Kontakt oss",
           "href": "/kontakt/"
         },
         {
-          "label": "Se operativ SEO-analyse",
+          "label": "Se SEO-funksjonene",
           "href": "/seo/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }
