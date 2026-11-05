@@ -2,33 +2,33 @@
   "_block": "content",
   "uid": "f4a35ce8-828d-4c62-ab14-7c3a56092532",
   "id": "felles-eksempel",
-  "name": "Evidensgrunnlaget",
-  "eyebrow": "SAMME DATA, RIKTIG KONTEKST",
-  "heading": "Flere signaler. Én dokumentert historikk.",
+  "name": "Fra signal til prioritering",
+  "eyebrow": "DATA ER IKKE JOBBEN",
+  "heading": "Poenget er å vite hva du skal gjøre med dataene.",
   "headingAlign": "center",
   "layout": "three-columns",
   "surface": "base-200",
   "body": [
-    "Crawleren dokumenterer nettstedets faktiske tekniske tilstand.",
-    "Search Console viser hva Google faktisk har observert på side- og query-nivå.",
-    "Hver observasjon beholdes med kilde og tidspunkt, slik at data og tolkning ikke blandes."
+    "Crawleren forteller hva som skjer på nettstedet. Search Console viser hva Google faktisk har registrert.",
+    "Når kildene holdes ryddige og ses i sammenheng, blir det lettere å skille et viktig problem fra enda et varsel.",
+    "Målet er ikke mer rapportering. Målet er et bedre neste valg."
   ],
   "items": [
     {
-      "title": "Nettstedet",
-      "text": "Sider, statuskoder, metadata, lenker og andre observerbare tekniske forhold.",
+      "title": "Se problemet",
+      "text": "Forstå hva som faktisk er observert og hvor signalet kommer fra.",
       "surface": "base-100",
       "boxVariant": "card"
     },
     {
-      "title": "Google",
-      "text": "Visninger, klikk, posisjoner og søk fra Search Console — som Google-data, ikke som en rank tracker.",
+      "title": "Vurder betydningen",
+      "text": "Sett funnet i kontekst med søkedata, side og historikk.",
       "surface": "base-100",
       "boxVariant": "card"
     },
     {
-      "title": "Historikken",
-      "text": "Endringer over tid gjør det mulig å se forskjell på et øyeblikksbilde og en faktisk utvikling.",
+      "title": "Velg neste tiltak",
+      "text": "Bruk tiden der den har best sjanse til å gjøre en forskjell.",
       "surface": "base-100",
       "boxVariant": "card"
     }
