@@ -57,7 +57,7 @@ test('CONTENT-06: synthetic create/read/page-list/delete roundtrip in isolated f
  try{
   for(const d of ['managed-articles'])mkdirSync(join(tmp,d));
   const entries=[
-   {folder:'',file:'demo-service.json',page:{...json('../src/content/pages/tjeneste.json'),slug:'demo-service'}},
+   {folder:'',file:'demo-service.json',page:{...json('../src/content/pages/tjeneste.json'),slug:'demo-service',listing:{...json('../src/content/pages/tjeneste.json').listing,visible:true,title:'Demo service'}}},
    {folder:'managed-articles',file:'innsikt-demo-guide.json',page:{...json('../src/content/pages/managed-articles/innsikt-artikkel.json'),slug:'innsikt/demo-guide'}}
   ];
   for(const e of entries){
