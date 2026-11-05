@@ -21,7 +21,7 @@
     "visual": {
       "kind": "image",
       "image": {
-        "src": "/images/pages/hero-demo.svg",
+        "src": "/images/pages/seotool-hero-flow.webp",
         "alt": "SeoTool oversikt",
         "positionX": 50,
         "positionY": 50,
@@ -47,7 +47,9 @@
       "_block": "content",
       "id": "kjernefilosofi",
       "heading": "Fra datafangst til handling",
-      "body": "SeoTool henter tekniske observasjoner, Search Console-data og siteringer fra kunstig intelligens. I stedet for abstrakte poengsummer får du en sortert tiltaksliste forankret i observerbare data.",
+      "headingAlign": "center",
+      "layout": "default",
+      "surface": "default",
       "visibility": "visible"
     },
     {
@@ -77,8 +79,7 @@
         "mode": "automatic",
         "sort": "editorial",
         "limit": 3,
-        "layout": "alternating",
-        "entries": []
+        "layout": "alternating"
       }
     }
   ]
