@@ -9,7 +9,7 @@
     "layout": "split-right",
     "eyebrow": "GJØR MER SEO SELV",
     "title": "Du kan gjøre mye av SEO-jobben selv. SeoTool viser deg hva du bør gjøre først.",
-    "support": "Det vanskelige med SEO er sjelden å endre en tittel, forbedre en side eller legge en internlenke. Det vanskelige er å vite hva som faktisk er verdt tiden din. SeoTool samler signalene og hjelper deg prioritere tiltakene med størst betydning.",
+    "support": "Du trenger ikke en SEO-ekspert for å skrive riktig adresse, forbedre en metatittel eller legge inn en internlenke. SeoTool hjelper deg finne det du kan gjøre selv — og spare eksperttimene til det som faktisk krever ekspertise.",
     "primaryCta": {
       "label": "Finn ut hva du bør gjøre først",
       "href": "/gratis-analyse/"
@@ -38,8 +38,8 @@
       "answer": "Ja. Mye SEO er konkrete forbedringer du kan gjøre selv når du vet hva som er viktigst: innhold, titler, internlenking, struktur og en del tekniske feil. SeoTool hjelper deg få oversikt og prioritere. Du bestemmer hvor mye du vil gjøre selv."
     },
     {
-      "question": "Hva hvis jeg ikke vil gjøre jobben selv?",
-      "answer": "Da kan Medon hjelpe. Tanken er ikke å låse deg til et byrå, men å gi deg kontroll. Når du mangler tid, kapasitet eller lyst, kan du få hjelp med akkurat den delen du vil slippe."
+      "question": "Når bør jeg bruke en SEO-ekspert?",
+      "answer": "Når oppgaven er teknisk, risikofylt eller dyr å lære seg bare for å gjøre én gang — for eksempel canonical-problemer, migrering, JavaScript-indeksering eller alvorlige CMS-/serverfeil. Enkle innholds- og sideforbedringer kan du ofte gjøre selv."
     }
   ],
   "sections": [
@@ -57,22 +57,22 @@
       "items": [
         {
           "title": "1. Finn problemet",
-          "text": "Samle tekniske funn, Google-data og andre relevante signaler i samme oversikt.",
+          "text": "SeoTool samler signalene og viser hvor det er mest interessant å se nærmere.",
           "surface": "base-200"
         },
         {
           "title": "2. Prioriter",
-          "text": "Skill det som haster eller kan gi reell verdi fra ting som bare ser travle ut.",
+          "text": "Skill tiltak med reell betydning fra ting som bare fyller en rapport.",
           "surface": "base-200"
         },
         {
-          "title": "3. Gjør det selv",
-          "text": "Fiks det du kan og vil gjøre selv, uten å vente på et byrå for hver lille endring.",
+          "title": "3. Gjør det enkle selv",
+          "text": "Adresse, metatitler, innhold, internlenker, FAQ og bilder trenger sjelden eksperttimepris.",
           "surface": "base-200"
         },
         {
-          "title": "4. Få hjelp når du vil",
-          "text": "Når oppgaven krever mer tid, kode, innhold eller tålmodighet, kan Medon ta over.",
+          "title": "4. Bruk ekspert på det vanskelige",
+          "text": "Spar eksperttimene til tekniske, risikofylte eller komplekse saker.",
           "surface": "base-200"
         }
       ],
@@ -91,23 +91,23 @@
     },
     {
       "_block": "content",
-      "id": "medon-handoff",
-      "eyebrow": "NÅR DU HAR FÅTT NOK AV SEO",
-      "heading": "Gjør det selv så lenge det gir mening. Vi er her når det ikke gjør det.",
+      "id": "bruk-ekspert-smart",
+      "eyebrow": "SPAR EKSPERTTIMENE",
+      "heading": "Du trenger ikke en ekspert for å skrive riktig adresse eller endre en metatittel.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Noen vil gjøre alt selv. Noen vil ikke røre SEO med ildtang. De fleste ligger et sted i midten.",
-        "SeoTool gir deg kontrollen. Medon er done-for-you-alternativet når tiden, kapasiteten eller lysten tar slutt."
+        "Mye SEO er enkelt arbeid når du først vet hva som bør gjøres. Det er dårlig økonomi å betale eksperttimepris for oppgaver du fint kan håndtere selv.",
+        "Bruk heller eksperten på canonical-feil, migrering, JavaScript-indeksering, kritiske tekniske problemer og andre saker der feil kan koste mer enn hjelpen."
       ],
       "links": [
         {
-          "label": "Jeg vil gjøre mer selv",
+          "label": "Se hva du kan gjøre selv",
           "href": "/seo/"
         },
         {
-          "label": "Jeg vil ha hjelp",
+          "label": "Når bør du bruke ekspert?",
           "href": "/kontakt/"
         }
       ],
