@@ -2,14 +2,14 @@
   "slug": "om",
   "kind": "utility",
   "seo": {
-    "title": "Om SeoTool – SEO trenger ikke starte med et byrå",
-    "description": "SeoTool er laget for bedrifter som vil forstå og gjøre mer SEO selv, med Medon tilgjengelig når de vil ha hjelp."
+    "title": "Om SeoTool – spar eksperttimene til det vanskelige",
+    "description": "SeoTool er laget for å hjelpe bedrifter gjøre mer SEO selv, prioritere bedre og bruke eksperthjelp bare der kompetansen faktisk gir verdi."
   },
   "hero": {
     "layout": "centered-none",
     "eyebrow": "HVORFOR SEOTOOL FINNES",
-    "title": "SEO trenger ikke starte med et byrå.",
-    "support": "Mange bedrifter kan gjøre langt mer SEO selv enn de tror. De trenger først og fremst bedre oversikt over hva som er viktig, hva som kan vente og hva som faktisk er verdt å bruke tid på.",
+    "title": "Du skal ikke trenge en SEO-ekspert for hver liten endring.",
+    "support": "SeoTool er laget for å gjøre SEO mindre mystisk: forstå hva som er viktig, gjør det enkle selv og bruk ekspertise når problemet faktisk krever den.",
     "visual": {
       "kind": "none"
     },
@@ -18,8 +18,8 @@
       "href": "/slik-fungerer-det/"
     },
     "secondaryCta": {
-      "label": "Kontakt Medon",
-      "href": "https://medon.no/kontakt"
+      "label": "Når trenger du SEO-ekspert?",
+      "href": "/kontakt/"
     }
   },
   "listing": {
@@ -31,33 +31,33 @@
     {
       "_block": "content",
       "id": "hvorfor",
-      "eyebrow": "VERKTØY FØRST. BYRÅ NÅR DET TRENGS.",
-      "heading": "Vi vil heller gjøre deg mindre avhengig av oss.",
+      "eyebrow": "HVORFOR SEOTOOL FINNES",
+      "heading": "Vi vil gjøre deg mindre avhengig av eksperter på rutineoppgaver.",
       "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Det høres kanskje ut som en dårlig byråmodell. Det er det ikke. Hvis SeoTool hjelper deg ta bedre valg og gjøre mer selv, har produktet levert verdi.",
-        "Og den dagen du går lei, mangler kapasitet eller møter noe som krever mer kompetanse, trenger du ikke starte fra null. Medon kan jobbe videre fra det samme grunnlaget."
+        "Det er lite poeng i å betale eksperttimepris for å rette en adresse, skrive en metatittel eller legge inn en internlenke.",
+        "SeoTool skal hjelpe deg forstå hva som kan gjøres enkelt og trygt selv — og hva som faktisk fortjener spesialistkompetanse."
       ],
       "items": [
         {
           "title": "Forstå først",
-          "text": "Se hva dataene faktisk sier før du bestemmer hva som skal gjøres.",
+          "text": "Se hva problemet er og hvorfor det betyr noe.",
           "surface": "base-200"
         },
         {
           "title": "Prioriter",
-          "text": "Bruk tiden på tiltak som fortjener den, ikke på å få alle lamper grønne.",
+          "text": "Bruk tiden på tiltak som fortjener den.",
           "surface": "base-200"
         },
         {
           "title": "Gjør selv",
-          "text": "Behold oppgaver du har kapasitet og lyst til å håndtere.",
+          "text": "Ta rutineoppgavene du kan håndtere trygt og effektivt.",
           "surface": "base-200"
         },
         {
-          "title": "Deleger smart",
-          "text": "Send bort arbeid når det er billigere enn tiden, frustrasjonen eller læringskurven.",
+          "title": "Bruk ekspert smart",
+          "text": "Kjøp kompetanse når problemet er teknisk, risikofylt eller kostbart å lære.",
           "surface": "base-200"
         }
       ],
@@ -65,14 +65,14 @@
     },
     {
       "_block": "content",
-      "id": "medon",
-      "heading": "SeoTool utvikles av Medon",
+      "id": "prinsipp",
+      "heading": "Eksperthjelp skal være et valg, ikke en forutsetning.",
       "headingAlign": "left",
       "layout": "two-columns",
       "presentation": "cta",
       "body": [
-        "Medon jobber med SEO, AI-synlighet, nettsteder, CRO og betalt annonsering. SeoTool er laget for å gjøre dataene og prioriteringene mer brukbare både for kunder som gjør mye selv og for oss når vi tar over.",
-        "Det gir en enkel modell: samme grunnlag, valgfri mengde hjelp."
+        "SeoTool skal være nyttig selv om du aldri kjøper SEO-tjenester. Det er hele poenget.",
+        "Når du først trenger en ekspert, har du et tydeligere problem, bedre kontekst og mindre risiko for å betale noen for å bruke de første timene på å finne ut hva som er galt."
       ],
       "links": [
         {
@@ -80,7 +80,7 @@
           "href": "/seo/"
         },
         {
-          "label": "Få hjelp",
+          "label": "Når trenger du ekspert?",
           "href": "/kontakt/"
         }
       ],
