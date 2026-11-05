@@ -64,7 +64,7 @@ test('PageList pages source retains legacy key but shows only services and produ
     .find(f=>f.name==='pageList').fields.find(f=>f.name==='source');
   assert.equal(source.options.values.find(x=>x.name==='pages').label,'Tjenester og produkter');
   assert.deepEqual(source.options.values.map(x=>x.name),['articles','pages','cases']);
-  const saved=JSON.parse(JSON.stringify({source:'pages',mode:'automatic',sort:'editorial',limit:6,layout:'cards',entries:[]}));
+  const saved=JSON.parse(JSON.stringify({source:'pages',mode:'automatic',sort:'editorial',limit:12,layout:'cards',entries:[]}));
   assert.equal(pageListSchema.parse(saved).source,'pages');
   const product=builderPageSchema.parse({...service,slug:'produkter/produkt',listing:{...service.listing,title:'Produkt',order:1}});
   const index=builderPageSchema.parse({...service,slug:'oversikt',kind:'index'});
