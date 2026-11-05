@@ -2,91 +2,101 @@
   "slug": "ai-synlighet",
   "kind": "service",
   "seo": {
-    "title": "AI-synlighet – Overvåk omtale i ChatGPT og Google AI",
-    "description": "Spor hvordan merkevaren og nettstedet ditt siteres i ChatGPT, Google AI Overviews og AI Mode med SeoTool."
+    "title": "AI-synlighet – SeoTool (under intern pilot)",
+    "description": "SeoTool bygger AI Visibility som historiske observasjoner av svar, omtaler, siteringer og kilder. Modulen er ikke åpnet som kundeprodukt ennå."
   },
   "hero": {
     "layout": "centered-none",
-    "eyebrow": "AI-søk og siteringer",
-    "title": "Se hvordan kunstig intelligens omtaler og siterer nettstedet ditt.",
-    "support": "Kartlegg hvilke kilder og konkurrenter som trekkes frem i ChatGPT og Google AI Overviews, basert på observerte siteringer framfor spekulative poengsummer.",
+    "eyebrow": "NESTE PRODUKTLAG · INTERN PILOT",
+    "title": "AI-synlighet som observasjoner — ikke en oppdiktet AI-rangering.",
+    "support": "SeoTool bygger AI Visibility for å lagre konkrete, tidsstemplete observasjoner av svar, omtaler, siteringer, kilder og konkurrenter. Modulen er under intern pilot og er ikke åpnet som kundeprodukt ennå.",
     "visual": {
       "kind": "none"
     },
     "primaryCta": {
-      "label": "Utforsk AI-synlighet",
+      "label": "Se produktretningen",
+      "href": "/slik-fungerer-det/"
+    },
+    "secondaryCta": {
+      "label": "Be om en vurdering",
       "href": "/gratis-analyse/"
     }
   },
   "listing": {
     "title": "AI-synlighet",
-    "summary": "Overvåk kildesiteringer og omtaler i ChatGPT, Google AI Overviews og AI Mode.",
+    "summary": "Under intern pilot: historiske AI-observasjoner med kilde og tidspunkt.",
     "order": 2,
     "visible": true
   },
   "faq": [
     {
-      "question": "Kan man manipulere svar i ChatGPT og Google AI?",
-      "answer": "Nei. Kunstig intelligens trekker ut informasjon fra kilder modellene oppfatter som autoritative. SeoTool observerer og dokumenterer faktiske siteringer fremfor å love urealistiske snarveier."
+      "question": "Er AI Visibility tilgjengelig for kunder nå?",
+      "answer": "Ikke ennå. Modulen er neste godkjente byggemål og testes som intern pilot før eventuell kundeaktivering."
     },
     {
-      "question": "Hva er forskjellen mellom omtale og sitering?",
-      "answer": "En omtale betyr at merkevaren eller produktet nevnes i svaret, mens en sitering inkluderer en eksplisitt lenke til nettstedet ditt som kilde."
+      "question": "Hvorfor bruker SeoTool ikke én fast AI-rangering?",
+      "answer": "AI-svar kan variere mellom spørsmål, tidspunkt og flater. SeoTool er derfor designet for å behandle hver måling som en konkret observasjon med historikk, ikke som en universell fasit."
     }
   ],
   "sections": [
     {
       "_block": "content",
-      "id": "ai-kilder",
-      "heading": "Hva SeoTool måler i AI-modeller",
-      "visibility": "visible",
+      "id": "mvp-prinsipp",
+      "eyebrow": "MÅLBART FØR MAGISK",
+      "heading": "Vi lagrer det som faktisk kan observeres.",
+      "headingAlign": "left",
       "layout": "two-columns",
       "body": [
-        "Brukeratferd flytter seg mot AI-drevne søkeflater. SeoTool kartlegger hvorvidt innholdet ditt blir brukt som referansekilde når brukere stiller spørsmål innen din bransje.",
-        "Målingene bygger på observerbare svar og kildelister, uten konstruerte 'AI-rangeringer' som mangler forankring i virkeligheten."
+        "Målet er ikke å forklare hva en modell «tenkte». Det som kan dokumenteres er selve svaret, omtaler, siteringer, kilder, konkurrenter og tidspunktet for testen.",
+        "Samme prinsipp brukes i resten av SeoTool: observasjon først, tolkning etterpå."
       ],
       "items": [
         {
-          "title": "ChatGPT og nettmodeller",
-          "text": "Sporer hvordan spørsmål besvares og om nettstedet ditt oppgis som autoritativ referanse.",
+          "title": "Svar",
+          "text": "Det konkrete svaret fra den målte AI-flaten.",
           "surface": "base-200"
         },
         {
-          "title": "Google AI Overviews",
-          "text": "Overvåker AI-sammendrag i Googles søkeresultater og hvilke URL-er som inkluderes i kildekarusellen.",
+          "title": "Omtaler",
+          "text": "Om virksomhet, merkevare eller andre relevante aktører nevnes.",
           "surface": "base-200"
         },
         {
-          "title": "Siteringer og kildeanalyse",
-          "text": "Viser hvilke konkurrenter og domener som oftest siteres på dine kjerneområder.",
+          "title": "Siteringer og kilder",
+          "text": "Hvilke URL-er eller domener som faktisk vises som referanser.",
           "surface": "base-200"
         },
         {
-          "title": "Historisk utvikling",
-          "text": "Observerer hvordan omtalen og kildebruken endrer seg over tid etter innholdsoppdateringer.",
+          "title": "Historikk",
+          "text": "Gjentatte observasjoner kan senere skille tilfeldig variasjon fra mer varige endringer.",
           "surface": "base-200"
         }
-      ]
+      ],
+      "visibility": "visible"
     },
     {
       "_block": "content",
-      "id": "neste-steg",
-      "heading": "Vil du vite om du siteres i AI-søk?",
-      "visibility": "visible",
+      "id": "status",
+      "eyebrow": "PRODUKTSTATUS",
+      "heading": "Pilot først. Kommersiell aktivering senere.",
+      "headingAlign": "left",
+      "layout": "two-columns",
+      "presentation": "cta",
       "body": [
-        "Start med en enkel kartlegging for å se hvordan nettsiden din fremstår i søkemotorer og AI-modeller.",
-        "Vi analyserer faktiske kildehenvisninger og gir deg konkrete råd for innholdsautoritet."
+        "AI Visibility er neste produktlag, men offentlig nettside skal ikke selge en intern pilot som en ferdig funksjon.",
+        "Når modulen er produksjonsverifisert og eksplisitt åpnet for kunder, oppdateres denne siden fra «under pilot» til faktisk tilgjengelighet."
       ],
       "links": [
         {
-          "label": "Analyser nettsiden",
-          "href": "/gratis-analyse/"
+          "label": "Se dagens SEO-grunnlag",
+          "href": "/seo/"
         },
         {
-          "label": "Les om hvordan det fungerer",
+          "label": "Se hva som kommer etterpå",
           "href": "/slik-fungerer-det/"
         }
-      ]
+      ],
+      "visibility": "visible"
     }
   ]
 }
