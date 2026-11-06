@@ -71,7 +71,13 @@
         "Du gir SeoTool nødvendig tillatelse til å behandle disse opplysningene for å levere tjenestens funksjoner.",
         "Hvordan vi behandler personopplysninger er nærmere beskrevet i vår personvernerklæring."
       ],
-      "visibility": "visible"
+      "visibility": "visible",
+      "links": [
+        {
+          "label": "Les personvernerklæringen",
+          "href": "/personvern/"
+        }
+      ]
     },
     {
       "_block": "content",
