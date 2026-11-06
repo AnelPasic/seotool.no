@@ -296,6 +296,7 @@ components:
         - { name: "innsikt/artikkel", label: "Search Console-posisjon er ikke det samme som rank tracking | SeoTool" }
         - { name: "kontakt", label: "Når bør du bruke SEO-ekspert? | SeoTool" }
         - { name: "om", label: "Om SeoTool – spar eksperttimene til det vanskelige" }
+        - { name: "personvern", label: "Personvernerklæring for SeoTool" }
         - { name: "priser", label: "Tilgang og priser – SeoTool" }
         - { name: "tjeneste", label: "SeoTool – fra SEO-data til neste tiltak" }
 # PAGE_BUILDER_CHOICES_END
@@ -871,6 +872,7 @@ content:
         exclude:
           - 404.json
           - brukervilkar.json
+          - personvern.json
           - home.json
           - kontakt.json
           - om.json
@@ -949,6 +951,21 @@ content:
     label: Brukervilkår
     type: file
     path: src/content/pages/brukervilkar.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: starterPersonvern
+    label: Personvernerklæring
+    type: file
+    path: src/content/pages/personvern.json
     format: json
     operations: { create: false, delete: false, rename: false }
     fields:
