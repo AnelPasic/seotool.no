@@ -291,6 +291,7 @@ components:
       values:
 # PAGE_BUILDER_CHOICES_BEGIN
         - { name: "404", label: "Siden finnes ikke | SeoTool" }
+        - { name: "brukervilkar", label: "Brukervilkår for SeoTool" }
         - { name: "home", label: "SeoTool – Gjør mer SEO selv. Prioriter det som betyr mest." }
         - { name: "innsikt/artikkel", label: "Search Console-posisjon er ikke det samme som rank tracking | SeoTool" }
         - { name: "kontakt", label: "Når bør du bruke SEO-ekspert? | SeoTool" }
@@ -869,6 +870,7 @@ content:
         path: src/content/pages
         exclude:
           - 404.json
+          - brukervilkar.json
           - home.json
           - kontakt.json
           - om.json
@@ -932,6 +934,21 @@ content:
     label: Om denne demonstrasjonen
     type: file
     path: src/content/pages/om.json
+    format: json
+    operations: { create: false, delete: false, rename: false }
+    fields:
+      - *rootSlug
+      - *rootSeo
+      - *rootHero
+      - { name: sections, component: builderSections }
+      - { name: faq, component: builderFaq }
+      - { name: listing, component: builderListing }
+      - { name: kind, label: Sidetype, type: string, required: true, readonly: true }
+
+  - name: starterBrukervilkar
+    label: Brukervilkår
+    type: file
+    path: src/content/pages/brukervilkar.json
     format: json
     operations: { create: false, delete: false, rename: false }
     fields:

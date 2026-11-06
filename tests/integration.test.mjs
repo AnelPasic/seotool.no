@@ -38,7 +38,7 @@ test('native CMS exposes the one shared editorial hierarchy across all pages', (
   assert.equal(cms.content[1].items[0].name,'sharedContent');
   assert.equal(cms.components.builderSharedPlacement.fields[0].type,'reference');
   const entries=cms.content.slice(3).filter(entry=>entry.type==='file');
-  assert.equal(entries.length,5,'Five fixed pages protected; services/articles use separate native collections');
+  assert.equal(entries.length,6,'Six fixed pages protected; services/articles use separate native collections');
   const articles=cms.content.find(x=>x.name==='insightGroup')?.items?.[0];
   assert.equal(articles?.name,'managedArticles');
   assert.equal(articles?.label,'Artikler');

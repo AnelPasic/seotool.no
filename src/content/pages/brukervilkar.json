@@ -1,0 +1,180 @@
+{
+  "slug": "brukervilkar",
+  "kind": "utility",
+  "seo": {
+    "title": "Brukervilkår for SeoTool",
+    "description": "Brukervilkår for SeoTool, levert av Medon AS. Sist oppdatert 4. november 2026."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "JURIDISK",
+    "title": "Brukervilkår for SeoTool",
+    "support": "Sist oppdatert: 4. november 2026. Ved å registrere en konto eller bruke tjenesten aksepterer du disse brukervilkårene. SeoTool leveres av Medon AS, Norge.",
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "listing": {
+    "title": "Brukervilkår",
+    "visible": false
+  },
+  "faq": [],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "om-tjenesten",
+      "heading": "1. Om tjenesten",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "SeoTool er en digital plattform for analyse og optimalisering av nettsteder, søkemotorsynlighet og digital tilstedeværelse.",
+        "Tjenesten kan inkludere nettstedanalyser, søkeordovervåking, konkurranseanalyser, AI-synlighet, rapportering og integrasjoner med tredjepartstjenester.",
+        "Funksjonaliteten kan endres og videreutvikles over tid."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "brukerkonto-og-tilgang",
+      "heading": "2. Brukerkonto og tilgang",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Du er ansvarlig for å holde innloggingsopplysningene dine sikre og for aktivitet som skjer gjennom kontoen din.",
+        "Du må ha nødvendige rettigheter til nettsteder, data og eksterne tjenester du kobler til SeoTool.",
+        "Det er ikke tillatt å bruke tjenesten til ulovlige aktiviteter, uautorisert datainnhenting eller handlinger som kan skade tjenesten eller andre brukere."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "integrasjoner-med-tredjepart",
+      "heading": "3. Integrasjoner med tredjepart",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "SeoTool kan integreres med eksterne tjenester, blant annet Google Search Console og Google Business Profile.",
+        "Ved å aktivere en integrasjon gir du SeoTool tillatelse til å hente og behandle relevante data innenfor tilgangen du har godkjent.",
+        "Du kan trekke tilbake slik tilgang gjennom SeoTool eller den aktuelle tredjeparten.",
+        "Tilgjengeligheten og funksjonaliteten til eksterne tjenester styres også av deres egne vilkår og tekniske begrensninger. SeoTool er ikke ansvarlig for endringer eller driftsavbrudd hos disse leverandørene."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "data-og-personvern",
+      "heading": "4. Data og personvern",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Du beholder rettighetene til data og innhold du legger inn i tjenesten, i den utstrekning du har slike rettigheter.",
+        "Du gir SeoTool nødvendig tillatelse til å behandle disse opplysningene for å levere tjenestens funksjoner.",
+        "Hvordan vi behandler personopplysninger er nærmere beskrevet i vår personvernerklæring."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "analyse-og-resultater",
+      "heading": "5. Analyse og resultater",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "SeoTool presenterer analyser, observasjoner, estimater og anbefalinger basert på tilgjengelige datakilder.",
+        "Vi garanterer ikke bestemte søkerangeringer, trafikkmengder, konverteringer, inntekter eller andre kommersielle resultater.",
+        "Informasjonen er ment som beslutningsstøtte. Brukeren er selv ansvarlig for beslutninger og tiltak som gjennomføres på bakgrunn av analysene."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "betaling-og-abonnement",
+      "heading": "6. Betaling og abonnement",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Enkelte funksjoner kan kreve et betalt abonnement eller en særskilt avtale.",
+        "Priser, fakturering, abonnementsperiode, oppsigelse og eventuelle bruksbegrensninger fremgår av vilkårene som presenteres ved bestilling eller i en separat avtale.",
+        "Eventuelle tredjepartskostnader som ikke inngår i abonnementet, skal opplyses før de belastes brukeren."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "tilgjengelighet-og-endringer",
+      "heading": "7. Tilgjengelighet og endringer",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Vi arbeider for å tilby en stabil og sikker tjeneste, men kan ikke garantere uavbrutt tilgjengelighet.",
+        "SeoTool kan gjennomføre vedlikehold, sikkerhetsoppdateringer og nødvendige tekniske endringer.",
+        "Vi kan begrense eller stenge tilgang ved vesentlige brudd på vilkårene eller ved sikkerhetsrisiko, så langt dette er tillatt etter gjeldende rett."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "immaterielle-rettigheter",
+      "heading": "8. Immaterielle rettigheter",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "SeoTool, inkludert programvare, design, varemerker og egenutviklet funksjonalitet, tilhører Medon AS eller våre lisensgivere.",
+        "Brukeren får en begrenset rett til å benytte tjenesten i samsvar med gjeldende avtale. Dette innebærer ingen overføring av eierskap til programvaren."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "ansvar",
+      "heading": "9. Ansvar",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "SeoTool leveres med den funksjonaliteten som er beskrevet i tjenesten og eventuelle tilhørende avtaler.",
+        "Medon AS er ikke ansvarlig for indirekte tap eller tap som skyldes forhold utenfor vår rimelige kontroll, i den utstrekning dette er tillatt etter gjeldende lov.",
+        "Ingenting i disse vilkårene begrenser rettigheter eller ansvar som ikke lovlig kan fravikes."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "oppsigelse-og-sletting",
+      "heading": "10. Oppsigelse og sletting",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Du kan avslutte bruken av tjenesten i samsvar med gjeldende abonnementsavtale.",
+        "Ved avslutning kan du be om sletting av kontoen og tilhørende personopplysninger, med forbehold om opplysninger vi har rettslig plikt eller annet gyldig grunnlag for å oppbevare."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "endringer-i-vilkarene",
+      "heading": "11. Endringer i vilkårene",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Vi kan oppdatere brukervilkårene når tjenesten, lovverket eller våre driftsforhold endres.",
+        "Ved vesentlige endringer som påvirker eksisterende brukeres rettigheter, vil vi gi passende informasjon før endringene trer i kraft."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "lovvalg-og-kontakt",
+      "heading": "12. Lovvalg og kontakt",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Disse vilkårene reguleres av norsk rett, med forbehold om ufravikelig lovgivning.",
+        "Medon AS",
+        "Nettsted: https://seotool.no",
+        "E-post: kontakt@seotool.no",
+        "Spørsmål om tjenesten eller brukervilkårene kan sendes til kontaktadressen ovenfor."
+      ],
+      "visibility": "visible"
+    }
+  ]
+}
