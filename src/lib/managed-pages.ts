@@ -1,8 +1,8 @@
 /** Validate only newly CMS-managed page files; never touch existing core pages. */
 const simple=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const article=/^innsikt\/[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const blocked=new Set(['home','404','design-system','sitemap.xml','priser','kontakt','om','brukervilkar','artikkel']);
-const fixedRoots=new Set(['404.json','home.json','kontakt.json','om.json','priser.json','brukervilkar.json']);
+const blocked=new Set(['home','404','design-system','sitemap.xml','priser','kontakt','om','brukervilkar','personvern','artikkel']);
+const fixedRoots=new Set(['404.json','home.json','kontakt.json','om.json','priser.json','brukervilkar.json','personvern.json']);
 export function assertManagedPageSource(source:string,raw:unknown):void{
  const relative=source.replace(/\\/g,'/').split('/content/pages/')[1];
  if(!relative)throw new Error('Invalid source path: '+source);
