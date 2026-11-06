@@ -1,0 +1,123 @@
+{
+  "slug": "personvern",
+  "kind": "utility",
+  "seo": {
+    "title": "Personvernerklæring for SeoTool",
+    "description": "Personvernerklæring for SeoTool, levert av Medon AS. Sist oppdatert 4. november 2026."
+  },
+  "hero": {
+    "layout": "centered-none",
+    "eyebrow": "JURIDISK",
+    "title": "Personvernerklæring for SeoTool",
+    "support": "Sist oppdatert: 4. november 2026. SeoTool er en digital plattform for analyse og optimalisering av nettsteder, søkesynlighet og digital tilstedeværelse. Tjenesten leveres av Medon AS, Norge. Vi behandler personopplysninger med respekt for personvernet og i samsvar med gjeldende personvernlovgivning, inkludert GDPR.",
+    "visual": {
+      "kind": "none"
+    }
+  },
+  "listing": {
+    "title": "Personvernerklæring",
+    "visible": false
+  },
+  "faq": [],
+  "sections": [
+    {
+      "_block": "content",
+      "id": "hvilke-opplysninger-vi-behandler",
+      "heading": "1. Hvilke opplysninger vi behandler",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Ved bruk av SeoTool kan vi behandle:",
+        "• Kontaktinformasjon og opplysninger knyttet til brukerkontoer.",
+        "• Informasjon om nettsteder og prosjekter som registreres i tjenesten.",
+        "• Analyse- og ytelsesdata fra tilkoblede tjenester, blant annet Google Search Console.",
+        "• Teknisk informasjon som er nødvendig for drift, sikkerhet og feilsøking."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "tilkobling-til-google",
+      "heading": "2. Tilkobling til Google",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Når du velger å koble Google-kontoen din til SeoTool, ber vi om tilgang til de opplysningene som er nødvendige for funksjonene du aktiverer.",
+        "For Google Search Console benyttes tilgangen til å hente, analysere og presentere informasjon om søkevisninger, klikk, søkeord og nettstedets synlighet.",
+        "Vi lagrer nødvendige tilgangsopplysninger sikkert, slik at tjenesten kan oppdatere data automatisk. Vi får ikke tilgang til Google-passordet ditt.",
+        "Google-data brukes til å levere funksjonene i SeoTool, ikke til salg av personopplysninger eller urelatert annonsering."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "hvordan-opplysningene-brukes",
+      "heading": "3. Hvordan opplysningene brukes",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Opplysninger behandles for å levere og forbedre tjenestens funksjonalitet, presentere analyser og rapporter, administrere brukerkontoer og opprettholde sikker og stabil drift.",
+        "Behandlingen skjer på grunnlag av avtale, berettiget interesse eller annet relevant behandlingsgrunnlag. Tilkobling til eksterne tjenester skjer etter brukerens aktive godkjenning."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "lagring-og-deling",
+      "heading": "4. Lagring og deling",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Opplysninger lagres i systemer med tekniske og organisatoriske sikkerhetstiltak. Vi benytter nødvendige tekniske tjenesteleverandører for hosting, drift og sikkerhet.",
+        "Vi selger ikke personopplysninger. Opplysninger deles bare når det er nødvendig for tjenesten, brukeren aktiverer en relevant integrasjon, eller loven krever det."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "lagringstid-og-sletting",
+      "heading": "5. Lagringstid og sletting",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Opplysninger oppbevares så lenge de er nødvendige for formålene beskrevet ovenfor eller for å oppfylle lovpålagte forpliktelser.",
+        "Du kan trekke tilbake tilgangen til Google gjennom SeoTool eller Google-kontoens sikkerhetsinnstillinger. Når en Google-tilkobling fjernes, stopper videre innhenting gjennom denne tilkoblingen. Tidligere importerte analysedata kan beholdes som del av prosjektets historikk inntil prosjektdataene slettes.",
+        "Du kan kontakte oss for å be om innsyn, retting eller sletting av personopplysninger."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "dine-rettigheter",
+      "heading": "6. Dine rettigheter",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Du har rettigheter etter gjeldende personvernlovgivning, blant annet innsyn, retting, sletting, begrensning av behandling og, der vilkårene er oppfylt, dataportabilitet og innsigelse.",
+        "Du kan også klage til Datatilsynet dersom du mener at personopplysningene dine behandles i strid med regelverket."
+      ],
+      "visibility": "visible"
+    },
+    {
+      "_block": "content",
+      "id": "kontakt",
+      "heading": "7. Kontakt",
+      "headingAlign": "left",
+      "layout": "stacked",
+      "body": [
+        "Medon AS",
+        "Nettsted: https://seotool.no",
+        "E-post: kontakt@seotool.no",
+        "Spørsmål om personvern eller behandling av personopplysninger kan sendes til kontaktadressen ovenfor.",
+        "Vi kan oppdatere denne erklæringen ved endringer i tjenesten eller gjeldende regelverk."
+      ],
+      "links": [
+        {
+          "label": "Les brukervilkårene",
+          "href": "/brukervilkar/"
+        }
+      ],
+      "visibility": "visible"
+    }
+  ]
+}
