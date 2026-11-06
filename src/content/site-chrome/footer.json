@@ -51,6 +51,10 @@
     "note": "Gjør det enkle selv. Spar eksperttimene til det som faktisk krever ekspertise.",
     "legalLinks": [
       {
+        "label": "Personvern",
+        "href": "/personvern/"
+      },
+      {
         "label": "Brukervilkår",
         "href": "/brukervilkar/"
       }
