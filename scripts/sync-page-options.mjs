@@ -9,13 +9,13 @@ const option = name => {
 const base = resolve(new URL('../', import.meta.url).pathname);
 const pagesDir = resolve(option('--pages') ?? join(base, 'templates/pages'));
 const configPath = resolve(option('--config') ?? join(base, 'templates/PAGES-CMS-PAGE-BUILDER.yml'));
-// Pin picker choices to the seven seeded pages: native CMS add/delete of a
+// Pin picker choices to the fixed seeded pages: native CMS add/delete of a
 // root service must not create a manual YAML regeneration dependency.
 // Prefer the integrated article folder; historical template exports still
 // contain artikkel.json in the root, without migrating customer sources.
 const articleSeed = existsSync(join(pagesDir,'managed-articles','innsikt-artikkel.json'))
  ? 'managed-articles/innsikt-artikkel.json' : 'artikkel.json';
-const seeded = ['404.json',articleSeed,'home.json','kontakt.json','om.json','priser.json','tjeneste.json'];
+const seeded = ['404.json',articleSeed,'brukervilkar.json','home.json','kontakt.json','om.json','priser.json','tjeneste.json'];
 const paths = seeded.filter(name=>existsSync(join(pagesDir,name)));
 if (paths.length!==seeded.length) throw new Error('Missing seeded page JSON in CMS picker source');
 const pages = paths.map(name => JSON.parse(readFileSync(join(pagesDir,name),'utf8')));
