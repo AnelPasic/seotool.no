@@ -49,6 +49,11 @@
     ],
     "copyright": "SeoTool",
     "note": "Gjør det enkle selv. Spar eksperttimene til det som faktisk krever ekspertise.",
-    "legalLinks": []
+    "legalLinks": [
+      {
+        "label": "Brukervilkår",
+        "href": "/brukervilkar/"
+      }
+    ]
   }
 }
