@@ -27,7 +27,7 @@ test('CONTENT-06: unified service menu and native article Add/Delete; fixed edit
  assert.equal(service.subfolders,false);
  assert.deepEqual(service.operations,{create:true,rename:false,delete:true});
  assert.deepEqual(service.filename,{template:'{fields.slug}.json',field:false});
- assert.deepEqual([...service.exclude].sort(),['404.json','brukervilkar.json','home.json','kontakt.json','om.json','priser.json'].sort());
+ assert.deepEqual([...service.exclude].sort(),['404.json','brukervilkar.json','personvern.json','home.json','kontakt.json','om.json','priser.json'].sort());
  assert.deepEqual(service.fields.map(f=>f.name),['slug','seo','hero','sections','faq','listing','kind']);
  assert.equal(service.fields[0].readonly,undefined);
  assert.equal(service.fields[0].required,true);
@@ -45,7 +45,7 @@ test('CONTENT-06: unified service menu and native article Add/Delete; fixed edit
  assert.deepEqual(article.operations,{create:true,rename:false,delete:true});
  assert.equal(article.fields.find(f=>f.name==='kind').default,'article');
  const existing=cms.content.filter(x=>x.type==='file'&&x.path.startsWith('src/content/pages/'));
- assert.equal(existing.length,6);
+ assert.equal(existing.length,7);
  for(const x of existing)assert.equal(x.operations.delete,false,x.name);
  const original=json('../src/content/pages/tjeneste.json');
  assert.equal(original.kind,'service');
@@ -93,7 +93,7 @@ test('CONTENT-06: root service security, pinned picker and link safety',()=>{
  const tmp=mkdtempSync(join(tmpdir(),'mws-choice-stability-'));
  try{
   const folder=join(tmp,'pages');mkdirSync(folder);mkdirSync(join(folder,'managed-articles'));
-  for(const name of ['404','brukervilkar','home','kontakt','om','priser','tjeneste'])
+  for(const name of ['404','brukervilkar','personvern','home','kontakt','om','priser','tjeneste'])
    writeFileSync(join(folder,name+'.json'),readFileSync(new URL('../src/content/pages/'+name+'.json',import.meta.url),'utf8'));
   writeFileSync(join(folder,'managed-articles','innsikt-artikkel.json'),readFileSync(new URL('../src/content/pages/managed-articles/innsikt-artikkel.json',import.meta.url),'utf8'));
   writeFileSync(join(folder,'demo-service.json'),JSON.stringify({...base,slug:'demo-service'}));
