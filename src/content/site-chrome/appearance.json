@@ -1,5 +1,5 @@
 {
-  "showThemeSwitch": false,
+  "showThemeSwitch": true,
   "themes": {
     "defaultMode": "light",
     "lightCss": "@plugin \"daisyui/theme\" {\n  name: \"seotool-light\";\n  default: true;\n  prefersdark: false;\n  color-scheme: light;\n  --color-base-100: oklch(98.5% 0.008 247);\n  --color-base-200: oklch(96% 0.016 247);\n  --color-base-300: oklch(91% 0.028 252);\n  --color-base-content: oklch(19% 0.035 262);\n  --color-primary: oklch(70% 0.17 178);\n  --color-primary-content: oklch(16% 0.03 262);\n  --color-secondary: oklch(58% 0.22 278);\n  --color-secondary-content: oklch(98% 0.004 247);\n  --color-accent: oklch(68% 0.19 230);\n  --color-accent-content: oklch(16% 0.03 262);\n  --color-neutral: oklch(22% 0.04 262);\n  --color-neutral-content: oklch(98% 0.004 247);\n  --color-info: oklch(74% 0.15 215);\n  --color-info-content: oklch(16% 0.03 262);\n  --color-success: oklch(70% 0.15 165);\n  --color-success-content: oklch(16% 0.03 262);\n  --color-warning: oklch(80% 0.16 85);\n  --color-warning-content: oklch(22% 0.04 70);\n  --color-error: oklch(63% 0.23 25);\n  --color-error-content: oklch(98% 0.004 247);\n  --radius-selector: 0.75rem;\n  --radius-field: 0.75rem;\n  --radius-box: 1.5rem;\n  --size-selector: 0.25rem;\n  --size-field: 0.25rem;\n  --border: 1px;\n  --depth: 0;\n  --noise: 0;\n}",
